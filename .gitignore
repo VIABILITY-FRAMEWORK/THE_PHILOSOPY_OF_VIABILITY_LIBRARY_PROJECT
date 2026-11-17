@@ -41,7 +41,6 @@
 *.fls
 *.log
 *.out
-*.pdf
 *.gz
 *.toc
 *.lof
