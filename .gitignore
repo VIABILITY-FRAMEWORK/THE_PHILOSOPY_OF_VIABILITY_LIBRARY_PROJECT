@@ -32,6 +32,7 @@
 !*.csv
 !*.md
 !*.pdf
+!*.png
 # ------------------------------------------------------------
 # 5) Explicitly ignore LaTeX build artifacts (belt-and-suspenders)
 #    (these are already covered by the "*" rule above, but listed
