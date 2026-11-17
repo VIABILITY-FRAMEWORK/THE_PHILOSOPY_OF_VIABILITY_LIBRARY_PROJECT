@@ -1,0 +1,17 @@
+# ============================================================
+# .gitignore — VIABILITY_FRAMEWORK / Book I
+# Policy: ONLY *.tex files are tracked. Everything else ignored.
+# ============================================================
+
+# 1) Ignore everything by default (whitelist strategy)
+*
+
+# 2) Un-ignore the .gitignore itself (so the rule stays in repo)
+!.gitignore
+
+# 3) Un-ignore all directories so git can descend into them
+#    (without this, git won't look inside ignored dirs)
+!*/
+
+# 4) Allow only .tex files
+!*.tex

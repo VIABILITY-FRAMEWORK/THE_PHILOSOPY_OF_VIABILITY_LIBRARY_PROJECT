@@ -1,0 +1,511 @@
+
+% ============================================================
+% VIABILITY PHILOSOPHY SYSTEM
+% BOOK I: ONTOLOGY OF VIABILITY
+%
+% File: macros.tex
+% Location: Project Root
+%
+% Purpose:
+% Central collection of project-specific LaTeX commands
+% for structural identification, logical entity identification,
+% cross-referencing, terminology, and formal notation.
+%
+% Compiler: pdfLaTeX
+%
+% Dependencies:
+% - amsmath
+% - amssymb
+% - hyperref
+% - cleveref
+%
+% These packages are loaded in preamble.tex.
+%
+% ============================================================
+
+
+% ------------------------------------------------------------
+% 1. GENERAL PROJECT COMMANDS
+% ------------------------------------------------------------
+
+\newcommand{\ViabilitySystem}{Viability Philosophy System}
+
+\newcommand{\ViabilityBook}{Ontology of Viability}
+
+\newcommand{\VS}{VS}
+
+\newcommand{\BOne}{B01}
+
+
+% ------------------------------------------------------------
+% 2. STRUCTURAL IDENTIFIER COMMANDS
+%
+% Structural identifiers specify the location of a textual
+% or organizational unit within the complete system.
+%
+% Example:
+% VS.B01.P01.C01.S01.SS01.P001
+%
+% Structural identifiers are supplied explicitly.
+% This file does not generate or assign their numbers.
+% ------------------------------------------------------------
+
+\newcommand{\StructuralIdentifier}[1]{%
+    \texttt{#1}%
+}
+
+\newcommand{\BookStructuralIDFormat}[1]{%
+    \StructuralIdentifier{#1}%
+}
+
+\newcommand{\PartStructuralID}[1]{%
+    \StructuralIdentifier{#1}%
+}
+
+\newcommand{\ChapterStructuralID}[1]{%
+    \StructuralIdentifier{#1}%
+}
+
+\newcommand{\SectionStructuralID}[1]{%
+    \StructuralIdentifier{#1}%
+}
+
+\newcommand{\SubsectionStructuralID}[1]{%
+    \StructuralIdentifier{#1}%
+}
+
+\newcommand{\ParagraphStructuralID}[1]{%
+    \StructuralIdentifier{#1}%
+}
+
+
+% ------------------------------------------------------------
+% 3. LOGICAL ENTITY IDENTIFIER COMMANDS
+%
+% Logical entity identifiers specify the identity of
+% formal entities throughout the Viability Philosophy System.
+%
+% Entity identifiers are global and remain stable across books.
+%
+% Approved prefixes:
+% AX = Axiom
+% DF = Definition
+% PR = Proposition
+% TH = Theorem
+% HY = Hypothesis
+% AR = Argument
+% PF = Proof
+%
+% The numerical component is supplied explicitly.
+% ------------------------------------------------------------
+
+\newcommand{\LogicalEntityIdentifier}[1]{%
+    \texttt{#1}%
+}
+
+\newcommand{\EntityID}[2]{%
+    \LogicalEntityIdentifier{#1-#2}%
+}
+
+\newcommand{\AxiomID}[1]{%
+    \EntityID{AX}{#1}%
+}
+
+\newcommand{\DefinitionID}[1]{%
+    \EntityID{DF}{#1}%
+}
+
+\newcommand{\PropositionID}[1]{%
+    \EntityID{PR}{#1}%
+}
+
+\newcommand{\TheoremID}[1]{%
+    \EntityID{TH}{#1}%
+}
+
+\newcommand{\HypothesisID}[1]{%
+    \EntityID{HY}{#1}%
+}
+
+\newcommand{\ArgumentID}[1]{%
+    \EntityID{AR}{#1}%
+}
+
+\newcommand{\ProofID}[1]{%
+    \EntityID{PF}{#1}%
+}
+
+
+% ------------------------------------------------------------
+% 4. LOGICAL ENTITY PRESENTATION
+%
+% These commands display an entity identifier together
+% with its descriptive text.
+%
+% They do not create theorem environments, assign identifiers,
+% or establish logical dependencies.
+% ------------------------------------------------------------
+
+\newcommand{\IdentifiedAxiom}[2]{%
+    \par\noindent
+    \textbf{Axiom \AxiomID{#1}.}\enspace #2\par
+}
+
+\newcommand{\IdentifiedDefinition}[2]{%
+    \par\noindent
+    \textbf{Definition \DefinitionID{#1}.}\enspace #2\par
+}
+
+\newcommand{\IdentifiedProposition}[2]{%
+    \par\noindent
+    \textbf{Proposition \PropositionID{#1}.}\enspace #2\par
+}
+
+\newcommand{\IdentifiedTheorem}[2]{%
+    \par\noindent
+    \textbf{Theorem \TheoremID{#1}.}\enspace #2\par
+}
+
+\newcommand{\IdentifiedHypothesis}[2]{%
+    \par\noindent
+    \textbf{Hypothesis \HypothesisID{#1}.}\enspace #2\par
+}
+
+\newcommand{\IdentifiedArgument}[2]{%
+    \par\noindent
+    \textbf{Argument \ArgumentID{#1}.}\enspace #2\par
+}
+
+
+% ------------------------------------------------------------
+% 5. INTERNAL CROSS-REFERENCE COMMANDS
+%
+% These commands refer to LaTeX labels.
+% The referenced labels must be defined in the relevant files.
+% ------------------------------------------------------------
+
+\newcommand{\StructuralRef}[1]{%
+    \cref{#1}%
+}
+
+\newcommand{\StructuralRefUpper}[1]{%
+    \Cref{#1}%
+}
+
+\newcommand{\PageRef}[1]{%
+    page~\pageref{#1}%
+}
+
+\newcommand{\ChapterRef}[1]{%
+    Chapter~\ref{#1}%
+}
+
+\newcommand{\PartRef}[1]{%
+    Part~\ref{#1}%
+}
+
+\newcommand{\SectionRef}[1]{%
+    Section~\ref{#1}%
+}
+
+\newcommand{\SubsectionRef}[1]{%
+    Subsection~\ref{#1}%
+}
+
+\newcommand{\EquationRef}[1]{%
+    \eqref{#1}%
+}
+
+\newcommand{\FigureRef}[1]{%
+    \cref{#1}%
+}
+
+\newcommand{\TableRef}[1]{%
+    \cref{#1}%
+}
+
+\newcommand{\TheoremRef}[1]{%
+    \cref{#1}%
+}
+
+\newcommand{\DefinitionRef}[1]{%
+    \cref{#1}%
+}
+
+\newcommand{\PropositionRef}[1]{%
+    \cref{#1}%
+}
+
+
+% ------------------------------------------------------------
+% 6. LOGICAL ENTITY REFERENCES
+%
+% These commands display global logical entity identifiers.
+% They do not imply that the entity has been formally defined
+% or that a corresponding registry entry already exists.
+% ------------------------------------------------------------
+
+\newcommand{\AxiomRef}[1]{%
+    \AxiomID{#1}%
+}
+
+\newcommand{\DefinitionEntityRef}[1]{%
+    \DefinitionID{#1}%
+}
+
+\newcommand{\PropositionEntityRef}[1]{%
+    \PropositionID{#1}%
+}
+
+\newcommand{\TheoremEntityRef}[1]{%
+    \TheoremID{#1}%
+}
+
+\newcommand{\HypothesisRef}[1]{%
+    \HypothesisID{#1}%
+}
+
+\newcommand{\ArgumentRef}[1]{%
+    \ArgumentID{#1}%
+}
+
+\newcommand{\ProofRef}[1]{%
+    \ProofID{#1}%
+}
+
+
+% ------------------------------------------------------------
+% 7. FORMAL SYMBOL PRESENTATION
+%
+% General-purpose commands for displaying mathematical
+% and formal symbols.
+% ------------------------------------------------------------
+
+\newcommand{\FormalSymbol}[1]{%
+    \ensuremath{#1}%
+}
+
+\newcommand{\FormalExpression}[1]{%
+    \ensuremath{#1}%
+}
+
+\newcommand{\SymbolicDefinition}[2]{%
+    \ensuremath{#1}\;:\;#2%
+}
+
+
+% ------------------------------------------------------------
+% 8. TERMINOLOGY AND CONCEPTUAL PRESENTATION
+% ------------------------------------------------------------
+
+\newcommand{\TechnicalTerm}[1]{%
+    \textit{#1}%
+}
+
+\newcommand{\Concept}[1]{%
+    \textit{#1}%
+}
+
+\newcommand{\DefinedTerm}[1]{%
+    \textbf{#1}%
+}
+
+\newcommand{\EmphasizedTerm}[1]{%
+    \emph{#1}%
+}
+
+\newcommand{\TermIndex}[1]{%
+    #1\index{#1}%
+}
+
+
+% ------------------------------------------------------------
+% 9. ONTOLOGICAL TERMINOLOGY
+%
+% These commands provide consistent typographical
+% presentation of the principal terms used in Book I.
+% They do not introduce additional ontological commitments.
+% ------------------------------------------------------------
+
+\newcommand{\Identity}{\textit{Identity}}
+
+\newcommand{\Manifestation}{\textit{Manifestation}}
+
+\newcommand{\Being}{\textit{Being}}
+
+\newcommand{\RealmsOfBeing}{\textit{Realms of Being}}
+
+\newcommand{\OntologicalLight}{\textit{Ontological Light}}
+
+\newcommand{\DynamicsOfBeing}{\textit{Dynamics of Being}}
+
+\newcommand{\FirstDetermination}{\textit{First Determination}}
+
+\newcommand{\StructuralDetermination}{\textit{Structural Determination}}
+
+\newcommand{\RelationalManifestation}{\textit{Relational Manifestation}}
+
+\newcommand{\MaterialManifestation}{\textit{Material Manifestation}}
+
+\newcommand{\HubOfDecree}{\textit{Hub of Decree}}
+
+\newcommand{\HubOfSignification}{\textit{Hub of Signification}}
+
+\newcommand{\HubOfRealization}{\textit{Hub of Realization}}
+
+
+% ------------------------------------------------------------
+% 10. ARGUMENT AND PROOF PRESENTATION
+% ------------------------------------------------------------
+
+\newcommand{\ArgumentLabel}[1]{%
+    \par\noindent
+    \textbf{Argument:} #1\par
+}
+
+\newcommand{\ProofLabel}[1]{%
+    \par\noindent
+    \textbf{Proof:} #1\par
+}
+
+\newcommand{\PremiseLabel}[1]{%
+    \textbf{Premise:} #1%
+}
+
+\newcommand{\ConclusionLabel}[1]{%
+    \textbf{Conclusion:} #1%
+}
+
+
+% ------------------------------------------------------------
+% 11. RELATIONAL AND DEPENDENCY NOTATION
+%
+% General-purpose notation only.
+% The semantic meaning of each relation must be defined
+% in the relevant philosophical or formal context.
+% ------------------------------------------------------------
+
+\newcommand{\DependsOn}{%
+    \ensuremath{\longrightarrow}%
+}
+
+\newcommand{\Entails}{%
+    \ensuremath{\vdash}%
+}
+
+\newcommand{\Implies}{%
+    \ensuremath{\Rightarrow}%
+}
+
+\newcommand{\EquivalentTo}{%
+    \ensuremath{\Leftrightarrow}%
+}
+
+\newcommand{\NotEquivalentTo}{%
+    \ensuremath{\not\Leftrightarrow}%
+}
+
+\newcommand{\Necessary}{%
+    \ensuremath{\Box}%
+}
+
+\newcommand{\Possible}{%
+    \ensuremath{\Diamond}%
+}
+
+
+% ------------------------------------------------------------
+% 12. EDITORIAL AND EXPLANATORY ENVIRONMENTS
+% ------------------------------------------------------------
+
+\newenvironment{editorialnote}
+{
+    \begin{quote}
+    \small
+    \textbf{Editorial Note.}\enspace
+}
+{
+    \end{quote}
+}
+
+\newenvironment{technicalnote}
+{
+    \begin{quote}
+    \small
+    \textbf{Technical Note.}\enspace
+}
+{
+    \end{quote}
+}
+
+\newenvironment{conceptualnote}
+{
+    \begin{quote}
+    \small
+    \textbf{Conceptual Note.}\enspace
+}
+{
+    \end{quote}
+}
+
+
+% ------------------------------------------------------------
+% 13. QUOTATIONS AND SOURCE DISCUSSION
+% ------------------------------------------------------------
+
+\newenvironment{sourcequotation}
+{
+    \begin{quote}
+    \small
+}
+{
+    \end{quote}
+}
+
+\newcommand{\SourceDiscussion}[1]{%
+    \par\noindent
+    \textbf{Source Discussion.}\enspace #1\par
+}
+
+
+% ------------------------------------------------------------
+% 14. APPENDIX AND SUPPLEMENTARY MATERIAL REFERENCES
+% ------------------------------------------------------------
+
+\newcommand{\AppendixRef}[1]{%
+    Appendix~\ref{#1}%
+}
+
+\newcommand{\SupplementaryMaterialRef}[1]{%
+    \cref{#1}%
+}
+
+
+% ------------------------------------------------------------
+% 15. CONSISTENT LABEL PREFIXES
+%
+% Recommended label naming conventions:
+%
+% ch:       Chapters
+% sec:      Sections
+% subsec:   Subsections
+% eq:       Equations
+% fig:      Figures
+% tab:      Tables
+% ax:       Axioms
+% df:       Definitions
+% pr:       Propositions
+% th:       Theorems
+% hy:       Hypotheses
+% ar:       Arguments
+% pf:       Proofs
+% app:      Appendices
+%
+% These prefixes are conventions for label organization.
+% They do not automatically create labels.
+% ------------------------------------------------------------
+
+
+% ============================================================
+% END OF macros.tex
+% ============================================================
