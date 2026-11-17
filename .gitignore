@@ -1,6 +1,8 @@
 # ============================================================
-# .gitignore — VIABILITY_FRAMEWORK / Book I
-# Policy: ONLY *.tex files are tracked. Everything else ignored.
+# .gitignore — THE_PHILOSOPHY_OF_VIABILITY_LIBRARY_PROJECT
+# Book I: VS.B01 — Ontology of Viability
+# Policy: ONLY source files (*.tex, *.bib, *.ist, *.csv) are tracked.
+#         All build artifacts and generated outputs are ignored.
 # ============================================================
 
 # 1) Ignore everything by default (whitelist strategy)
@@ -13,5 +15,58 @@
 #    (without this, git won't look inside ignored dirs)
 !*/
 
-# 4) Allow only .tex files
+# ------------------------------------------------------------
+# 4) Allow source files required by the project
+# ------------------------------------------------------------
+
+# LaTeX source files (chapters, sections, front/back matter, etc.)
 !*.tex
+
+# BibTeX bibliography database
+!*.bib
+
+# Index style files (makeindex configuration)
+!*.ist
+
+# Book-level registries (CSV data files)
+!*.csv
+
+# ------------------------------------------------------------
+# 5) Explicitly ignore LaTeX build artifacts (belt-and-suspenders)
+#    (these are already covered by the "*" rule above, but listed
+#    for clarity and in case the whitelist strategy changes)
+# ------------------------------------------------------------
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.gz
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.run.xml
+*.bcf
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+
+# ------------------------------------------------------------
+# 6) Explicitly ignore non-source text files
+# ------------------------------------------------------------
+*.txt
+
+# ------------------------------------------------------------
+# 7) OS / editor noise
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*~
