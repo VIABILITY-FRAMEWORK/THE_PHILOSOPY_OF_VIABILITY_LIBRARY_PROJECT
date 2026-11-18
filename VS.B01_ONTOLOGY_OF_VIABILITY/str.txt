@@ -1,0 +1,500 @@
+VS.B01_ONTOLOGY_OF_VIABILITY/
+│
+├── main.tex
+├── preamble.tex
+├── metadata.tex
+├── macros.tex
+├── acronyms.tex
+├── glossary.tex
+├── README.md
+├── main.pdf
+│
+├── 1_FRONTMATTER/
+│   │
+│   ├── 00_frontmatter.tex
+│   ├── 01_title_page.tex
+│   ├── 02_copyright.tex
+│   ├── 03_dedication.tex
+│   ├── 04_epigraph.tex
+│   ├── 05_preface.tex
+│   ├── 06_introduction.tex
+│   ├── 07_methodology.tex
+│   ├── 08_reading_guide.tex
+│   └── 09_structure_and_referencing_guide.tex
+│
+├── 2_MAINMATTER/
+│   │
+│   ├── 00_mainmatter.tex
+│   │
+│   ├── PART_I_IDENTITY_AND_MANIFESTATION/
+│   │   │
+│   │   ├── 00_part_01_aggregator.tex
+│   │   ├── part_01.tex
+│   │   │
+│   │   ├── chapter_01_identity/
+│   │   │   ├── 00_chapter_01_aggregator.tex
+│   │   │   ├── chapter_01.tex
+│   │   │   │
+│   │   │   ├── sections/
+│   │   │   │   ├── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_problem_of_identity.tex
+│   │   │   │   ├── section_02_being_and_identity.tex
+│   │   │   │   ├── section_03_identity_and_determination.tex
+│   │   │   │   ├── section_04_identity_and_distinction.tex
+│   │   │   │   ├── section_05_identity_and_self_sameness.tex
+│   │   │   │   ├── section_06_identity_and_individuation.tex
+│   │   │   │   ├── section_07_identity_and_continuity.tex
+│   │   │   │   ├── section_08_identity_and_ontological_relations.tex
+│   │   │   │   ├── section_09_scope_and_limits_of_identity.tex
+│   │   │   │   └── section_10_synthesis_of_identity.tex
+│   │   │   │
+│   │   │   ├── tables/
+│   │   │   │   ├── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_identity_conceptual_distinctions.tex
+│   │   │   │   ├── table_02_identity_relations.tex
+│   │   │   │   ├── table_03_identity_scope_and_limits.tex
+│   │   │   │   └── table_04_identity_synthesis.tex
+│   │   │   │
+│   │   │   └── figures/
+│   │   │       ├── 00_figures_aggregator.tex
+│   │   │       ├── figure_01_identity_ontological_structure.tex
+│   │   │       └── figure_02_identity_relations.tex
+│   │   │
+│   │   ├── chapter_02_invariance/
+│   │   │   ├── 00_chapter_02_aggregator.tex
+│   │   │   ├── chapter_02.tex
+│   │   │   │
+│   │   │   ├── sections/
+│   │   │   │   ├── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_problem_of_invariance.tex
+│   │   │   │   ├── section_02_invariance_and_identity.tex
+│   │   │   │   ├── section_03_invariance_and_difference.tex
+│   │   │   │   ├── section_04_invariance_and_change.tex
+│   │   │   │   ├── section_05_invariance_and_continuity.tex
+│   │   │   │   ├── section_06_invariance_and_structure.tex
+│   │   │   │   ├── section_07_forms_and_domains_of_invariance.tex
+│   │   │   │   ├── section_08_invariance_and_knowledge.tex
+│   │   │   │   ├── section_09_scope_and_limits_of_invariance.tex
+│   │   │   │   └── section_10_synthesis_of_invariance.tex
+│   │   │   │
+│   │   │   ├── tables/
+│   │   │   │   ├── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_forms_of_invariance.tex
+│   │   │   │   ├── table_02_invariance_and_identity.tex
+│   │   │   │   ├── table_03_invariance_domains.tex
+│   │   │   │   └── table_04_invariance_synthesis.tex
+│   │   │   │
+│   │   │   └── figures/
+│   │   │       ├── 00_figures_aggregator.tex
+│   │   │       ├── figure_01_invariance_and_transformation.tex
+│   │   │       └── figure_02_domains_of_invariance.tex
+│   │   │
+│   │   ├── chapter_03_unity_and_plurality/
+│   │   │   ├── 00_chapter_03_aggregator.tex
+│   │   │   ├── chapter_03.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_04_manifestation/
+│   │   │   ├── 00_chapter_04_aggregator.tex
+│   │   │   ├── chapter_04.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_05_identity_and_manifestation/
+│   │   │   ├── 00_chapter_05_aggregator.tex
+│   │   │   ├── chapter_05.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_06_formal_reconstruction/
+│   │   │   ├── 00_chapter_06_aggregator.tex
+│   │   │   ├── chapter_06.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   └── chapter_07_comparative_studies/
+│   │       ├── 00_chapter_07_aggregator.tex
+│   │       ├── chapter_07.tex
+│   │       ├── sections/
+│   │       │   └── 00_sections_aggregator.tex
+│   │       ├── tables/
+│   │       │   └── 00_tables_aggregator.tex
+│   │       └── figures/
+│   │           └── 00_figures_aggregator.tex
+│   │
+│   ├── PART_II_THE_REALMS_OF_BEING/
+│   │   │
+│   │   ├── 00_part_02_aggregator.tex
+│   │   ├── part_02.tex
+│   │   │
+│   │   ├── chapter_08_architecture_of_the_realms/
+│   │   │   ├── 00_chapter_08_aggregator.tex
+│   │   │   ├── chapter_08.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_09_first_determination/
+│   │   │   ├── 00_chapter_09_aggregator.tex
+│   │   │   ├── chapter_09.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_10_structural_determination/
+│   │   │   ├── 00_chapter_10_aggregator.tex
+│   │   │   ├── chapter_10.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_11_relational_manifestation/
+│   │   │   ├── 00_chapter_11_aggregator.tex
+│   │   │   ├── chapter_11.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_12_material_manifestation/
+│   │   │   ├── 00_chapter_12_aggregator.tex
+│   │   │   ├── chapter_12.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_13_hub_of_decree/
+│   │   │   ├── 00_chapter_13_aggregator.tex
+│   │   │   ├── chapter_13.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_14_hub_of_signification/
+│   │   │   ├── 00_chapter_14_aggregator.tex
+│   │   │   ├── chapter_14.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_15_hub_of_realization/
+│   │   │   ├── 00_chapter_15_aggregator.tex
+│   │   │   ├── chapter_15.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_16_formal_reconstruction/
+│   │   │   ├── 00_chapter_16_aggregator.tex
+│   │   │   ├── chapter_16.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   └── chapter_17_comparative_studies/
+│   │       ├── 00_chapter_17_aggregator.tex
+│   │       ├── chapter_17.tex
+│   │       ├── sections/
+│   │       │   └── 00_sections_aggregator.tex
+│   │       ├── tables/
+│   │       │   └── 00_tables_aggregator.tex
+│   │       └── figures/
+│   │           └── 00_figures_aggregator.tex
+│   │
+│   ├── PART_III_LIGHT/
+│   │   │
+│   │   ├── 00_part_03_aggregator.tex
+│   │   ├── part_03.tex
+│   │   │
+│   │   ├── chapter_18_ontology_of_light/
+│   │   │   ├── 00_chapter_18_aggregator.tex
+│   │   │   ├── chapter_18.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_19_light_and_identity/
+│   │   │   ├── 00_chapter_19_aggregator.tex
+│   │   │   ├── chapter_19.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_20_light_and_manifestation/
+│   │   │   ├── 00_chapter_20_aggregator.tex
+│   │   │   ├── chapter_20.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_21_forms_and_dynamics_of_light/
+│   │   │   ├── 00_chapter_21_aggregator.tex
+│   │   │   ├── chapter_21.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   ├── chapter_22_formal_reconstruction/
+│   │   │   ├── 00_chapter_22_aggregator.tex
+│   │   │   ├── chapter_22.tex
+│   │   │   ├── sections/
+│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   ├── tables/
+│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   └── figures/
+│   │   │       └── 00_figures_aggregator.tex
+│   │   │
+│   │   └── chapter_23_comparative_studies/
+│   │       ├── 00_chapter_23_aggregator.tex
+│   │       ├── chapter_23.tex
+│   │       ├── sections/
+│   │       │   └── 00_sections_aggregator.tex
+│   │       ├── tables/
+│   │       │   └── 00_tables_aggregator.tex
+│   │       └── figures/
+│   │           └── 00_figures_aggregator.tex
+│   │
+│   └── PART_IV_DYNAMICS_OF_BEING/
+│       │
+│       ├── 00_part_04_aggregator.tex
+│       ├── part_04.tex
+│       │
+│       ├── chapter_24_ontological_dynamics/
+│       │   ├── 00_chapter_24_aggregator.tex
+│       │   ├── chapter_24.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_25_becoming_and_change/
+│       │   ├── 00_chapter_25_aggregator.tex
+│       │   ├── chapter_25.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_26_relations_and_interaction/
+│       │   ├── 00_chapter_26_aggregator.tex
+│       │   ├── chapter_26.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_27_emergence_and_formation/
+│       │   ├── 00_chapter_27_aggregator.tex
+│       │   ├── chapter_27.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_28_continuity_and_discontinuity/
+│       │   ├── 00_chapter_28_aggregator.tex
+│       │   ├── chapter_28.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_29_temporality/
+│       │   ├── 00_chapter_29_aggregator.tex
+│       │   ├── chapter_29.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_30_transformation_and_transition/
+│       │   ├── 00_chapter_30_aggregator.tex
+│       │   ├── chapter_30.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_31_generation_and_dissolution/
+│       │   ├── 00_chapter_31_aggregator.tex
+│       │   ├── chapter_31.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_32_reversibility_and_irreversibility/
+│       │   ├── 00_chapter_32_aggregator.tex
+│       │   ├── chapter_32.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_33_cost_residue_and_consequence/
+│       │   ├── 00_chapter_33_aggregator.tex
+│       │   ├── chapter_33.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_34_limits_of_ontological_dynamics/
+│       │   ├── 00_chapter_34_aggregator.tex
+│       │   ├── chapter_34.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       ├── chapter_35_formal_reconstruction/
+│       │   ├── 00_chapter_35_aggregator.tex
+│       │   ├── chapter_35.tex
+│       │   ├── sections/
+│       │   │   └── 00_sections_aggregator.tex
+│       │   ├── tables/
+│       │   │   └── 00_tables_aggregator.tex
+│       │   └── figures/
+│       │       └── 00_figures_aggregator.tex
+│       │
+│       └── chapter_36_comparative_studies/
+│           ├── 00_chapter_36_aggregator.tex
+│           ├── chapter_36.tex
+│           ├── sections/
+│           │   └── 00_sections_aggregator.tex
+│           ├── tables/
+│           │   └── 00_tables_aggregator.tex
+│           └── figures/
+│               └── 00_figures_aggregator.tex
+│
+├── 3_BACKMATTER/
+│   │
+│   ├── 00_backmatter.tex
+│   │
+│   ├── 00_conclusion_aggregator.tex
+│   ├── 01_conclusion.tex
+│   │
+│   ├── 02_appendices/
+│   │   ├── 00_appendices.tex
+│   │   ├── appendix_A.tex
+│   │   ├── appendix_B.tex
+│   │   ├── appendix_C.tex
+│   │   ├── appendix_D.tex
+│   │   ├── appendix_E.tex
+│   │   ├── appendix_F.tex
+│   │   └── appendix_G.tex
+│   │
+│   ├── 00_logical_entity_reference_map_aggregator.tex
+│   ├── 03_logical_entity_reference_map.tex
+│   │
+│   ├── 04_bibliography/
+│   │   ├── 00_bibliography_aggregator.tex
+│   │   ├── bibliography.tex
+│   │   └── references.bib
+│   │
+│   ├── 00_glossary_aggregator.tex
+│   ├── 05_glossary.tex
+│   │
+│   ├── 06_indexes/
+│   │   ├── 00_indexes_aggregator.tex
+│   │   ├── subject_index.tex
+│   │   ├── name_index.tex
+│   │   └── concept_index.tex
+│   │
+│   └── 07_registers/
+│       ├── axioms_register.csv
+│       ├── definitions_register.csv
+│       ├── propositions_register.csv
+│       ├── theses_register.csv
+│       ├── hypotheses_register.csv
+│       ├── arguments_register.csv
+│       └── philosophical_foundations_register.csv
+│
+└── 4_ASSETS/
+    │
+    ├── figures/
+    │
+    ├── diagrams/
+    │
+    ├── illustrations/
+    │
+    └── cover/
+        ├── front_cover.png
+        └── back_cover.png
