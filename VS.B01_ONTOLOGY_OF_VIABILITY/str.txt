@@ -1,3 +1,4 @@
+
 VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 ├── main.tex
@@ -10,7 +11,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 ├── main.pdf
 │
 ├── 1_FRONTMATTER/
-│   │
 │   ├── 00_frontmatter.tex
 │   ├── 01_title_page.tex
 │   ├── 02_copyright.tex
@@ -23,431 +23,514 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   └── 09_structure_and_referencing_guide.tex
 │
 ├── 2_MAINMATTER/
-│   │
 │   ├── 00_mainmatter.tex
 │   │
-│   ├── PART_I_IDENTITY_AND_MANIFESTATION/
-│   │   │
-│   │   ├── 00_part_01_aggregator.tex
-│   │   ├── part_01.tex
+│   ├── PART_I_IDENTITY/
+│   │   ├── 00_part_01.tex
 │   │   │
 │   │   ├── chapter_01_identity/
-│   │   │   ├── 00_chapter_01_aggregator.tex
-│   │   │   ├── chapter_01.tex
-│   │   │   │
+│   │   │   ├── 00_chapter_01.tex
 │   │   │   ├── sections/
-│   │   │   │   ├── 00_sections_aggregator.tex
 │   │   │   │   ├── section_01_ontological_problem_of_identity.tex
 │   │   │   │   ├── section_02_being_and_identity.tex
 │   │   │   │   ├── section_03_identity_and_determination.tex
-│   │   │   │   ├── section_04_identity_and_distinction.tex
-│   │   │   │   ├── section_05_identity_and_self_sameness.tex
+│   │   │   │   ├── section_04_identity_and_unity.tex
+│   │   │   │   ├── section_05_identity_and_distinction.tex
 │   │   │   │   ├── section_06_identity_and_individuation.tex
-│   │   │   │   ├── section_07_identity_and_continuity.tex
-│   │   │   │   ├── section_08_identity_and_ontological_relations.tex
-│   │   │   │   ├── section_09_scope_and_limits_of_identity.tex
-│   │   │   │   └── section_10_synthesis_of_identity.tex
-│   │   │   │
+│   │   │   │   ├── section_07_identity_and_numerical_identity.tex
+│   │   │   │   ├── section_08_identity_and_signature.tex
+│   │   │   │   ├── section_09_identity_and_non_reduction.tex
+│   │   │   │   ├── section_10_scope_and_limits_of_identity.tex
+│   │   │   │   └── section_11_synthesis_of_identity.tex
 │   │   │   ├── tables/
-│   │   │   │   ├── 00_tables_aggregator.tex
 │   │   │   │   ├── table_01_identity_conceptual_distinctions.tex
-│   │   │   │   ├── table_02_identity_relations.tex
-│   │   │   │   ├── table_03_identity_scope_and_limits.tex
-│   │   │   │   └── table_04_identity_synthesis.tex
-│   │   │   │
+│   │   │   │   ├── table_02_identity_and_determination.tex
+│   │   │   │   ├── table_03_identity_unity_and_individuation.tex
+│   │   │   │   ├── table_04_identity_and_signature.tex
+│   │   │   │   └── table_05_identity_scope_and_limits.tex
 │   │   │   └── figures/
-│   │   │       ├── 00_figures_aggregator.tex
 │   │   │       ├── figure_01_identity_ontological_structure.tex
-│   │   │       └── figure_02_identity_relations.tex
+│   │   │       ├── figure_02_identity_unity_and_individuation.tex
+│   │   │       └── figure_03_identity_and_signature.tex
 │   │   │
 │   │   ├── chapter_02_invariance/
-│   │   │   ├── 00_chapter_02_aggregator.tex
-│   │   │   ├── chapter_02.tex
-│   │   │   │
+│   │   │   ├── 00_chapter_02.tex
 │   │   │   ├── sections/
-│   │   │   │   ├── 00_sections_aggregator.tex
 │   │   │   │   ├── section_01_ontological_problem_of_invariance.tex
 │   │   │   │   ├── section_02_invariance_and_identity.tex
-│   │   │   │   ├── section_03_invariance_and_difference.tex
-│   │   │   │   ├── section_04_invariance_and_change.tex
-│   │   │   │   ├── section_05_invariance_and_continuity.tex
+│   │   │   │   ├── section_03_defining_invariants.tex
+│   │   │   │   ├── section_04_invariance_and_transformation.tex
+│   │   │   │   ├── section_05_invariance_and_difference.tex
 │   │   │   │   ├── section_06_invariance_and_structure.tex
-│   │   │   │   ├── section_07_forms_and_domains_of_invariance.tex
-│   │   │   │   ├── section_08_invariance_and_knowledge.tex
-│   │   │   │   ├── section_09_scope_and_limits_of_invariance.tex
-│   │   │   │   └── section_10_synthesis_of_invariance.tex
-│   │   │   │
+│   │   │   │   ├── section_07_invariance_and_composition.tex
+│   │   │   │   ├── section_08_invariance_and_continuity.tex
+│   │   │   │   ├── section_09_forms_and_domains_of_invariance.tex
+│   │   │   │   ├── section_10_limits_of_invariance.tex
+│   │   │   │   └── section_11_synthesis_of_invariance.tex
 │   │   │   ├── tables/
-│   │   │   │   ├── 00_tables_aggregator.tex
 │   │   │   │   ├── table_01_forms_of_invariance.tex
-│   │   │   │   ├── table_02_invariance_and_identity.tex
-│   │   │   │   ├── table_03_invariance_domains.tex
+│   │   │   │   ├── table_02_defining_invariants.tex
+│   │   │   │   ├── table_03_invariance_and_transformation.tex
 │   │   │   │   └── table_04_invariance_synthesis.tex
-│   │   │   │
 │   │   │   └── figures/
-│   │   │       ├── 00_figures_aggregator.tex
 │   │   │       ├── figure_01_invariance_and_transformation.tex
 │   │   │       └── figure_02_domains_of_invariance.tex
 │   │   │
 │   │   ├── chapter_03_unity_and_plurality/
-│   │   │   ├── 00_chapter_03_aggregator.tex
-│   │   │   ├── chapter_03.tex
+│   │   │   ├── 00_chapter_03.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_problem_of_unity_and_plurality.tex
+│   │   │   │   ├── section_02_unity_of_identity.tex
+│   │   │   │   ├── section_03_unity_of_source_and_aggregate.tex
+│   │   │   │   ├── section_04_plurality_of_identities.tex
+│   │   │   │   ├── section_05_plurality_and_composition.tex
+│   │   │   │   ├── section_06_identity_and_multiplicity.tex
+│   │   │   │   ├── section_07_non_equivalence_of_unity_and_singularity.tex
+│   │   │   │   ├── section_08_limits_of_unity_and_plurality.tex
+│   │   │   │   └── section_09_synthesis_of_unity_and_plurality.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_forms_of_unity.tex
+│   │   │   │   ├── table_02_unity_and_aggregate.tex
+│   │   │   │   └── table_03_plurality_and_identity.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       ├── figure_01_unity_and_plurality.tex
+│   │   │       └── figure_02_source_and_aggregate.tex
 │   │   │
-│   │   ├── chapter_04_manifestation/
-│   │   │   ├── 00_chapter_04_aggregator.tex
-│   │   │   ├── chapter_04.tex
+│   │   ├── chapter_04_expression/
+│   │   │   ├── 00_chapter_04.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_problem_of_expression.tex
+│   │   │   │   ├── section_02_identity_and_expression.tex
+│   │   │   │   ├── section_03_expression_and_determination.tex
+│   │   │   │   ├── section_04_expression_and_invariance.tex
+│   │   │   │   ├── section_05_expression_and_source.tex
+│   │   │   │   ├── section_06_expression_and_multiplicity.tex
+│   │   │   │   ├── section_07_expression_and_manifestation_distinction.tex
+│   │   │   │   ├── section_08_limits_of_expression.tex
+│   │   │   │   └── section_09_synthesis_of_expression.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_expression_conceptual_distinctions.tex
+│   │   │   │   └── table_02_identity_and_expression.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       ├── figure_01_identity_and_expression.tex
+│   │   │       └── figure_02_expression_conceptual_scope.tex
 │   │   │
-│   │   ├── chapter_05_identity_and_manifestation/
-│   │   │   ├── 00_chapter_05_aggregator.tex
-│   │   │   ├── chapter_05.tex
+│   │   ├── chapter_05_identity_and_continuity/
+│   │   │   ├── 00_chapter_05.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_problem_of_identity_continuity.tex
+│   │   │   │   ├── section_02_identity_and_persistence.tex
+│   │   │   │   ├── section_03_invariance_and_continuity.tex
+│   │   │   │   ├── section_04_identity_and_non_identity_through_difference.tex
+│   │   │   │   ├── section_05_conditions_of_identity_preservation.tex
+│   │   │   │   ├── section_06_limits_of_identity_continuity.tex
+│   │   │   │   └── section_07_synthesis_of_identity_and_continuity.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_identity_and_persistence.tex
+│   │   │   │   └── table_02_identity_continuity_conditions.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_identity_continuity.tex
 │   │   │
-│   │   ├── chapter_06_formal_reconstruction/
-│   │   │   ├── 00_chapter_06_aggregator.tex
-│   │   │   ├── chapter_06.tex
-│   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
-│   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
-│   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
-│   │   │
-│   │   └── chapter_07_comparative_studies/
-│   │       ├── 00_chapter_07_aggregator.tex
-│   │       ├── chapter_07.tex
+│   │   └── chapter_06_synthesis_of_identity/
+│   │       ├── 00_chapter_06.tex
 │   │       ├── sections/
-│   │       │   └── 00_sections_aggregator.tex
+│   │       │   ├── section_01_integrated_account_of_identity.tex
+│   │       │   ├── section_02_identity_principles_and_propositions.tex
+│   │       │   ├── section_03_open_ontological_questions.tex
+│   │       │   └── section_04_transition_to_the_realms_of_being.tex
 │   │       ├── tables/
-│   │       │   └── 00_tables_aggregator.tex
+│   │       │   └── table_01_identity_principles_and_propositions.tex
 │   │       └── figures/
-│   │           └── 00_figures_aggregator.tex
+│   │           └── figure_01_integrated_identity_framework.tex
 │   │
 │   ├── PART_II_THE_REALMS_OF_BEING/
+│   │   ├── 00_part_02.tex
 │   │   │
-│   │   ├── 00_part_02_aggregator.tex
-│   │   ├── part_02.tex
-│   │   │
-│   │   ├── chapter_08_architecture_of_the_realms/
-│   │   │   ├── 00_chapter_08_aggregator.tex
-│   │   │   ├── chapter_08.tex
+│   │   ├── chapter_07_architecture_of_the_realms/
+│   │   │   ├── 00_chapter_07.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_problem_of_realms.tex
+│   │   │   │   ├── section_02_meaning_of_ontological_realm.tex
+│   │   │   │   ├── section_03_four_fundamental_realms.tex
+│   │   │   │   ├── section_04_three_intermediary_hubs.tex
+│   │   │   │   ├── section_05_fundamental_and_intermediary_distinction.tex
+│   │   │   │   ├── section_06_order_and_non_linearity_of_realms.tex
+│   │   │   │   ├── section_07_relations_among_realms.tex
+│   │   │   │   ├── section_08_scope_and_limits_of_realm_architecture.tex
+│   │   │   │   └── section_09_synthesis_of_realm_architecture.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_seven_realms_overview.tex
+│   │   │   │   └── table_02_fundamental_and_intermediary_realms.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       ├── figure_01_architecture_of_seven_realms.tex
+│   │   │       └── figure_02_relations_among_realms.tex
 │   │   │
-│   │   ├── chapter_09_first_determination/
-│   │   │   ├── 00_chapter_09_aggregator.tex
-│   │   │   ├── chapter_09.tex
+│   │   ├── chapter_08_first_determination/
+│   │   │   ├── 00_chapter_08.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_first_determination.tex
+│   │   │   │   ├── section_02_first_determination_and_pure_unity.tex
+│   │   │   │   ├── section_03_determination_without_composition.tex
+│   │   │   │   ├── section_04_identity_in_first_determination.tex
+│   │   │   │   ├── section_05_limits_of_first_determination.tex
+│   │   │   │   └── section_06_synthesis_of_first_determination.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_first_determination_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_first_determination.tex
 │   │   │
-│   │   ├── chapter_10_structural_determination/
-│   │   │   ├── 00_chapter_10_aggregator.tex
-│   │   │   ├── chapter_10.tex
+│   │   ├── chapter_09_structural_determination/
+│   │   │   ├── 00_chapter_09.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_structural_determination.tex
+│   │   │   │   ├── section_02_structure_and_determination.tex
+│   │   │   │   ├── section_03_invariants_and_structural_constraints.tex
+│   │   │   │   ├── section_04_structural_possibility.tex
+│   │   │   │   ├── section_05_identity_and_structural_determination.tex
+│   │   │   │   ├── section_06_limits_of_structural_determination.tex
+│   │   │   │   └── section_07_synthesis_of_structural_determination.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_structural_determination_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_structural_determination.tex
 │   │   │
-│   │   ├── chapter_11_relational_manifestation/
-│   │   │   ├── 00_chapter_11_aggregator.tex
-│   │   │   ├── chapter_11.tex
+│   │   ├── chapter_10_relational_manifestation/
+│   │   │   ├── 00_chapter_10.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_relational_manifestation.tex
+│   │   │   │   ├── section_02_relation_as_mode_of_being.tex
+│   │   │   │   ├── section_03_relational_determination.tex
+│   │   │   │   ├── section_04_relational_possibility_and_constraint.tex
+│   │   │   │   ├── section_05_identity_and_relational_manifestation.tex
+│   │   │   │   ├── section_06_limits_of_relational_manifestation.tex
+│   │   │   │   └── section_07_synthesis_of_relational_manifestation.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_relational_manifestation_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_relational_manifestation.tex
 │   │   │
-│   │   ├── chapter_12_material_manifestation/
-│   │   │   ├── 00_chapter_12_aggregator.tex
-│   │   │   ├── chapter_12.tex
+│   │   ├── chapter_11_material_manifestation/
+│   │   │   ├── 00_chapter_11.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_material_manifestation.tex
+│   │   │   │   ├── section_02_material_determination.tex
+│   │   │   │   ├── section_03_material_form_and_constraint.tex
+│   │   │   │   ├── section_04_identity_and_material_manifestation.tex
+│   │   │   │   ├── section_05_materiality_and_ontological_reality.tex
+│   │   │   │   ├── section_06_limits_of_material_manifestation.tex
+│   │   │   │   └── section_07_synthesis_of_material_manifestation.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_material_manifestation_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_material_manifestation.tex
 │   │   │
-│   │   ├── chapter_13_hub_of_decree/
-│   │   │   ├── 00_chapter_13_aggregator.tex
-│   │   │   ├── chapter_13.tex
+│   │   ├── chapter_12_hub_of_decree/
+│   │   │   ├── 00_chapter_12.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_hub_of_decree.tex
+│   │   │   │   ├── section_02_decree_and_determination.tex
+│   │   │   │   ├── section_03_decree_and_possibility.tex
+│   │   │   │   ├── section_04_decree_and_the_fundamental_realms.tex
+│   │   │   │   └── section_05_synthesis_of_hub_of_decree.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_hub_of_decree_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_hub_of_decree.tex
 │   │   │
-│   │   ├── chapter_14_hub_of_signification/
-│   │   │   ├── 00_chapter_14_aggregator.tex
-│   │   │   ├── chapter_14.tex
+│   │   ├── chapter_13_hub_of_signification/
+│   │   │   ├── 00_chapter_13.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_hub_of_signification.tex
+│   │   │   │   ├── section_02_signification_as_ontological_determination.tex
+│   │   │   │   ├── section_03_signification_and_relation.tex
+│   │   │   │   ├── section_04_signification_without_epistemic_reduction.tex
+│   │   │   │   └── section_05_synthesis_of_hub_of_signification.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_hub_of_signification_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_hub_of_signification.tex
 │   │   │
-│   │   ├── chapter_15_hub_of_realization/
-│   │   │   ├── 00_chapter_15_aggregator.tex
-│   │   │   ├── chapter_15.tex
+│   │   ├── chapter_14_hub_of_realization/
+│   │   │   ├── 00_chapter_14.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_status_of_hub_of_realization.tex
+│   │   │   │   ├── section_02_realization_and_determination.tex
+│   │   │   │   ├── section_03_realization_and_materiality.tex
+│   │   │   │   ├── section_04_realization_and_ontological_effect.tex
+│   │   │   │   └── section_05_synthesis_of_hub_of_realization.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_hub_of_realization_properties.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_hub_of_realization.tex
 │   │   │
-│   │   ├── chapter_16_formal_reconstruction/
-│   │   │   ├── 00_chapter_16_aggregator.tex
-│   │   │   ├── chapter_16.tex
-│   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
-│   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
-│   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
-│   │   │
-│   │   └── chapter_17_comparative_studies/
-│   │       ├── 00_chapter_17_aggregator.tex
-│   │       ├── chapter_17.tex
+│   │   └── chapter_15_synthesis_of_the_realms/
+│   │       ├── 00_chapter_15.tex
 │   │       ├── sections/
-│   │       │   └── 00_sections_aggregator.tex
+│   │       │   ├── section_01_integrated_architecture_of_the_realms.tex
+│   │       │   ├── section_02_ontological_relations_and_constraints.tex
+│   │       │   ├── section_03_open_questions_concerning_the_realms.tex
+│   │       │   └── section_04_transition_to_light.tex
 │   │       ├── tables/
-│   │       │   └── 00_tables_aggregator.tex
+│   │       │   └── table_01_realms_principles_and_properties.tex
 │   │       └── figures/
-│   │           └── 00_figures_aggregator.tex
+│   │           └── figure_01_integrated_realms_framework.tex
 │   │
 │   ├── PART_III_LIGHT/
+│   │   ├── 00_part_03.tex
 │   │   │
-│   │   ├── 00_part_03_aggregator.tex
-│   │   ├── part_03.tex
-│   │   │
-│   │   ├── chapter_18_ontology_of_light/
-│   │   │   ├── 00_chapter_18_aggregator.tex
-│   │   │   ├── chapter_18.tex
+│   │   ├── chapter_16_ontology_of_light/
+│   │   │   ├── 00_chapter_16.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_ontological_problem_of_light.tex
+│   │   │   │   ├── section_02_light_as_an_ontological_element.tex
+│   │   │   │   ├── section_03_light_and_being.tex
+│   │   │   │   ├── section_04_light_and_determination.tex
+│   │   │   │   ├── section_05_light_and_ontological_possibility.tex
+│   │   │   │   ├── section_06_light_and_epistemic_light_distinction.tex
+│   │   │   │   ├── section_07_limits_of_ontological_light.tex
+│   │   │   │   └── section_08_synthesis_of_ontology_of_light.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   ├── table_01_ontological_and_epistemic_light.tex
+│   │   │   │   └── table_02_properties_of_ontological_light.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_ontology_of_light.tex
 │   │   │
-│   │   ├── chapter_19_light_and_identity/
-│   │   │   ├── 00_chapter_19_aggregator.tex
-│   │   │   ├── chapter_19.tex
+│   │   ├── chapter_17_light_and_identity/
+│   │   │   ├── 00_chapter_17.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_identity_and_light.tex
+│   │   │   │   ├── section_02_light_and_expression.tex
+│   │   │   │   ├── section_03_light_and_identity_preservation.tex
+│   │   │   │   ├── section_04_light_and_ontological_determination.tex
+│   │   │   │   ├── section_05_limits_of_light_in_relation_to_identity.tex
+│   │   │   │   └── section_06_synthesis_of_light_and_identity.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_light_and_identity_relations.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_light_and_identity.tex
 │   │   │
-│   │   ├── chapter_20_light_and_manifestation/
-│   │   │   ├── 00_chapter_20_aggregator.tex
-│   │   │   ├── chapter_20.tex
+│   │   ├── chapter_18_light_and_the_realms/
+│   │   │   ├── 00_chapter_18.tex
 │   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
+│   │   │   │   ├── section_01_light_across_the_realms.tex
+│   │   │   │   ├── section_02_light_and_fundamental_realms.tex
+│   │   │   │   ├── section_03_light_and_intermediary_hubs.tex
+│   │   │   │   ├── section_04_light_and_realm_specific_possibilities.tex
+│   │   │   │   ├── section_05_light_and_ontological_constraints.tex
+│   │   │   │   └── section_06_synthesis_of_light_and_the_realms.tex
 │   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
+│   │   │   │   └── table_01_light_and_realms.tex
 │   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
+│   │   │       └── figure_01_light_across_the_realms.tex
 │   │   │
-│   │   ├── chapter_21_forms_and_dynamics_of_light/
-│   │   │   ├── 00_chapter_21_aggregator.tex
-│   │   │   ├── chapter_21.tex
-│   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
-│   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
-│   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
-│   │   │
-│   │   ├── chapter_22_formal_reconstruction/
-│   │   │   ├── 00_chapter_22_aggregator.tex
-│   │   │   ├── chapter_22.tex
-│   │   │   ├── sections/
-│   │   │   │   └── 00_sections_aggregator.tex
-│   │   │   ├── tables/
-│   │   │   │   └── 00_tables_aggregator.tex
-│   │   │   └── figures/
-│   │   │       └── 00_figures_aggregator.tex
-│   │   │
-│   │   └── chapter_23_comparative_studies/
-│   │       ├── 00_chapter_23_aggregator.tex
-│   │       ├── chapter_23.tex
+│   │   └── chapter_19_forms_and_dynamics_of_light/
+│   │       ├── 00_chapter_19.tex
 │   │       ├── sections/
-│   │       │   └── 00_sections_aggregator.tex
+│   │       │   ├── section_01_forms_of_ontological_light.tex
+│   │       │   ├── section_02_light_and_potentiality.tex
+│   │       │   ├── section_03_light_and_realization.tex
+│   │       │   ├── section_04_light_and_transition.tex
+│   │       │   ├── section_05_limits_and_non_equivalences_of_light.tex
+│   │       │   └── section_06_synthesis_of_forms_and_dynamics_of_light.tex
 │   │       ├── tables/
-│   │       │   └── 00_tables_aggregator.tex
+│   │       │   └── table_01_forms_and_functions_of_light.tex
 │   │       └── figures/
-│   │           └── 00_figures_aggregator.tex
+│   │           └── figure_01_forms_and_dynamics_of_light.tex
 │   │
 │   └── PART_IV_DYNAMICS_OF_BEING/
+│       ├── 00_part_04.tex
 │       │
-│       ├── 00_part_04_aggregator.tex
-│       ├── part_04.tex
-│       │
-│       ├── chapter_24_ontological_dynamics/
-│       │   ├── 00_chapter_24_aggregator.tex
-│       │   ├── chapter_24.tex
+│       ├── chapter_20_ontology_of_dynamics/
+│       │   ├── 00_chapter_20.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_problem_of_dynamics.tex
+│       │   │   ├── section_02_dynamics_and_static_determination.tex
+│       │   │   ├── section_03_conditions_of_ontological_dynamics.tex
+│       │   │   ├── section_04_identity_and_dynamics.tex
+│       │   │   ├── section_05_dynamics_across_the_realms.tex
+│       │   │   └── section_06_synthesis_of_ontology_of_dynamics.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_ontological_dynamics_properties.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_ontology_of_dynamics.tex
 │       │
-│       ├── chapter_25_becoming_and_change/
-│       │   ├── 00_chapter_25_aggregator.tex
-│       │   ├── chapter_25.tex
+│       ├── chapter_21_becoming_and_change/
+│       │   ├── 00_chapter_21.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_becoming_as_an_ontological_problem.tex
+│       │   │   ├── section_02_being_and_becoming.tex
+│       │   │   ├── section_03_change_and_identity.tex
+│       │   │   ├── section_04_change_and_invariance.tex
+│       │   │   ├── section_05_forms_of_ontological_change.tex
+│       │   │   └── section_06_limits_of_becoming_and_change.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_forms_of_becoming_and_change.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_becoming_and_change.tex
 │       │
-│       ├── chapter_26_relations_and_interaction/
-│       │   ├── 00_chapter_26_aggregator.tex
-│       │   ├── chapter_26.tex
+│       ├── chapter_22_relations_and_interaction/
+│       │   ├── 00_chapter_22.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_status_of_relations.tex
+│       │   │   ├── section_02_relation_and_identity.tex
+│       │   │   ├── section_03_interaction_and_mutual_determination.tex
+│       │   │   ├── section_04_relations_across_realms.tex
+│       │   │   ├── section_05_constraints_of_interaction.tex
+│       │   │   └── section_06_synthesis_of_relations_and_interaction.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_forms_of_ontological_relation.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_relations_and_interaction.tex
 │       │
-│       ├── chapter_27_emergence_and_formation/
-│       │   ├── 00_chapter_27_aggregator.tex
-│       │   ├── chapter_27.tex
+│       ├── chapter_23_emergence_and_formation/
+│       │   ├── 00_chapter_23.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_problem_of_emergence.tex
+│       │   │   ├── section_02_formation_and_determination.tex
+│       │   │   ├── section_03_emergence_and_structural_conditions.tex
+│       │   │   ├── section_04_emergence_across_realms.tex
+│       │   │   ├── section_05_formation_and_identity.tex
+│       │   │   └── section_06_limits_of_emergence_and_formation.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_forms_of_emergence_and_formation.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_emergence_and_formation.tex
 │       │
-│       ├── chapter_28_continuity_and_discontinuity/
-│       │   ├── 00_chapter_28_aggregator.tex
-│       │   ├── chapter_28.tex
+│       ├── chapter_24_manifestation/
+│       │   ├── 00_chapter_24.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_problem_of_manifestation.tex
+│       │   │   ├── section_02_identity_expression_and_manifestation.tex
+│       │   │   ├── section_03_manifestation_and_receiving_realm.tex
+│       │   │   ├── section_04_manifestational_possibility_and_constraints.tex
+│       │   │   ├── section_05_light_and_manifestation.tex
+│       │   │   ├── section_06_plurality_of_manifestations.tex
+│       │   │   ├── section_07_manifestation_and_ontological_reality.tex
+│       │   │   ├── section_08_manifestation_and_identity_preservation.tex
+│       │   │   ├── section_09_recursive_and_secondary_manifestation.tex
+│       │   │   ├── section_10_limits_of_manifestation.tex
+│       │   │   └── section_11_synthesis_of_manifestation.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   ├── table_01_manifestation_conceptual_distinctions.tex
+│       │   │   ├── table_02_identity_expression_and_manifestation.tex
+│       │   │   ├── table_03_manifestation_across_the_realms.tex
+│       │   │   └── table_04_manifestation_constraints_and_possibilities.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       ├── figure_01_ontological_structure_of_manifestation.tex
+│       │       ├── figure_02_identity_and_plurality_of_manifestations.tex
+│       │       └── figure_03_light_realm_and_manifestation.tex
 │       │
-│       ├── chapter_29_temporality/
-│       │   ├── 00_chapter_29_aggregator.tex
-│       │   ├── chapter_29.tex
+│       ├── chapter_25_continuity_and_discontinuity/
+│       │   ├── 00_chapter_25.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_problem_of_continuity.tex
+│       │   │   ├── section_02_continuity_and_identity.tex
+│       │   │   ├── section_03_discontinuity_and_transition.tex
+│       │   │   ├── section_04_continuity_across_realms.tex
+│       │   │   ├── section_05_forms_of_ontological_continuity.tex
+│       │   │   └── section_06_limits_of_continuity.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_continuity_and_discontinuity.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_continuity_and_discontinuity.tex
 │       │
-│       ├── chapter_30_transformation_and_transition/
-│       │   ├── 00_chapter_30_aggregator.tex
-│       │   ├── chapter_30.tex
+│       ├── chapter_26_temporality/
+│       │   ├── 00_chapter_26.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_temporality_as_an_ontological_problem.tex
+│       │   │   ├── section_02_temporality_and_change.tex
+│       │   │   ├── section_03_temporality_and_continuity.tex
+│       │   │   ├── section_04_temporality_across_the_realms.tex
+│       │   │   ├── section_05_temporal_order_and_ontological_process.tex
+│       │   │   └── section_06_limits_of_ontological_temporality.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_ontological_temporality.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_temporality_and_ontological_process.tex
 │       │
-│       ├── chapter_31_generation_and_dissolution/
-│       │   ├── 00_chapter_31_aggregator.tex
-│       │   ├── chapter_31.tex
+│       ├── chapter_27_transformation_and_transition/
+│       │   ├── 00_chapter_27.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_transformation_as_ontological_process.tex
+│       │   │   ├── section_02_transformation_and_identity.tex
+│       │   │   ├── section_03_transition_between_determinations.tex
+│       │   │   ├── section_04_transition_across_realms.tex
+│       │   │   ├── section_05_forms_of_transformation.tex
+│       │   │   └── section_06_limits_of_transformation.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_forms_of_transformation_and_transition.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_transformation_and_transition.tex
 │       │
-│       ├── chapter_32_reversibility_and_irreversibility/
-│       │   ├── 00_chapter_32_aggregator.tex
-│       │   ├── chapter_32.tex
+│       ├── chapter_28_generation_and_dissolution/
+│       │   ├── 00_chapter_28.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_generation_as_an_ontological_process.tex
+│       │   │   ├── section_02_conditions_of_generation.tex
+│       │   │   ├── section_03_dissolution_and_ontological_status.tex
+│       │   │   ├── section_04_generation_identity_and_continuity.tex
+│       │   │   ├── section_05_generation_and_dissolution_across_realms.tex
+│       │   │   └── section_06_limits_of_generation_and_dissolution.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_generation_and_dissolution.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_generation_and_dissolution.tex
 │       │
-│       ├── chapter_33_cost_residue_and_consequence/
-│       │   ├── 00_chapter_33_aggregator.tex
-│       │   ├── chapter_33.tex
+│       ├── chapter_29_reversibility_and_irreversibility/
+│       │   ├── 00_chapter_29.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_problem_of_reversibility.tex
+│       │   │   ├── section_02_reversibility_and_transformation.tex
+│       │   │   ├── section_03_irreversibility_and_consequence.tex
+│       │   │   ├── section_04_identity_and_irreversible_change.tex
+│       │   │   └── section_05_limits_of_reversibility.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_reversibility_and_irreversibility.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_reversibility_and_irreversibility.tex
 │       │
-│       ├── chapter_34_limits_of_ontological_dynamics/
-│       │   ├── 00_chapter_34_aggregator.tex
-│       │   ├── chapter_34.tex
+│       ├── chapter_30_cost_residue_and_consequence/
+│       │   ├── 00_chapter_30.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_ontological_cost.tex
+│       │   │   ├── section_02_residue_of_ontological_processes.tex
+│       │   │   ├── section_03_consequence_and_structural_effect.tex
+│       │   │   ├── section_04_cost_and_irreversibility.tex
+│       │   │   └── section_05_limits_of_cost_residue_and_consequence.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_cost_residue_and_consequence.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_cost_residue_and_consequence.tex
 │       │
-│       ├── chapter_35_formal_reconstruction/
-│       │   ├── 00_chapter_35_aggregator.tex
-│       │   ├── chapter_35.tex
+│       ├── chapter_31_limits_of_ontological_dynamics/
+│       │   ├── 00_chapter_31.tex
 │       │   ├── sections/
-│       │   │   └── 00_sections_aggregator.tex
+│       │   │   ├── section_01_limits_of_becoming.tex
+│       │   │   ├── section_02_limits_of_transformation.tex
+│       │   │   ├── section_03_limits_of_interaction.tex
+│       │   │   ├── section_04_limits_of_manifestation.tex
+│       │   │   └── section_05_open_questions_of_ontological_dynamics.tex
 │       │   ├── tables/
-│       │   │   └── 00_tables_aggregator.tex
+│       │   │   └── table_01_limits_of_ontological_dynamics.tex
 │       │   └── figures/
-│       │       └── 00_figures_aggregator.tex
+│       │       └── figure_01_limits_of_ontological_dynamics.tex
 │       │
-│       └── chapter_36_comparative_studies/
-│           ├── 00_chapter_36_aggregator.tex
-│           ├── chapter_36.tex
+│       └── chapter_32_integrated_ontological_reconstruction/
+│           ├── 00_chapter_32.tex
 │           ├── sections/
-│           │   └── 00_sections_aggregator.tex
+│           │   ├── section_01_integrated_ontology_of_viability.tex
+│           │   ├── section_02_identity_realms_light_and_dynamics.tex
+│           │   ├── section_03_principles_definitions_and_propositions.tex
+│           │   ├── section_04_open_questions_and_unresolved_commitments.tex
+│           │   └── section_05_scope_of_the_ontology_and_transition_to_epistemology.tex
 │           ├── tables/
-│           │   └── 00_tables_aggregator.tex
+│           │   ├── table_01_integrated_ontological_framework.tex
+│           │   └── table_02_ontological_principles_and_propositions.tex
 │           └── figures/
-│               └── 00_figures_aggregator.tex
+│               └── figure_01_integrated_ontology_of_viability.tex
 │
 ├── 3_BACKMATTER/
-│   │
 │   ├── 00_backmatter.tex
-│   │
 │   ├── 00_conclusion_aggregator.tex
 │   ├── 01_conclusion.tex
 │   │
@@ -488,13 +571,9 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       └── philosophical_foundations_register.csv
 │
 └── 4_ASSETS/
-    │
     ├── figures/
-    │
     ├── diagrams/
-    │
     ├── illustrations/
-    │
     └── cover/
         ├── front_cover.png
         └── back_cover.png

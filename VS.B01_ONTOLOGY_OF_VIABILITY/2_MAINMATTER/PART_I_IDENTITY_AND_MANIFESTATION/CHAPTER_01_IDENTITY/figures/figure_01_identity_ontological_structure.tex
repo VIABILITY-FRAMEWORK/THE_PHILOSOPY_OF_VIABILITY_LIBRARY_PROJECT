@@ -1,0 +1,124 @@
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        node distance=1.5cm and 1.8cm,
+        every node/.style={font=\small},
+        central/.style={
+            rectangle,
+            rounded corners=4pt,
+            draw=black,
+            thick,
+            minimum width=5.2cm,
+            minimum height=1.15cm,
+            align=center,
+            fill=blue!8
+        },
+        dimension/.style={
+            rectangle,
+            rounded corners=3pt,
+            draw=black,
+            minimum width=3.5cm,
+            minimum height=0.9cm,
+            align=center,
+            fill=gray!10
+        },
+        distinction/.style={
+            rectangle,
+            rounded corners=3pt,
+            draw=black,
+            minimum width=3.5cm,
+            minimum height=0.9cm,
+            align=center,
+            fill=orange!10
+        },
+        relation/.style={
+            <->,
+            thick,
+            >=stealth
+        },
+        derivation/.style={
+            ->,
+            thick,
+            >=stealth
+        }
+    ]
+
+    % Central ontological unity
+    \node[central] (beingidentity) {
+        \textbf{ONTOLOGICAL ACTUALITY}\\
+        Being and Identity
+    };
+
+    % Analytical dimensions
+    \node[dimension, below left=of beingidentity] (being) {
+        \textbf{Being}\\
+        The actuality of an entity
+    };
+
+    \node[dimension, below right=of beingidentity] (identity) {
+        \textbf{Identity}\\
+        The entity being itself
+    };
+
+    % Constitutive determination
+    \node[central, below=2.0cm of beingidentity] (determination) {
+        \textbf{DETERMINATE CONSTITUTION}\\
+        Constitutive determinations of the entity
+    };
+
+    % Analytical relations
+    \node[distinction, below left=1.5cm and 0.5cm of determination] (unity) {
+        \textbf{Unity}\\
+        Ontological coherence
+    };
+
+    \node[distinction, below=1.5cm of determination] (individuation) {
+        \textbf{Individuation}\\
+        Differentiation as this entity
+    };
+
+    \node[distinction, below right=1.5cm and 0.5cm of determination] (distinction) {
+        \textbf{Distinction}\\
+        Difference from others
+    };
+
+    % Non-equivalent characterizations
+    \node[dimension, below=1.8cm of individuation] (signature) {
+        \textbf{Signature}\\
+        Structured characterization
+    };
+
+    \node[dimension, left=of signature] (invariance) {
+        \textbf{Invariance}\\
+        Persistence across transformations
+    };
+
+    \node[dimension, right=of signature] (manifestation) {
+        \textbf{Manifestation}\\
+        Ontological realization
+    };
+
+    % Relations between being and identity
+    \draw[relation] (beingidentity.south west) -- (being.north);
+    \draw[relation] (beingidentity.south east) -- (identity.north);
+
+    \draw[relation] (being) -- (determination);
+    \draw[relation] (identity) -- (determination);
+
+    % Constitutive and analytical dimensions
+    \draw[derivation] (determination.south west) -- (unity.north);
+    \draw[derivation] (determination.south) -- (individuation.north);
+    \draw[derivation] (determination.south east) -- (distinction.north);
+
+    % Characterizations and related concepts
+    \draw[relation] (individuation.south west) -- (invariance.north);
+    \draw[relation] (individuation.south) -- (signature.north);
+    \draw[relation] (individuation.south east) -- (manifestation.north);
+
+    \end{tikzpicture}
+
+    \caption{The Ontological Structure of Identity: The Inseparability of Being and Identity and Their Analytical Relations to Determination, Unity, Individuation, and Related Concepts}
+    \label{fig:identity-ontological-structure}
+\end{figure}
