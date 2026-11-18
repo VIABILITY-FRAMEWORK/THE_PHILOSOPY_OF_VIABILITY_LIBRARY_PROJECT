@@ -1,33 +1,33 @@
 
 % ============================================================
-% VIABILITY PHILOSOPHY SYSTEM
+% THE PHILOSOPHY OF VIABILITY
 % BOOK I: ONTOLOGY OF VIABILITY
 %
 % File: preamble.tex
-% Location: Project Root
+% Location: VS.B01_ONTOLOGY_OF_VIABILITY/
 %
 % Compiler: pdfLaTeX
 % Distribution: TeX Live 2025
 %
 % Purpose:
-% Central configuration of packages, document layout,
-% mathematical environments, typography, tables, figures,
-% cross-referencing, hyperlinks, and editorial presentation.
+% Central configuration of language, mathematical environments,
+% graphics, tables, typography, page layout, theorem structures,
+% captions, hyperlinks, cross-referencing, and document defaults.
 % ============================================================
 
 
-% ------------------------------------------------------------
+% ============================================================
 % 1. LANGUAGE AND ENCODING
-% ------------------------------------------------------------
+% ============================================================
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
 
-% ------------------------------------------------------------
+% ============================================================
 % 2. MATHEMATICAL FOUNDATION
-% ------------------------------------------------------------
+% ============================================================
 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -36,24 +36,40 @@
 \usepackage{mathtools}
 
 
-% ------------------------------------------------------------
-% 3. GRAPHICS AND FIGURES
-% ------------------------------------------------------------
+% ============================================================
+% 3. COLORS
+% ============================================================
+
+\usepackage{xcolor}
+
+\definecolor{ViabilityBlack}{RGB}{25,25,25}
+\definecolor{ViabilityGray}{RGB}{100,100,100}
+\definecolor{ViabilityLightGray}{RGB}{242,242,242}
+\definecolor{ViabilityBlue}{RGB}{35,75,115}
+\definecolor{ViabilityDarkBlue}{RGB}{25,50,80}
+\definecolor{ViabilityRed}{RGB}{145,55,55}
+\definecolor{ViabilityGreen}{RGB}{55,105,75}
+
+
+% ============================================================
+% 4. GRAPHICS, FIGURES, AND DIAGRAMS
+% ============================================================
 
 \usepackage{graphicx}
 
 \graphicspath{
-    {1_FRONTMATTER/figures/}
-    {2_MAIN_BODY/figures/}
-    {3_BACKMATTER/figures/}
+    {4_ASSETS/figures/}
+    {4_ASSETS/diagrams/}
+    {4_ASSETS/illustrations/}
+    {4_ASSETS/cover/}
 }
 
 \usepackage{tikz}
 
 
-% ------------------------------------------------------------
-% 4. TABLES
-% ------------------------------------------------------------
+% ============================================================
+% 5. TABLES
+% ============================================================
 
 \usepackage{array}
 \usepackage{booktabs}
@@ -61,9 +77,9 @@
 \usepackage{longtable}
 
 
-% ------------------------------------------------------------
-% 5. LISTS AND ENUMERATION
-% ------------------------------------------------------------
+% ============================================================
+% 6. LISTS AND ENUMERATION
+% ============================================================
 
 \usepackage{enumitem}
 
@@ -83,19 +99,9 @@
 }
 
 
-% ------------------------------------------------------------
-% 6. COLORS AND TECHNICAL BOXES
-% ------------------------------------------------------------
-
-\usepackage{xcolor}
-
-\definecolor{ViabilityBlack}{RGB}{25,25,25}
-\definecolor{ViabilityGray}{RGB}{100,100,100}
-\definecolor{ViabilityLightGray}{RGB}{242,242,242}
-\definecolor{ViabilityBlue}{RGB}{35,75,115}
-\definecolor{ViabilityDarkBlue}{RGB}{25,50,80}
-\definecolor{ViabilityRed}{RGB}{145,55,55}
-\definecolor{ViabilityGreen}{RGB}{55,105,75}
+% ============================================================
+% 7. TECHNICAL BOXES
+% ============================================================
 
 \usepackage[most]{tcolorbox}
 
@@ -113,13 +119,12 @@
 }
 
 
-% ------------------------------------------------------------
-% 7. PAGE GEOMETRY
-% ------------------------------------------------------------
+% ============================================================
+% 8. PAGE GEOMETRY
+% ============================================================
 
 \usepackage[
     a4paper,
-    twoside,
     inner=30mm,
     outer=25mm,
     top=27mm,
@@ -130,9 +135,9 @@
 ]{geometry}
 
 
-% ------------------------------------------------------------
-% 8. TYPOGRAPHY AND MICROTYPOGRAPHY
-% ------------------------------------------------------------
+% ============================================================
+% 9. TYPOGRAPHY AND MICROTYPOGRAPHY
+% ============================================================
 
 \usepackage{microtype}
 
@@ -143,10 +148,12 @@
 
 \frenchspacing
 
+\setlength{\emergencystretch}{3em}
 
-% ------------------------------------------------------------
-% 9. HEADER AND FOOTER CONFIGURATION
-% ------------------------------------------------------------
+
+% ============================================================
+% 10. HEADER AND FOOTER CONFIGURATION
+% ============================================================
 
 \usepackage{fancyhdr}
 \usepackage{emptypage}
@@ -172,21 +179,25 @@
 }
 
 
-% ------------------------------------------------------------
-% 10. CHAPTER AND SECTION MARKS
-% ------------------------------------------------------------
+% ============================================================
+% 11. CHAPTER AND SECTION MARKS
+% ============================================================
 
-\renewcommand{\chaptermark}[1]{
-    \markboth{\thechapter.\ #1}{}
+\renewcommand{\chaptermark}[1]{%
+    \markboth{\thechapter.\ #1}{}%
 }
 
-\renewcommand{\sectionmark}[1]{
-    \markright{\thesection.\ #1}
+\renewcommand{\sectionmark}[1]{%
+    \markright{\thesection.\ #1}%
 }
 
 
+% ============================================================
+% 12. THEOREM AND FORMAL STATEMENT ENVIRONMENTS
+% ============================================================
+
 % ------------------------------------------------------------
-% 11. THEOREM ENVIRONMENTS
+% 12.1. Numbered formal statements
 % ------------------------------------------------------------
 
 \theoremstyle{plain}
@@ -204,6 +215,10 @@
 \newtheorem{principle}[theorem]{Principle}
 
 
+% ------------------------------------------------------------
+% 12.2. Definitions and assumptions
+% ------------------------------------------------------------
+
 \theoremstyle{definition}
 
 \newtheorem{definition}[theorem]{Definition}
@@ -215,6 +230,10 @@
 \newtheorem{assumption}[theorem]{Assumption}
 
 
+% ------------------------------------------------------------
+% 12.3. Explanatory environments
+% ------------------------------------------------------------
+
 \theoremstyle{remark}
 
 \newtheorem{remark}[theorem]{Remark}
@@ -224,38 +243,39 @@
 \newtheorem{example}[theorem]{Example}
 
 
-% ------------------------------------------------------------
-% 12. EQUATION NUMBERING
-% ------------------------------------------------------------
+% ============================================================
+% 13. EQUATION NUMBERING
+% ============================================================
 
 \numberwithin{equation}{chapter}
 
 
-% ------------------------------------------------------------
-% 13. CAPTIONS
-% ------------------------------------------------------------
+% ============================================================
+% 14. CAPTIONS
+% ============================================================
 
 \usepackage[
     font=small,
     labelfont=bf,
-    justification=centering
+    justification=raggedright,
+    singlelinecheck=false
 ]{caption}
 
 
-% ------------------------------------------------------------
-% 14. CROSS-REFERENCING
-% ------------------------------------------------------------
+% ============================================================
+% 15. URL HANDLING
+% ============================================================
+
+\usepackage{xurl}
+
+
+% ============================================================
+% 16. HYPERLINKS AND PDF BOOKMARKS
+% ============================================================
 
 \usepackage{hyperref}
 
 \usepackage{bookmark}
-
-\usepackage[nameinlink,noabbrev]{cleveref}
-
-
-% ------------------------------------------------------------
-% 15. HYPERLINK CONFIGURATION
-% ------------------------------------------------------------
 
 \hypersetup{
     colorlinks=true,
@@ -271,8 +291,15 @@
 }
 
 
+% ============================================================
+% 17. INTELLIGENT CROSS-REFERENCING
+% ============================================================
+
+\usepackage[nameinlink,noabbrev]{cleveref}
+
+
 % ------------------------------------------------------------
-% 16. CLEVERREF NAMING
+% 17.1. Structural references
 % ------------------------------------------------------------
 
 \crefname{chapter}{Chapter}{Chapters}
@@ -284,14 +311,16 @@
 \crefname{subsection}{Subsection}{Subsections}
 \Crefname{subsection}{Subsection}{Subsections}
 
+\crefname{subsubsection}{Subsubsection}{Subsubsections}
+\Crefname{subsubsection}{Subsubsection}{Subsubsections}
+
+
+% ------------------------------------------------------------
+% 17.2. Mathematical references
+% ------------------------------------------------------------
+
 \crefname{equation}{Equation}{Equations}
 \Crefname{equation}{Equation}{Equations}
-
-\crefname{figure}{Figure}{Figures}
-\Crefname{figure}{Figure}{Figures}
-
-\crefname{table}{Table}{Tables}
-\Crefname{table}{Table}{Tables}
 
 \crefname{theorem}{Theorem}{Theorems}
 \Crefname{theorem}{Theorem}{Theorems}
@@ -305,6 +334,11 @@
 \crefname{corollary}{Corollary}{Corollaries}
 \Crefname{corollary}{Corollary}{Corollaries}
 
+
+% ------------------------------------------------------------
+% 17.3. Ontological and conceptual references
+% ------------------------------------------------------------
+
 \crefname{definition}{Definition}{Definitions}
 \Crefname{definition}{Definition}{Definitions}
 
@@ -314,56 +348,90 @@
 \crefname{principle}{Principle}{Principles}
 \Crefname{principle}{Principle}{Principles}
 
+\crefname{postulate}{Postulate}{Postulates}
+\Crefname{postulate}{Postulate}{Postulates}
+
 \crefname{hypothesis}{Hypothesis}{Hypotheses}
 \Crefname{hypothesis}{Hypothesis}{Hypotheses}
 
+\crefname{assumption}{Assumption}{Assumptions}
+\Crefname{assumption}{Assumption}{Assumptions}
+
 
 % ------------------------------------------------------------
-% 17. TABLE OF CONTENTS DEPTH
+% 17.4. Figures and tables
 % ------------------------------------------------------------
+
+\crefname{figure}{Figure}{Figures}
+\Crefname{figure}{Figure}{Figures}
+
+\crefname{table}{Table}{Tables}
+\Crefname{table}{Table}{Tables}
+
+
+% ------------------------------------------------------------
+% 17.5. Explanatory references
+% ------------------------------------------------------------
+
+\crefname{remark}{Remark}{Remarks}
+\Crefname{remark}{Remark}{Remarks}
+
+\crefname{observation}{Observation}{Observations}
+\Crefname{observation}{Observation}{Observations}
+
+\crefname{example}{Example}{Examples}
+\Crefname{example}{Example}{Examples}
+
+
+% ============================================================
+% 18. TABLE OF CONTENTS AND NUMBERING DEPTH
+% ============================================================
 
 \setcounter{secnumdepth}{3}
+
 \setcounter{tocdepth}{2}
 
 
-% ------------------------------------------------------------
-% 18. FLOAT CONFIGURATION
-% ------------------------------------------------------------
+% ============================================================
+% 19. FLOAT CONFIGURATION
+% ============================================================
 
 \renewcommand{\topfraction}{0.85}
+
 \renewcommand{\bottomfraction}{0.75}
+
 \renewcommand{\textfraction}{0.10}
+
 \renewcommand{\floatpagefraction}{0.75}
 
 \setcounter{topnumber}{3}
+
 \setcounter{bottomnumber}{2}
+
 \setcounter{totalnumber}{5}
 
 
-% ------------------------------------------------------------
-% 19. FOOTNOTES
-% ------------------------------------------------------------
-
-\renewcommand{\footnotesize}{\small}
+% ============================================================
+% 20. FOOTNOTE CONFIGURATION
+% ============================================================
 
 \setlength{\skip\footins}{10pt}
 
 
-% ------------------------------------------------------------
-% 20. OVERFULL AND UNDERFULL DIAGNOSTICS
-% ------------------------------------------------------------
-
-\setlength{\emergencystretch}{3em}
-
-\hfuzz=0.5pt
-\vfuzz=0.5pt
-
-
-% ------------------------------------------------------------
+% ============================================================
 % 21. DOCUMENT-WIDE FORMATTING DEFAULTS
-% ------------------------------------------------------------
+% ============================================================
 
 \raggedbottom
+
+
+% ============================================================
+% 22. DIAGNOSTIC SETTINGS
+% ============================================================
+
+\hfuzz=0.5pt
+
+\vfuzz=0.5pt
 
 
 % ============================================================

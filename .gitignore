@@ -1,0 +1,119 @@
+
+# ============================================================
+# THE PHILOSOPHY OF VIABILITY
+# Root .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# 1. LaTeX Compilation Artifacts
+# ------------------------------------------------------------
+
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# LaTeX intermediate files
+*.4ct
+*.4tc
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lol
+*.maf
+*.mtc
+*.mtc0
+*.upa
+*.upb
+
+# ------------------------------------------------------------
+# 2. Bibliography and Index Build Artifacts
+# ------------------------------------------------------------
+
+*.bib.bak
+*.bib.sav
+*.blg
+*.ilg
+*.ind
+*.idx
+*.run.xml
+
+# ------------------------------------------------------------
+# 3. latexmk and Build Directories
+# ------------------------------------------------------------
+
+.latexmkrc.bak
+latex.out/
+build/
+_build/
+out/
+
+# ------------------------------------------------------------
+# 4. Editor and Operating System Artifacts
+# ------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ------------------------------------------------------------
+# 5. Editor Temporary Files
+# ------------------------------------------------------------
+
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# ------------------------------------------------------------
+# 6. Python and Scripting Artifacts
+# ------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# ------------------------------------------------------------
+# END OF .gitignore
+# ============================================================
