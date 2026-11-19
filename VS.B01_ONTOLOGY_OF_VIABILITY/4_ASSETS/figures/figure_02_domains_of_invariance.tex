@@ -1,0 +1,154 @@
+
+% =============================================================================
+% Figure 02 — Domains of Invariance
+% Book I — Ontology of Viability
+% Chapter 02 — Invariance
+%
+% Purpose:
+%   To illustrate the bounded and conditional scope within which
+%   an invariant may obtain under specified transformations.
+%
+% Conceptual Policy:
+%   1. Domains of invariance are analytical scopes, not ontological
+%      realms or independent components of existence.
+%   2. Invariance is always relative to a specified respect.
+%   3. Different domains may overlap.
+%   4. Validity within one domain does not imply validity in another.
+%   5. No invariant is presumed to hold across all transformations.
+%   6. The diagram does not establish a hierarchy among domains.
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        domain/.style={
+            draw,
+            rounded corners=4pt,
+            thick,
+            minimum width=3.35cm,
+            minimum height=1.35cm,
+            align=center
+        },
+        central/.style={
+            draw,
+            rounded corners=4pt,
+            thick,
+            minimum width=4.0cm,
+            minimum height=1.25cm,
+            align=center,
+            fill=gray!10
+        },
+        scope/.style={
+            draw,
+            dashed,
+            rounded corners=5pt,
+            thick,
+            inner sep=0.55cm
+        },
+        relation/.style={
+            thick,
+            ->,
+            >=stealth
+        },
+        possible/.style={
+            thick,
+            dashed,
+            ->,
+            >=stealth
+        }
+    ]
+
+    % -------------------------------------------------------------------------
+    % Central analytical claim
+    % -------------------------------------------------------------------------
+
+    \node[central] (claim) {
+        \textbf{Invariance Claim}\\
+        A specified feature is preserved
+    };
+
+    % -------------------------------------------------------------------------
+    % Domains
+    % -------------------------------------------------------------------------
+
+    \node[domain, fill=blue!6, above left=1.55cm and 2.25cm of claim]
+        (structural) {
+        \textbf{Structural Domain}\\
+        Preservation of organization
+    };
+
+    \node[domain, fill=green!7, above right=1.55cm and 2.25cm of claim]
+        (relational) {
+        \textbf{Relational Domain}\\
+        Preservation of relations
+    };
+
+    \node[domain, fill=orange!9, below left=1.55cm and 2.25cm of claim]
+        (determinational) {
+        \textbf{Determinational Domain}\\
+        Preservation of determinations
+    };
+
+    \node[domain, fill=red!6, below right=1.55cm and 2.25cm of claim]
+        (compositional) {
+        \textbf{Compositional Domain}\\
+        Preservation of composition
+    };
+
+    % -------------------------------------------------------------------------
+    % Relations between claim and domains
+    % -------------------------------------------------------------------------
+
+    \draw[possible] (claim) -- (structural);
+    \draw[possible] (claim) -- (relational);
+    \draw[possible] (claim) -- (determinational);
+    \draw[possible] (claim) -- (compositional);
+
+    % -------------------------------------------------------------------------
+    % Domain of validity
+    % -------------------------------------------------------------------------
+
+    \node[
+        draw,
+        rounded corners=4pt,
+        thick,
+        fill=gray!5,
+        minimum width=10.2cm,
+        minimum height=0.85cm,
+        align=center,
+        below=1.55cm of claim
+    ] (validity) {
+        \textbf{Specified Domain of Validity}\\
+        Transformation, conditions, and respect of preservation
+    };
+
+    \draw[relation] (claim) -- (validity);
+
+    % -------------------------------------------------------------------------
+    % Boundary note
+    % -------------------------------------------------------------------------
+
+    \node[
+        below=0.65cm of validity,
+        text width=11cm,
+        align=center,
+        font=\footnotesize
+    ] (note) {
+        Invariance established within a specified domain
+        cannot be generalized automatically to other domains
+        or to unrestricted transformations.
+    };
+
+    \end{tikzpicture}
+
+    \caption{Analytical Domains of Invariance.
+    An invariance claim may concern different kinds of preserved
+    determinations, relations, or organizations. Its validity
+    remains bounded by the specified transformation, conditions,
+    and respect of preservation.}
+
+    \label{fig:domains-of-invariance}
+
+\end{figure}

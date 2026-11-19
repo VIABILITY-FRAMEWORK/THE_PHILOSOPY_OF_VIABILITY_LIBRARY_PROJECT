@@ -1,5 +1,6 @@
-
-VS.B01_ONTOLOGY_OF_VIABILITY/
+THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT/
+│
+├── VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 ├── main.tex
 ├── preamble.tex
@@ -42,16 +43,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_09_identity_and_non_reduction.tex
 │   │   │   │   ├── section_10_scope_and_limits_of_identity.tex
 │   │   │   │   └── section_11_synthesis_of_identity.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_identity_conceptual_distinctions.tex
-│   │   │   │   ├── table_02_identity_and_determination.tex
-│   │   │   │   ├── table_03_identity_unity_and_individuation.tex
-│   │   │   │   ├── table_04_identity_and_signature.tex
-│   │   │   │   └── table_05_identity_scope_and_limits.tex
-│   │   │   └── figures/
-│   │   │       ├── figure_01_identity_ontological_structure.tex
-│   │   │       ├── figure_02_identity_unity_and_individuation.tex
-│   │   │       └── figure_03_identity_and_signature.tex
 │   │   │
 │   │   ├── chapter_02_invariance/
 │   │   │   ├── 00_chapter_02.tex
@@ -67,14 +58,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_09_forms_and_domains_of_invariance.tex
 │   │   │   │   ├── section_10_limits_of_invariance.tex
 │   │   │   │   └── section_11_synthesis_of_invariance.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_forms_of_invariance.tex
-│   │   │   │   ├── table_02_defining_invariants.tex
-│   │   │   │   ├── table_03_invariance_and_transformation.tex
-│   │   │   │   └── table_04_invariance_synthesis.tex
-│   │   │   └── figures/
-│   │   │       ├── figure_01_invariance_and_transformation.tex
-│   │   │       └── figure_02_domains_of_invariance.tex
 │   │   │
 │   │   ├── chapter_03_unity_and_plurality/
 │   │   │   ├── 00_chapter_03.tex
@@ -88,32 +71,19 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_07_non_equivalence_of_unity_and_singularity.tex
 │   │   │   │   ├── section_08_limits_of_unity_and_plurality.tex
 │   │   │   │   └── section_09_synthesis_of_unity_and_plurality.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_forms_of_unity.tex
-│   │   │   │   ├── table_02_unity_and_aggregate.tex
-│   │   │   │   └── table_03_plurality_and_identity.tex
-│   │   │   └── figures/
-│   │   │       ├── figure_01_unity_and_plurality.tex
-│   │   │       └── figure_02_source_and_aggregate.tex
 │   │   │
 │   │   ├── chapter_04_expression/
 │   │   │   ├── 00_chapter_04.tex
-│   │   │   ├── sections/
-│   │   │   │   ├── section_01_ontological_problem_of_expression.tex
-│   │   │   │   ├── section_02_identity_and_expression.tex
-│   │   │   │   ├── section_03_expression_and_determination.tex
-│   │   │   │   ├── section_04_expression_and_invariance.tex
-│   │   │   │   ├── section_05_expression_and_source.tex
-│   │   │   │   ├── section_06_expression_and_multiplicity.tex
-│   │   │   │   ├── section_07_expression_and_manifestation_distinction.tex
-│   │   │   │   ├── section_08_limits_of_expression.tex
-│   │   │   │   └── section_09_synthesis_of_expression.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_expression_conceptual_distinctions.tex
-│   │   │   │   └── table_02_identity_and_expression.tex
-│   │   │   └── figures/
-│   │   │       ├── figure_01_identity_and_expression.tex
-│   │   │       └── figure_02_expression_conceptual_scope.tex
+│   │   │   └── sections/
+│   │   │      ├── section_01_ontological_problem_of_expression.tex
+│   │   │      ├── section_02_identity_and_expression.tex
+│   │   │      ├── section_03_expression_and_determination.tex
+│   │   │      ├── section_04_expression_and_invariance.tex
+│   │   │      ├── section_05_expression_and_source.tex
+│   │   │      ├── section_06_expression_and_multiplicity.tex
+│   │   │      ├── section_07_expression_and_manifestation_distinction.tex
+│   │   │      ├── section_08_limits_of_expression.tex
+│   │   │      └── section_09_synthesis_of_expression.tex
 │   │   │
 │   │   ├── chapter_05_identity_and_continuity/
 │   │   │   ├── 00_chapter_05.tex
@@ -125,11 +95,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_05_conditions_of_identity_preservation.tex
 │   │   │   │   ├── section_06_limits_of_identity_continuity.tex
 │   │   │   │   └── section_07_synthesis_of_identity_and_continuity.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_identity_and_persistence.tex
-│   │   │   │   └── table_02_identity_continuity_conditions.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_identity_continuity.tex
 │   │   │
 │   │   └── chapter_06_synthesis_of_identity/
 │   │       ├── 00_chapter_06.tex
@@ -137,11 +102,7 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │       │   ├── section_01_integrated_account_of_identity.tex
 │   │       │   ├── section_02_identity_principles_and_propositions.tex
 │   │       │   ├── section_03_open_ontological_questions.tex
-│   │       │   └── section_04_transition_to_the_realms_of_being.tex
-│   │       ├── tables/
-│   │       │   └── table_01_identity_principles_and_propositions.tex
-│   │       └── figures/
-│   │           └── figure_01_integrated_identity_framework.tex
+│   │           └── section_04_transition_to_the_realms_of_being.tex
 │   │
 │   ├── PART_II_THE_REALMS_OF_BEING/
 │   │   ├── 00_part_02.tex
@@ -158,12 +119,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_07_relations_among_realms.tex
 │   │   │   │   ├── section_08_scope_and_limits_of_realm_architecture.tex
 │   │   │   │   └── section_09_synthesis_of_realm_architecture.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_seven_realms_overview.tex
-│   │   │   │   └── table_02_fundamental_and_intermediary_realms.tex
-│   │   │   └── figures/
-│   │   │       ├── figure_01_architecture_of_seven_realms.tex
-│   │   │       └── figure_02_relations_among_realms.tex
 │   │   │
 │   │   ├── chapter_08_first_determination/
 │   │   │   ├── 00_chapter_08.tex
@@ -174,10 +129,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_04_identity_in_first_determination.tex
 │   │   │   │   ├── section_05_limits_of_first_determination.tex
 │   │   │   │   └── section_06_synthesis_of_first_determination.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_first_determination_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_first_determination.tex
 │   │   │
 │   │   ├── chapter_09_structural_determination/
 │   │   │   ├── 00_chapter_09.tex
@@ -189,10 +140,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_05_identity_and_structural_determination.tex
 │   │   │   │   ├── section_06_limits_of_structural_determination.tex
 │   │   │   │   └── section_07_synthesis_of_structural_determination.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_structural_determination_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_structural_determination.tex
 │   │   │
 │   │   ├── chapter_10_relational_manifestation/
 │   │   │   ├── 00_chapter_10.tex
@@ -204,10 +151,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_05_identity_and_relational_manifestation.tex
 │   │   │   │   ├── section_06_limits_of_relational_manifestation.tex
 │   │   │   │   └── section_07_synthesis_of_relational_manifestation.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_relational_manifestation_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_relational_manifestation.tex
 │   │   │
 │   │   ├── chapter_11_material_manifestation/
 │   │   │   ├── 00_chapter_11.tex
@@ -219,10 +162,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_05_materiality_and_ontological_reality.tex
 │   │   │   │   ├── section_06_limits_of_material_manifestation.tex
 │   │   │   │   └── section_07_synthesis_of_material_manifestation.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_material_manifestation_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_material_manifestation.tex
 │   │   │
 │   │   ├── chapter_12_hub_of_decree/
 │   │   │   ├── 00_chapter_12.tex
@@ -232,10 +171,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_03_decree_and_possibility.tex
 │   │   │   │   ├── section_04_decree_and_the_fundamental_realms.tex
 │   │   │   │   └── section_05_synthesis_of_hub_of_decree.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_hub_of_decree_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_hub_of_decree.tex
 │   │   │
 │   │   ├── chapter_13_hub_of_signification/
 │   │   │   ├── 00_chapter_13.tex
@@ -245,10 +180,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_03_signification_and_relation.tex
 │   │   │   │   ├── section_04_signification_without_epistemic_reduction.tex
 │   │   │   │   └── section_05_synthesis_of_hub_of_signification.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_hub_of_signification_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_hub_of_signification.tex
 │   │   │
 │   │   ├── chapter_14_hub_of_realization/
 │   │   │   ├── 00_chapter_14.tex
@@ -258,10 +189,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_03_realization_and_materiality.tex
 │   │   │   │   ├── section_04_realization_and_ontological_effect.tex
 │   │   │   │   └── section_05_synthesis_of_hub_of_realization.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_hub_of_realization_properties.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_hub_of_realization.tex
 │   │   │
 │   │   └── chapter_15_synthesis_of_the_realms/
 │   │       ├── 00_chapter_15.tex
@@ -270,10 +197,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │       │   ├── section_02_ontological_relations_and_constraints.tex
 │   │       │   ├── section_03_open_questions_concerning_the_realms.tex
 │   │       │   └── section_04_transition_to_light.tex
-│   │       ├── tables/
-│   │       │   └── table_01_realms_principles_and_properties.tex
-│   │       └── figures/
-│   │           └── figure_01_integrated_realms_framework.tex
 │   │
 │   ├── PART_III_LIGHT/
 │   │   ├── 00_part_03.tex
@@ -289,11 +212,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_06_light_and_epistemic_light_distinction.tex
 │   │   │   │   ├── section_07_limits_of_ontological_light.tex
 │   │   │   │   └── section_08_synthesis_of_ontology_of_light.tex
-│   │   │   ├── tables/
-│   │   │   │   ├── table_01_ontological_and_epistemic_light.tex
-│   │   │   │   └── table_02_properties_of_ontological_light.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_ontology_of_light.tex
 │   │   │
 │   │   ├── chapter_17_light_and_identity/
 │   │   │   ├── 00_chapter_17.tex
@@ -304,10 +222,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_04_light_and_ontological_determination.tex
 │   │   │   │   ├── section_05_limits_of_light_in_relation_to_identity.tex
 │   │   │   │   └── section_06_synthesis_of_light_and_identity.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_light_and_identity_relations.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_light_and_identity.tex
 │   │   │
 │   │   ├── chapter_18_light_and_the_realms/
 │   │   │   ├── 00_chapter_18.tex
@@ -318,10 +232,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │   │   │   ├── section_04_light_and_realm_specific_possibilities.tex
 │   │   │   │   ├── section_05_light_and_ontological_constraints.tex
 │   │   │   │   └── section_06_synthesis_of_light_and_the_realms.tex
-│   │   │   ├── tables/
-│   │   │   │   └── table_01_light_and_realms.tex
-│   │   │   └── figures/
-│   │   │       └── figure_01_light_across_the_realms.tex
 │   │   │
 │   │   └── chapter_19_forms_and_dynamics_of_light/
 │   │       ├── 00_chapter_19.tex
@@ -332,10 +242,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │   │       │   ├── section_04_light_and_transition.tex
 │   │       │   ├── section_05_limits_and_non_equivalences_of_light.tex
 │   │       │   └── section_06_synthesis_of_forms_and_dynamics_of_light.tex
-│   │       ├── tables/
-│   │       │   └── table_01_forms_and_functions_of_light.tex
-│   │       └── figures/
-│   │           └── figure_01_forms_and_dynamics_of_light.tex
 │   │
 │   └── PART_IV_DYNAMICS_OF_BEING/
 │       ├── 00_part_04.tex
@@ -349,10 +255,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_identity_and_dynamics.tex
 │       │   │   ├── section_05_dynamics_across_the_realms.tex
 │       │   │   └── section_06_synthesis_of_ontology_of_dynamics.tex
-│       │   ├── tables/
-│       │   │   └── table_01_ontological_dynamics_properties.tex
-│       │   └── figures/
-│       │       └── figure_01_ontology_of_dynamics.tex
 │       │
 │       ├── chapter_21_becoming_and_change/
 │       │   ├── 00_chapter_21.tex
@@ -363,10 +265,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_change_and_invariance.tex
 │       │   │   ├── section_05_forms_of_ontological_change.tex
 │       │   │   └── section_06_limits_of_becoming_and_change.tex
-│       │   ├── tables/
-│       │   │   └── table_01_forms_of_becoming_and_change.tex
-│       │   └── figures/
-│       │       └── figure_01_becoming_and_change.tex
 │       │
 │       ├── chapter_22_relations_and_interaction/
 │       │   ├── 00_chapter_22.tex
@@ -377,10 +275,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_relations_across_realms.tex
 │       │   │   ├── section_05_constraints_of_interaction.tex
 │       │   │   └── section_06_synthesis_of_relations_and_interaction.tex
-│       │   ├── tables/
-│       │   │   └── table_01_forms_of_ontological_relation.tex
-│       │   └── figures/
-│       │       └── figure_01_relations_and_interaction.tex
 │       │
 │       ├── chapter_23_emergence_and_formation/
 │       │   ├── 00_chapter_23.tex
@@ -391,10 +285,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_emergence_across_realms.tex
 │       │   │   ├── section_05_formation_and_identity.tex
 │       │   │   └── section_06_limits_of_emergence_and_formation.tex
-│       │   ├── tables/
-│       │   │   └── table_01_forms_of_emergence_and_formation.tex
-│       │   └── figures/
-│       │       └── figure_01_emergence_and_formation.tex
 │       │
 │       ├── chapter_24_manifestation/
 │       │   ├── 00_chapter_24.tex
@@ -410,15 +300,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_09_recursive_and_secondary_manifestation.tex
 │       │   │   ├── section_10_limits_of_manifestation.tex
 │       │   │   └── section_11_synthesis_of_manifestation.tex
-│       │   ├── tables/
-│       │   │   ├── table_01_manifestation_conceptual_distinctions.tex
-│       │   │   ├── table_02_identity_expression_and_manifestation.tex
-│       │   │   ├── table_03_manifestation_across_the_realms.tex
-│       │   │   └── table_04_manifestation_constraints_and_possibilities.tex
-│       │   └── figures/
-│       │       ├── figure_01_ontological_structure_of_manifestation.tex
-│       │       ├── figure_02_identity_and_plurality_of_manifestations.tex
-│       │       └── figure_03_light_realm_and_manifestation.tex
 │       │
 │       ├── chapter_25_continuity_and_discontinuity/
 │       │   ├── 00_chapter_25.tex
@@ -429,10 +310,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_continuity_across_realms.tex
 │       │   │   ├── section_05_forms_of_ontological_continuity.tex
 │       │   │   └── section_06_limits_of_continuity.tex
-│       │   ├── tables/
-│       │   │   └── table_01_continuity_and_discontinuity.tex
-│       │   └── figures/
-│       │       └── figure_01_continuity_and_discontinuity.tex
 │       │
 │       ├── chapter_26_temporality/
 │       │   ├── 00_chapter_26.tex
@@ -443,10 +320,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_temporality_across_the_realms.tex
 │       │   │   ├── section_05_temporal_order_and_ontological_process.tex
 │       │   │   └── section_06_limits_of_ontological_temporality.tex
-│       │   ├── tables/
-│       │   │   └── table_01_ontological_temporality.tex
-│       │   └── figures/
-│       │       └── figure_01_temporality_and_ontological_process.tex
 │       │
 │       ├── chapter_27_transformation_and_transition/
 │       │   ├── 00_chapter_27.tex
@@ -457,10 +330,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_transition_across_realms.tex
 │       │   │   ├── section_05_forms_of_transformation.tex
 │       │   │   └── section_06_limits_of_transformation.tex
-│       │   ├── tables/
-│       │   │   └── table_01_forms_of_transformation_and_transition.tex
-│       │   └── figures/
-│       │       └── figure_01_transformation_and_transition.tex
 │       │
 │       ├── chapter_28_generation_and_dissolution/
 │       │   ├── 00_chapter_28.tex
@@ -471,10 +340,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_04_generation_identity_and_continuity.tex
 │       │   │   ├── section_05_generation_and_dissolution_across_realms.tex
 │       │   │   └── section_06_limits_of_generation_and_dissolution.tex
-│       │   ├── tables/
-│       │   │   └── table_01_generation_and_dissolution.tex
-│       │   └── figures/
-│       │       └── figure_01_generation_and_dissolution.tex
 │       │
 │       ├── chapter_29_reversibility_and_irreversibility/
 │       │   ├── 00_chapter_29.tex
@@ -484,10 +349,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_03_irreversibility_and_consequence.tex
 │       │   │   ├── section_04_identity_and_irreversible_change.tex
 │       │   │   └── section_05_limits_of_reversibility.tex
-│       │   ├── tables/
-│       │   │   └── table_01_reversibility_and_irreversibility.tex
-│       │   └── figures/
-│       │       └── figure_01_reversibility_and_irreversibility.tex
 │       │
 │       ├── chapter_30_cost_residue_and_consequence/
 │       │   ├── 00_chapter_30.tex
@@ -497,10 +358,6 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_03_consequence_and_structural_effect.tex
 │       │   │   ├── section_04_cost_and_irreversibility.tex
 │       │   │   └── section_05_limits_of_cost_residue_and_consequence.tex
-│       │   ├── tables/
-│       │   │   └── table_01_cost_residue_and_consequence.tex
-│       │   └── figures/
-│       │       └── figure_01_cost_residue_and_consequence.tex
 │       │
 │       ├── chapter_31_limits_of_ontological_dynamics/
 │       │   ├── 00_chapter_31.tex
@@ -510,58 +367,43 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       │   │   ├── section_03_limits_of_interaction.tex
 │       │   │   ├── section_04_limits_of_manifestation.tex
 │       │   │   └── section_05_open_questions_of_ontological_dynamics.tex
-│       │   ├── tables/
-│       │   │   └── table_01_limits_of_ontological_dynamics.tex
-│       │   └── figures/
-│       │       └── figure_01_limits_of_ontological_dynamics.tex
 │       │
 │       └── chapter_32_integrated_ontological_reconstruction/
 │           ├── 00_chapter_32.tex
-│           ├── sections/
-│           │   ├── section_01_integrated_ontology_of_viability.tex
-│           │   ├── section_02_identity_realms_light_and_dynamics.tex
-│           │   ├── section_03_principles_definitions_and_propositions.tex
-│           │   ├── section_04_open_questions_and_unresolved_commitments.tex
-│           │   └── section_05_scope_of_the_ontology_and_transition_to_epistemology.tex
-│           ├── tables/
-│           │   ├── table_01_integrated_ontological_framework.tex
-│           │   └── table_02_ontological_principles_and_propositions.tex
-│           └── figures/
-│               └── figure_01_integrated_ontology_of_viability.tex
+│           └── sections/
+│               ├── section_01_integrated_ontology_of_viability.tex
+│               ├── section_02_identity_realms_light_and_dynamics.tex
+│               ├── section_03_principles_definitions_and_propositions.tex
+│               ├── section_04_open_questions_and_unresolved_commitments.tex
+│               └── section_05_scope_of_the_ontology_and_transition_to_epistemology.tex
 │
 ├── 3_BACKMATTER/
 │   ├── 00_backmatter.tex
-│   ├── 00_conclusion_aggregator.tex
-│   ├── 01_conclusion.tex
 │   │
-│   ├── 02_appendices/
+│   ├── 01appendices/
 │   │   ├── 00_appendices.tex
-│   │   ├── appendix_A.tex
-│   │   ├── appendix_B.tex
-│   │   ├── appendix_C.tex
-│   │   ├── appendix_D.tex
-│   │   ├── appendix_E.tex
-│   │   ├── appendix_F.tex
-│   │   └── appendix_G.tex
+│   │   ├── appendix_A_FORMAL_NOTATION.tex
+│   │   ├── appendix_BONTOLOGICAL_PRINCIPLES.tex
+│   │   ├── appendix_C_DEFINITIONS_AND_PROPOSITIONS.tex
+│   │   ├── appendix_D_FORMAL_DEPENDENCY_MAPS.tex
+│   │   ├── appendix_E_SUPPLEMENTARY_PROOFS.tex
+│   │   ├── appendix_F_COMPARATIVE_TABLES.tex
+│   │   └── appendix_G_TECHNICAL_TERMINOLOGY.tex
 │   │
-│   ├── 00_logical_entity_reference_map_aggregator.tex
-│   ├── 03_logical_entity_reference_map.tex
+│   ├── 02_logical_entity_reference_map.tex
 │   │
-│   ├── 04_bibliography/
-│   │   ├── 00_bibliography_aggregator.tex
+│   ├── 03_bibliography/
 │   │   ├── bibliography.tex
 │   │   └── references.bib
 │   │
-│   ├── 00_glossary_aggregator.tex
-│   ├── 05_glossary.tex
+│   ├── 04_glossary.tex
 │   │
-│   ├── 06_indexes/
-│   │   ├── 00_indexes_aggregator.tex
+│   ├── 05_indexes/
 │   │   ├── subject_index.tex
 │   │   ├── name_index.tex
 │   │   └── concept_index.tex
 │   │
-│   └── 07_registers/
+│   └── 06_registers/
 │       ├── axioms_register.csv
 │       ├── definitions_register.csv
 │       ├── propositions_register.csv
@@ -572,6 +414,7 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 └── 4_ASSETS/
     ├── figures/
+    ├── tables/
     ├── diagrams/
     ├── illustrations/
     └── cover/
