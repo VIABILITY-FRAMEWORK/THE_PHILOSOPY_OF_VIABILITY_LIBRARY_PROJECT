@@ -1,0 +1,112 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/illustrations/
+%           VS.B01.P01.C03.S02.SS08.P002.IL01.
+%           differentiated_determinations_and_unity.tex
+%
+% Asset   : IL01 — Differentiated Determinations and Unity
+% Section : 02 — Unity of Identity
+% Chapter : 03 — Unity and Plurality
+%
+% Purpose :
+%   To illustrate how differentiated elements may coexist
+%   within one organized situation without implying that
+%   their organization establishes one identity.
+%
+% Interpretive Limit :
+%   The illustration does not prove the unity, singularity,
+%   or number of identities involved in the depicted situation.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{calc, positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.7cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        detbox/.style={box, text width=2.6cm, minimum height=1.2cm,
+                       fill=blue!8, draw=blue!55!black},
+        orgbox/.style={box, text width=9.9cm, minimum height=1.0cm,
+                       fill=gray!10, draw=black!60},
+        % --- frame and labels (frame = scope of the example, not an
+        %     identity boundary) ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=6pt,
+                        inner sep=10pt, line width=0.6pt},
+        grouptitle/.style={font=\small\bfseries, align=center},
+        legendtext/.style={font=\scriptsize},
+        % --- undirected lines (no arrowheads: no order or priority) ---
+        vsrel/.style={draw=black!70, line width=0.8pt},
+        vslink/.style={draw=black!55, dashed, line width=0.7pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Differentiated determinations
+    % ---------------------------------------------------------------
+    \node[detbox] (b) {\textbf{Determination B}};
+    \node[detbox, left=of b]  (a) {\textbf{Determination A}};
+    \node[detbox, right=of b] (c) {\textbf{Determination C}};
+
+    \node[grouptitle, above=0.45cm of b] (ttl) {One Organized Situation};
+
+    % ---------------------------------------------------------------
+    % Relations and organization (shared field below)
+    % ---------------------------------------------------------------
+    \node[orgbox, below=1.0cm of b] (org) {
+        \textbf{Relations and Organization}
+    };
+
+    \draw[vsrel] (a) -- (b);
+    \draw[vsrel] (b) -- (c);
+
+    \draw[vslink] (a.south) -- (a.south |- org.north);
+    \draw[vslink] (b.south) -- (b.south |- org.north);
+    \draw[vslink] (c.south) -- (c.south |- org.north);
+
+    % ---------------------------------------------------------------
+    % Frame: scope of the example
+    % ---------------------------------------------------------------
+    \node[vsgroup, fit=(ttl)(a)(b)(c)(org)] (frame) {};
+
+    % ---------------------------------------------------------------
+    % Note (outside the frame: identity is not part of the situation)
+    % ---------------------------------------------------------------
+    \node[below=0.5cm of frame, text width=10cm, align=center,
+          font=\footnotesize\itshape] (note) {
+        Differentiation and organization are both represented;
+        identity remains an independent ontological question.
+    };
+
+    % ---------------------------------------------------------------
+    % Legend
+    % ---------------------------------------------------------------
+    \node[below=0.35cm of note, legendtext] {
+        \tikz[baseline=-0.5ex]\draw[vsrel] (0,0) -- (0.55,0);~relation among elements
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[vslink] (0,0) -- (0.55,0);~element within the organizing field
+    };
+
+    \end{tikzpicture}
+
+    \caption{Differentiated Determinations Within an Organized Situation.
+    The elements are distinct and related within one depicted
+    configuration. The frame represents the scope of the example,
+    not a demonstrated boundary of one identity.}
+    \label{fig:differentiated-determinations-and-unity}
+\end{figure}
+
+% =============================================================================
+% END OF ASSET IL01 — SECTION 02 OF CHAPTER 03
+% =============================================================================

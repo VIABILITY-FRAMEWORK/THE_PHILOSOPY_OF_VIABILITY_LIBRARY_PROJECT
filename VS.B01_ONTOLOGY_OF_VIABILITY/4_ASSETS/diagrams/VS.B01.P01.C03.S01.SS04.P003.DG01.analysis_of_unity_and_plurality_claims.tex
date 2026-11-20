@@ -1,0 +1,96 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/
+%           VS.B01.P01.C03.S01.SS04.P003.DG01.
+%           analysis_of_unity_and_plurality_claims.tex
+%
+% Asset   : DG01 — Analysis of Unity and Plurality Claims
+% Section : 01 — The Ontological Problem of Unity and Plurality
+% Chapter : 03 — Unity and Plurality
+%
+% Purpose :
+%   To represent the methodological requirements for
+%   analyzing claims of unity and plurality through
+%   their subject, respect, and scope.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        reqbox/.style={box, text width=3.2cm, minimum height=2.2cm,
+                       fill=blue!8, draw=blue!55!black},
+        claimbox/.style={box, text width=5.6cm, minimum height=1.1cm,
+                         fill=gray!10, draw=black!60},
+        resultbox/.style={box, text width=7.0cm, minimum height=1.3cm,
+                          fill=green!8, draw=green!40!black},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=left},
+        % --- arrow ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Three requirements (equal rank, no order among them)
+    % ---------------------------------------------------------------
+    \node[reqbox] (subject) {
+        \textbf{Subject}\\[3pt]
+        What is being treated as one or many?
+    };
+    \node[reqbox, right=of subject] (respect) {
+        \textbf{Respect}\\[3pt]
+        In what determination or relation is it one or many?
+    };
+    \node[reqbox, right=of respect] (scope) {
+        \textbf{Scope and Criterion}\\[3pt]
+        What conditions and limits govern the attribution?
+    };
+
+    \node[vsgroup, fit=(subject)(respect)(scope)] (reqs) {};
+    \node[grouplabel, anchor=south west] at (reqs.north west) {
+        Requirements of the analysis
+    };
+
+    % ---------------------------------------------------------------
+    % Claim (above) and assessment (below)
+    % ---------------------------------------------------------------
+    \node[claimbox, above=1.0cm of reqs] (claim) {
+        \textbf{Claim of Unity or Plurality}\\[3pt]
+        Something is asserted to be one or multiple
+    };
+    \node[resultbox, below=0.9cm of reqs] (result) {
+        \textbf{Proportionate Ontological Assessment}\\[3pt]
+        Conclusions remain limited to the specified subject,
+        respect, and scope
+    };
+
+    \draw[directed] (claim) -- (reqs);
+    \draw[directed] (reqs)  -- (result);
+
+    \end{tikzpicture}
+
+    \caption{Methodological Analysis of Claims of Unity and Plurality}
+    \label{fig:analysis-of-unity-and-plurality-claims}
+\end{figure}
+
+% =============================================================================
+% END OF ASSET DG01 — SECTION 01 OF CHAPTER 03
+% =============================================================================

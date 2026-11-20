@@ -1,0 +1,101 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/
+%           VS.B01.P01.C03.S02.SS10.P002.DG01.
+%           scope_of_unity_of_identity.tex
+%
+% Asset   : DG01 — Scope of a Unity-of-Identity Claim
+% Section : 02 — Unity of Identity
+% Chapter : 03 — Unity and Plurality
+%
+% Purpose :
+%   To represent the analytical requirements for examining
+%   a claim concerning unity of identity.
+%
+% Interpretive Limit :
+%   The diagram represents a method of assessment, not
+%   an ontological production process or hierarchy.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        reqbox/.style={box, text width=3.0cm, minimum height=2.3cm,
+                       fill=blue!8, draw=blue!55!black},
+        assessbox/.style={box, text width=6.0cm, minimum height=1.3cm,
+                          fill=blue!16, draw=blue!55!black},
+        resultbox/.style={box, text width=7.0cm, minimum height=1.3cm,
+                          fill=green!8, draw=green!40!black},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=left},
+        % --- arrow (methodological order only) ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Three requirements (equal rank, specified together)
+    % ---------------------------------------------------------------
+    \node[reqbox] (subject) {
+        \textbf{Subject}\\[3pt]
+        What is claimed to be unified?
+    };
+    \node[reqbox, right=of subject] (respect) {
+        \textbf{Respect}\\[3pt]
+        In what ontological respect is unity attributed?
+    };
+    \node[reqbox, right=of respect] (scope) {
+        \textbf{Scope}\\[3pt]
+        Under what conditions and limits?
+    };
+
+    \node[vsgroup, fit=(subject)(respect)(scope)] (reqs) {};
+    \node[grouplabel, anchor=south west] at (reqs.north west) {
+        Specification of the claim
+    };
+
+    % ---------------------------------------------------------------
+    % Assessment and conclusion
+    % ---------------------------------------------------------------
+    \node[assessbox, below=0.9cm of reqs] (assessment) {
+        \textbf{Ontological Assessment}\\[3pt]
+        Examine the relevant relations and supporting argument
+    };
+    \node[resultbox, below=0.9cm of assessment] (conclusion) {
+        \textbf{Proportionate Conclusion}\\[3pt]
+        A unity claim limited to its established subject,
+        respect, and scope
+    };
+
+    \draw[directed] (reqs)       -- (assessment);
+    \draw[directed] (assessment) -- (conclusion);
+
+    \end{tikzpicture}
+
+    \caption{Analytical Scope of a Claim Concerning Unity of Identity.
+    The subject, respect, and scope of the claim must be specified
+    before its ontological adequacy can be assessed.}
+    \label{fig:scope-of-unity-of-identity}
+\end{figure}
+
+% =============================================================================
+% END OF ASSET DG01 — SECTION 02 OF CHAPTER 03
+% =============================================================================
