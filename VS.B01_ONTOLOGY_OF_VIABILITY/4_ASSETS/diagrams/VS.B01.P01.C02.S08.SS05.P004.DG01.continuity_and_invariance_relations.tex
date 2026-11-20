@@ -1,0 +1,115 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/
+%           VS.B01.P01.C02.S08.SS05.P004.DG01.continuity_and_invariance_relations.tex
+%
+% Asset   : DG01 — Continuity and Invariance Relations
+% Location: Chapter 02 / Section 08 / Subsection 05 / Paragraph 004
+%
+% Purpose :
+%   To distinguish the analytical questions of invariance
+%   and continuity and to display their possible coexistence
+%   or independent occurrence.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, calc, positioning}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.6cm and 2cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=4.8cm, minimum height=1.6cm,
+            inner sep=6pt, line width=0.6pt
+        },
+        % --- node roles ---
+        concept/.style={box, fill=blue!8,  draw=blue!55!black},
+        outcome/.style={box, fill=gray!10, draw=black!60},
+        joint/.style  ={box, fill=green!8, draw=green!40!black, text width=5cm},
+        % --- arrows ---
+        relation/.style={-{Stealth[length=2.5mm]}, thick},
+        optional/.style={-{Stealth[length=2.5mm]}, thick, dashed},
+        % --- arrow labels ---
+        elabel/.style={font=\scriptsize\itshape, anchor=south, inner sep=2pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Row 1: analytical questions
+    % ---------------------------------------------------------------
+    \node[concept] (invariance) {
+        \textbf{Invariance}\\[3pt]
+        Preservation of a specified determination under a specified transformation
+    };
+    \node[concept, right=of invariance] (continuity) {
+        \textbf{Continuity}\\[3pt]
+        A determinate relation connecting successive states or phases
+    };
+
+    % ---------------------------------------------------------------
+    % Row 2: outcomes
+    % ---------------------------------------------------------------
+    \node[outcome, below=of invariance] (preserved) {
+        \textbf{Preservation established}\\[3pt]
+        A relevant determination remains preserved
+    };
+    \node[outcome, below=of continuity] (connected) {
+        \textbf{Connection established}\\[3pt]
+        A relevant relation between states or phases is established
+    };
+
+    % ---------------------------------------------------------------
+    % Row 3: possible coexistence (centered between the two outcomes)
+    % ---------------------------------------------------------------
+    \node[joint, anchor=north] (joint) at
+        ($(preserved.south)!0.5!(connected.south)+(0,-2.2cm)$) {
+        \textbf{Possible coexistence}\\[3pt]
+        Both may apply, but neither proves the other
+    };
+
+    % ---------------------------------------------------------------
+    % Note
+    % ---------------------------------------------------------------
+    \node[below=0.9cm of joint, text width=11cm, align=center,
+          font=\footnotesize\itshape] (limit) {
+        Neither invariance nor continuity independently establishes
+        the numerical identity of an existent.
+    };
+    \draw[black!40, line width=0.4pt]
+        ($(limit.north west)+(1.5,0.3)$) -- ($(limit.north east)+(-1.5,0.3)$);
+
+    % ---------------------------------------------------------------
+    % Arrows
+    % ---------------------------------------------------------------
+    \draw[relation] (invariance.south) -- (preserved.north);
+    \draw[relation] (continuity.south) -- (connected.north);
+
+    % down, across, down into the top of the joint box
+    \draw[optional] (preserved.south) -- ++(0,-0.9)
+        -| ([xshift=1.1cm]joint.north west);
+    \draw[optional] (connected.south) -- ++(0,-0.9)
+        -| ([xshift=-1.1cm]joint.north east);
+
+    % labels sit above the horizontal segments (no background needed)
+    \node[elabel] at ($(preserved.south)+(1.8,-0.9)$) {may be relevant to};
+    \node[elabel] at ($(connected.south)+(-1.8,-0.9)$) {may be examined with};
+
+    \end{tikzpicture}
+
+    \caption{Invariance and continuity address distinct analytical
+    questions. Their coexistence is possible, but neither relation
+    independently establishes the other or numerical identity.}
+    \label{fig:continuity-and-invariance-relations}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

@@ -1,0 +1,110 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C02.S11.SS10.P004.DG01.dimensions_of_an_invariance_claim.tex
+%
+% Asset   : DG01 — Dimensions of an Invariance Claim
+% Type    : Diagram
+% Location: Section 11, Subsection 10, Paragraph 004
+%
+% Purpose :
+%   To represent the distinction and coordination of claim
+%   specification, form of preservation, and domain of examination.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles (names avoid clashes with built-in TikZ keys) ---
+        dimbox/.style={box, text width=3.3cm, minimum height=3.2cm,
+                       fill=blue!8, draw=blue!55!black},
+        assessbox/.style={box, text width=5.4cm, minimum height=1.1cm,
+                          font=\small\bfseries,
+                          fill=blue!16, draw=blue!55!black},
+        resultbox/.style={box, text width=5.4cm, minimum height=1.1cm,
+                          dashed, fill=green!8, draw=green!40!black},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=center},
+        % --- arrows ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Three analytical dimensions (equal rank, no order among them)
+    % ---------------------------------------------------------------
+    \node[dimbox] (specification) {
+        \textbf{Claim Specification}\\[5pt]
+        \footnotesize
+        Subject, determination, transformation,
+        respect, criterion, conditions, scope
+    };
+    \node[dimbox, right=of specification] (form) {
+        \textbf{Form of Preservation}\\[5pt]
+        \footnotesize
+        Determinational, structural, relational, compositional,
+        quantitative, qualitative, configurational and combined forms
+    };
+    \node[dimbox, right=of form] (domaindim) {
+        \textbf{Domain of Examination}\\[5pt]
+        \footnotesize
+        Four proposed fundamental domains
+        and three intermediate hubs
+    };
+
+    \node[vsgroup, fit=(specification)(form)(domaindim)] (dims) {};
+    \node[grouplabel, above=0.1cm of dims] {
+        Distinct analytical dimensions, jointly coordinated
+    };
+
+    % ---------------------------------------------------------------
+    % Assessment and result
+    % ---------------------------------------------------------------
+    \node[assessbox, below=0.9cm of dims] (assessment) {
+        Invariance Assessment
+    };
+    \node[resultbox, below=0.9cm of assessment] (result) {
+        Preservation claim within a specified scope
+    };
+
+    \draw[directed] (dims)       -- (assessment);
+    \draw[directed] (assessment) -- (result);
+
+    % ---------------------------------------------------------------
+    % Note
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of result, text width=10cm, align=center,
+          font=\footnotesize\itshape] {
+        The assessment does not independently establish
+        numerical identity, persistence, continuity,
+        or the total ontological constitution of the existent.
+    };
+
+    \end{tikzpicture}
+
+    \caption{The three analytical dimensions of an invariance
+    claim. They coordinate the assessment of preservation
+    without becoming interchangeable or establishing conclusions
+    beyond the specified scope.}
+    \label{fig:dimensions-of-an-invariance-claim}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

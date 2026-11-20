@@ -1,0 +1,97 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/illustrations/
+%           VS.B01.P01.C02.S08.SS06.P003.IL01.continuity_through_transformation.tex
+%
+% Asset   : IL01 — Continuity Through Transformation
+% Location: Chapter 02 / Section 08 / Subsection 06 / Paragraph 003
+%
+% Purpose :
+%   To provide a concrete visual illustration of a process
+%   whose visible configurations change across successive
+%   phases while a proposed connecting relation remains
+%   available for examination.
+%
+% Conceptual Caution :
+%   The illustration does not establish numerical identity,
+%   material identity, or a universal criterion of continuity.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    % horizontal distance between phase centres (panel width 3.4 cm + gap 1.0 cm)
+    \def\phpitch{4.4}
+
+    \begin{tikzpicture}[
+        % --- panel ---
+        phasebox/.style={
+            draw=black!60, fill=gray!6, rounded corners=4pt,
+            minimum width=3.4cm, minimum height=3.0cm, line width=0.7pt
+        },
+        % --- drawing elements ---
+        flow/.style={line width=2.2pt, line cap=round, draw=blue!55!black},
+        bank/.style={line width=0.5pt, draw=black!70},
+        % --- arrows and relation line ---
+        transition/.style={-{Stealth[length=3mm]}, line width=1.1pt},
+        rel/.style={dashed, thick, draw=black!70},
+        % --- one phase panel: #1 title / #2 flow rise / #3 bank tilt / #4 label ---
+        pics/phase/.style args={#1/#2/#3/#4}{
+            code={
+                \node[phasebox] (-box) at (0,0) {};
+                \node[font=\small\bfseries] at (0,1.15) {#1};
+                \draw[flow] (-1.2,-0.6)
+                    .. controls (-0.6,{-0.6+#2}) and (0.6,{-0.6+#2})
+                    .. (1.2,-0.6);
+                \draw[bank] (-1.35,-0.95) -- ({-1.35+#3},-0.35);
+                \draw[bank] ( 1.35,-0.95) -- ({ 1.35-#3},-0.35);
+                \node[font=\scriptsize] at (0,-1.2) {#4};
+            }
+        }
+    ]
+
+    % ---------------------------------------------------------------
+    % Phases
+    % ---------------------------------------------------------------
+    \pic (A) at (0,0)              {phase=Phase A/0.40/0.00/Initial configuration};
+    \pic (B) at (\phpitch,0)       {phase=Phase B/0.90/0.30/Modified configuration};
+    \pic (C) at ({2*\phpitch},0)   {phase=Phase C/1.25/0.60/Further configuration};
+
+    % ---------------------------------------------------------------
+    % Transitions
+    % ---------------------------------------------------------------
+    \draw[transition] (A-box.east) -- (B-box.west);
+    \draw[transition] (B-box.east) -- (C-box.west);
+
+    % ---------------------------------------------------------------
+    % Proposed relation (undirected: no arrowheads)
+    % ---------------------------------------------------------------
+    \draw[rel] (A-box.south) -- ++(0,-0.6) coordinate (ra);
+    \draw[rel] (B-box.south) -- ++(0,-0.6) coordinate (rb);
+    \draw[rel] (C-box.south) -- ++(0,-0.6) coordinate (rc);
+    \draw[rel] (ra) -- (rc);
+
+    \node[below=4pt of rb, font=\small\itshape] {
+        Proposed relation connecting successive phases
+    };
+
+    \end{tikzpicture}
+
+    \caption{An illustrative process across changing configurations.
+    The visible determinations differ between phases, while a
+    connecting relation is proposed for examination. The image
+    illustrates a question of continuity; it does not establish
+    numerical identity or the preservation of an invariant.}
+    \label{fig:continuity-through-transformation}
+\end{figure}
+
+% =============================================================================
+% END OF ILLUSTRATION IL01
+% =============================================================================

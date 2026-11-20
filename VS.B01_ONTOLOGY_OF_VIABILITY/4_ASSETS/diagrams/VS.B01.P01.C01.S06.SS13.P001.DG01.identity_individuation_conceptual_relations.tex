@@ -1,0 +1,113 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/
+%           VS.B01.P01.C01.S06.SS13.P001.DG01.identity_individuation_conceptual_relations.tex
+%
+% Asset:
+%   Conceptual Relations of Identity, Unity, and Individuation
+%
+% Purpose:
+%   Provides a schematic representation of the analytical questions
+%   concerning an existent, distinguishing identity, unity,
+%   individuation, distinction, and numerical identity without
+%   implying causal, temporal, or hierarchical priority.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning, fit, backgrounds}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.45cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            minimum height=1.35cm, inner sep=5pt, line width=0.6pt
+        },
+        % --- primary questions (three stacked, equal width) ---
+        primary/.style={box, text width=9.2cm, fill=blue!8, draw=blue!55!black},
+        % --- related questions (2 x 2 grid, equal width) ---
+        related/.style={box, text width=4.4cm, fill=gray!10, draw=black!60},
+        % --- group frames ---
+        group/.style={
+            draw=black!45, dashed, rounded corners=5pt,
+            inner sep=9pt, line width=0.5pt
+        },
+        % --- captions and title (names avoid clashes with built-in TikZ keys) ---
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75, align=center},
+        figtitle/.style={font=\small\bfseries, align=center}
+    ]
+
+    % ---------------------------------------------------------------
+    % Group A: primary analytical questions
+    % ---------------------------------------------------------------
+    \node[primary] (identity) {
+        \textbf{Identity}\\[2pt]
+        The identity of the existent
+    };
+    \node[primary, below=of identity] (unity) {
+        \textbf{Unity}\\[2pt]
+        The constitution of a unity
+    };
+    \node[primary, below=of unity] (individuation) {
+        \textbf{Individuation}\\[2pt]
+        The constitution of the existent as an individual
+    };
+
+    \node[group, fit=(identity)(unity)(individuation)] (groupA) {};
+    \node[grouplabel, below=0.15cm of groupA] (capA) {
+        Analytically distinguishable questions
+    };
+
+    % ---------------------------------------------------------------
+    % Group B: related questions (2 x 2)
+    % ---------------------------------------------------------------
+    \node[related, below=1.1cm of capA, xshift=-2.4cm] (distinction) {
+        \textbf{Distinction}\\[2pt]
+        Difference and non-identity
+    };
+    \node[related, right=0.4cm of distinction] (numerical) {
+        \textbf{Numerical Identity}\\[2pt]
+        Sameness across comparison
+    };
+    \node[related, below=0.4cm of distinction] (singularity) {
+        \textbf{Singularity}\\[2pt]
+        Singular status within a respect
+    };
+    \node[related, below=0.4cm of numerical] (uniqueness) {
+        \textbf{Uniqueness}\\[2pt]
+        Non-repetition within a comparison
+    };
+
+    \node[group, fit=(distinction)(numerical)(singularity)(uniqueness)] (groupB) {};
+    \node[grouplabel, below=0.15cm of groupB] (capB) {
+        Related questions; no automatic derivation or reduction
+    };
+
+    % ---------------------------------------------------------------
+    % Outer frame and title
+    % ---------------------------------------------------------------
+    \begin{scope}[on background layer]
+        \node[draw=black, rounded corners=6pt, line width=0.8pt,
+              inner sep=12pt, fit=(groupA)(capA)(groupB)(capB)] (outer) {};
+    \end{scope}
+    \node[figtitle, above=0.25cm of outer] {
+        ONE EXISTENT UNDER ONTOLOGICAL EXAMINATION
+    };
+
+    \end{tikzpicture}
+
+    \caption{Analytical Relations Among Identity, Unity, and Individuation}
+    \label{fig:identity-individuation-conceptual-relations}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

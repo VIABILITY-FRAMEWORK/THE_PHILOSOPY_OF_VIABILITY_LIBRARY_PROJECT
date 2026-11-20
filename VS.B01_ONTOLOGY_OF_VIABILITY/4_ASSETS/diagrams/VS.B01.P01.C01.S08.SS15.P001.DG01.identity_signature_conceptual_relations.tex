@@ -1,0 +1,134 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C01.S08.SS15.P001.DG01.identity_signature_conceptual_relations.tex
+%
+% Section / Chapter:
+%   Identity and Signature — Chapter 01: Identity
+%
+% Asset:
+%   DG01 — Identity and Signature: Conceptual Relations
+%
+% Purpose :
+%   To represent the conceptual distinction between an existent,
+%   its determinations, an organized configuration considered as
+%   a signature, and the description through which that configuration
+%   may be represented.
+%
+% Technical Requirements (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning}
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.9cm and 1.0cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=3.4cm, minimum height=1.6cm,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        onto/.style    ={box, fill=blue!8, draw=blue!55!black},
+        analytic/.style={box, dashed, fill=gray!10, draw=black!60},
+        % --- arrows ---
+        directed/.style={-{Stealth[length=2.5mm]}, thick},
+        assoc/.style   ={{Stealth[length=2.2mm]}-{Stealth[length=2.2mm]},
+                         thick, dashed}
+    ]
+
+    % ---------------------------------------------------------------
+    % Grid: three columns, centered on Determinations
+    % ---------------------------------------------------------------
+    \node[onto] (determinations) {
+        \textbf{Determinations}\\[2pt]
+        Actual determinations of the existent
+    };
+    \node[onto, left=of determinations] (identity) {
+        \textbf{Identity}\\[2pt]
+        What makes the existent the existent that it is
+    };
+    \node[onto, right=of determinations] (manifestation) {
+        \textbf{Manifestation}\\[2pt]
+        Manifestation of an existent or its determinations
+    };
+    \node[onto, above=of determinations] (existent) {
+        \textbf{Existent}\\[2pt]
+        Ontological actuality
+    };
+
+    % ---------------------------------------------------------------
+    % Analytical column (below Determinations)
+    % ---------------------------------------------------------------
+    \node[analytic, below=of determinations] (signature) {
+        \textbf{Signature}\\[2pt]
+        Organized configuration of determinations
+    };
+    \node[analytic, below=of signature] (description) {
+        \textbf{Description}\\[2pt]
+        Representation or articulation of a signature
+    };
+
+    % Numerical Identity: same column as Identity, same row as Signature
+    \node[onto] (numerical) at (identity |- signature) {
+        \textbf{Numerical Identity}\\[2pt]
+        Reference to one and the same existent
+    };
+
+    % ---------------------------------------------------------------
+    % Relations
+    % ---------------------------------------------------------------
+    \draw[directed] (existent)        -- (determinations);
+    \draw[directed] (determinations)  -- (signature);
+
+    \draw[assoc] (existent.west) -| (identity.north);
+    \draw[assoc] (determinations)     -- (manifestation);
+    \draw[assoc] (signature)          -- (description);
+    \draw[assoc] (identity)           -- (numerical);
+
+    % ---------------------------------------------------------------
+    % Legend (bottom right, in the empty cell)
+    % ---------------------------------------------------------------
+    \node[anchor=center, draw=black!30, rounded corners=2pt,
+          text width=3.4cm, align=left, font=\scriptsize, inner sep=5pt]
+        (legend) at (manifestation |- description) {
+        \textbf{Legend}\\[3pt]
+        \tikz[baseline=-0.5ex]\draw[rounded corners=1pt, thick, fill=blue!8,
+            draw=blue!55!black] (0,-0.1) rectangle (0.5,0.1);\;
+        ontological concept\\[2pt]
+        \tikz[baseline=-0.5ex]\draw[rounded corners=1pt, thick, dashed,
+            fill=gray!10, draw=black!60] (0,-0.1) rectangle (0.5,0.1);\;
+        analytical notion\\[2pt]
+        \tikz[baseline=-0.5ex]\draw[directed] (0,0) -- (0.5,0);\;
+        directed relation\\[2pt]
+        \tikz[baseline=-0.5ex]\draw[assoc] (0,0) -- (0.5,0);\;
+        association
+    };
+
+    % ---------------------------------------------------------------
+    % Explanatory note
+    % ---------------------------------------------------------------
+    \node[below=0.8cm of description, text width=11cm, align=center,
+          font=\footnotesize\itshape] (note) {
+        Conceptual associations do not establish equivalence,
+        causal production, or ontological reduction.
+        The constitutive status of signature remains open.
+    };
+
+    \end{tikzpicture}
+
+    \caption{Conceptual Relations Between Identity, Determination,
+    Signature, and Description}
+    \label{fig:identity-signature-conceptual-relations}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

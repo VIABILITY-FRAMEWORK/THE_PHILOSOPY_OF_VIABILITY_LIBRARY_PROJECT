@@ -1,0 +1,157 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/figures/VS.B01.P01.C02.S01.SS04.P001.FG01.invariance_and_transformation.tex
+%
+% Section / Chapter / Asset:
+%   Chapter 02 — Invariance
+%   Figure FG01 — Invariance and Transformation
+%
+% Asset ID:
+%   VS.B01.P01.C02.S01.SS04.P001.FG01.invariance_and_transformation
+%
+% Purpose :
+%   To distinguish initial and resulting configurations under
+%   transformation and to illustrate the possible coexistence
+%   of preservation and alteration with respect to different
+%   determinations or relations.
+%
+% Conceptual Policy:
+%   1. The figure does not presuppose that an invariant exists.
+%   2. Preservation and alteration are distinct analytical possibilities.
+%   3. They may coexist with respect to different specified features.
+%   4. Preservation of one feature does not imply that the entire
+%      configuration remains unchanged.
+%   5. Neither preservation nor alteration establishes numerical
+%      identity or non-identity across configurations.
+%   6. An invariance claim requires specification of its
+%      transformation, domain, respect, and preservation criterion.
+%   7. The figure is schematic and does not assert a universal
+%      ontological mechanism.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, calc, positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.9cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        config/.style={box, text width=3.2cm, minimum height=1.9cm,
+                       fill=blue!8, draw=blue!55!black},
+        transformation/.style={box, text width=2.4cm, minimum height=1.5cm,
+                       fill=blue!16, draw=blue!55!black},
+        outcome/.style={box, text width=5.0cm, minimum height=2.0cm,
+                       fill=gray!10, draw=black!60},
+        coexist/.style={box, text width=8.0cm, minimum height=1.6cm,
+                       fill=green!8, draw=green!40!black},
+        chip/.style={box, text width=2.3cm, minimum height=0.95cm,
+                     font=\footnotesize, fill=white, draw=black!55},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        elabel/.style={font=\footnotesize\itshape, text=black!75},
+        condtitle/.style={font=\small\bfseries, align=center},
+        % --- arrows ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        possible/.style={-{Stealth[length=2.5mm]}, line width=0.8pt, dashed}
+    ]
+
+    % ---------------------------------------------------------------
+    % Row 1: initial configuration, transformation, resulting configuration
+    % ---------------------------------------------------------------
+    \node[config] (initial) {
+        \textbf{Initial Configuration}\\[3pt]
+        Determinations and relations associated with an existent
+    };
+    \node[transformation, right=of initial] (transform) {
+        \textbf{Transformation}\\[3pt]
+        Specified change
+    };
+    \node[config, right=of transform] (result) {
+        \textbf{Resulting Configuration}\\[3pt]
+        Determinations and relations following transformation
+    };
+
+    \draw[directed] (initial) -- (transform);
+    \draw[directed] (transform) -- (result);
+
+    \node[vsgroup, fit=(initial)(transform)(result)] (top) {};
+
+    % ---------------------------------------------------------------
+    % Row 2: possible preservation / possible alteration
+    % ---------------------------------------------------------------
+    \node[outcome, anchor=north east] (preservation) at
+        ($(top.south)+(-0.4,-1.6)$) {
+        \textbf{Possible Preservation}\\[3pt]
+        A specified determination or relation remains preserved
+        under transformation
+    };
+    \node[outcome, anchor=north west] (alteration) at
+        ($(top.south)+(0.4,-1.6)$) {
+        \textbf{Possible Alteration}\\[3pt]
+        Another determination or relation undergoes change
+        under transformation
+    };
+
+    % Shared stem (no arrowhead), then two arrowed branches
+    \draw[line width=0.8pt, dashed] (top.south) -- ++(0,-0.8) coordinate (split);
+    \draw[possible] (split) -| (preservation.north);
+    \draw[possible] (split) -| (alteration.north);
+
+    \node[elabel, anchor=west] at ($(top.south)+(0.15,-0.4)$) {
+        Analytical Assessment of the Result
+    };
+
+    % ---------------------------------------------------------------
+    % Row 3: possible coexistence
+    % ---------------------------------------------------------------
+    \coordinate (gap) at ($(preservation.south east)!0.5!(alteration.south west)$);
+
+    \node[coexist, below=1.3cm of gap] (coexistence) {
+        \textbf{Possible Coexistence}\\[3pt]
+        Preservation and alteration may concern different respects
+        of the same transformation
+    };
+
+    \draw[possible] (preservation.south) -- ++(0,-0.65)
+        -| ([xshift=-1.5cm]coexistence.north);
+    \draw[possible] (alteration.south) -- ++(0,-0.65)
+        -| ([xshift=1.5cm]coexistence.north);
+
+    % ---------------------------------------------------------------
+    % Row 4: conditions of an invariance claim (standalone, no arrow)
+    % ---------------------------------------------------------------
+    \coordinate (condc) at ($(coexistence.south)+(0,-2.1)$);
+
+    \node[chip, anchor=east] (c2) at ($(condc)+(-0.1,0)$) {Domain};
+    \node[chip, anchor=west] (c3) at ($(condc)+(0.1,0)$)  {Respect};
+    \node[chip, left=0.2cm of c2]  (c1) {Transformation};
+    \node[chip, right=0.2cm of c3] (c4) {Preservation Criterion};
+
+    \node[condtitle] (ctitle) at ($(condc)+(0,0.95)$) {
+        Conditions of an Invariance Claim
+    };
+    \node[vsgroup, fit=(ctitle)(c1)(c2)(c3)(c4)] {};
+
+    \end{tikzpicture}
+
+    \caption{Preservation and Alteration as Distinct Possibilities
+    Under Transformation}
+    \label{fig:invariance-and-transformation}
+\end{figure}
+
+% =============================================================================
+% END OF FIGURE FG01
+% =============================================================================

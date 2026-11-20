@@ -1,0 +1,99 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/illustrations/VS.B01.P01.C02.S10.SS02.P003.IL01.shared_invariant_distinct_existents.tex
+%
+% Asset   : IL01 — Shared Invariant Across Distinct Existents
+% Type    : Illustration
+% Location: Section 10, Subsection 02, Paragraph 003
+%
+% Purpose :
+%   To illustrate that two distinct existents may share a preserved
+%   determination without thereby becoming numerically identical.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{calc, positioning}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    % distance between the centres of the two existents (box 4.0 cm + gap 2.6 cm)
+    \def\expitch{6.6}
+
+    \begin{tikzpicture}[
+        font=\small,
+        % --- node roles ---
+        exbox/.style={
+            draw=blue!55!black, fill=blue!8, rounded corners=8pt,
+            line width=0.8pt, minimum width=4.0cm, minimum height=2.4cm
+        },
+        exttitle/.style={font=\small\bfseries, align=center},
+        exnote/.style={font=\footnotesize, text=black!75, align=center,
+                       text width=3.6cm},
+        shared/.style={
+            draw=green!40!black, fill=green!10, circle,
+            minimum size=0.75cm, line width=0.8pt, inner sep=0pt,
+            font=\small
+        },
+        % --- undirected link (no arrowheads: no direction or priority) ---
+        sharedline/.style={draw=green!40!black, dashed, line width=0.8pt},
+        % --- one existent: #1 = title ---
+        pics/existent/.style={
+            code={
+                \node[exbox] (-box) at (0,0) {};
+                \node[exttitle] at (0,0.8) {#1};
+                \node[shared] (-d) at (0,-0.1) {$d$};
+                \node[exnote] at (0,-0.85) {Independent configuration};
+            }
+        }
+    ]
+
+    % ---------------------------------------------------------------
+    % Distinct existents
+    % ---------------------------------------------------------------
+    \pic (A) at (0,0)        {existent={Existent A}};
+    \pic (B) at (\expitch,0) {existent={Existent B}};
+
+    % ---------------------------------------------------------------
+    % Shared determination (undirected)
+    % ---------------------------------------------------------------
+    \draw[sharedline] (A-d) -- (B-d)
+        node[midway, above=3pt, align=center, text width=2.2cm,
+             font=\footnotesize\bfseries, text=green!30!black] {
+            Same specified determination
+        };
+
+    % ---------------------------------------------------------------
+    % Distinctness marker (optional)
+    % ---------------------------------------------------------------
+    \node[below=3pt of $(A-d)!0.5!(B-d)$, align=center, text width=2.2cm,
+          font=\footnotesize\itshape, text=black!75] {
+        $\neq$\\ numerically distinct
+    };
+
+    % ---------------------------------------------------------------
+    % Note (centred under both existents)
+    % ---------------------------------------------------------------
+    \coordinate (mid) at ($(A-box.south)!0.5!(B-box.south)$);
+    \node[below=0.7cm of mid, text width=10.0cm, align=center,
+          font=\footnotesize\itshape] {
+        Preservation of $d$ across both cases does not establish
+        numerical identity between Existent A and Existent B.
+    };
+
+    \end{tikzpicture}
+
+    \caption{A shared invariant determination does not establish
+    the numerical identity of distinct existents. The matching
+    symbol represents one specified determination, not the
+    identity of the existents as wholes.}
+    \label{fig:shared-invariant-distinct-existents}
+\end{figure}
+
+% =============================================================================
+% END OF ILLUSTRATION IL01
+% =============================================================================

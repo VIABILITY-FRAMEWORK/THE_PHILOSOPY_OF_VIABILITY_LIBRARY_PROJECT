@@ -1,13 +1,25 @@
 THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT/
 │
+│
+└── 07_registers/
+    ├── axioms_register.csv
+    ├── definitions_register.csv
+    ├── propositions_register.csv
+    ├── theses_register.csv
+    ├── hypotheses_register.csv
+    ├── arguments_register.csv
+    └── philosophical_foundations_register.csv
+
+
+
 ├── VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 ├── main.tex
 ├── preamble.tex
 ├── metadata.tex
 ├── macros.tex
-├── acronyms.tex
-├── glossary.tex
+
+
 ├── README.md
 ├── main.pdf
 │
@@ -377,40 +389,38 @@ THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT/
 │               ├── section_04_open_questions_and_unresolved_commitments.tex
 │               └── section_05_scope_of_the_ontology_and_transition_to_epistemology.tex
 │
-├── 3_BACKMATTER/
-│   ├── 00_backmatter.tex
-│   │
-│   ├── 01appendices/
-│   │   ├── 00_appendices.tex
-│   │   ├── appendix_A_FORMAL_NOTATION.tex
-│   │   ├── appendix_BONTOLOGICAL_PRINCIPLES.tex
-│   │   ├── appendix_C_DEFINITIONS_AND_PROPOSITIONS.tex
-│   │   ├── appendix_D_FORMAL_DEPENDENCY_MAPS.tex
-│   │   ├── appendix_E_SUPPLEMENTARY_PROOFS.tex
-│   │   ├── appendix_F_COMPARATIVE_TABLES.tex
-│   │   └── appendix_G_TECHNICAL_TERMINOLOGY.tex
-│   │
-│   ├── 02_logical_entity_reference_map.tex
-│   │
-│   ├── 03_bibliography/
-│   │   ├── bibliography.tex
-│   │   └── references.bib
-│   │
-│   ├── 04_glossary.tex
-│   │
-│   ├── 05_indexes/
-│   │   ├── subject_index.tex
-│   │   ├── name_index.tex
-│   │   └── concept_index.tex
-│   │
-│   └── 06_registers/
-│       ├── axioms_register.csv
-│       ├── definitions_register.csv
-│       ├── propositions_register.csv
-│       ├── theses_register.csv
-│       ├── hypotheses_register.csv
-│       ├── arguments_register.csv
-│       └── philosophical_foundations_register.csv
+3_BACKMATTER/
+│
+├── 00_backmatter.tex
+│
+├── 01_appendices/
+│   ├── 00_appendices.tex
+│   ├── appendix_A_formal_notation.tex
+│   ├── appendix_B_ontological_principles.tex
+│   ├── appendix_C_definitions_and_propositions.tex
+│   ├── appendix_D_formal_dependency_maps.tex
+│   ├── appendix_E_supplementary_proofs.tex
+│   ├── appendix_F_comparative_tables.tex
+│   └── appendix_G_technical_terminology.tex
+│
+├── 02_logical_entity_reference_map.tex
+│
+├── 03_bibliography/
+│   ├── bibliography.tex
+│   └── references.bib
+│
+├── 04_glossary.tex
+│
+├── 05_acronyms.tex
+│
+├── 06_indexes/
+│   ├── subject_index.tex
+│   ├── name_index.tex
+│   └── concept_index.tex
+
+
+
+
 │
 └── 4_ASSETS/
     ├── figures/

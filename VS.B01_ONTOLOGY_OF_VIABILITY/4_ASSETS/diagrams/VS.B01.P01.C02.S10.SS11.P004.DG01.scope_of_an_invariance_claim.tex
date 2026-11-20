@@ -1,0 +1,129 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C02.S10.SS11.P004.DG01.scope_of_an_invariance_claim.tex
+%
+% Asset   : DG01 — Scope of an Invariance Claim
+% Type    : Diagram
+% Location: Section 10, Subsection 11, Paragraph 004
+%
+% Purpose :
+%   To display the elements that delimit an invariance claim and
+%   distinguish its warranted conclusion from conclusions that
+%   require independent ontological justification.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, calc, positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.35cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        specbox/.style={box, text width=3.1cm, minimum height=1.1cm,
+                        fill=blue!8, draw=blue!55!black},
+        assessbox/.style={box, text width=5.6cm, minimum height=1.0cm,
+                          fill=blue!16, draw=blue!55!black},
+        resultbox/.style={box, text width=5.6cm, minimum height=1.1cm,
+                          font=\small\bfseries, line width=0.9pt,
+                          fill=green!8, draw=green!40!black},
+        limitbox/.style={box, text width=3.1cm, minimum height=1.1cm,
+                         dashed, fill=gray!10, draw=black!60},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=center},
+        % --- arrows and lines ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        vslink/.style={draw=black!55, dashed, line width=0.7pt},
+        boundary/.style={draw=black!70, line width=0.9pt,
+                         dash pattern=on 6pt off 2pt on 1pt off 2pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Claim specification: six elements, no order among them
+    % ---------------------------------------------------------------
+    \node[specbox] (subject)        {Existent / Subject};
+    \node[specbox, right=of subject]        (determination)  {Specified Determination};
+    \node[specbox, right=of determination]  (transformation) {Transformation};
+    \node[specbox, below=of subject]        (domain)         {Domain and Respect};
+    \node[specbox, below=of determination]  (criterion)      {Preservation Criterion};
+    \node[specbox, below=of transformation] (conditions)     {Conditions and Limits};
+
+    \node[vsgroup, fit=(subject)(determination)(transformation)
+                       (domain)(criterion)(conditions)] (spec) {};
+    \node[grouplabel, above=0.1cm of spec] {Elements delimiting the claim};
+
+    % ---------------------------------------------------------------
+    % Assessment and warranted result
+    % ---------------------------------------------------------------
+    \node[assessbox, below=0.8cm of spec] (assessment) {
+        \textbf{Specified Invariance Assessment}
+    };
+    \node[resultbox, below=0.8cm of assessment] (result) {
+        Preservation Established Within Scope
+    };
+
+    \draw[directed] (spec)       -- (assessment);
+    \draw[directed] (assessment) -- (result);
+
+    % ---------------------------------------------------------------
+    % Inferential boundary
+    % ---------------------------------------------------------------
+    \coordinate (bnd) at ($(result.south)+(0,-1.0)$);
+    \draw[boundary] (spec.west |- bnd) -- (spec.east |- bnd);
+    \node[grouplabel, anchor=south] at ($(bnd)+(1.75,0.03)$) {
+        Inferential Boundary
+    };
+
+    % ---------------------------------------------------------------
+    % Further ontological questions (same columns as the top grid)
+    % ---------------------------------------------------------------
+    \node[limitbox, below=1.0cm of bnd] (persistence) {
+        Persistence and Continuity
+    };
+    \node[limitbox, left=of persistence]  (identity) {Numerical Identity};
+    \node[limitbox, right=of persistence] (totality) {
+        Complete Ontological Constitution
+    };
+
+    % Undirected connectors: not entailed by the invariance result
+    \draw[vslink] (result.south) -- (persistence.north);
+    \draw[vslink] ($(result.south)+(0,-0.4)$) -| (identity.north);
+    \draw[vslink] ($(result.south)+(0,-0.4)$) -| (totality.north);
+
+    % ---------------------------------------------------------------
+    % Note
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of persistence, text width=10cm, align=center,
+          font=\footnotesize\itshape] {
+        These further conclusions are not entailed by the
+        invariance finding alone. Each requires independent
+        ontological justification.
+    };
+
+    \end{tikzpicture}
+
+    \caption{The scope of an invariance claim. A justified
+    preservation finding is restricted to its specified subject,
+    determination, transformation, domain, respect, criterion,
+    and conditions. Further ontological conclusions require
+    independent justification.}
+    \label{fig:scope-of-an-invariance-claim}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

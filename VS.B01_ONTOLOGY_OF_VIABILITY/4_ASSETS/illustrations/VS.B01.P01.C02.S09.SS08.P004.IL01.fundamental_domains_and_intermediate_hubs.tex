@@ -1,0 +1,118 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/illustrations/
+%           VS.B01.P01.C02.S09.SS08.P004.IL01.fundamental_domains_and_intermediate_hubs.tex
+%
+% Asset   : IL01 — Fundamental Domains and Intermediate Hubs
+% Location: Chapter 02 / Section 09 / Subsection 08 / Paragraph 004
+%
+% Purpose :
+%   To provide a visual orientation to the four fundamental
+%   domains and three intermediate hubs in the proposed
+%   ontological articulation.
+%
+% Conceptual Caution :
+%   Spatial arrangement is illustrative only. It does not
+%   establish hierarchy, temporal order, causal direction,
+%   exhaustive classification, or fixed relations between
+%   the domains and hubs.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{calc, positioning}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    % layout parameters (cm)
+    \def\dx{4.0}   % horizontal offset of the fundamental domains from centre
+    \def\dy{2.0}   % vertical offset of the top / bottom rows from centre
+    \def\hx{1.8}   % horizontal offset of the two middle hubs from centre
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- node roles ---
+        fundamental/.style={
+            draw=blue!55!black, fill=blue!8, rounded corners=5pt,
+            line width=0.8pt, text width=3.2cm, minimum height=1.2cm,
+            align=center, inner sep=6pt
+        },
+        hub/.style={
+            draw=black!60, fill=gray!10, rounded corners=9pt, dashed,
+            line width=0.8pt, text width=2.6cm, minimum height=1.2cm,
+            align=center, inner sep=6pt
+        },
+        % --- non-directional association (no arrowheads) ---
+        fieldline/.style={draw=black!55, densely dotted, line width=0.8pt},
+        % --- legend swatches ---
+        legfund/.style={draw=blue!55!black, fill=blue!8, rounded corners=2pt,
+                        line width=0.6pt},
+        leghub/.style={draw=black!60, fill=gray!10, rounded corners=4pt,
+                       dashed, line width=0.6pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Fundamental domains (four corners)
+    % ---------------------------------------------------------------
+    \node[fundamental] (first)      at (-\dx,  \dy) {\textbf{First Determination}};
+    \node[fundamental] (structural) at ( \dx,  \dy) {\textbf{Structural Determination}};
+    \node[fundamental] (relational) at (-\dx, -\dy) {\textbf{Relational Manifestation}};
+    \node[fundamental] (material)   at ( \dx, -\dy) {\textbf{Material Manifestation}};
+
+    % ---------------------------------------------------------------
+    % Intermediate hubs (decree aligned with the top row)
+    % ---------------------------------------------------------------
+    \node[hub] (decree)        at (0,    \dy) {\textbf{Hub of Decree}};
+    \node[hub] (signification) at (-\hx, 0)   {\textbf{Hub of Signification}};
+    \node[hub] (realization)   at ( \hx, 0)   {\textbf{Hub of Realization}};
+
+    % ---------------------------------------------------------------
+    % Non-directional illustrative associations
+    % ---------------------------------------------------------------
+    \draw[fieldline] (first)      -- (decree);
+    \draw[fieldline] (structural) -- (decree);
+    \draw[fieldline] (first)      -- (signification);
+    \draw[fieldline] (structural) -- (realization);
+    \draw[fieldline] (relational) -- (signification);
+    \draw[fieldline] (material)   -- (realization);
+    \draw[fieldline] (relational) -- (realization);
+    \draw[fieldline] (material)   -- (signification);
+
+    % ---------------------------------------------------------------
+    % Legend and note (centred under the bottom row)
+    % ---------------------------------------------------------------
+    \coordinate (mid) at ($(relational.south)!0.5!(material.south)$);
+
+    \node[below=0.8cm of mid, font=\scriptsize] (legend) {
+        \tikz[baseline=-0.5ex]\draw[legfund] (0,-0.12) rectangle (0.55,0.12);~Fundamental domain
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[leghub] (0,-0.12) rectangle (0.55,0.12);~Intermediate hub
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[fieldline] (0,0) -- (0.55,0);~Non-directional association
+    };
+
+    \node[below=0.45cm of legend, text width=10.5cm, align=center,
+          font=\footnotesize\itshape] {
+        Four fundamental domains and three intermediate hubs
+        within one proposed ontological articulation.
+        Their spatial arrangement does not establish a
+        linear sequence or a hierarchy.
+    };
+
+    \end{tikzpicture}
+
+    \caption{An illustrative orientation to the four fundamental
+    domains and three intermediate hubs. The dotted associations
+    are non-directional and do not specify fixed relations,
+    causal connections, or ontological priority.}
+    \label{fig:fundamental-domains-and-intermediate-hubs}
+\end{figure}
+
+% =============================================================================
+% END OF ILLUSTRATION IL01
+% =============================================================================
