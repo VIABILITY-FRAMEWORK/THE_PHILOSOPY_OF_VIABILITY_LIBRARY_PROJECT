@@ -1,0 +1,110 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C03.S07.SS11.P003.DG01.scope_of_unity_and_singularity_claims.tex
+%
+% Asset:
+%   Diagram DG01 — Scope of Unity and Singularity Claims
+%
+% Purpose :
+%   To distinguish the independent questions involved in a claim
+%   that something is one, and to prevent numerical singularity,
+%   ontological unity, uniqueness, and identity from being treated
+%   as equivalent conclusions.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    claim/.style={
+        draw,
+        rounded corners,
+        align=center,
+        text width=0.55\textwidth,
+        minimum height=0.8cm,
+        inner sep=5pt,
+        font=\small
+    },
+    specification/.style={
+        draw,
+        rounded corners,
+        align=center,
+        text width=0.68\textwidth,
+        minimum height=1.0cm,
+        inner sep=6pt,
+        font=\small
+    },
+    distinction/.style={
+        draw,
+        rounded corners,
+        align=center,
+        text width=2.7cm,
+        minimum height=1.25cm,
+        inner sep=5pt,
+        font=\small
+    },
+    connection/.style={
+        thick,
+        dashed,
+        -{Stealth[length=2mm]}
+    }
+]
+
+\node[claim] (initial) at (0,3.3) {
+    \textbf{Claim: ``X is one''}
+};
+
+\node[specification] (specify) at (0,1.8) {
+    \textbf{Specify the claim}\\
+    Subject; domain; respect; criterion; scope
+};
+
+\node[distinction] (number) at (-4.8,-0.3) {
+    \textbf{Numerical Singularity}\\
+    One unit under a specified counting criterion
+};
+
+\node[distinction] (unity) at (-1.6,-0.3) {
+    \textbf{Ontological Unity}\\
+    Unity attributed to a subject in a specified respect
+};
+
+\node[distinction] (unique) at (1.6,-0.3) {
+    \textbf{Uniqueness}\\
+    No other item meets the relevant criterion
+};
+
+\node[distinction] (identity) at (4.8,-0.3) {
+    \textbf{Identity Question}\\
+    Unity or plurality of identities requires independent grounds
+};
+
+\draw[connection] (initial) -- (specify);
+\draw[connection] (specify.south west) -- (number.north);
+\draw[connection] (specify.south west) -- (unity.north);
+\draw[connection] (specify.south east) -- (unique.north);
+\draw[connection] (specify.south east) -- (identity.north);
+
+\node[
+    align=center,
+    text width=0.9\textwidth,
+    font=\footnotesize
+] at (0,-2.0) {
+    These are distinct analytical questions. The connections
+    indicate clarification, not entailment. No branch establishes
+    another without an additional ontological argument.
+};
+
+\end{tikzpicture}
+
+\caption{The Analytical Scope of Unity and Singularity Claims}
+\label{fig:scope-of-unity-and-singularity-claims}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

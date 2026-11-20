@@ -1,0 +1,74 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/illustrations/VS.B01.P01.C03.S06.SS13.P003.IL01.workshop_configuration_and_multiplicity.tex
+%
+% Asset:
+%   Illustration IL01 — Workshop Configuration and Multiplicity
+%
+% Purpose :
+%   To provide a concrete visual example of compositional,
+%   processual, and relational multiplicity within an organized
+%   configuration, without assigning an identity count to it.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    item/.style={
+        draw,
+        rounded corners,
+        minimum width=2.0cm,
+        minimum height=0.85cm,
+        align=center,
+        font=\small
+    },
+    process/.style={
+        draw,
+        ellipse,
+        minimum width=2.15cm,
+        minimum height=0.85cm,
+        align=center,
+        font=\small
+    },
+    link/.style={thick}
+]
+
+% Configuration boundary
+\draw[rounded corners, thick]
+    (-4.4,-2.45) rectangle (4.4,2.55);
+
+\node[font=\small\bfseries] at (0,2.2) {Organized Workshop};
+
+% Components
+\node[item] (machine) at (-2.7,1.1) {Machine};
+\node[item] (tools) at (0,1.1) {Tools};
+\node[item] (materials) at (2.7,1.1) {Materials};
+
+% Processes
+\node[process] (operation) at (-1.35,-0.35) {Operation};
+\node[process] (production) at (1.35,-0.35) {Production};
+
+% Product
+\node[item] (product) at (0,-1.65) {Produced object};
+
+% Relations
+\draw[link] (machine) -- (operation);
+\draw[link] (tools) -- (operation);
+\draw[link] (tools) -- (production);
+\draw[link] (materials) -- (production);
+\draw[link] (operation) -- (production);
+\draw[link] (production) -- (product);
+
+\end{tikzpicture}
+
+\caption{An Organized Configuration with Multiple Components, Processes, and Relations}
+\label{fig:workshop-configuration-and-multiplicity}
+\end{figure}
+
+% =============================================================================
+% END OF ILLUSTRATION IL01
+% =============================================================================

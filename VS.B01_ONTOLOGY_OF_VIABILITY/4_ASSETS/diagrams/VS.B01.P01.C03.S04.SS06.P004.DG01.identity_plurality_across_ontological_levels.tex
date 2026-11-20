@@ -1,0 +1,120 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/
+%           VS.B01.P01.C03.S04.SS06.P004.DG01.identity_plurality_across_ontological_levels.tex
+%
+% Asset   : DG01 — Identity Plurality Across Ontological Levels
+%
+% Purpose :
+%   To display distinct levels at which unity and plurality
+%   may be asserted, without implying a necessary hierarchy
+%   or numerical correspondence among them.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning, fit}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        levelbox/.style={box, text width=2.8cm, minimum height=1.4cm,
+                         fill=blue!8, draw=blue!55!black},
+        identitybox/.style={box, text width=6.4cm, minimum height=1.3cm,
+                            fill=blue!16, draw=blue!55!black},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=left},
+        elabel/.style={font=\footnotesize\itshape, text=black!75,
+                       align=left, text width=4.6cm},
+        % --- undirected link (no arrowheads: no priority, no entailment) ---
+        vslink/.style={draw=black!55, dashed, line width=0.7pt}
+    ]
+
+    % ---------------------------------------------------------------
+    % Row 1: three levels
+    % ---------------------------------------------------------------
+    \node[levelbox] (manifestation) {
+        \textbf{Manifestation}\\[3pt]
+        One or many forms
+    };
+    \node[levelbox, right=of manifestation] (components) {
+        \textbf{Components}\\[3pt]
+        One or many elements
+    };
+    \node[levelbox, right=of components] (relations) {
+        \textbf{Relations}\\[3pt]
+        One or many connections
+    };
+
+    % ---------------------------------------------------------------
+    % Row 2: two levels, centred under the row above
+    % ---------------------------------------------------------------
+    \node[levelbox, below=of components, xshift=-1.8cm] (source) {
+        \textbf{Source}\\[3pt]
+        One or many grounds
+    };
+    \node[levelbox, below=of components, xshift=1.8cm] (aggregate) {
+        \textbf{Aggregate}\\[3pt]
+        Unity by a grouping criterion
+    };
+
+    % ---------------------------------------------------------------
+    % Frame: five levels of equal rank
+    % ---------------------------------------------------------------
+    \node[vsgroup, fit=(manifestation)(components)(relations)
+                       (source)(aggregate)] (levels) {};
+    \node[grouplabel, anchor=south west] at (levels.north west) {
+        Levels at which unity and plurality may be asserted
+    };
+
+    % ---------------------------------------------------------------
+    % Identity (outside the frame)
+    % ---------------------------------------------------------------
+    \node[identitybox, below=1.1cm of levels] (identity) {
+        \textbf{Identity}\\[3pt]
+        Unity or plurality requiring identity-level grounds
+    };
+
+    \draw[vslink] (levels.south) -- (identity.north)
+        node[elabel, midway, right=5pt] {
+            possible relevance for inquiry
+        };
+
+    % ---------------------------------------------------------------
+    % Analytical constraint
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of identity, text width=10.5cm, align=center,
+          font=\footnotesize\itshape] {
+        \textbf{Analytical constraint:}
+        A unity or plurality claim at one level does not determine
+        the identity configuration at another level without
+        additional ontological grounds. The connection indicates
+        possible relevance for inquiry, not entailment, causation,
+        or a fixed hierarchy.
+    };
+
+    \end{tikzpicture}
+
+    \caption{Distinct ontological levels relevant to the analysis of
+    identity plurality}
+    \label{fig:identity-plurality-across-ontological-levels}
+\end{figure}
+
+% =============================================================================
+% END OF ASSET DG01
+% =============================================================================

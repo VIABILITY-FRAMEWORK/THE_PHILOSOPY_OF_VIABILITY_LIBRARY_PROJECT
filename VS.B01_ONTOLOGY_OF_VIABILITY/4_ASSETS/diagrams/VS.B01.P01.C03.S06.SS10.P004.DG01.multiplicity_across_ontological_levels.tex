@@ -1,0 +1,86 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C03.S06.SS10.P004.DG01.multiplicity_across_ontological_levels.tex
+%
+% Asset:
+%   Diagram DG01 — Multiplicity Across Ontological Levels
+%
+% Purpose :
+%   To distinguish possible subjects and levels at which multiplicity
+%   may be examined, without presenting them as a necessary hierarchy
+%   or inferring identity plurality from organizational plurality.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.15cm,
+    every node/.style={align=center},
+    levelnode/.style={
+        draw,
+        rounded corners,
+        text width=0.69\textwidth,
+        minimum height=0.85cm,
+        inner sep=5pt
+    },
+    relation/.style={-{Stealth[length=2mm]}, thick, dashed}
+]
+
+\node[levelnode] (elements) {
+    \textbf{Elements or determinations}\\
+    \footnotesize
+    Components, features, relations, manifestations, or processes
+};
+
+\node[levelnode, below=of elements] (subject) {
+    \textbf{A specified subject}\\
+    \footnotesize
+    Existent, composition, aggregate, or configuration
+};
+
+\node[levelnode, below=of subject] (configuration) {
+    \textbf{A broader configuration}\\
+    \footnotesize
+    Relations among subjects or participation in a wider arrangement
+};
+
+\node[
+    draw,
+    rounded corners,
+    text width=0.69\textwidth,
+    minimum height=1.0cm,
+    inner sep=5pt,
+    below=1.35cm of configuration
+] (identity) {
+    \textbf{Identity question}\\
+    \footnotesize
+    Unity, plurality, or unresolved identity relations
+};
+
+\draw[relation] (elements) -- node[right, font=\scriptsize, text width=2.2cm] {may belong to or characterize} (subject);
+\draw[relation] (subject) -- node[right, font=\scriptsize, text width=2.2cm] {may participate in} (configuration);
+\draw[relation] (configuration) -- node[right, font=\scriptsize, text width=2.2cm] {does not decide} (identity);
+
+\node[
+    text width=0.83\textwidth,
+    align=center,
+    font=\footnotesize,
+    below=0.35cm of identity
+] {
+    The diagram distinguishes analytical questions. It does not assert
+    that every configuration has an identity, that identity is located
+    at a particular level, or that the levels form a necessary hierarchy.
+};
+
+\end{tikzpicture}
+\caption{Multiplicity Across Ontological Levels}
+\label{fig:multiplicity-across-ontological-levels}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

@@ -1,0 +1,103 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/
+%           VS.B01.P01.C03.S05.SS08.P032.DG01.components_composition_and_identity_relations.tex
+%
+% Asset   : DG01 — Components, Composition, and Identity Relations
+%
+% Purpose :
+%   To represent the distinction between component plurality,
+%   compositional organization, and identity without implying
+%   that any one of these necessarily entails another.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    component/.style={
+        draw,
+        rounded corners=2pt,
+        minimum width=1.65cm,
+        minimum height=0.8cm,
+        align=center,
+        font=\small
+    },
+    composition/.style={
+        draw,
+        rounded corners=3pt,
+        thick,
+        minimum width=4.4cm,
+        minimum height=1.25cm,
+        align=center,
+        text width=4.0cm,
+        font=\small
+    },
+    identity/.style={
+        draw,
+        rounded corners=3pt,
+        densely dashed,
+        thick,
+        minimum width=4.4cm,
+        minimum height=1.1cm,
+        align=center,
+        text width=4.0cm,
+        font=\small
+    },
+    link/.style={
+        <->,
+        thick
+    },
+    note/.style={
+        draw,
+        rounded corners=2pt,
+        text width=10.0cm,
+        align=left,
+        inner sep=7pt,
+        font=\footnotesize
+    }
+]
+
+\node[component] (a) at (-3.0,2.3) {Component A};
+\node[component] (b) at (0,2.3) {Component B};
+\node[component] (c) at (3.0,2.3) {Component C};
+
+\node[composition] (whole) at (0,0.35) {
+    \textbf{Composition}\\
+    Organized relations among components
+};
+
+\node[identity] (id) at (0,-1.65) {
+    \textbf{Identity}\\
+    Unity or plurality requires identity-level grounds
+};
+
+\draw[thick] (a.south) -- (whole.north west);
+\draw[thick] (b.south) -- (whole.north);
+\draw[thick] (c.south) -- (whole.north east);
+
+\draw[link] (whole.south) -- (id.north);
+
+\node[note] at (0,-3.45) {
+    \textbf{Interpretive constraint:}
+    The component-to-composition connections represent
+    participation in an organized configuration. The
+    composition-to-identity connection represents possible
+    ontological relevance, not entailment. Component count
+    and compositional unity do not determine identity number.
+};
+
+\end{tikzpicture}
+
+\caption{The distinct relations among components, composition, and identity}
+\label{fig:components-composition-and-identity-relations}
+
+\end{figure}
+
+% =============================================================================
+% END OF ASSET DG01
+% =============================================================================

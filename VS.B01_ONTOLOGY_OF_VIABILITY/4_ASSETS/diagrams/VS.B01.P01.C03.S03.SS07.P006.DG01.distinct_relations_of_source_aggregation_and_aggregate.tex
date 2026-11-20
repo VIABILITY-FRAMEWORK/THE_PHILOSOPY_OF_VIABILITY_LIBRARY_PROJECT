@@ -1,0 +1,162 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C03.S03.SS07.P006.DG01.distinct_relations_of_source_aggregation_and_aggregate.tex
+%
+% Asset   : DG01 — Distinct Relations of Source, Aggregation,
+%           and Aggregate
+%
+% Purpose :
+%   To represent several possible configurations in which
+%   source-relations and aggregate-relations may occur
+%   independently or together.
+%
+% Diagram Policy :
+%   Connections are relational, not necessarily causal,
+%   temporal, or hierarchical. No configuration determines
+%   the number or unity of identities.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning}
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    % panel size 5.8 x 4.4 cm, gap 0.4 cm
+    \def\pw{6.2}   % horizontal distance between panel centres
+    \def\ph{4.8}   % vertical distance between panel centres
+
+    \begin{tikzpicture}[
+        font=\small,
+        % --- panel, title, note ---
+        panel/.style={draw=black!45, fill=gray!4, rounded corners=4pt,
+                      line width=0.7pt},
+        ptitle/.style={font=\small\bfseries, align=center, text width=5.3cm,
+                       minimum height=0.9cm, anchor=north},
+        pnote/.style={font=\scriptsize\itshape, text=black!75, align=center,
+                      text width=5.5cm, anchor=north},
+        % --- node roles ---
+        src/.style={draw=blue!55!black, fill=blue!8, rounded corners=2pt,
+                    align=center, minimum width=1.8cm, minimum height=0.6cm,
+                    inner sep=4pt, line width=0.7pt},
+        elem/.style={draw=black!60, fill=gray!10, rounded corners=2pt,
+                     align=center, minimum width=1.2cm, minimum height=0.6cm,
+                     inner sep=4pt, line width=0.7pt},
+        % --- aggregate: one dashed green frame everywhere ---
+        aggregate/.style={draw=green!40!black, dashed, rounded corners=4pt,
+                          line width=0.8pt},
+        aggbox/.style={aggregate, align=center, minimum width=1.6cm,
+                       minimum height=1.2cm, inner sep=4pt},
+        aglabel/.style={font=\scriptsize\bfseries, text=green!30!black},
+        % --- source relation (undirected: no arrowheads) ---
+        srcrel/.style={draw=black!70, line width=0.8pt},
+        legtext/.style={font=\scriptsize, anchor=west}
+    ]
+
+    % ---------------------------------------------------------------
+    % Panel 1 — common source, separate manifestations
+    % ---------------------------------------------------------------
+    \begin{scope}
+        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \node[ptitle] at (0,2.1) {1. Common Source, Separate Manifestations};
+
+        \node[src]  (s1)  at (0,0.55)     {Source S};
+        \node[elem] (m11) at (-1.3,-0.65) {M$_1$};
+        \node[elem] (m12) at (1.3,-0.65)  {M$_2$};
+        \draw[srcrel] (s1) -- (m11);
+        \draw[srcrel] (s1) -- (m12);
+
+        \node[pnote] at (0,-1.55) {No common aggregate is asserted};
+    \end{scope}
+
+    % ---------------------------------------------------------------
+    % Panel 2 — different sources, one aggregate
+    % ---------------------------------------------------------------
+    \begin{scope}[shift={(\pw,0)}]
+        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \node[ptitle] at (0,2.1) {2. Different Sources, One Aggregate};
+
+        \node[src] (s21) at (-1.7,0.55) {Source S$_1$};
+        \node[src] (s22) at (1.7,0.55)  {Source S$_2$};
+
+        \draw[aggregate] (-1.5,-1.45) rectangle (1.5,-0.25);
+        \node[elem] (c21) at (-0.75,-0.65) {C$_1$};
+        \node[elem] (c22) at (0.75,-0.65)  {C$_2$};
+        \node[aglabel] at (0,-1.17) {Aggregate A};
+
+        \draw[srcrel] (s21) -- (c21);
+        \draw[srcrel] (s22) -- (c22);
+    \end{scope}
+
+    % ---------------------------------------------------------------
+    % Panel 3 — common source and aggregate relation
+    % ---------------------------------------------------------------
+    \begin{scope}[shift={(0,-\ph)}]
+        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \node[ptitle] at (0,2.1) {3. Common Source and Aggregate Relation};
+
+        \node[src] (s3) at (0,0.55) {Source S};
+
+        \draw[aggregate] (-1.5,-1.45) rectangle (1.5,-0.25);
+        \node[elem] (m31) at (-0.75,-0.65) {M$_1$};
+        \node[elem] (m32) at (0.75,-0.65)  {M$_2$};
+        \node[aglabel] at (0,-1.17) {Aggregate A};
+
+        \draw[srcrel] (s3) -- (m31);
+        \draw[srcrel] (s3) -- (m32);
+
+        \node[pnote] at (0,-1.55) {Both relations occur, but remain distinct};
+    \end{scope}
+
+    % ---------------------------------------------------------------
+    % Panel 4 — multiple sources and aggregates
+    % ---------------------------------------------------------------
+    \begin{scope}[shift={(\pw,-\ph)}]
+        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \node[ptitle] at (0,2.1) {4. Multiple Sources and Aggregates};
+
+        \node[src] (s41) at (-1.7,0.55) {S$_1$};
+        \node[src] (s42) at (1.7,0.55)  {S$_2$};
+
+        \node[aggbox] (a41) at (-1.5,-0.85) {A$_1$};
+        \node[aggbox] (a42) at (1.5,-0.85)  {A$_2$};
+
+        \draw[srcrel] (s41) -- (a41);
+        \draw[srcrel] (s42) -- (a42);
+
+        \node[pnote] at (0,-1.55) {Further relations may connect the configurations};
+    \end{scope}
+
+    % ---------------------------------------------------------------
+    % Legend (defines the two relation types once for all panels)
+    % ---------------------------------------------------------------
+    \node[src, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
+          anchor=west] (l1) at (-1.6,-7.5) {};
+    \node[legtext, right=0.12cm of l1] (t1) {source};
+
+    \node[elem, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
+          right=0.5cm of t1] (l2) {};
+    \node[legtext, right=0.12cm of l2] (t2) {element};
+
+    \node[right=0.5cm of t2, inner sep=0pt] (l3) {};
+    \draw[srcrel] (l3.west) -- ++(0.6,0) coordinate (l3e);
+    \node[legtext, right=0.12cm of l3e] (t3) {source relation};
+
+    \node[aggbox, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
+          right=0.5cm of t3] (l4) {};
+    \node[legtext, right=0.12cm of l4] {aggregate relation};
+
+    \end{tikzpicture}
+
+    \caption{Possible Configurations of Source-Relations and
+    Aggregate-Relations}
+    \label{fig:distinct-relations-of-source-aggregation-and-aggregate}
+\end{figure}
+
+% =============================================================================
+% END OF ASSET DG01
+% =============================================================================
