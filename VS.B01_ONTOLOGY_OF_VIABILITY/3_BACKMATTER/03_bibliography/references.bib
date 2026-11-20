@@ -6,31 +6,39 @@
 % File    : 3_BACKMATTER/03_bibliography/references.bib
 %
 % Section / Chapter / Asset:
-%   Bibliographic Database
+%   Central Bibliographic Database
 %
 % Purpose :
-%   Bibliographic database for the philosophical and ontological
-%   foundations of Book I — Ontology of Viability.
+%   Curated primary and secondary bibliography for the ontological,
+%   metaphysical, historical, and comparative foundations of
+%   Book I — Ontology of Viability.
 %
 % Format  : BibTeX
 % Compiler: pdfLaTeX
+% Style   : plainnat (requires natbib for author-year citation commands)
 %
-% Notes:
-%   1. Citation keys are intended to remain stable across the project.
-%   2. Entries should be cited in the text before appearing in the
-%      printed bibliography.
-%   3. Publication details refer to the editions specified below.
-%   4. This database is a foundational reference collection, not
-%      a claim that every listed work has already been cited.
+% Editorial Policy:
+%   1. Existing citation keys are retained wherever possible.
+%   2. Primary philosophical texts are distinguished from scholarship
+%      about those texts and traditions.
+%   3. Classical, medieval, early modern, and contemporary works are
+%      included where they bear directly on the book's questions.
+%   4. Islamic, Indian, Chinese, and Greek-Latin traditions are included
+%      as distinct intellectual contexts, not as interchangeable systems.
+%   5. Bibliographic inclusion does not imply agreement with the work.
+%   6. Sources must be cited only where they genuinely support the
+%      historical, interpretive, comparative, or argumentative point.
+%   7. Page references must be checked against the edition actually used.
+%   8. Unverified publication details must not be invented.
 %
 % =============================================================================
 
 
 % =============================================================================
-% I. ANCIENT PHILOSOPHY
+% I. ANCIENT GREEK PHILOSOPHY
 % =============================================================================
 
-@BOOK{AristotleCategories,
+@INCOLLECTION{AristotleCategories,
   AUTHOR    = {Aristotle},
   TITLE     = {Categories},
   BOOKTITLE = {The Complete Works of Aristotle},
@@ -42,9 +50,10 @@
   NOTE      = {Translated by J. L. Ackrill}
 }
 
-@BOOK{AristotleMetaphysics,
+@INCOLLECTION{AristotleMetaphysics,
   AUTHOR    = {Aristotle},
   TITLE     = {Metaphysics},
+  BOOKTITLE = {The Complete Works of Aristotle},
   EDITOR    = {Jonathan Barnes},
   PUBLISHER = {Princeton University Press},
   ADDRESS   = {Princeton},
@@ -53,9 +62,10 @@
   NOTE      = {Translated by W. D. Ross}
 }
 
-@BOOK{AristotlePhysics,
+@INCOLLECTION{AristotlePhysics,
   AUTHOR    = {Aristotle},
   TITLE     = {Physics},
+  BOOKTITLE = {The Complete Works of Aristotle},
   EDITOR    = {Jonathan Barnes},
   PUBLISHER = {Princeton University Press},
   ADDRESS   = {Princeton},
@@ -64,13 +74,274 @@
   NOTE      = {Translated by R. P. Hardie and R. K. Gaye}
 }
 
+@INCOLLECTION{PlatoSophist,
+  AUTHOR    = {Plato},
+  TITLE     = {Sophist},
+  BOOKTITLE = {Plato: Complete Works},
+  EDITOR    = {John M. Cooper},
+  PUBLISHER = {Hackett Publishing Company},
+  ADDRESS   = {Indianapolis},
+  YEAR      = {1997},
+  NOTE      = {Translated by Nicholas P. White}
+}
+
+@INCOLLECTION{PlatoParmenides,
+  AUTHOR    = {Plato},
+  TITLE     = {Parmenides},
+  BOOKTITLE = {Plato: Complete Works},
+  EDITOR    = {John M. Cooper},
+  PUBLISHER = {Hackett Publishing Company},
+  ADDRESS   = {Indianapolis},
+  YEAR      = {1997},
+  NOTE      = {Translated by Mary Louise Gill and Paul Ryan}
+}
+
+@INCOLLECTION{PlatoTimaeus,
+  AUTHOR    = {Plato},
+  TITLE     = {Timaeus},
+  BOOKTITLE = {Plato: Complete Works},
+  EDITOR    = {John M. Cooper},
+  PUBLISHER = {Hackett Publishing Company},
+  ADDRESS   = {Indianapolis},
+  YEAR      = {1997},
+  NOTE      = {Translated by Donald J. Zeyl}
+}
+
+@BOOK{PlotinusEnneads,
+  AUTHOR     = {Plotinus},
+  TITLE      = {The Enneads},
+  EDITOR     = {Lloyd P. Gerson},
+  TRANSLATOR = {Lloyd P. Gerson and others},
+  PUBLISHER  = {Cambridge University Press},
+  ADDRESS    = {Cambridge},
+  YEAR       = {2018}
+}
+
+@BOOK{ProclusElements,
+  AUTHOR     = {Proclus},
+  TITLE      = {The Elements of Theology},
+  TRANSLATOR = {E. R. Dodds},
+  EDITION    = {2},
+  PUBLISHER  = {Oxford University Press},
+  ADDRESS    = {Oxford},
+  YEAR       = {1963}
+}
+
 
 % =============================================================================
-% II. EARLY MODERN PHILOSOPHY
+% II. MEDIEVAL LATIN AND CHRISTIAN METAPHYSICS
+% =============================================================================
+
+@BOOK{AquinasBeingEssence,
+  AUTHOR     = {Aquinas, Thomas},
+  TITLE      = {On Being and Essence},
+  TRANSLATOR = {Joseph Bobik},
+  PUBLISHER  = {University of Notre Dame Press},
+  ADDRESS    = {Notre Dame},
+  YEAR       = {1965}
+}
+
+@BOOK{ScotusPhilosophicalWritings,
+  AUTHOR     = {Scotus, John Duns},
+  TITLE      = {Philosophical Writings},
+  EDITOR     = {Allan B. Wolter},
+  TRANSLATOR = {Allan B. Wolter},
+  PUBLISHER  = {Nelson},
+  ADDRESS    = {Edinburgh},
+  YEAR       = {1962}
+}
+
+
+% =============================================================================
+% III. CLASSICAL AND MEDIEVAL ISLAMIC PHILOSOPHY
+% =============================================================================
+
+@BOOK{AlFarabiVirtuousCity,
+  AUTHOR     = {Al-Farabi},
+  TITLE      = {Al-Farabi on the Perfect State},
+  TRANSLATOR = {Richard Walzer},
+  PUBLISHER  = {Oxford University Press},
+  ADDRESS    = {Oxford},
+  YEAR       = {1985},
+  NOTE       = {A translation of Mabadi' Ara' Ahl al-Madina al-Fadila}
+}
+
+@BOOK{AvicennaMetaphysics,
+  AUTHOR     = {Ibn Sina},
+  TITLE      = {The Metaphysics of The Healing},
+  TRANSLATOR = {Michael E. Marmura},
+  PUBLISHER  = {Brigham Young University Press},
+  ADDRESS    = {Provo},
+  YEAR       = {2005},
+  SERIES     = {Islamic Translation Series}
+}
+
+@BOOK{AvicennaMetaphysicsMcGinnis,
+  AUTHOR     = {Ibn Sina},
+  TITLE      = {The Metaphysics of The Healing},
+  TRANSLATOR = {Michael E. Marmura},
+  PUBLISHER  = {Brigham Young University Press},
+  ADDRESS    = {Provo},
+  YEAR       = {2005},
+  NOTE       = {Parallel English-Arabic edition}
+}
+
+@BOOK{AlGhazaliIncoherence,
+  AUTHOR     = {Al-Ghazali},
+  TITLE      = {The Incoherence of the Philosophers},
+  TRANSLATOR = {Michael E. Marmura},
+  EDITION    = {2},
+  PUBLISHER  = {Brigham Young University Press},
+  ADDRESS    = {Provo},
+  YEAR       = {2000},
+  SERIES     = {Islamic Translation Series}
+}
+
+@BOOK{AverroesDecisiveTreatise,
+  AUTHOR     = {Averroes},
+  TITLE      = {The Decisive Treatise and Epistle Dedicatory},
+  TRANSLATOR = {Charles E. Butterworth},
+  PUBLISHER  = {Brigham Young University Press},
+  ADDRESS    = {Provo},
+  YEAR       = {2001},
+  SERIES     = {Islamic Translation Series}
+}
+
+@BOOK{SuhrawardiPhilosophyIllumination,
+  AUTHOR     = {Suhrawardi, Shihab al-Din},
+  TITLE      = {The Philosophy of Illumination},
+  TRANSLATOR = {John Walbridge and Hossein Ziai},
+  PUBLISHER  = {Brigham Young University Press},
+  ADDRESS    = {Provo},
+  YEAR       = {1999},
+  SERIES     = {Islamic Translation Series}
+}
+
+@BOOK{IbnArabiBezels,
+  AUTHOR     = {Ibn al-Arabi},
+  TITLE      = {The Bezels of Wisdom},
+  TRANSLATOR = {R. W. J. Austin},
+  PUBLISHER  = {Paulist Press},
+  ADDRESS    = {New York},
+  YEAR       = {1980},
+  SERIES     = {Classics of Western Spirituality}
+}
+
+@BOOK{MullaSadraPhilosophy,
+  AUTHOR    = {Rahman, Fazlur},
+  TITLE     = {The Philosophy of Mulla Sadra},
+  PUBLISHER = {State University of New York Press},
+  ADDRESS   = {Albany},
+  YEAR      = {1975}
+}
+
+@BOOK{NasrThreeMuslimSages,
+  AUTHOR    = {Nasr, Seyyed Hossein},
+  TITLE     = {Three Muslim Sages},
+  PUBLISHER = {Harvard University Press},
+  ADDRESS   = {Cambridge, MA},
+  YEAR      = {1964}
+}
+
+@BOOK{AdamsonPhilosophyIslamicWorld,
+  AUTHOR    = {Adamson, Peter},
+  TITLE     = {Philosophy in the Islamic World: A History of Philosophy Without Any Gaps},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2016}
+}
+
+@BOOK{IzutsuSufismTaoism,
+  AUTHOR    = {Izutsu, Toshihiko},
+  TITLE     = {Sufism and Taoism: A Comparative Study of Key Philosophical Concepts},
+  PUBLISHER = {University of California Press},
+  ADDRESS   = {Berkeley},
+  YEAR      = {1983}
+}
+
+
+% =============================================================================
+% IV. INDIAN PHILOSOPHY AND BUDDHIST ONTOLOGY
+% =============================================================================
+
+@BOOK{NagarjunaFundamentalWisdom,
+  AUTHOR     = {Nagarjuna},
+  TITLE      = {The Fundamental Wisdom of the Middle Way: Nagarjuna's
+                Mulamadhyamakakarika},
+  TRANSLATOR = {Jay L. Garfield},
+  PUBLISHER  = {Oxford University Press},
+  ADDRESS    = {New York},
+  YEAR       = {1995},
+  NOTE       = {Translation and philosophical commentary}
+}
+
+@BOOK{VasubandhuAbhidharmakosa,
+  AUTHOR     = {Vasubandhu},
+  TITLE      = {Abhidharmakosabhasyam},
+  TRANSLATOR = {Louis de La Vallee Poussin},
+  NOTE       = {English translation by Leo M. Pruden, four volumes},
+  PUBLISHER  = {Asian Humanities Press},
+  ADDRESS    = {Berkeley},
+  YEAR       = {1988}
+}
+
+@BOOK{UpanishadsOlivelle,
+  AUTHOR     = {Olivelle, Patrick},
+  TITLE      = {Upanisads},
+  TRANSLATOR = {Patrick Olivelle},
+  PUBLISHER  = {Oxford University Press},
+  ADDRESS    = {Oxford},
+  YEAR       = {1996}
+}
+
+@BOOK{BhagavadGitaEdgerton,
+  AUTHOR    = {Edgerton, Franklin},
+  TITLE     = {The Bhagavad Gita},
+  PUBLISHER = {Harvard University Press},
+  ADDRESS   = {Cambridge, MA},
+  YEAR      = {1944},
+  SERIES    = {Harvard Oriental Series}
+}
+
+
+% =============================================================================
+% V. CLASSICAL CHINESE PHILOSOPHY
+% =============================================================================
+
+@BOOK{LaoziDaoDeJing,
+  AUTHOR     = {Laozi},
+  TITLE      = {Dao De Jing: A Philosophical Translation},
+  TRANSLATOR = {Roger T. Ames and David L. Hall},
+  PUBLISHER  = {Ballantine Books},
+  ADDRESS    = {New York},
+  YEAR       = {2003}
+}
+
+@BOOK{ZhuangziBasicWritings,
+  AUTHOR     = {Zhuangzi},
+  TITLE      = {Basic Writings},
+  TRANSLATOR = {Burton Watson},
+  PUBLISHER  = {Columbia University Press},
+  ADDRESS    = {New York},
+  YEAR       = {1964}
+}
+
+@BOOK{ConfuciusAnalects,
+  AUTHOR     = {Confucius},
+  TITLE      = {Analects: With Selections from Traditional Commentaries},
+  TRANSLATOR = {Edward Slingerland},
+  PUBLISHER  = {Hackett Publishing Company},
+  ADDRESS    = {Indianapolis},
+  YEAR       = {2003}
+}
+
+
+% =============================================================================
+% VI. EARLY MODERN PHILOSOPHY
 % =============================================================================
 
 @BOOK{DescartesMeditations,
-  AUTHOR     = {Descartes, Ren{\'e}},
+  AUTHOR     = {Descartes, Rene},
   TITLE      = {Meditations on First Philosophy},
   TRANSLATOR = {John Cottingham},
   PUBLISHER  = {Cambridge University Press},
@@ -87,7 +358,7 @@
   YEAR      = {1975}
 }
 
-@BOOK{LeibnizMonadology,
+@INCOLLECTION{LeibnizMonadology,
   AUTHOR    = {Leibniz, Gottfried Wilhelm},
   TITLE     = {Monadology},
   BOOKTITLE = {Philosophical Essays},
@@ -98,7 +369,7 @@
   NOTE      = {Translated by Roger Ariew and Daniel Garber}
 }
 
-@BOOK{LeibnizDiscourse,
+@INCOLLECTION{LeibnizDiscourse,
   AUTHOR    = {Leibniz, Gottfried Wilhelm},
   TITLE     = {Discourse on Metaphysics},
   BOOKTITLE = {Philosophical Essays},
@@ -127,9 +398,29 @@
   YEAR       = {1998}
 }
 
+@BOOK{SpinozaEthics,
+  AUTHOR    = {Spinoza, Benedict de},
+  TITLE     = {The Collected Works of Spinoza},
+  VOLUME    = {1},
+  EDITOR    = {Edwin Curley},
+  PUBLISHER = {Princeton University Press},
+  ADDRESS   = {Princeton},
+  YEAR      = {1985},
+  NOTE      = {Contains the Ethics, translated by Edwin Curley}
+}
+
+@BOOK{HegelScienceOfLogic,
+  AUTHOR     = {Hegel, Georg Wilhelm Friedrich},
+  TITLE      = {Science of Logic},
+  TRANSLATOR = {A. V. Miller},
+  PUBLISHER  = {George Allen and Unwin},
+  ADDRESS    = {London},
+  YEAR       = {1969}
+}
+
 
 % =============================================================================
-% III. CLASSICAL AND MODERN METAPHYSICS
+% VII. CLASSICAL AND MODERN METAPHYSICS
 % =============================================================================
 
 @BOOK{FregeFoundations,
@@ -175,9 +466,19 @@
   YEAR       = {1962}
 }
 
+@BOOK{WhiteheadProcessReality,
+  AUTHOR    = {Whitehead, Alfred North},
+  TITLE     = {Process and Reality: An Essay in Cosmology},
+  EDITOR    = {David Ray Griffin and Donald W. Sherburne},
+  EDITION   = {Corrected},
+  PUBLISHER = {Free Press},
+  ADDRESS   = {New York},
+  YEAR      = {1978}
+}
+
 
 % =============================================================================
-% IV. IDENTITY AND INDIVIDUATION
+% VIII. IDENTITY, INDIVIDUATION, AND ONTOLOGICAL CATEGORIES
 % =============================================================================
 
 @BOOK{GeachIdentity,
@@ -241,9 +542,34 @@
   YEAR      = {2003}
 }
 
+@BOOK{LowePossibilityMetaphysics,
+  AUTHOR    = {Lowe, E. J.},
+  TITLE     = {The Possibility of Metaphysics: Substance, Identity,
+               and Time},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {1998}
+}
+
+@BOOK{KoslickiStructureObjects,
+  AUTHOR    = {Koslicki, Kathrin},
+  TITLE     = {The Structure of Objects},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2008}
+}
+
+@BOOK{ReaMaterialConstitution,
+  EDITOR    = {Rea, Michael C.},
+  TITLE     = {Material Constitution: A Reader},
+  PUBLISHER = {Rowman and Littlefield},
+  ADDRESS   = {Lanham},
+  YEAR      = {1997}
+}
+
 
 % =============================================================================
-% V. IDENTITY, PERSISTENCE, AND TEMPORAL CONTINUITY
+% IX. IDENTITY, PERSISTENCE, AND TEMPORAL CONTINUITY
 % =============================================================================
 
 @BOOK{LewisOnWorlds,
@@ -279,9 +605,25 @@
   YEAR      = {2001}
 }
 
+@BOOK{SiderWritingBookWorld,
+  AUTHOR    = {Sider, Theodore},
+  TITLE     = {Writing the Book of the World},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2011}
+}
+
+@BOOK{VanInwagenExistence,
+  AUTHOR    = {van Inwagen, Peter},
+  TITLE     = {Existence: Essays in Ontology},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge},
+  YEAR      = {2014}
+}
+
 
 % =============================================================================
-% VI. CONTEMPORARY METAPHYSICS AND ONTOLOGY
+% X. CONTEMPORARY METAPHYSICS AND ONTOLOGY
 % =============================================================================
 
 @BOOK{LouxMetaphysics,
@@ -335,9 +677,60 @@
   YEAR      = {2008}
 }
 
+@BOOK{TahkoMetametaphysics,
+  AUTHOR    = {Tahko, Tuomas E.},
+  TITLE     = {An Introduction to Metametaphysics},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge},
+  YEAR      = {2015}
+}
+
+@BOOK{BennettMakingThingsUp,
+  AUTHOR    = {Bennett, Karen},
+  TITLE     = {Making Things Up},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2017}
+}
+
+@BOOK{EllisScientificEssentialism,
+  AUTHOR    = {Ellis, Brian},
+  TITLE     = {Scientific Essentialism},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge},
+  YEAR      = {2001}
+}
+
+@BOOK{LadymanEveryThingMustGo,
+  AUTHOR    = {Ladyman, James and Ross, Don},
+  TITLE     = {Every Thing Must Go: Metaphysics Naturalized},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2007}
+}
+
+@BOOK{FrenchStructure,
+  AUTHOR    = {French, Steven},
+  TITLE     = {The Structure of the World: Metaphysics and
+               Representation},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2014}
+}
+
+@BOOK{MullerPhilosophyPhysics,
+  AUTHOR    = {Muller, F. A.},
+  TITLE     = {The Philosophy of Physics},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2016},
+  NOTE      = {Bibliographic details and exact title should be checked
+               against the edition used before citation}
+}
+
 
 % =============================================================================
-% VII. COMPOSITION, PARTS, AND WHOLES
+% XI. COMPOSITION, PARTS, AND WHOLES
 % =============================================================================
 
 @ARTICLE{LewisComposition,
@@ -360,20 +753,29 @@
   YEAR    = {1981}
 }
 
-@ARTICLE{ThomassonOrdinaryObjects,
-  AUTHOR  = {Thomasson, Amie L.},
-  TITLE   = {Ordinary Objects},
-  JOURNAL = {The Stanford Encyclopedia of Philosophy},
-  YEAR    = {2019},
-  NOTE    = {Reference entry}
+@MISC{ThomassonOrdinaryObjects,
+  AUTHOR       = {Thomasson, Amie L.},
+  TITLE        = {Ordinary Objects},
+  HOWPUBLISHED = {The Stanford Encyclopedia of Philosophy},
+  YEAR         = {2019},
+  NOTE         = {Reference entry; consult the version and revision date
+                  actually used}
+}
+
+@BOOK{KoslickiStructureOfObjects,
+  AUTHOR    = {Koslicki, Kathrin},
+  TITLE     = {The Structure of Objects},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2008}
 }
 
 
 % =============================================================================
-% VIII. INVARIANCE, STRUCTURE, AND FORMAL IDENTITY
+% XII. INVARIANCE, STRUCTURE, AND PHILOSOPHY OF SCIENCE
 % =============================================================================
 
-@BOOK{LadymanEveryThingMustGo,
+@BOOK{LadymanStructuralRealism,
   AUTHOR    = {Ladyman, James and Ross, Don},
   TITLE     = {Every Thing Must Go: Metaphysics Naturalized},
   PUBLISHER = {Oxford University Press},
@@ -381,7 +783,7 @@
   YEAR      = {2007}
 }
 
-@BOOK{FrenchStructure,
+@BOOK{FrenchStructureWorld,
   AUTHOR    = {French, Steven},
   TITLE     = {The Structure of the World: Metaphysics and
                Representation},
@@ -391,18 +793,17 @@
 }
 
 @BOOK{MullerPhilosophyPhysics,
-  AUTHOR    = {M{\"u}ller, F. A.},
+  AUTHOR    = {Muller, F. A.},
   TITLE     = {The Philosophy of Physics},
   PUBLISHER = {Oxford University Press},
   ADDRESS   = {Oxford},
   YEAR      = {2016},
-  NOTE      = {Use only where relevant to the discussion of
-               symmetry and invariance}
+  NOTE      = {Bibliographic details require verification before use}
 }
 
 
 % =============================================================================
-% IX. MODALITY, NECESSITY, AND POSSIBLE WORLDS
+% XIII. MODALITY, NECESSITY, ESSENCE, AND POSSIBLE WORLDS
 % =============================================================================
 
 @BOOK{KripkeNamingNecessity,
@@ -421,7 +822,7 @@
   YEAR      = {1974}
 }
 
-@BOOK{FineEssence,
+@ARTICLE{FineEssence,
   AUTHOR  = {Fine, Kit},
   TITLE   = {Essence and Modality},
   JOURNAL = {Philosophical Perspectives},
@@ -432,7 +833,7 @@
 
 
 % =============================================================================
-% X. LOGIC, REFERENCE, AND THE IDENTITY RELATION
+% XIV. LOGIC, REFERENCE, AND THE IDENTITY RELATION
 % =============================================================================
 
 @BOOK{FregeCollectedPapers,
@@ -465,13 +866,13 @@
 
 
 % =============================================================================
-% XI. ONTOLOGICAL DEPENDENCE AND GROUNDING
+% XV. ONTOLOGICAL DEPENDENCE, GROUNDING, AND REDUCTION
 % =============================================================================
 
-@ARTICLE{FineOntologicalDependence,
+@INCOLLECTION{FineOntologicalDependence,
   AUTHOR    = {Fine, Kit},
   TITLE     = {Guide to Ground},
-  JOURNAL   = {Metaphysical Grounding: Understanding the Structure
+  BOOKTITLE = {Metaphysical Grounding: Understanding the Structure
                of Reality},
   EDITOR    = {Fabrice Correia and Benjamin Schnieder},
   PUBLISHER = {Cambridge University Press},
@@ -489,10 +890,10 @@
   YEAR      = {2012}
 }
 
-@ARTICLE{SchafferGrounding,
+@INCOLLECTION{SchafferGrounding,
   AUTHOR    = {Schaffer, Jonathan},
   TITLE     = {On What Grounds What},
-  JOURNAL   = {Metametaphysics: New Essays on the Foundations
+  BOOKTITLE = {Metametaphysics: New Essays on the Foundations
                of Ontology},
   EDITOR    = {David J. Chalmers and David Manley and Ryan Wasserman},
   PUBLISHER = {Oxford University Press},
@@ -500,11 +901,6 @@
   PAGES     = {347--383},
   YEAR      = {2009}
 }
-
-
-% =============================================================================
-% XII. GENERAL METAPHYSICAL REFERENCE WORKS
-% =============================================================================
 
 @BOOK{ChalmersMetametaphysics,
   EDITOR    = {Chalmers, David J. and Manley, David and Wasserman, Ryan},
@@ -523,13 +919,58 @@
   YEAR      = {2003}
 }
 
-@BOOK{RosenMetaphysicalDependence,
-  AUTHOR    = {Rosen, Gideon},
-  TITLE     = {Metaphysical Dependence: Grounding and Reduction},
+@MISC{RosenMetaphysicalDependence,
+  AUTHOR = {Rosen, Gideon},
+  TITLE  = {Metaphysical Dependence: Grounding and Reduction},
+  YEAR   = {2010},
+  NOTE   = {Retained as a provisional bibliographic lead. Verify the
+            exact publication venue and version before citing as a
+            published work}
+}
+
+
+% =============================================================================
+% XVI. PROCESS, EMERGENCE, AND ONTOLOGICAL DYNAMICS
+% =============================================================================
+
+@BOOK{WhiteheadProcessReality,
+  AUTHOR    = {Whitehead, Alfred North},
+  TITLE     = {Process and Reality: An Essay in Cosmology},
+  EDITOR    = {David Ray Griffin and Donald W. Sherburne},
+  EDITION   = {Corrected},
+  PUBLISHER = {Free Press},
+  ADDRESS   = {New York},
+  YEAR      = {1978}
+}
+
+@BOOK{SimondonIndividuation,
+  AUTHOR     = {Simondon, Gilbert},
+  TITLE      = {Individuation in Light of Notions of Form and Information},
+  TRANSLATOR = {Taylor Adkins},
+  PUBLISHER  = {University of Minnesota Press},
+  ADDRESS    = {Minneapolis},
+  YEAR       = {2020}
+}
+
+
+% =============================================================================
+% XVII. GENERAL METAPHYSICAL REFERENCE WORKS
+% =============================================================================
+
+@BOOK{LouxZimmermanMetaphysics,
+  EDITOR    = {Loux, Michael J. and Zimmerman, Dean W.},
+  TITLE     = {The Oxford Handbook of Metaphysics},
   PUBLISHER = {Oxford University Press},
   ADDRESS   = {Oxford},
-  YEAR      = {2010},
-  NOTE      = {Use with the published version verified before citation}
+  YEAR      = {2003}
+}
+
+@BOOK{TahkoMetametaphysics,
+  AUTHOR    = {Tahko, Tuomas E.},
+  TITLE     = {An Introduction to Metametaphysics},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge},
+  YEAR      = {2015}
 }
 
 
