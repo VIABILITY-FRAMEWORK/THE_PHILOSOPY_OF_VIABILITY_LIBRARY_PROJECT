@@ -1,0 +1,111 @@
+
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Chapter : 08 — Comparative Philosophical Examination
+% Section : 02 — Parmenides
+%
+% Asset ID:
+%   VS.B01.P01.C08.S02.SS03.P006.DG01
+%
+% Type    : DG — Diagram
+% File    : parmenidean_routes_and_deduction.tex
+%
+% Purpose :
+%   Distinguish the two ways introduced in B2 from the mortal
+%   route in B6, and represent the inferential movement from
+%   the affirmation of what-is to the principal signs in B8.
+%
+% Limitation :
+%   The diagram is a reconstruction of the argumentative
+%   structure, not a claim that every interpretive dispute
+%   concerning the fragments has been settled.
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    >=stealth,
+    node distance=0.8cm,
+    route/.style={
+        draw,
+        rounded corners,
+        align=center,
+        text width=4.2cm,
+        minimum height=1.05cm
+    },
+    result/.style={
+        draw,
+        rounded corners,
+        align=center,
+        text width=3.1cm,
+        minimum height=0.9cm
+    },
+    arrow/.style={->,thick},
+    rejected/.style={->,thick,dashed}
+]
+
+% B2 routes
+\node[route] (being) at (-4.6,0)
+    {B2: What-is\\
+     \small It is and cannot not be};
+
+\node[route] (nonbeing) at (4.6,0)
+    {B2: What-is-not\\
+     \small It is not and must not be};
+
+\node[route] (mortal) at (0,-2.15)
+    {B6: Mortal route\\
+     \small Confused treatment of being and not-being};
+
+\node[result] (impossible) at (4.6,-1.8)
+    {Not available\\
+     \small No attainable object of inquiry};
+
+\node[result] (wandering) at (0,-3.75)
+    {Wandering inquiry\\
+     \small Unstable judgment};
+
+% B8 deduction
+\node[result] (b8) at (-4.6,-2.0)
+    {B8: Deduction\\
+     \small What-is must be};
+
+\node[result] (ungenerated) at (-7.7,-4.0)
+    {Ungenerated\\and imperishable};
+
+\node[result] (whole) at (-4.6,-4.0)
+    {Whole and\\continuous};
+
+\node[result] (unmoved) at (-1.5,-4.0)
+    {Unmoved and\\complete};
+
+% Main relations
+\draw[arrow] (being) -- (b8);
+\draw[rejected] (nonbeing) -- (impossible);
+\draw[rejected] (mortal) -- (wandering);
+
+\draw[arrow] (b8) -- (ungenerated);
+\draw[arrow] (b8) -- (whole);
+\draw[arrow] (b8) -- (unmoved);
+
+% Interpretive caution
+\node[draw=none,align=center,text width=12cm] at (0,-5.35)
+    {\footnotesize
+    The relation between the mortal route, the deductions
+    concerning what-is, and the cosmology of Doxa remains
+    a matter of interpretation. The diagram does not equate
+    the mortal route with absolute non-being.};
+
+\end{tikzpicture}
+
+\caption{The Ways of Inquiry and the Deductive Structure of B8}
+\label{fig:ch08-parmenides-routes-deduction}
+
+\end{figure}
+
+% =============================================================================
+% END OF ASSET
+% =============================================================================

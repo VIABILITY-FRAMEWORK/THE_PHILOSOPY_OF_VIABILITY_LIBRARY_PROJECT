@@ -1,0 +1,80 @@
+
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Chapter : 08 — Comparative Philosophical Examination
+% Section : 02 — Parmenides
+%
+% Asset ID:
+%   VS.B01.P01.C08.S02.SS02.P004.FG01
+%
+% Type    : FG — Figure
+% File    : structure_of_parmenides_poem.tex
+%
+% Purpose :
+%   Represent the principal textual movements of Parmenides'
+%   poem and make visible the interpretive problem concerning
+%   the relation between Aletheia and Doxa.
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    node distance=1.25cm,
+    every node/.style={
+        draw,
+        rounded corners,
+        align=center,
+        minimum width=4.2cm,
+        minimum height=0.95cm
+    },
+    flow/.style={->,thick},
+    uncertain/.style={->,dashed,thick}
+]
+
+\node (proem) {Proem\\
+    \small Journey, gates, divine reception};
+
+\node (program) [below=of proem] {Program of Revelation\\
+    \small Truth and mortal opinions};
+
+\node (aletheia) [below left=1.5cm and 1.1cm of program]
+    {Aletheia\\
+    \small What-is and the deductions of B8};
+
+\node (doxa) [below right=1.5cm and 1.1cm of program]
+    {Doxa\\
+    \small Cosmological account and mortal naming};
+
+\node (problem) [below=2.0cm of program,
+    minimum width=9.3cm]
+    {Interpretive Problem\\
+    \small What is the ontological and explanatory relation
+    between the two accounts?};
+
+\draw[flow] (proem) -- (program);
+\draw[flow] (program) -- (aletheia);
+\draw[flow] (program) -- (doxa);
+
+\draw[uncertain] (aletheia.south) --
+    node[left,draw=none,align=center]
+    {\scriptsize relation\\[-1pt]\scriptsize disputed}
+    (problem.north west);
+
+\draw[uncertain] (doxa.south) --
+    node[right,draw=none,align=center]
+    {\scriptsize status\\[-1pt]\scriptsize disputed}
+    (problem.north east);
+
+\end{tikzpicture}
+
+\caption{The Principal Textual Movements of Parmenides' Poem}
+\label{fig:ch08-parmenides-poem-structure}
+
+\end{figure}
+
+% =============================================================================
+% END OF ASSET
+% =============================================================================
