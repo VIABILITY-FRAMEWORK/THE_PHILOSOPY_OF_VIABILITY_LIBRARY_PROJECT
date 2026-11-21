@@ -1,0 +1,114 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY_LIBRARY_PROJECT
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/
+%   VS.B01.P01.C08.S03.SS04.P005.DG01.heraclitean_relations_of_opposites.tex
+%
+% Section / Chapter / Asset:
+%   Diagram DG01 — Heraclitean Relations of Opposites
+%
+% Structural Identifier:
+%   VS.B01.P01.C08.S03.SS04.P005.DG01
+%
+% Asset Type : DG
+%
+% Purpose:
+%   To distinguish four interpretively relevant forms of relation
+%   among opposites without reducing them to one logical structure.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    node distance=1.25cm and 1.15cm,
+    concept/.style={
+        draw=ViabilityDarkBlue!75,
+        fill=ViabilityPaper,
+        rounded corners=2pt,
+        align=center,
+        text width=3.2cm,
+        minimum height=1.0cm,
+        inner sep=6pt,
+        font=\small
+    },
+    central/.style={
+        draw=ViabilityGold!85!black,
+        fill=ViabilityGold!12,
+        rounded corners=3pt,
+        align=center,
+        text width=4.0cm,
+        minimum height=1.1cm,
+        inner sep=7pt,
+        font=\small\bfseries
+    },
+    relation/.style={
+        -{Stealth[length=2.2mm]},
+        draw=ViabilityBlue!80,
+        line width=0.9pt
+    }
+]
+
+\node[central] (centre) {
+    Relations among\\
+    Opposites
+};
+
+\node[concept, above left=of centre] (context) {
+    Contextual Contrast\\
+    \footnotesize B61
+};
+
+\node[concept, above right=of centre] (reciprocal) {
+    Reciprocal Dependence\\
+    \footnotesize B10
+};
+
+\node[concept, below left=of centre] (alternation) {
+    Temporal Alternation\\
+    \footnotesize B88
+};
+
+\node[concept, below right=of centre] (tension) {
+    Tension and Attunement\\
+    \footnotesize B51, B54
+};
+
+\draw[relation] (context) -- (centre);
+\draw[relation] (reciprocal) -- (centre);
+\draw[relation] (alternation) -- (centre);
+\draw[relation] (tension) -- (centre);
+
+\node[
+    below=1.0cm of centre,
+    text width=10.8cm,
+    align=center,
+    font=\footnotesize,
+    text=ViabilityGray
+] (limit) {
+    These are distinguishable interpretive relations.
+    The diagram does not assert that the opposed terms are identical,
+    that every opposition has the same structure, or that all
+    relations are exhaustive of Heraclitus' thought.
+};
+
+\end{tikzpicture}
+
+\caption{Four distinguishable ways in which Heraclitus' fragments
+present relations among opposites. The categories are analytical
+guides for comparison, not a formal taxonomy attributed directly
+to Heraclitus.}
+\label{fig:VS.B01.P01.C08.S03.SS04.P005.DG01}
+
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

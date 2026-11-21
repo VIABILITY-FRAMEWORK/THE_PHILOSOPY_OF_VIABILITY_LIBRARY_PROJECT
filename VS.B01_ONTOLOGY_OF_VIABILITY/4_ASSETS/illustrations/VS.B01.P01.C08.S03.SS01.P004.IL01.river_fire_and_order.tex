@@ -1,0 +1,145 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY_LIBRARY_PROJECT
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/illustrations/
+%   VS.B01.P01.C08.S03.SS01.P004.IL01.river_fire_and_order.tex
+%
+% Section / Chapter / Asset:
+%   Illustration IL01 — River, Fire, and Order
+%
+% Structural Identifier:
+%   VS.B01.P01.C08.S03.SS01.P004.IL01
+%
+% Asset Type : IL
+%
+% Purpose:
+%   To provide an atmospheric visual interpretation of the
+%   Heraclitean themes of flowing water, fire, and cosmic order.
+%   The image is illustrative and aesthetic, not a representation
+%   of an established cosmological model.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[x=1cm,y=1cm]
+
+    % Background field
+    \fill[ViabilityDarkBlue!7]
+        (0,0) rectangle (13,5.6);
+
+    % Distant horizon
+    \fill[ViabilityDarkBlue!14]
+        (0,2.1) --
+        (2.0,2.7) --
+        (4.1,2.35) --
+        (6.2,2.9) --
+        (8.1,2.45) --
+        (10.3,2.8) --
+        (13,2.25) --
+        (13,0) -- (0,0) -- cycle;
+
+    % River banks
+    \fill[ViabilityDarkBlue!28]
+        (0,0.5)
+        .. controls (2.0,1.0) and (3.0,0.3) .. (4.5,0.7)
+        .. controls (6.5,1.3) and (8.0,0.25) .. (9.5,0.65)
+        .. controls (11.0,1.0) and (12.0,0.45) .. (13,0.9)
+        -- (13,0) -- (0,0) -- cycle;
+
+    % Flowing water
+    \fill[ViabilityBlue!55]
+        (0,0.8)
+        .. controls (2.0,1.25) and (3.2,0.5) .. (5.0,0.9)
+        .. controls (7.0,1.35) and (8.1,0.55) .. (9.7,0.9)
+        .. controls (11.0,1.15) and (12.0,0.65) .. (13,1.0)
+        -- (13,1.7)
+        .. controls (11.5,1.35) and (10.4,1.8) .. (9.2,1.4)
+        .. controls (7.2,1.0) and (6.0,1.8) .. (4.2,1.35)
+        .. controls (2.5,0.95) and (1.2,1.55) .. (0,1.2)
+        -- cycle;
+
+    % Water highlights
+    \draw[white!80,line width=1.1pt,opacity=0.75]
+        (0.5,1.15)
+        .. controls (2.0,1.5) and (3.0,0.85) .. (4.6,1.15);
+
+    \draw[white!70,line width=0.8pt,opacity=0.7]
+        (5.4,1.25)
+        .. controls (7.0,1.65) and (8.0,0.95) .. (9.1,1.25);
+
+    \draw[white!65,line width=0.8pt,opacity=0.65]
+        (9.8,1.3)
+        .. controls (11.0,1.55) and (12.0,1.05) .. (12.6,1.25);
+
+    % Distant fire / light
+    \fill[ViabilityGold!18]
+        (9.3,3.1) circle (0.75);
+
+    \fill[ViabilityGold!35]
+        (9.3,3.1) circle (0.48);
+
+    \fill[ViabilityGold!70]
+        (9.3,3.1) circle (0.22);
+
+    % Fire-like rays
+    \foreach \a in {0,45,...,315}{
+        \draw[ViabilityGold!70,line width=0.8pt]
+            (9.3,3.1) ++(\a:0.58) -- ++(\a:0.28);
+    }
+
+    % Distant hills
+    \draw[ViabilityDarkBlue!70,line width=1.1pt]
+        (0,2.1)
+        .. controls (2.0,3.0) and (3.2,2.0) .. (5.0,2.7)
+        .. controls (6.5,3.3) and (7.5,2.3) .. (9.0,2.75)
+        .. controls (10.2,3.1) and (11.5,2.1) .. (13,2.6);
+
+    % Small stones
+    \foreach \x/\y/\s in {
+        1.2/0.45/0.12,
+        2.1/0.32/0.09,
+        4.0/0.35/0.10,
+        6.0/0.30/0.08,
+        10.7/0.35/0.10,
+        12.0/0.40/0.08
+    }{
+        \fill[ViabilityDarkBlue!55]
+            (\x,\y) ellipse ({\s*1.5} and {\s*0.55});
+    }
+
+    % Quiet title
+    \node[
+        anchor=west,
+        text=ViabilityDarkBlue,
+        font=\large\bfseries
+    ] at (0.55,4.85)
+        {River, Fire, and Order};
+
+    \node[
+        anchor=west,
+        text=ViabilityGray,
+        font=\small
+    ] at (0.58,4.42)
+        {An illustrative image, not a cosmological diagram};
+
+\end{tikzpicture}
+
+\caption{An atmospheric illustration inspired by the Heraclitean
+themes of flowing water, fire, and order. The image does not
+assert that fire is the uniquely established substance of all
+things, nor that the river provides a complete theory of identity.}
+\label{fig:VS.B01.P01.C08.S03.SS01.P004.IL01}
+
+\end{figure}
+
+% =============================================================================
+% END OF ILLUSTRATION IL01
+% =============================================================================

@@ -17,15 +17,18 @@
 % Citation: natbib-compatible author-year citations
 %
 % Editorial Policy:
-%   1. Citation keys are retained wherever possible.
-%   2. Duplicate keys and duplicate bibliographic records are consolidated.
-%   3. Primary philosophical texts are distinguished from secondary scholarship.
-%   4. Traditions are represented in their own historical and conceptual contexts.
-%   5. Inclusion does not imply philosophical agreement.
-%   6. Citations must support the precise claim for which they are used.
-%   7. Page references must be checked against the edition actually consulted.
-%   8. Unverified publication details are not supplied as established facts.
-%   9. Bibliographic records do not replace textual and interpretive analysis.
+%   1. Existing citation keys are retained for compatibility.
+%   2. Duplicate BibTeX keys are eliminated.
+%   3. Repeated bibliographic works are identified through notes and
+%      compatibility keys where removal could break existing citations.
+%   4. Primary philosophical texts are distinguished from secondary studies.
+%   5. Traditions are represented in their own historical and conceptual
+%      contexts.
+%   6. Inclusion does not imply philosophical agreement.
+%   7. Citations must support the precise claim for which they are used.
+%   8. Page references must be checked against the edition actually consulted.
+%   9. Unverified publication details are not treated as established facts.
+%  10. Bibliographic records do not replace textual and interpretive analysis.
 %
 % =============================================================================
 
@@ -38,7 +41,7 @@
   AUTHOR    = {Aristotle},
   TITLE     = {Categories},
   BOOKTITLE = {The Complete Works of Aristotle},
-  EDITOR    = {Jonathan Barnes},
+  EDITOR    = {Barnes, Jonathan},
   PUBLISHER = {Princeton University Press},
   ADDRESS   = {Princeton},
   YEAR      = {1984},
@@ -50,7 +53,7 @@
   AUTHOR    = {Aristotle},
   TITLE     = {Metaphysics},
   BOOKTITLE = {The Complete Works of Aristotle},
-  EDITOR    = {Jonathan Barnes},
+  EDITOR    = {Barnes, Jonathan},
   PUBLISHER = {Princeton University Press},
   ADDRESS   = {Princeton},
   YEAR      = {1984},
@@ -62,7 +65,7 @@
   AUTHOR    = {Aristotle},
   TITLE     = {Physics},
   BOOKTITLE = {The Complete Works of Aristotle},
-  EDITOR    = {Jonathan Barnes},
+  EDITOR    = {Barnes, Jonathan},
   PUBLISHER = {Princeton University Press},
   ADDRESS   = {Princeton},
   YEAR      = {1984},
@@ -70,34 +73,45 @@
   NOTE      = {Translated by R. P. Hardie and R. K. Gaye}
 }
 
-@INCOLLECTION{PlatoSophist,
+@INCOLLECTION{PlatoCratylus,
   AUTHOR    = {Plato},
-  TITLE     = {Sophist},
+  TITLE     = {Cratylus},
   BOOKTITLE = {Plato: Complete Works},
-  EDITOR    = {John M. Cooper},
+  EDITOR    = {Cooper, John M.},
   PUBLISHER = {Hackett Publishing Company},
   ADDRESS   = {Indianapolis},
   YEAR      = {1997},
-  NOTE      = {Translated by Nicholas P. White}
+  NOTE      = {Translated by C. D. C. Reeve}
 }
 
 @INCOLLECTION{PlatoParmenides,
   AUTHOR    = {Plato},
   TITLE     = {Parmenides},
   BOOKTITLE = {Plato: Complete Works},
-  EDITOR    = {John M. Cooper},
+  EDITOR    = {Cooper, John M.},
   PUBLISHER = {Hackett Publishing Company},
   ADDRESS   = {Indianapolis},
   YEAR      = {1997},
   NOTE      = {Translated by Mary Louise Gill and Paul Ryan.
-               This is Plato's dialogue, not a primary text by Parmenides.}
+               This is Plato's dialogue, not a primary text by Parmenides}
+}
+
+@INCOLLECTION{PlatoSophist,
+  AUTHOR    = {Plato},
+  TITLE     = {Sophist},
+  BOOKTITLE = {Plato: Complete Works},
+  EDITOR    = {Cooper, John M.},
+  PUBLISHER = {Hackett Publishing Company},
+  ADDRESS   = {Indianapolis},
+  YEAR      = {1997},
+  NOTE      = {Translated by Nicholas P. White}
 }
 
 @INCOLLECTION{PlatoTimaeus,
   AUTHOR    = {Plato},
   TITLE     = {Timaeus},
   BOOKTITLE = {Plato: Complete Works},
-  EDITOR    = {John M. Cooper},
+  EDITOR    = {Cooper, John M.},
   PUBLISHER = {Hackett Publishing Company},
   ADDRESS   = {Indianapolis},
   YEAR      = {1997},
@@ -107,39 +121,121 @@
 @BOOK{ParmenidesFragments,
   AUTHOR     = {Parmenides},
   TITLE      = {Parmenides of Elea: Fragments},
-  TRANSLATOR = {David Gallop},
+  TRANSLATOR = {Gallop, David},
   PUBLISHER  = {University of Toronto Press},
   ADDRESS    = {Toronto},
   YEAR       = {1984},
   NOTE       = {Translation and study of the surviving fragments}
 }
 
+@BOOK{CoxonParmenides2009,
+  AUTHOR    = {Coxon, A. H.},
+  TITLE     = {The Fragments of Parmenides: A Critical Text
+               with Introduction and Translation, the Ancient
+               Testimonia and a Commentary},
+  EDITOR    = {McKirahan, Richard D.},
+  EDITION   = {Revised and expanded},
+  PUBLISHER = {Parmenides Publishing},
+  ADDRESS   = {Las Vegas and Zurich and Athens},
+  YEAR      = {2009},
+  NOTE      = {With a new preface by Malcolm Schofield}
+}
+
+@BOOK{PalmerParmenides2009,
+  AUTHOR    = {Palmer, John},
+  TITLE     = {Parmenides and Presocratic Philosophy},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford and New York},
+  YEAR      = {2009},
+  DOI       = {10.1093/acprof:oso/9780199567904.001.0001}
+}
+
+@MISC{CurdParmenidesSEP,
+  AUTHOR       = {Curd, Patricia},
+  TITLE        = {Parmenides},
+  HOWPUBLISHED = {The Stanford Encyclopedia of Philosophy},
+  YEAR         = {2025},
+  NOTE         = {First published in 2008; substantive revision
+                  4 March 2025.
+                  URL: https://plato.stanford.edu/entries/parmenides/}
+}
+
 @BOOK{HeraclitusFragments,
   AUTHOR     = {Heraclitus},
   TITLE      = {The Art and Thought of Heraclitus: An Edition of the
                 Fragments with Translation and Commentary},
-  EDITOR     = {Charles H. Kahn},
-  TRANSLATOR = {Charles H. Kahn},
+  EDITOR     = {Kahn, Charles H.},
+  TRANSLATOR = {Kahn, Charles H.},
   PUBLISHER  = {Cambridge University Press},
   ADDRESS    = {Cambridge},
   YEAR       = {1979}
 }
 
+@BOOK{KahnHeraclitus1979,
+  AUTHOR    = {Kahn, Charles H.},
+  TITLE     = {The Art and Thought of Heraclitus: An Edition of the
+               Fragments with Translation and Commentary},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge},
+  YEAR      = {1979},
+  NOTE      = {Compatibility key for the same work catalogued under
+               HeraclitusFragments}
+}
+
+@BOOK{KirkHeraclitus1954,
+  AUTHOR    = {Kirk, G. S.},
+  TITLE     = {Heraclitus: The Cosmic Fragments},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge},
+  YEAR      = {1954}
+}
+
+@BOOK{GrahamTextsEarlyGreek2010,
+  EDITOR    = {Graham, Daniel W.},
+  TITLE     = {The Texts of Early Greek Philosophy: The Complete
+               Fragments and Selected Testimonies of the Major
+               Presocratics},
+  PUBLISHER = {Cambridge University Press},
+  ADDRESS   = {Cambridge and New York},
+  YEAR      = {2010},
+  NOTE      = {Two volumes. Edited and translated by Daniel W. Graham}
+}
+
+@MISC{GrahamHeraclitusSEP2023,
+  AUTHOR       = {Graham, Daniel W.},
+  TITLE        = {Heraclitus},
+  HOWPUBLISHED = {The Stanford Encyclopedia of Philosophy},
+  YEAR         = {2023},
+  NOTE         = {First published 8 February 2007; substantive revision
+                  8 December 2023.
+                  URL: https://plato.stanford.edu/entries/heraclitus/}
+}
+
+@MISC{CurdHeraclitusSEP2023,
+  AUTHOR       = {Curd, Patricia},
+  TITLE        = {Heraclitus},
+  HOWPUBLISHED = {The Stanford Encyclopedia of Philosophy},
+  YEAR         = {2023},
+  NOTE         = {Substantive revision December 2023.
+                  Verify authorship and revision metadata before citation.
+                  URL: https://plato.stanford.edu/entries/heraclitus/}
+}
+
 @BOOK{PlotinusEnneads,
   AUTHOR    = {Plotinus},
   TITLE     = {The Enneads},
-  EDITOR    = {Lloyd P. Gerson},
+  EDITOR    = {Gerson, Lloyd P.},
   PUBLISHER = {Cambridge University Press},
   ADDRESS   = {Cambridge},
   YEAR      = {2018},
-  NOTE      = {Consult the edition's title page for the precise
-               translation and editorial credits}
+  NOTE      = {Consult the edition's title page for precise translation
+               and editorial credits}
 }
 
 @BOOK{ProclusElements,
   AUTHOR     = {Proclus},
   TITLE      = {The Elements of Theology},
-  TRANSLATOR = {E. R. Dodds},
+  TRANSLATOR = {Dodds, E. R.},
   EDITION    = {2},
   PUBLISHER  = {Oxford University Press},
   ADDRESS    = {Oxford},
@@ -154,7 +250,7 @@
 @BOOK{AquinasBeingEssence,
   AUTHOR     = {Aquinas, Thomas},
   TITLE      = {On Being and Essence},
-  TRANSLATOR = {Joseph Bobik},
+  TRANSLATOR = {Bobik, Joseph},
   PUBLISHER  = {University of Notre Dame Press},
   ADDRESS    = {Notre Dame},
   YEAR       = {1965}
@@ -163,8 +259,8 @@
 @BOOK{ScotusPhilosophicalWritings,
   AUTHOR     = {Scotus, John Duns},
   TITLE      = {Philosophical Writings},
-  EDITOR     = {Allan B. Wolter},
-  TRANSLATOR = {Allan B. Wolter},
+  EDITOR     = {Wolter, Allan B.},
+  TRANSLATOR = {Wolter, Allan B.},
   PUBLISHER  = {Nelson},
   ADDRESS    = {Edinburgh},
   YEAR       = {1962}
@@ -178,7 +274,7 @@
 @BOOK{AlFarabiVirtuousCity,
   AUTHOR     = {Al-Farabi},
   TITLE      = {Al-Farabi on the Perfect State},
-  TRANSLATOR = {Richard Walzer},
+  TRANSLATOR = {Walzer, Richard},
   PUBLISHER  = {Clarendon Press},
   ADDRESS    = {Oxford},
   YEAR       = {1985},
@@ -188,7 +284,7 @@
 @BOOK{AvicennaMetaphysics,
   AUTHOR     = {Ibn Sina},
   TITLE      = {The Metaphysics of The Healing},
-  TRANSLATOR = {Michael E. Marmura},
+  TRANSLATOR = {Marmura, Michael E.},
   PUBLISHER  = {Brigham Young University Press},
   ADDRESS    = {Provo},
   YEAR       = {2005},
@@ -198,7 +294,7 @@
 @BOOK{AlGhazaliIncoherence,
   AUTHOR     = {Al-Ghazali},
   TITLE      = {The Incoherence of the Philosophers},
-  TRANSLATOR = {Michael E. Marmura},
+  TRANSLATOR = {Marmura, Michael E.},
   EDITION    = {2},
   PUBLISHER  = {Brigham Young University Press},
   ADDRESS    = {Provo},
@@ -209,7 +305,7 @@
 @BOOK{AverroesDecisiveTreatise,
   AUTHOR     = {Averroes},
   TITLE      = {The Decisive Treatise and Epistle Dedicatory},
-  TRANSLATOR = {Charles E. Butterworth},
+  TRANSLATOR = {Butterworth, Charles E.},
   PUBLISHER  = {Brigham Young University Press},
   ADDRESS    = {Provo},
   YEAR       = {2001},
@@ -219,7 +315,7 @@
 @BOOK{SuhrawardiPhilosophyIllumination,
   AUTHOR     = {Suhrawardi, Shihab al-Din},
   TITLE      = {The Philosophy of Illumination},
-  TRANSLATOR = {John Walbridge and Hossein Ziai},
+  TRANSLATOR = {Walbridge, John and Ziai, Hossein},
   PUBLISHER  = {Brigham Young University Press},
   ADDRESS    = {Provo},
   YEAR       = {1999},
@@ -229,7 +325,7 @@
 @BOOK{IbnArabiBezels,
   AUTHOR     = {Ibn al-Arabi},
   TITLE      = {The Bezels of Wisdom},
-  TRANSLATOR = {R. W. J. Austin},
+  TRANSLATOR = {Austin, R. W. J.},
   PUBLISHER  = {Paulist Press},
   ADDRESS    = {New York},
   YEAR       = {1980},
@@ -281,7 +377,7 @@
   AUTHOR     = {Nagarjuna},
   TITLE      = {The Fundamental Wisdom of the Middle Way:
                 Nagarjuna's Mulamadhyamakakarika},
-  TRANSLATOR = {Jay L. Garfield},
+  TRANSLATOR = {Garfield, Jay L.},
   PUBLISHER  = {Oxford University Press},
   ADDRESS    = {New York},
   YEAR       = {1995},
@@ -291,29 +387,27 @@
 @BOOK{VasubandhuAbhidharmakosa,
   AUTHOR     = {Vasubandhu},
   TITLE      = {Abhidharmakosabhasyam},
-  TRANSLATOR = {Louis de La Vallee Poussin},
+  TRANSLATOR = {Pruden, Leo M.},
   PUBLISHER  = {Asian Humanities Press},
   ADDRESS    = {Berkeley},
   YEAR       = {1988},
-  NOTE       = {English translation by Leo M. Pruden from the
-                French translation by Louis de La Vallee Poussin;
-                four volumes}
+  NOTE       = {English translation by Leo M. Pruden from the French
+                translation by Louis de La Vallee Poussin; four volumes}
 }
 
 @BOOK{UpanishadsOlivelle,
-  AUTHOR     = {{Various Authors}},
-  TITLE      = {Upanisads},
-  TRANSLATOR = {Patrick Olivelle},
-  PUBLISHER  = {Oxford University Press},
-  ADDRESS    = {Oxford},
-  YEAR       = {1996},
-  NOTE       = {Translation and edition by Patrick Olivelle}
+  EDITOR    = {Olivelle, Patrick},
+  TITLE     = {Upanisads},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {1996},
+  NOTE      = {Translation and edition by Patrick Olivelle}
 }
 
 @BOOK{BhagavadGitaEdgerton,
-  AUTHOR     = {{The Bhagavad Gita}},
+  AUTHOR     = {{Bhagavad Gita}},
   TITLE      = {The Bhagavad Gita},
-  TRANSLATOR = {Franklin Edgerton},
+  TRANSLATOR = {Edgerton, Franklin},
   PUBLISHER  = {Harvard University Press},
   ADDRESS    = {Cambridge, MA},
   YEAR       = {1944},
@@ -323,7 +417,7 @@
 @BOOK{ShankaraBrahmaSutraBhashya,
   AUTHOR     = {Shankaracharya},
   TITLE      = {Brahma-Sutra-Bhasya of Sri Shankaracharya},
-  TRANSLATOR = {Swami Gambhirananda},
+  TRANSLATOR = {Gambhirananda, Swami},
   EDITION    = {3},
   PUBLISHER  = {Advaita Ashrama},
   ADDRESS    = {Calcutta},
@@ -340,7 +434,7 @@
 @BOOK{LaoziDaoDeJing,
   AUTHOR     = {Laozi},
   TITLE      = {Dao De Jing: A Philosophical Translation},
-  TRANSLATOR = {Roger T. Ames and David L. Hall},
+  TRANSLATOR = {Ames, Roger T. and Hall, David L.},
   PUBLISHER  = {Ballantine Books},
   ADDRESS    = {New York},
   YEAR       = {2003}
@@ -349,7 +443,7 @@
 @BOOK{ZhuangziBasicWritings,
   AUTHOR     = {Zhuangzi},
   TITLE      = {Basic Writings},
-  TRANSLATOR = {Burton Watson},
+  TRANSLATOR = {Watson, Burton},
   PUBLISHER  = {Columbia University Press},
   ADDRESS    = {New York},
   YEAR       = {1964}
@@ -358,7 +452,7 @@
 @BOOK{ConfuciusAnalects,
   AUTHOR     = {Confucius},
   TITLE      = {Analects: With Selections from Traditional Commentaries},
-  TRANSLATOR = {Edward Slingerland},
+  TRANSLATOR = {Slingerland, Edward},
   PUBLISHER  = {Hackett Publishing Company},
   ADDRESS    = {Indianapolis},
   YEAR       = {2003}
@@ -372,7 +466,7 @@
 @BOOK{DescartesMeditations,
   AUTHOR     = {Descartes, Rene},
   TITLE      = {Meditations on First Philosophy},
-  TRANSLATOR = {John Cottingham},
+  TRANSLATOR = {Cottingham, John},
   PUBLISHER  = {Cambridge University Press},
   ADDRESS    = {Cambridge},
   YEAR       = {1996}
@@ -381,7 +475,7 @@
 @BOOK{LockeEssay,
   AUTHOR    = {Locke, John},
   TITLE     = {An Essay Concerning Human Understanding},
-  EDITOR    = {Peter H. Nidditch},
+  EDITOR    = {Nidditch, Peter H.},
   PUBLISHER = {Clarendon Press},
   ADDRESS   = {Oxford},
   YEAR      = {1975}
@@ -391,7 +485,7 @@
   AUTHOR    = {Leibniz, Gottfried Wilhelm},
   TITLE     = {Monadology},
   BOOKTITLE = {Philosophical Essays},
-  EDITOR    = {Roger Ariew and Daniel Garber},
+  EDITOR    = {Ariew, Roger and Garber, Daniel},
   PUBLISHER = {Hackett Publishing Company},
   ADDRESS   = {Indianapolis},
   YEAR      = {1989},
@@ -402,7 +496,7 @@
   AUTHOR    = {Leibniz, Gottfried Wilhelm},
   TITLE     = {Discourse on Metaphysics},
   BOOKTITLE = {Philosophical Essays},
-  EDITOR    = {Roger Ariew and Daniel Garber},
+  EDITOR    = {Ariew, Roger and Garber, Daniel},
   PUBLISHER = {Hackett Publishing Company},
   ADDRESS   = {Indianapolis},
   YEAR      = {1989},
@@ -412,7 +506,7 @@
 @BOOK{HumeTreatise,
   AUTHOR    = {Hume, David},
   TITLE     = {A Treatise of Human Nature},
-  EDITOR    = {David Fate Norton and Mary J. Norton},
+  EDITOR    = {Norton, David Fate and Norton, Mary J.},
   PUBLISHER = {Oxford University Press},
   ADDRESS   = {Oxford},
   YEAR      = {2000}
@@ -421,7 +515,7 @@
 @BOOK{KantCritiquePureReason,
   AUTHOR     = {Kant, Immanuel},
   TITLE      = {Critique of Pure Reason},
-  TRANSLATOR = {Paul Guyer and Allen W. Wood},
+  TRANSLATOR = {Guyer, Paul and Wood, Allen W.},
   PUBLISHER  = {Cambridge University Press},
   ADDRESS    = {Cambridge},
   YEAR       = {1998}
@@ -431,7 +525,7 @@
   AUTHOR    = {Spinoza, Benedict de},
   TITLE     = {The Collected Works of Spinoza},
   VOLUME    = {1},
-  EDITOR    = {Edwin Curley},
+  EDITOR    = {Curley, Edwin},
   PUBLISHER = {Princeton University Press},
   ADDRESS   = {Princeton},
   YEAR      = {1985},
@@ -441,7 +535,7 @@
 @BOOK{HegelScienceOfLogic,
   AUTHOR     = {Hegel, Georg Wilhelm Friedrich},
   TITLE      = {Science of Logic},
-  TRANSLATOR = {A. V. Miller},
+  TRANSLATOR = {Miller, A. V.},
   PUBLISHER  = {George Allen and Unwin},
   ADDRESS    = {London},
   YEAR       = {1969}
@@ -455,7 +549,7 @@
 @BOOK{FregeFoundations,
   AUTHOR     = {Frege, Gottlob},
   TITLE      = {The Foundations of Arithmetic},
-  TRANSLATOR = {J. L. Austin},
+  TRANSLATOR = {Austin, J. L.},
   PUBLISHER  = {Basil Blackwell},
   ADDRESS    = {Oxford},
   YEAR       = {1953}
@@ -489,7 +583,7 @@
 @BOOK{HeideggerBeingTime,
   AUTHOR     = {Heidegger, Martin},
   TITLE      = {Being and Time},
-  TRANSLATOR = {John Macquarrie and Edward Robinson},
+  TRANSLATOR = {Macquarrie, John and Robinson, Edward},
   PUBLISHER  = {Harper and Row},
   ADDRESS    = {New York},
   YEAR       = {1962}
@@ -498,7 +592,7 @@
 @BOOK{WhiteheadProcessReality,
   AUTHOR    = {Whitehead, Alfred North},
   TITLE     = {Process and Reality: An Essay in Cosmology},
-  EDITOR    = {David Ray Griffin and Donald W. Sherburne},
+  EDITOR    = {Griffin, David Ray and Sherburne, Donald W.},
   EDITION   = {Corrected},
   PUBLISHER = {Free Press},
   ADDRESS   = {New York},
@@ -782,7 +876,7 @@
   ADDRESS   = {Oxford},
   YEAR      = {2014},
   NOTE      = {Legacy citation key retained for compatibility.
-               This record duplicates FrenchStructure.}
+               Same bibliographic work as FrenchStructure}
 }
 
 @BOOK{LadymanStructuralRealism,
@@ -792,7 +886,7 @@
   ADDRESS   = {Oxford},
   YEAR      = {2007},
   NOTE      = {Legacy citation key retained for compatibility.
-               This record duplicates LadymanEveryThingMustGo.}
+               Same bibliographic work as LadymanEveryThingMustGo}
 }
 
 
@@ -833,8 +927,8 @@
 @BOOK{FregeCollectedPapers,
   AUTHOR     = {Frege, Gottlob},
   TITLE      = {Collected Papers on Mathematics, Logic, and Philosophy},
-  EDITOR     = {Brian McGuinness},
-  TRANSLATOR = {Max Black and others},
+  EDITOR     = {McGuinness, Brian},
+  TRANSLATOR = {Black, Max and others},
   PUBLISHER  = {Basil Blackwell},
   ADDRESS    = {Oxford},
   YEAR       = {1984}
@@ -868,7 +962,7 @@
   TITLE     = {Guide to Ground},
   BOOKTITLE = {Metaphysical Grounding: Understanding the Structure
                of Reality},
-  EDITOR    = {Fabrice Correia and Benjamin Schnieder},
+  EDITOR    = {Correia, Fabrice and Schnieder, Benjamin},
   PUBLISHER = {Cambridge University Press},
   ADDRESS   = {Cambridge},
   PAGES     = {37--80},
@@ -889,7 +983,7 @@
   TITLE     = {On What Grounds What},
   BOOKTITLE = {Metametaphysics: New Essays on the Foundations
                of Ontology},
-  EDITOR    = {David J. Chalmers and David Manley and Ryan Wasserman},
+  EDITOR    = {Chalmers, David J. and Manley, David and Wasserman, Ryan},
   PUBLISHER = {Oxford University Press},
   ADDRESS   = {Oxford},
   PAGES     = {347--383},
@@ -916,12 +1010,22 @@
   AUTHOR    = {Rosen, Gideon},
   TITLE     = {Metaphysical Dependence: Grounding and Reduction},
   BOOKTITLE = {Modality: Metaphysics, Logic, and Epistemology},
-  EDITOR    = {Bob Hale and Aviv Hoffmann},
+  EDITOR    = {Hale, Bob and Hoffmann, Aviv},
   PUBLISHER = {Oxford University Press},
   ADDRESS   = {Oxford},
   PAGES     = {109--136},
   YEAR      = {2010},
   DOI       = {10.1093/acprof:oso/9780199565818.003.0007}
+}
+
+@BOOK{LouxZimmermanMetaphysicsLegacy,
+  EDITOR    = {Loux, Michael J. and Zimmerman, Dean W.},
+  TITLE     = {The Oxford Handbook of Metaphysics},
+  PUBLISHER = {Oxford University Press},
+  ADDRESS   = {Oxford},
+  YEAR      = {2003},
+  NOTE      = {Legacy citation key retained for compatibility.
+               Same bibliographic work as LouxZimmermanMetaphysics}
 }
 
 
@@ -932,7 +1036,7 @@
 @BOOK{SimondonIndividuation,
   AUTHOR     = {Simondon, Gilbert},
   TITLE      = {Individuation in Light of Notions of Form and Information},
-  TRANSLATOR = {Taylor Adkins},
+  TRANSLATOR = {Adkins, Taylor},
   PUBLISHER  = {University of Minnesota Press},
   ADDRESS    = {Minneapolis},
   YEAR       = {2020}
@@ -943,73 +1047,9 @@
 % XVII. GENERAL METAPHYSICAL REFERENCE WORKS
 % =============================================================================
 
-@BOOK{LouxZimmermanMetaphysicsLegacy,
-  EDITOR    = {Loux, Michael J. and Zimmerman, Dean W.},
-  TITLE     = {The Oxford Handbook of Metaphysics},
-  PUBLISHER = {Oxford University Press},
-  ADDRESS   = {Oxford},
-  YEAR      = {2003},
-  NOTE      = {Legacy record retained for citation compatibility.
-               Identical bibliographic work to LouxZimmermanMetaphysics.}
-}
+% General reference works are grouped here only when they do not belong
+% more specifically to one of the preceding thematic categories.
 
-
-@BOOK{CoxonParmenides2009,
-  AUTHOR    = {Coxon, A. H.},
-  TITLE     = {The Fragments of Parmenides: A Critical Text
-               with Introduction and Translation, the Ancient
-               Testimonia and a Commentary},
-  EDITOR    = {McKirahan, Richard D.},
-  EDITION   = {Revised and expanded},
-  PUBLISHER = {Parmenides Publishing},
-  ADDRESS   = {Las Vegas and Zurich and Athens},
-  YEAR      = {2009},
-  NOTE      = {With a new preface by Malcolm Schofield}
-}
-
-@BOOK{PalmerParmenides2009,
-  AUTHOR    = {Palmer, John},
-  TITLE     = {Parmenides and Presocratic Philosophy},
-  PUBLISHER = {Oxford University Press},
-  ADDRESS   = {Oxford and New York},
-  YEAR      = {2009},
-  DOI       = {10.1093/acprof:oso/9780199567904.001.0001}
-}
-
-@MISC{CurdParmenidesSEP,
-  AUTHOR       = {Curd, Patricia},
-  TITLE        = {Parmenides},
-  HOWPUBLISHED = {The Stanford Encyclopedia of Philosophy},
-  YEAR         = {2025},
-  NOTE         = {First published 2008; substantive revision
-                  4 March 2025.
-                  https://plato.stanford.edu/entries/parmenides/}
-}
-
-@BOOK{KahnHeraclitus1979,
-  AUTHOR    = {Kahn, Charles H.},
-  TITLE     = {The Art and Thought of Heraclitus: An Edition of the Fragments with Translation and Commentary},
-  PUBLISHER = {Cambridge University Press},
-  ADDRESS   = {Cambridge},
-  YEAR      = {1979}
-}
-
-@BOOK{GrahamTextsEarlyGreek2010,
-  EDITOR    = {Graham, Daniel W.},
-  TITLE     = {The Texts of Early Greek Philosophy: The Complete Fragments and Selected Testimonies of the Major Presocratics},
-  PUBLISHER = {Cambridge University Press},
-  ADDRESS   = {Cambridge},
-  YEAR      = {2010}
-}
-
-@MISC{CurdHeraclitusSEP2023,
-  AUTHOR       = {Curd, Patricia},
-  TITLE        = {Heraclitus},
-  HOWPUBLISHED = {Stanford Encyclopedia of Philosophy},
-  YEAR         = {2023},
-  NOTE         = {Substantive revision December 8, 2023},
-  URL          = {https://plato.stanford.edu/entries/heraclitus/}
-}
 
 % =============================================================================
 % END OF BIBLIOGRAPHIC DATABASE
