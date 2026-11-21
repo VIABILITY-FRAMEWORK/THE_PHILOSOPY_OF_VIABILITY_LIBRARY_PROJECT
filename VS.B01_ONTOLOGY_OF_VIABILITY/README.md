@@ -17,11 +17,12 @@
 
 # 0. How to Use This Document
 
-This README is written so that an AI agent with **no prior knowledge of the project or its author** can pick up the work and continue it correctly. It consolidates three source documents:
+This README is written so that an AI agent with **no prior knowledge of the project or its author** can pick up the work and continue it correctly. It consolidates four source documents:
 
 1. The earlier project README (overview, directory documentation, editorial principles).
 2. The *Revised Book Architecture and Chapter Contents* (the 4-Part, 40-chapter architecture).
 3. The *Consolidated Writing and Revision Protocol* and its *Addendum* (the binding procedures for research, writing, sourcing, referencing, assets, validation and delivery).
+4. The *Operational Writing, Revision, Asset Production, and Commit Protocol* (mandatory response structure, claim-registry prefix meanings, complete-file delivery, compilation-claim levels, commit message, local/remote workflow).
 
 ## 0.1 Reading order for a new agent
 
@@ -29,7 +30,7 @@ This README is written so that an AI agent with **no prior knowledge of the proj
 2. Read §6–§9 (architecture, commitments, distinctions, open questions) before touching any philosophical content.
 3. Read §10–§13 (claim status, chapter boundaries, repository structure, identifiers) and §18 (assets) before producing any file.
 4. Read §14 (the mandatory algorithm) and follow it for **every** task.
-5. Use §15–§22 as reference while working, and §23–§25 (rewrite order, known discrepancies, definition of done) as the final checklist.
+5. Use §15–§22 as reference while working (§21.3–§21.6 fix the structure of every delivery, including the commit message), and §23–§25 (rewrite order, known discrepancies, definition of done) as the final checklist.
 
 ## 0.2 Normative language
 
@@ -202,6 +203,7 @@ If these conflict, the agent MUST identify the conflict and decide with theoreti
 - **Paths, filenames, directory layout:** the repository is the truth. Never fabricate or "fix" a path to match this README. If a file is not where expected, inspect the real repository structure; do not invent an alternative.
 - **Philosophy, rules and process:** this README governs unless the author instructs otherwise.
 - Record the discrepancy and report it (see §24 for known discrepancies).
+- **Operational protocol precedence:** the operational protocol (merged into §10.3, §13, §18, §20 and §21.3–§21.6) governs the workflow and structure of deliveries but does not override more specific philosophical, structural or technical requirements; where a more specific rule exists, it governs. Its meanings of the registry prefixes (`TH` = Theorem, `PF` = Proof) are authoritative and supersede the earlier README's meanings (see §10.3 and §24).
 
 ---
 
@@ -565,19 +567,24 @@ Foundationally Adopted Commitments · Stipulated or Defined Claims · Argued or 
 
 ## 10.3 Entity identifiers and registries
 
-| Prefix | Entity | CSV register |
-| --- | --- | --- |
-| `AX-` | Axiom | `axioms` |
-| `DF-` | Definition | `definitions` |
-| `PR-` | Proposition | `propositions` |
-| `TH-` | Thesis | `theses` |
-| `HY-` | Hypothesis | `hypotheses` |
-| `AR-` | Argument | `arguments` |
-| `PF-` | Philosophical Foundation | `philosophical_foundations` |
+Approved registry prefixes (authoritative):
 
+| Prefix | Meaning | Eligibility |
+| --- | --- | --- |
+| `AX-` | Axiom | An axiom adopted in a formal role |
+| `DF-` | Definition | A stipulated or defined term |
+| `PR-` | Proposition | A proposition |
+| `TH-` | **Theorem** | Only a result actually demonstrated under explicitly stated assumptions |
+| `HY-` | Hypothesis | A hypothesis |
+| `AR-` | Argument | An argument |
+| `PF-` | **Proof** | Only when an actual proof is being recorded |
+
+- `TH = Theorem` and `PF = Proof` are authoritative. The earlier README's meanings (`TH` = Thesis, `PF` = Philosophical Foundation) are **superseded** and MUST NOT be used.
+- Do not assign a theorem identifier to a methodological thesis or an unproved philosophical claim. Do not assign a proof identifier unless a real proof is recorded. This agrees with the rule of Chapters 07, 18, 24 and 39 that nothing is presented as a theorem unless demonstrated.
+- If a claim is not eligible for a registry identifier, **state why** (for example: "Thesis — unproved, so not eligible for `TH-`").
+- Axis-1 forms with no registry prefix at present: **Foundational Commitment, Thesis, Open Problem** (§10.1). They are tracked in the manuscript and the logical entity reference map; do **not** invent prefixes for them. This gap is an open structural question for the author (§24, item 10).
 - An identifier refers to one specific entity and MUST NOT be reused for an unrelated one.
-- The CSV registers are the structured records of the project; the publication-oriented registers in the backmatter serve presentation. Registers, the logical entity reference map and the manuscript MUST stay consistent.
-- Registers record both axes of status (§10.1). (Location of the register files: see §12.3 and §24.)
+- The CSV registers are the structured records of the project; the publication-oriented registers in the backmatter serve presentation. Registers, the logical entity reference map and the manuscript MUST stay consistent. Registers record both axes of status (§10.1). (Location and naming of the register files: see §12.3 and §24.)
 
 ---
 
@@ -618,6 +625,7 @@ To prevent overlap, each section has one function:
 - **Synthesis vs. formal vs. comparative chapters:** each is an independent task; a synthesis chapter does not substitute for the formal or comparative chapter.
 - **Every important distinction** is examined fully in its proper place; elsewhere it is only referred to as needed.
 - **Repetition** is evaluated by its philosophical function; chapter symmetry is never imposed merely for formal uniformity.
+- **Domains and books:** preserve the distinction between ontology, epistemology, metaphysics and other domains wherever the architecture requires it; do not import concepts, assumptions or conclusions from another book without explicit justification.
 
 ---
 
@@ -693,7 +701,7 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 └── (registers)   axioms_register.csv, definitions_register.csv, propositions_register.csv,
                   theses_register.csv, hypotheses_register.csv, arguments_register.csv,
-                  philosophical_foundations_register.csv      (location: see §12.3 / §24)
+                  philosophical_foundations_register.csv      (location and naming: see §10.3, §12.3 and §24)
 ```
 
 ## 12.2 Root files
@@ -713,7 +721,7 @@ The documents describe register/bibliography locations in more than one way (see
 
 ## 12.5 Structural integrity rules
 
-Files and directories MUST NOT be renamed, relocated, added or removed without an explicit structural decision. Chapter-local asset directories (`tables/`, `figures/` inside chapters) MUST NOT be reintroduced without explicit authorization.
+Files and directories MUST NOT be renamed, relocated, merged, split, added or removed without an explicit structural decision. Chapter-local asset directories (`tables/`, `figures/` inside chapters) MUST NOT be reintroduced without explicit authorization.
 
 ---
 
@@ -738,11 +746,17 @@ Identifiers MUST be unique, stable during ordinary editing, correspond to the ac
 % Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
+% Part    : [Part title and ID, where applicable]
+% Chapter : [Chapter title, where applicable]
+% Chapter ID : [Chapter ID, where applicable]
 %
 % File    : [exact relative file path]
 %
 % Section / Chapter / Asset:
 %   [exact title]
+%
+% Structural Identifier : [full structural identifier, where applicable]
+% Asset Type : [TL / FG / DG / IL — asset files only]
 %
 % Purpose :
 %   [precise statement of the file's function]
@@ -750,7 +764,7 @@ Identifiers MUST be unique, stable during ordinary editing, correspond to the ac
 % =============================================================================
 ```
 
-Path, title and purpose MUST match the real file.
+Path, title and purpose MUST match the real file. Fields that do not apply to a file (for example Part or Chapter in a frontmatter file) are omitted, never invented.
 
 ## 13.3 End markers
 
@@ -780,12 +794,17 @@ Numbers and titles MUST match the real file.
 - Internal references MUST be **clickable hyperlinks generated by LaTeX macros** (intended usage: `\InternalRef{VS.B01.P01.C01.S01.SS01.P001}`); the displayed identifier itself is the link. The exact macro name comes from the real `macros.tex`; if the macro does not exist or is defective, design, implement and test it **before** using it across the book.
 - The macro MUST: accept a valid identifier; resolve it to the destination; generate a link; display the identifier or an approved readable reference; fail usefully when the target is missing; avoid duplicate destinations; stay compatible with pdfLaTeX and the project's hyperref configuration; never depend on guessed page numbers; generate the destination from the same identifier used in the reference.
 - A textual identifier that looks right but does not resolve to a hyperlink is **not** acceptable.
+- Paragraph identifiers MUST NOT exist only as comments where functional internal references are required; a comment containing an identifier is not a hyperlink.
+- Preserve existing valid identifiers; avoid duplicates; never assign an identifier to a nonexistent paragraph; never change an identifier without justification.
+- If the necessary macros do not exist or cannot be verified, state that limitation and provide a **clearly labelled implementation proposal**; do not pretend the project's linking system is already functional.
+- Standard LaTeX labels and hyperlinks may be used only as a temporary or explicitly approved alternative; they MUST NOT silently replace the project-wide reference architecture.
 - Integrity checks: identifier exists; destination is the intended paragraph; target unique; resolves after compilation; no obsolete identifier remains in text or registries.
 
 ## 13.5 Technical conventions
 
 - Preserve existing labels; check uniqueness of new labels; do not redefine existing macros; do not add packages without necessity; inspect the real preamble before adding dependencies; verify every `\input` path; never load a package twice; keep consistency with the real document class.
 - `\input` commands omit the `.tex` extension.
+- Do not introduce a new package, macro, environment or global configuration change without identifying its purpose and its effect on the existing project.
 
 ---
 
@@ -802,7 +821,7 @@ This sequence is mandatory. No step may be silently omitted. The target file is 
 - **05.** Inspect frontmatter, mainmatter, backmatter and assets (scope: `1_FRONTMATTER/`, `2_MAINMATTER/`, `3_BACKMATTER/`, `4_ASSETS/` within `VS.B01_ONTOLOGY_OF_VIABILITY/`).
 - **06.** Inspect `main.tex`, `preamble.tex`, `metadata.tex`, `macros.tex`, `acronyms.tex`, `glossary.tex`, bibliography configuration, hyperlink configuration, internal-reference macros, label and anchor conventions; establish which packages and macros actually exist.
 
-Do not rely on memory, old copies or incomplete summaries when the real file is available. Do not assume a section is consistent merely because it was previously written or approved. Do not re-ask the author for anything available in the repository.
+Do not rely on memory, old copies or incomplete summaries when the real file is available. Do not assume a section is consistent merely because it was previously written or approved. Do not re-ask the author for anything available in the repository. If the source file cannot be accessed, state that limitation explicitly and do not claim to have verified content that was not inspected; a filename, summary, placeholder or earlier description is not a substitute for inspecting the actual file.
 
 ## Phase 2 — Consistency Diagnosis and Repair-Before-Expansion
 
@@ -849,7 +868,7 @@ Do not rely on memory, old copies or incomplete summaries when the real file is 
 - **31.** Identify all necessary footnotes.
 - **32.** Identify paragraph identifiers and internal links.
 - **33.** Identify necessary glossary, acronym, index and entity-map updates.
-- **34.** Prepare the **Asset Plan** required by §18.12: assess Table, Figure, Diagram and Illustration separately against both asset criteria; record Produce, Reuse/Adapt or Do Not Produce; state each asset’s purpose, reader benefit, insertion point, proposed content, epistemic status, identifier/path (if assignable), dependencies and validation status. If an insertion point has no paragraph-level identifier under the current scheme, record the structural-ID issue as pending author decision; do not invent an identifier or silently omit the asset.
+- **34.** Prepare the **Asset Plan** required by §18.12: assess Table, Figure, Diagram and Illustration separately against both asset criteria; record Produce, Reuse/Adapt, Defer (with reason and condition for later production) or Do Not Produce; state each asset’s purpose, reader benefit, insertion point, proposed content, epistemic status, identifier/path (if assignable), dependencies and validation status. If an insertion point has no paragraph-level identifier under the current scheme, record the structural-ID issue as pending author decision; do not invent an identifier or silently omit the asset.
 
 The blueprint distinguishes **inherited**, **adapted** and **genuinely new** material. No section is drafted before the blueprint is sufficiently complete.
 
@@ -892,11 +911,11 @@ Updates are based on actual changes, not speculative future content.
 - **59.** Deliver the **complete** revised file, not a patch.
 - **60.** Deliver all newly created or revised dependent files (each asset separately).
 - **61.** Identify exact repository paths.
-- **62.** Report what changed and why.
+- **62.** Report what changed and why, and supply the ready-to-use commit message (§21.4).
 - **63.** Report remaining uncertainty or unresolved issues.
 - **64.** Distinguish verified results from unverified assumptions.
 - **65.** If repository modification is authorized, apply the changes and verify the resulting commit and repository state.
-- **66.** Never claim a file was modified, pushed or compiled unless that operation actually succeeded.
+- **66.** Never claim a file was modified, committed, pushed or compiled unless that operation actually succeeded.
 
 ## 14.1 Required pre-writing report (before any substantive drafting or major revision)
 
@@ -914,7 +933,7 @@ Provide a concise but complete report containing:
 10. **Writing blueprint** — thesis, arguments, section structure.
 11. **Open issues** — what cannot yet be verified or resolved.
 
-The report distinguishes facts established by inspection from hypotheses and proposed decisions, and never presents a proposed revision as an already completed repository change.
+The report distinguishes facts established by inspection from hypotheses and proposed decisions, and never presents a proposed revision as an already completed repository change. In a single-response delivery this report may be given as items 1–2 of the response structure in §21.3; for a major revision it may be delivered separately before drafting. In either case no substantive drafting precedes it.
 
 ## 14.2 Source classification: philosophy vs. science
 
@@ -946,7 +965,7 @@ Avoid repeating patterns such as: "X is not Y, Z, or W." · "Nothing in this sec
 
 ## 15.3 Theoretical load of each section
 
-Each section has an independent theoretical function. If a subsection only repeats the cautions of a previous one, it must be enriched with new argument, given a new example/consequence, merged with a related subsection, or removed if functionless. Do **not** reduce subsection count or depth without reason. **Reconstruction is not summarization.**
+Each section has an independent theoretical function. If a subsection only repeats the cautions of a previous one, it must be enriched with new argument, given a new example/consequence, merged with a related subsection, or removed if functionless. Do **not** reduce subsection count or depth without reason. **Reconstruction is not summarization.** A revision MUST reconstruct the philosophical argument where it requires reconstruction; it MUST NOT be limited to cosmetic editing or sentence-level polishing.
 
 ## 15.4 Positive core
 
@@ -1048,7 +1067,7 @@ Example rows:
 
 ## 17.3 Prohibited mappings and maintenance
 
-Do not: assign a source to a subsection where it was not used; invent paragraph identifiers; treat thematic similarity as source dependence; claim quotation where there is only paraphrase; claim implicit use where the source did not materially inform the argument. A source in the bibliography with no recorded use is labelled an **unused research reference**, never represented as used. The architecture (separate table, structured register, dedicated mapping file, or generated table) is chosen **after inspecting existing files**. The map stays synchronized with `references.bib` and the actual mainmatter.
+Do not: assign a source to a subsection where it was not used; invent paragraph identifiers; treat thematic similarity as source dependence; claim quotation where there is only paraphrase; claim implicit use where the source did not materially inform the argument. A source in the bibliography with no recorded use is labelled an **unused research reference**, never represented as used. The architecture (separate table, structured register, dedicated mapping file, or generated table) is chosen **after inspecting existing files**. The map stays synchronized with `references.bib` and the actual mainmatter. Do not claim that the source-usage map or the bibliography has been updated unless the corresponding file has actually been produced or modified.
 
 ## 17.4 Citation system and BibTeX behaviour
 
@@ -1056,6 +1075,10 @@ Do not: assign a source to a subsection where it was not used; invent paragraph 
 - A `references.bib` file's existence does not mean BibTeX must be active at every stage. If no real citation command exists yet and the bibliography call is intentionally commented out, the message `I found no \citation commands` is **expected** and is not evidence of breakage. Never add empty/formal citations merely to silence it.
 - Once real citations are in the text: activate the bibliography call; check the citation configuration; match keys to `references.bib`; run BibTeX; inspect `.blg`/`.bbl` warnings and errors.
 - **Audit `references.bib`** at every review: duplicate keys; duplicate entries under different keys; incomplete data; wrong titles/publication details; wrong author/translator names; uncertain years; provisional/unverified entries; entry type validity; presence of keys cited in the text. Preserve old keys where possible so valid citations do not break, but preserving a key never legitimizes a duplicate or wrong entry.
+
+## 17.5 Missing sources
+
+If a necessary source is absent from the bibliography: (1) identify the missing source; (2) provide a complete, verified bibliographic entry where sufficient information is available; (3) name the exact bibliography file to update; (4) distinguish verified details from details still requiring confirmation. Use existing BibTeX keys; never invent keys or silently introduce duplicate entries.
 
 ---
 
@@ -1143,9 +1166,12 @@ The assessment must lead to an explicit decision for each asset type:
 
 - **Produce:** there is a meaningful intellectual, aesthetic or combined reason. If production is approved, actually create and deliver the asset; merely proposing it is not completion.
 - **Reuse or adapt:** a suitable existing asset can serve the purpose without misleading the reader. Verify that reuse remains accurate in the new context.
-- **Do not produce:** neither axis yields a meaningful contribution, or the proposed asset would be repetitive, misleading, low-quality or distracting. State the specific reason in the section's asset plan or delivery report.
+- **Defer:** the asset is warranted but cannot responsibly be produced now. State the reason and the clear condition for later production; a deferred asset is recorded in the asset plan and the cumulative visual audit, not silently dropped.
+- **Do not produce:** neither criterion yields a meaningful contribution, or the proposed asset would be repetitive, misleading, low-quality or distracting. State the specific reason in the section's asset plan or delivery report.
 
 There is no quota requiring one asset of each type in every Section. There is, however, a mandatory assessment of every type. Equally, there is no rule that an asset must be indispensable to comprehension before it can be produced.
+
+**Reading rule for the operational protocol's benefit test.** The operational protocol (§21.3 ff.) asks that a table clarify structured comparison, a figure represent a meaningful visual or formal object, a diagram clarify a process, relationship, architecture or logical structure, and an illustration provide a genuine explanatory or conceptual benefit. Read together with §3.4, "benefit" includes the aesthetic and reader-experience criterion; an asset with no intelligible editorial purpose remains prohibited (§22). This reading is flagged for author confirmation in §24, item 11.
 
 ## 18.5 Book-level visual planning and visual rhythm
 
@@ -1268,6 +1294,8 @@ For LaTeX assets:
 - do not assume a particular drawing package or macro exists;
 - preserve the project's compilation method and directory structure.
 
+Each asset file contains: the standard asset header (§13.2); complete LaTeX source; caption and label where appropriate; appropriate internal references; and the correct asset end marker (§13.3). The `\input` is placed at the conceptually correct location, and the insertion point is justified by the argument.
+
 The section file references the independent asset at the correct point in the argument. Example:
 
 ```latex
@@ -1318,7 +1346,7 @@ Every Section blueprint must include an Asset Plan with at least these fields:
 | Field | Required content |
 | --- | --- |
 | Asset class | Table, Figure, Diagram or Illustration |
-| Decision | Produce, Reuse/Adapt, or Do Not Produce |
+| Decision | Produce, Reuse/Adapt, Defer (reason and condition for later production), or Do Not Produce |
 | Primary purpose | Explanatory, comparative, navigational, illustrative, aesthetic, or combined |
 | Reader benefit | What the reader gains in understanding, orientation, imagination, visual relief or reading pleasure |
 | Insertion point | Exact verified paragraph or structural location |
@@ -1414,7 +1442,7 @@ Documentary integrity: manuscript, registries, bibliography, indexes and referen
 
 ## 20.1 Technical audit contents
 
-`main.tex` structure; preamble load order; packages; macros; input files; asset paths; duplicate labels; incomplete references; citation keys; bibliography; footnotes; glossary and acronyms; compile warnings. Validate: LaTeX syntax; required packages; macro definitions; `\label` and hyperlink destinations; `\ref` and internal-reference commands; footnote syntax; bibliography keys; citation commands; asset paths; input paths; duplicate identifiers; missing references.
+`main.tex` structure; preamble load order; packages (including TikZ libraries and environments); macros; input files; asset paths; duplicate labels; incomplete references; citation keys; bibliography; footnotes; glossary and acronyms; compile warnings. Validate: LaTeX syntax; required packages; macro definitions; `\label` and hyperlink destinations; `\ref` and internal-reference commands; footnote syntax; bibliography keys; citation commands; asset paths; input paths; duplicate identifiers; missing references.
 
 ## 20.2 Production workflow
 
@@ -1424,6 +1452,8 @@ Compilation uses the configured LaTeX environment (VS Code in the author's setup
 ## 20.3 Honesty rule
 
 Never say a file compiled unless compilation was actually run; report the real output. If compilation was not run, say so. A bibliography is not "validated" because its text looks plausible. Interpret BibTeX messages in project context (see §17.4).
+
+Distinguish five levels of verification and never merge them: (1) source-level inspection; (2) static consistency checking; (3) actual LaTeX compilation; (4) successful PDF generation; (5) visual inspection of the resulting PDF. A file is not described as successfully compiled unless compilation was actually performed and verified; a source file that merely looks syntactically plausible is not a verified compile-ready file. If compilation cannot be performed, say so and list the remaining technical checks.
 
 ## 20.4 Version control
 
@@ -1445,11 +1475,81 @@ Repository: `THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT`. Keep source files dist
 1. Path and name of the rewritten file.
 2. Most important philosophical and argumentative changes.
 3. Sources and footnotes added or reconstructed.
-4. **Asset Plan:** a concise record for Table, Figure, Diagram and Illustration, each with its Produce / Reuse-Adapt / Do Not Produce decision, purpose and reader benefit; identify any paragraphless asset as pending author decision.
+4. **Asset Plan:** a concise record for Table, Figure, Diagram and Illustration, each with its Produce / Reuse-Adapt / Defer / Do Not Produce decision, purpose and reader benefit; identify any paragraphless asset as pending author decision.
 5. Status of each asset class and, where applicable, the exact path and identifier of every produced or revised asset.
 6. **Compilation status:** state whether the relevant LaTeX source or complete manuscript was compiled; identify the scope and result.
 7. **Rendering/inspection status:** separately state whether each asset was actually rendered and visually inspected, and whether the compiled PDF/page placement was inspected. Compilation does not by itself establish that an asset rendered correctly; rendering does not by itself establish that the full manuscript compiled.
 8. Essential conceptual notes for continuing the work, unresolved issues, and the distinction between verified and unverified results.
+9. **Commit message:** provided in the dedicated section required by §21.4.
+
+## 21.3 Mandatory response structure
+
+Every writing or revision delivery follows this order:
+
+1. **Task identification and scope** — project; book title and Book ID; Part title and ID; Chapter title and ID; Section title and ID (where applicable); exact target filename and directory; whether the task is new writing, complete rewriting, revision, restructuring or asset production; purpose and scope. Existing titles, approved section sequences, filenames, structural identifiers and directory conventions are preserved unless a change is explicitly authorized; files are never silently renamed, relocated, merged, split or deleted.
+2. **Philosophical and editorial decisions** — the substance of the pre-writing report (§14.1) and the diagnosis (§15.6, claim classification on both axes).
+3. **Complete revised or newly written main file** — one code block, with header and end marker.
+4. **Independent asset files** — one code block per asset.
+5. **Asset inventory and placement** — the Asset Plan (§18.12): decision for each of TL, FG, DG, IL; exact insertion points and their justification.
+6. **References, footnotes and internal linking** — sources used, footnotes, paragraph identifiers, internal hyperlinks, bibliography keys, source-usage map, registry entries.
+7. **Technical and structural validation** — checks actually performed, using the five verification levels of §20.3.
+8. **Commit message** — mandatory (§21.4).
+9. **Delivery status and remaining actions** (§21.6).
+
+Not every task needs every category of asset, but every category is explicitly assessed. The Commit Message section is never omitted. The response distinguishes completed work from proposed work, verified results from unverified assumptions, and generated files from files actually updated in the repository. The per-file report of §21.2 is realized inside items 1, 2, 5, 6, 7 and 9 of this structure and is not duplicated. Communication with the author remains in Persian (§5).
+
+## 21.4 Commit message (mandatory)
+
+Every writing, rewriting, revision or asset-production delivery includes a dedicated **Commit Message** section, placed immediately after the file delivery and validation so the author can proceed without asking for it. It describes only the files and changes **actually delivered in the current task** and is ready for immediate use in the author's local Git repository.
+
+**Format** (unless the repository has an established alternative):
+
+```text
+<type>(<scope>): <concise description>
+```
+
+| Type | Use |
+| --- | --- |
+| `feat` | New section, chapter content or new asset |
+| `fix` | Correction of an error or inconsistency |
+| `refactor` | Structural or conceptual reorganization without changing the intended scope |
+| `docs` | Documentation and README updates |
+| `chore` | Supporting technical or repository maintenance |
+| `style` | Formatting-only changes that do not alter content |
+
+Examples:
+
+```text
+feat(VS.B01.P01.C08): add Section 01 comparative methodology
+feat(VS.B01.P01.C08.S01): add comparative criteria table and dialectical diagram
+fix(VS.B01.P01.C08.S01): revise comparative method and internal references
+docs(VS.B01): establish writing and asset production protocol
+```
+
+Rules:
+
+- When several files are delivered together, the subject describes the main change and the optional body lists the important supporting files: main section file; new or revised assets; bibliography changes; registry changes; macro or preamble changes; source-usage map changes.
+- The message MUST NOT mention files that were not actually delivered or modified. A main file plus several assets yields one message reflecting the whole group.
+- A proposed commit message is not evidence that a commit exists.
+
+## 21.5 Local repository and remote push workflow
+
+The author's workflow is:
+
+1. Receive the complete source and asset files.
+2. Place or replace the corresponding files in the local repository.
+3. Inspect the resulting local changes.
+4. Run the relevant validation or compilation checks.
+5. Stage the intended files.
+6. Commit using the supplied commit message.
+7. Push the commit to the remote repository.
+8. Continue with the next writing or revision task.
+
+The agent MUST NOT claim that the author's local repository has been updated, committed or pushed unless the operation was actually performed through an authorized and available mechanism. If the agent has access only to the remote GitHub repository, it distinguishes remote operations from the author's local workflow. A completed local commit is not evidence that the remote push succeeded.
+
+## 21.6 Delivery status and verification
+
+Every delivery states what has and has not been completed, using explicit status lines such as: complete source file delivered; independent asset files delivered; asset insertion commands included; paragraph identifiers assigned; internal hyperlinks implemented; bibliographic entries verified; footnotes added; source-usage map updated; registry entries updated; repository files inspected; local repository updated; compilation performed; PDF visually inspected; commit created; remote push verified. An item is marked complete **only** when the corresponding action actually occurred; for each pending operation, the exact remaining task is named.
 
 ---
 
@@ -1475,6 +1575,12 @@ Forbidden:
 16. Claiming repository access, modification, compilation, commit, push or validation without actual verification.
 17. Re-asking the author for information available in the conversation, memory, library or repository.
 18. Importing material from other books, or the cognitive four-column framework, into Book I's foundations.
+19. Omitting the Commit Message section from a delivery; presenting a proposed commit message as a completed Git operation; claiming the local repository was updated, committed or pushed (or that a push succeeded) without actual verification.
+20. Assigning `TH-` to anything other than a demonstrated theorem or `PF-` to anything other than an actual proof; using the superseded prefix meanings (Thesis, Philosophical Foundation).
+21. Treating a comment containing an identifier as a functional hyperlink; assigning identifiers to nonexistent paragraphs.
+22. Treating superficial terminological similarity as proof of philosophical agreement.
+23. Concealing unresolved philosophical or technical issues; replacing the established project architecture with an improvised structure; silently merging, splitting, renaming, relocating or deleting files.
+24. Creating decorative or redundant assets merely to satisfy a numerical target.
 
 ---
 
@@ -1512,6 +1618,8 @@ These arise from the three source documents having been written at different tim
 7. **Part III has no separate synthesis chapter** although the structural principles call for a synthesis chapter in each Part; Chapter 23 carries an "integrated account". Treat this as an open structural question: do not silently add or rename chapters; raise it with the author if it affects the task.
 8. **Scope statement.** The protocol's active scope lists `1_FRONTMATTER/`, `2_MAINMATTER/`, `3_BACKMATTER/`, `4_ASSETS/`; the earlier README also lists registry, bibliography and cover paths. Use the real repository to establish what is in scope.
 9. **Repository access.** The protocol was written for an assistant connected directly to the GitHub repository. If the current agent has no repository access, say so plainly, request the needed files once, and never pretend to have inspected the repository.
+10. **Registry prefix meanings (changed).** The earlier README defined `TH` = Thesis and `PF` = Philosophical Foundation; the operational protocol declares `TH` = Theorem and `PF` = Proof authoritative. This README adopts the latter (§10.3). Consequences to resolve with the author, not to improvise: the documented register files `theses_register.csv` and `philosophical_foundations_register.csv` no longer match any prefix; and Foundational Commitment, Thesis and Open Problem (Axis-1 forms) have no registry prefix. Do not rename register files or invent prefixes without an explicit decision.
+11. **Wording of the asset-benefit test.** The operational protocol requires an illustration to give a "genuine explanatory or conceptual benefit" and forbids redundant assets; §3.4 and §18 additionally recognize aesthetic and reader-experience value as a legitimate, independent reason. This README reads "benefit" as including both (§18.4) and keeps the prohibition on assets with no intelligible editorial purpose. Author confirmation requested.
 
 ---
 
@@ -1529,6 +1637,7 @@ These arise from the three source documents having been written at different tim
 - its dependent backmatter is synchronized;
 - its assets and technical references are valid;
 - its final state has been checked against the actual repository.
+- the delivery includes a commit message that matches exactly the files delivered, and the status of every local and remote operation is stated accurately.
 
 Prose alone never makes a section complete.
 
@@ -1546,7 +1655,7 @@ Prose alone never makes a section complete.
 8. Draft the **complete** file: positive central thesis; two-axis claim status; open questions visible; footnotes; paragraph identifiers; internal hyperlinks; assets (evaluate all four types); standard header and end marker.
 9. Synchronize bibliography, source-usage map, glossary, acronyms, entity map, registers, indexes, asset records.
 10. Validate philosophically, bibliographically, referentially and technically; compile and inspect if possible.
-11. Deliver complete files, each asset separately, plus a short report in Persian; state verified vs. unverified.
+11. Deliver in the order of §21.3: complete files, each asset separately, the **commit message** (§21.4), and a short report in Persian; state verified vs. unverified and the true status of every operation (§21.6).
 12. Carry forward the conceptual notes needed for the next file.
 
 ## 25.3 Final statement
