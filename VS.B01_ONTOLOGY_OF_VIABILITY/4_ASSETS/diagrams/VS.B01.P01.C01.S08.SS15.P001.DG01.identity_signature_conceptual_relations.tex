@@ -25,10 +25,11 @@
 
 \begin{figure}[htbp]
     \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
     \begin{tikzpicture}[
         font=\small,
-        node distance=0.9cm and 1.0cm,
+        node distance=0.9cm and 0.7cm,
         % --- base box ---
         box/.style={
             draw, rounded corners=3pt, align=center,
@@ -131,4 +132,4 @@
 
 % =============================================================================
 % END OF DIAGRAM DG01
-% =============================================================================
+% =============================================================================

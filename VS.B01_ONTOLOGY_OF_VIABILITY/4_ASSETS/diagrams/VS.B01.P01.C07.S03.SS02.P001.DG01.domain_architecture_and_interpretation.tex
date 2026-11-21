@@ -1,0 +1,88 @@
+% ============================================================
+% Project: THE PHILOSOPHY OF VIABILITY
+% Book: Book I — Ontology of Viability
+% Book ID: VS.B01
+% Chapter: Chapter 07 — Formal and Logical Reconstruction
+% File: 4_ASSETS/diagrams/VS.B01.P01.C07.S03.SS02.P001.DG01.domain_architecture_and_interpretation.tex
+% Asset: DG01 — Domain Architecture and Interpretation
+% Purpose: To distinguish discourse, formal interpretation,
+% and ontological domains without identifying their status.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning}
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=8.2cm, minimum height=1.9cm,
+            inner sep=7pt, line width=0.8pt
+        },
+        % --- node roles (names avoid clashes with built-in TikZ keys) ---
+        discbox/.style={box, fill=blue!8,  draw=blue!55!black},
+        formbox/.style={box, fill=blue!16, draw=blue!55!black},
+        ontbox/.style={box, dashed, fill=gray!10, draw=black!60},
+        % --- arrows (methodological and interpretive, not production) ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        qualified/.style={{Stealth[length=2.5mm]}-{Stealth[length=2.5mm]},
+                          line width=0.9pt, dashed},
+        elabel/.style={font=\footnotesize\itshape, text=black!75,
+                       align=left, text width=3.4cm}
+    ]
+
+    % ---------------------------------------------------------------
+    % Three senses of domain (stacked; no identity of status asserted)
+    % ---------------------------------------------------------------
+    \node[discbox] (discourse) {
+        \textbf{Domain of Discourse}\\[3pt]
+        Subject matter selected for a particular inquiry\\
+        Existent, identity, determination, relation, manifestation
+    };
+    \node[formbox, below=of discourse] (formal) {
+        \textbf{Formal Domain of Interpretation}\\[3pt]
+        Variable ranges, formal objects, assigned interpretations\\
+        Domains, sorts, predicates, relations, functions
+    };
+    \node[ontbox, below=of formal] (ontological) {
+        \textbf{Ontological Domain}\\[3pt]
+        A proposed range or category of what exists\\
+        Requires independent ontological justification
+    };
+
+    \draw[directed] (discourse) -- (formal)
+        node[elabel, midway, right=5pt] {guides formal representation};
+    \draw[qualified] (formal) -- (ontological)
+        node[elabel, midway, right=5pt] {interpretation may refer to ontological claims};
+
+    % ---------------------------------------------------------------
+    % Legend and note
+    % ---------------------------------------------------------------
+    \node[below=0.6cm of ontological, font=\scriptsize] (legend) {
+        \tikz[baseline=-0.5ex]\draw[directed] (0,0) -- (0.7,0);~methodological guidance
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[qualified] (0,0) -- (0.7,0);~qualified interpretive relation
+    };
+
+    \node[below=0.4cm of legend, text width=10cm, align=center,
+          font=\footnotesize\itshape] {
+        Formal domains and sorts do not, by themselves,
+        establish the divisions or completeness of reality.
+    };
+
+    \end{tikzpicture}
+
+    \caption{Three senses of domain in formal ontological reconstruction. The arrows represent methodological and interpretive relations, not ontological production or equivalence.}
+    \label{fig:ch07_domain_architecture}
+\end{figure}
+
+% ============================================================
+% END OF ASSET DG01 — CHAPTER 07, SECTION 03
+% ============================================================

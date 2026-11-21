@@ -25,10 +25,11 @@
 
 \begin{figure}[htbp]
     \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-    % panel size 5.8 x 4.4 cm, gap 0.4 cm
+    % panel size 5.8 x 4.65 cm, gap 0.4 cm
     \def\pw{6.2}   % horizontal distance between panel centres
-    \def\ph{4.8}   % vertical distance between panel centres
+    \def\ph{5.05}   % vertical distance between panel centres
 
     \begin{tikzpicture}[
         font=\small,
@@ -61,7 +62,7 @@
     % Panel 1 — common source, separate manifestations
     % ---------------------------------------------------------------
     \begin{scope}
-        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {1. Common Source, Separate Manifestations};
 
         \node[src]  (s1)  at (0,0.55)     {Source S};
@@ -77,7 +78,7 @@
     % Panel 2 — different sources, one aggregate
     % ---------------------------------------------------------------
     \begin{scope}[shift={(\pw,0)}]
-        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {2. Different Sources, One Aggregate};
 
         \node[src] (s21) at (-1.7,0.55) {Source S$_1$};
@@ -96,7 +97,7 @@
     % Panel 3 — common source and aggregate relation
     % ---------------------------------------------------------------
     \begin{scope}[shift={(0,-\ph)}]
-        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {3. Common Source and Aggregate Relation};
 
         \node[src] (s3) at (0,0.55) {Source S};
@@ -116,7 +117,7 @@
     % Panel 4 — multiple sources and aggregates
     % ---------------------------------------------------------------
     \begin{scope}[shift={(\pw,-\ph)}]
-        \draw[panel] (-2.9,-2.2) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {4. Multiple Sources and Aggregates};
 
         \node[src] (s41) at (-1.7,0.55) {S$_1$};
@@ -135,7 +136,7 @@
     % Legend (defines the two relation types once for all panels)
     % ---------------------------------------------------------------
     \node[src, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
-          anchor=west] (l1) at (-1.6,-7.5) {};
+          anchor=west] (l1) at (-1.6,-7.85) {};
     \node[legtext, right=0.12cm of l1] (t1) {source};
 
     \node[elem, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
@@ -159,4 +160,4 @@
 
 % =============================================================================
 % END OF ASSET DG01
-% =============================================================================
+% =============================================================================

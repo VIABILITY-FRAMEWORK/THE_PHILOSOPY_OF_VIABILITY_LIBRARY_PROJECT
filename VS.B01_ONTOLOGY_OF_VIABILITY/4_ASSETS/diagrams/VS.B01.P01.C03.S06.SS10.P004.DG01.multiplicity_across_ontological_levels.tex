@@ -13,72 +13,80 @@
 %   may be examined, without presenting them as a necessary hierarchy
 %   or inferring identity plurality from organizational plurality.
 %
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning}
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
-\begin{tikzpicture}[
-    node distance=1.15cm,
-    every node/.style={align=center},
-    levelnode/.style={
-        draw,
-        rounded corners,
-        text width=0.69\textwidth,
-        minimum height=0.85cm,
-        inner sep=5pt
-    },
-    relation/.style={-{Stealth[length=2mm]}, thick, dashed}
-]
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\node[levelnode] (elements) {
-    \textbf{Elements or determinations}\\
-    \footnotesize
-    Components, features, relations, manifestations, or processes
-};
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.2cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=7.4cm, minimum height=1.4cm,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        levelbox/.style={box, fill=blue!8, draw=blue!55!black},
+        questionbox/.style={box, dashed, fill=gray!10, draw=black!60},
+        % --- relations ---
+        possible/.style={-{Stealth[length=2.5mm]}, line width=0.8pt, dashed},
+        vslink/.style={draw=black!55, dotted, line width=0.9pt},
+        elabel/.style={font=\scriptsize\itshape, text=black!75, align=left,
+                       text width=3.2cm}
+    ]
 
-\node[levelnode, below=of elements] (subject) {
-    \textbf{A specified subject}\\
-    \footnotesize
-    Existent, composition, aggregate, or configuration
-};
+    % ---------------------------------------------------------------
+    % Levels (analytical distinctions, not a necessary hierarchy)
+    % ---------------------------------------------------------------
+    \node[levelbox] (elements) {
+        \textbf{Elements or determinations}\\[3pt]
+        \footnotesize Components, features, relations, manifestations,
+        or processes
+    };
+    \node[levelbox, below=of elements] (subject) {
+        \textbf{A specified subject}\\[3pt]
+        \footnotesize Existent, composition, aggregate, or configuration
+    };
+    \node[levelbox, below=of subject] (configuration) {
+        \textbf{A broader configuration}\\[3pt]
+        \footnotesize Relations among subjects or participation in a
+        wider arrangement
+    };
+    \node[questionbox, below=1.4cm of configuration] (identity) {
+        \textbf{Identity question}\\[3pt]
+        \footnotesize Unity, plurality, or unresolved identity relations
+    };
 
-\node[levelnode, below=of subject] (configuration) {
-    \textbf{A broader configuration}\\
-    \footnotesize
-    Relations among subjects or participation in a wider arrangement
-};
+    % ---------------------------------------------------------------
+    % Relations (labels beside the lines, never on them)
+    % ---------------------------------------------------------------
+    \draw[possible] (elements) -- (subject)
+        node[elabel, midway, right=5pt] {may belong to or characterize};
+    \draw[possible] (subject) -- (configuration)
+        node[elabel, midway, right=5pt] {may participate in};
+    \draw[vslink] (configuration) -- (identity)
+        node[elabel, midway, right=5pt] {does not decide};
 
-\node[
-    draw,
-    rounded corners,
-    text width=0.69\textwidth,
-    minimum height=1.0cm,
-    inner sep=5pt,
-    below=1.35cm of configuration
-] (identity) {
-    \textbf{Identity question}\\
-    \footnotesize
-    Unity, plurality, or unresolved identity relations
-};
+    % ---------------------------------------------------------------
+    % Note
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of identity, text width=10.5cm, align=center,
+          font=\footnotesize\itshape] {
+        The diagram distinguishes analytical questions. It does not assert
+        that every configuration has an identity, that identity is located
+        at a particular level, or that the levels form a necessary hierarchy.
+    };
 
-\draw[relation] (elements) -- node[right, font=\scriptsize, text width=2.2cm] {may belong to or characterize} (subject);
-\draw[relation] (subject) -- node[right, font=\scriptsize, text width=2.2cm] {may participate in} (configuration);
-\draw[relation] (configuration) -- node[right, font=\scriptsize, text width=2.2cm] {does not decide} (identity);
+    \end{tikzpicture}
 
-\node[
-    text width=0.83\textwidth,
-    align=center,
-    font=\footnotesize,
-    below=0.35cm of identity
-] {
-    The diagram distinguishes analytical questions. It does not assert
-    that every configuration has an identity, that identity is located
-    at a particular level, or that the levels form a necessary hierarchy.
-};
-
-\end{tikzpicture}
-\caption{Multiplicity Across Ontological Levels}
-\label{fig:multiplicity-across-ontological-levels}
+    \caption{Multiplicity Across Ontological Levels}
+    \label{fig:multiplicity-across-ontological-levels}
 \end{figure}
 
 % =============================================================================

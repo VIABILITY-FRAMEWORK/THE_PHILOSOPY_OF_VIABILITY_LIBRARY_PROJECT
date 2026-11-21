@@ -1,0 +1,114 @@
+% ============================================================
+% Project: THE PHILOSOPHY OF VIABILITY
+% Book: Book I — Ontology of Viability
+% Book ID: VS.B01
+% Part: Part I — Identity and Manifestation
+% Chapter: Chapter 07 — Formal and Logical Reconstruction
+% Section: 04 — Definitions and Conceptual Dependencies
+% Asset: DG01 — Typed Dependency Structure
+% File: VS.B01.P01.C07.S04.SS02.P001.DG01.typed_dependency_structure.tex
+% Purpose: To distinguish definitional, conceptual, logical,
+% ontological, and justificatory relations.
+% Placement: Section 04, subsection
+% "Dependency Graphs and the Control of Conceptual Order".
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning}
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.0cm and 0.7cm,
+        % --- nodes ---
+        concept/.style={
+            draw=blue!55!black, fill=blue!8, rounded corners=3pt,
+            align=center, text width=3.1cm, minimum height=1.6cm,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- five relation types: distinct by line pattern, weight and colour ---
+        rel/.style={-{Stealth[length=2.5mm]}},
+        definitional/.style={rel, line width=1.8pt, draw=blue!55!black},
+        conceptual/.style={rel, line width=0.9pt, draw=black!75},
+        logical/.style={rel, line width=0.9pt, dashed, draw=purple!60!black},
+        ontological/.style={rel, line width=1.2pt, densely dotted,
+                            draw=green!40!black},
+        justificatory/.style={rel, line width=0.9pt,
+                              dash pattern=on 5pt off 2pt on 1pt off 2pt,
+                              draw=red!55!black},
+        legendtext/.style={font=\scriptsize, align=center, text width=11cm}
+    ]
+
+    % ---------------------------------------------------------------
+    % Grid of concepts
+    % ---------------------------------------------------------------
+    \node[concept] (vocab) {Conceptual vocabulary};
+
+    \node[concept, below=of vocab] (explication) {Conceptual\\explication};
+    \node[concept, left=of explication]  (definition) {Definitional\\introduction};
+    \node[concept, right=of explication] (primitive) {Primitive conceptual\\or formal roles};
+
+    \node[concept, below=of definition]  (formal) {Formal expressions\\and definitions};
+    \node[concept, below=of explication] (claims) {Substantive claims\\and propositions};
+    \node[concept, below=of primitive]   (interpretation)
+        {Interpretation\\and ontological\\characterization};
+
+    \node[concept, text width=4.6cm, minimum height=1.2cm, below=of claims] (assessment)
+        {Argument, assessment,\\and justificatory support};
+
+    % ---------------------------------------------------------------
+    % Typed relations
+    % ---------------------------------------------------------------
+    \draw[definitional] (vocab) -- (definition);
+    \draw[conceptual]   (vocab) -- (explication);
+    \draw[conceptual]   (vocab) -- (primitive);
+
+    \draw[definitional] (definition)  -- (formal);
+    \draw[conceptual]   (explication) -- (claims);
+    \draw[conceptual]   (primitive)   -- (interpretation);
+
+    \draw[logical]       (formal) -- (claims);
+    \draw[ontological]   (interpretation) -- (claims);
+    \draw[justificatory] (claims) -- (assessment);
+    \draw[justificatory] (interpretation) -- (assessment);
+
+    % ---------------------------------------------------------------
+    % Legend (one line sample per relation type)
+    % ---------------------------------------------------------------
+    \node[below=0.8cm of assessment, legendtext] (legend) {
+        \tikz[baseline=-0.5ex]\draw[definitional] (0,0) -- (0.8,0);~definitional
+        \quad
+        \tikz[baseline=-0.5ex]\draw[conceptual] (0,0) -- (0.8,0);~conceptual
+        \quad
+        \tikz[baseline=-0.5ex]\draw[logical] (0,0) -- (0.8,0);~logical\\[3pt]
+        \tikz[baseline=-0.5ex]\draw[ontological] (0,0) -- (0.8,0);~ontological
+        \quad
+        \tikz[baseline=-0.5ex]\draw[justificatory] (0,0) -- (0.8,0);~justificatory
+    };
+
+    \node[below=0.4cm of legend, text width=11cm, align=left,
+          font=\footnotesize\itshape] {
+        \textbf{Interpretive constraint:}
+        The arrows indicate distinct kinds of theoretical connection.
+        They do not establish that every connection is necessary,
+        that every path is complete, or that formal introduction
+        determines ontological order. In particular, definitional
+        introduction and conceptual articulation do not by themselves
+        establish ontological dependence.
+    };
+
+    \end{tikzpicture}
+
+    \caption{A typed map of definitional and conceptual dependencies.
+    The relations shown are methodologically distinct and must not
+    be collapsed into a single undifferentiated dependency relation.}
+    \label{fig:typed-dependency-structure}
+\end{figure}
+
+% ============================================================
+% END OF ASSET DG01 — CHAPTER 07, SECTION 04
+% ============================================================

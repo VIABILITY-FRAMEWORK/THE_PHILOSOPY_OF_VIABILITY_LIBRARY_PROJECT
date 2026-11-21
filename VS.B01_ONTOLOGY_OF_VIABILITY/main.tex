@@ -44,6 +44,33 @@
 \input{macros}
 
 
+% ------------------------------------------------------------
+% 2.4. Cover Pages (full-bleed images)
+% ------------------------------------------------------------
+% The front cover is always the first page and the back cover is
+% always the last page of the book. Both are full-bleed, unnumbered
+% pages. Cross-references via the TikZ page overlay need two runs.
+
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\newcommand{\FrontCoverFile}{4_ASSETS/cover/front_cover.png}
+\newcommand{\BackCoverFile}{4_ASSETS/cover/back_cover.png}
+
+% \CoverPage{<image file>}: one empty, unnumbered page filled edge to edge
+\newcommand{\CoverPage}[1]{%
+    \IfFileExists{#1}{}{\PackageError{main}{Cover image not found: #1}{Check the path.}}%
+    \clearpage
+    \thispagestyle{empty}%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[inner sep=0pt, outer sep=0pt] at (current page.center)
+            {\includegraphics[width=\paperwidth, height=\paperheight]{#1}};
+    \end{tikzpicture}%
+    \null
+    \clearpage
+}
+
+
 % ============================================================
 % 3. DOCUMENT BODY
 % ============================================================
@@ -53,6 +80,11 @@
 % ============================================================
 % PART I. FRONT COVER
 % ============================================================
+
+% Physical page 1. Letter page numbering keeps its hyperref anchor
+% (page.a) distinct from the arabic and roman numbering that follows.
+\pagenumbering{alph}
+\CoverPage{\FrontCoverFile}
 
 
 % ============================================================
@@ -85,6 +117,9 @@
 % ============================================================
 % PART V. BACK COVER
 % ============================================================
+
+% Nothing may follow this page.
+\CoverPage{\BackCoverFile}
 
 
 % ============================================================

@@ -20,6 +20,7 @@
 
 \begin{figure}[htbp]
     \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
     \begin{tikzpicture}[
         font=\small,
@@ -30,7 +31,7 @@
             inner sep=6pt, line width=0.7pt
         },
         % --- node roles (names avoid clashes with built-in TikZ keys) ---
-        dimbox/.style={box, text width=3.3cm, minimum height=3.2cm,
+        dimbox/.style={box, text width=3.3cm, minimum height=4.1cm,
                        fill=blue!8, draw=blue!55!black},
         assessbox/.style={box, text width=5.4cm, minimum height=1.1cm,
                           font=\small\bfseries,
@@ -107,4 +108,4 @@
 
 % =============================================================================
 % END OF DIAGRAM DG01
-% =============================================================================
+% =============================================================================

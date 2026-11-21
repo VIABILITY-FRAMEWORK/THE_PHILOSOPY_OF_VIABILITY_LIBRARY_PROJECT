@@ -13,89 +13,96 @@
 %   compositional organization, and identity without implying
 %   that any one of these necessarily entails another.
 %
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{calc, positioning, fit}
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\begin{tikzpicture}[
-    component/.style={
-        draw,
-        rounded corners=2pt,
-        minimum width=1.65cm,
-        minimum height=0.8cm,
-        align=center,
-        font=\small
-    },
-    composition/.style={
-        draw,
-        rounded corners=3pt,
-        thick,
-        minimum width=4.4cm,
-        minimum height=1.25cm,
-        align=center,
-        text width=4.0cm,
-        font=\small
-    },
-    identity/.style={
-        draw,
-        rounded corners=3pt,
-        densely dashed,
-        thick,
-        minimum width=4.4cm,
-        minimum height=1.1cm,
-        align=center,
-        text width=4.0cm,
-        font=\small
-    },
-    link/.style={
-        <->,
-        thick
-    },
-    note/.style={
-        draw,
-        rounded corners=2pt,
-        text width=10.0cm,
-        align=left,
-        inner sep=7pt,
-        font=\footnotesize
-    }
-]
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        compbox/.style={box, text width=2.6cm, minimum height=1.1cm,
+                        fill=blue!8, draw=blue!55!black},
+        compositionbox/.style={box, text width=6.8cm, minimum height=1.5cm,
+                               fill=blue!16, draw=blue!55!black},
+        identitybox/.style={box, text width=6.8cm, minimum height=1.5cm,
+                            dashed, fill=gray!10, draw=black!60},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=left},
+        legendtext/.style={font=\scriptsize},
+        % --- undirected lines (no arrowheads: no entailment, no priority) ---
+        vsrel/.style={draw=black!70, line width=0.8pt},
+        vslink/.style={draw=black!55, dashed, line width=0.7pt}
+    ]
 
-\node[component] (a) at (-3.0,2.3) {Component A};
-\node[component] (b) at (0,2.3) {Component B};
-\node[component] (c) at (3.0,2.3) {Component C};
+    % ---------------------------------------------------------------
+    % Components (equal rank)
+    % ---------------------------------------------------------------
+    \node[compbox] (b) {Component B};
+    \node[compbox, left=of b]  (a) {Component A};
+    \node[compbox, right=of b] (c) {Component C};
 
-\node[composition] (whole) at (0,0.35) {
-    \textbf{Composition}\\
-    Organized relations among components
-};
+    \node[vsgroup, fit=(a)(b)(c)] (comps) {};
+    \node[grouplabel, anchor=south west] at (comps.north west) {
+        Component plurality
+    };
 
-\node[identity] (id) at (0,-1.65) {
-    \textbf{Identity}\\
-    Unity or plurality requires identity-level grounds
-};
+    % ---------------------------------------------------------------
+    % Composition and identity
+    % ---------------------------------------------------------------
+    \node[compositionbox, below=1.1cm of comps] (whole) {
+        \textbf{Composition}\\[3pt]
+        Organized relations among components
+    };
+    \node[identitybox, below=1.1cm of whole] (id) {
+        \textbf{Identity}\\[3pt]
+        Unity or plurality requires identity-level grounds
+    };
 
-\draw[thick] (a.south) -- (whole.north west);
-\draw[thick] (b.south) -- (whole.north);
-\draw[thick] (c.south) -- (whole.north east);
+    % each component participates in the composition (straight, vertical)
+    \draw[vsrel] (a.south) -- (a.south |- whole.north);
+    \draw[vsrel] (b.south) -- (b.south |- whole.north);
+    \draw[vsrel] (c.south) -- (c.south |- whole.north);
 
-\draw[link] (whole.south) -- (id.north);
+    % possible ontological relevance (not entailment)
+    \draw[vslink] (whole) -- (id);
 
-\node[note] at (0,-3.45) {
-    \textbf{Interpretive constraint:}
-    The component-to-composition connections represent
-    participation in an organized configuration. The
-    composition-to-identity connection represents possible
-    ontological relevance, not entailment. Component count
-    and compositional unity do not determine identity number.
-};
+    % ---------------------------------------------------------------
+    % Legend and interpretive constraint
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of id, legendtext] (legend) {
+        \tikz[baseline=-0.5ex]\draw[vsrel] (0,0) -- (0.6,0);~participation in an organized configuration
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[vslink] (0,0) -- (0.6,0);~possible ontological relevance
+    };
 
-\end{tikzpicture}
+    \node[below=0.4cm of legend, text width=10.5cm, align=center,
+          font=\footnotesize\itshape] {
+        \textbf{Interpretive constraint:}
+        The component-to-composition connections represent
+        participation in an organized configuration. The
+        composition-to-identity connection represents possible
+        ontological relevance, not entailment. Component count
+        and compositional unity do not determine identity number.
+    };
 
-\caption{The distinct relations among components, composition, and identity}
-\label{fig:components-composition-and-identity-relations}
+    \end{tikzpicture}
 
+    \caption{The distinct relations among components, composition, and identity}
+    \label{fig:components-composition-and-identity-relations}
 \end{figure}
 
 % =============================================================================

@@ -14,95 +14,94 @@
 %   ontological unity, uniqueness, and identity from being treated
 %   as equivalent conclusions.
 %
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, calc, positioning, fit}
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\begin{tikzpicture}[
-    claim/.style={
-        draw,
-        rounded corners,
-        align=center,
-        text width=0.55\textwidth,
-        minimum height=0.8cm,
-        inner sep=5pt,
-        font=\small
-    },
-    specification/.style={
-        draw,
-        rounded corners,
-        align=center,
-        text width=0.68\textwidth,
-        minimum height=1.0cm,
-        inner sep=6pt,
-        font=\small
-    },
-    distinction/.style={
-        draw,
-        rounded corners,
-        align=center,
-        text width=2.7cm,
-        minimum height=1.25cm,
-        inner sep=5pt,
-        font=\small
-    },
-    connection/.style={
-        thick,
-        dashed,
-        -{Stealth[length=2mm]}
-    }
-]
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.3cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        claimbox/.style={box, text width=5.0cm, minimum height=1.0cm,
+                         fill=gray!10, draw=black!60},
+        specbox/.style={box, text width=8.0cm, minimum height=1.2cm,
+                        fill=blue!16, draw=blue!55!black},
+        distbox/.style={box, text width=4.4cm, minimum height=1.7cm,
+                        fill=blue!8, draw=blue!55!black},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=left},
+        % --- arrows (clarification, not entailment) ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        possible/.style={-{Stealth[length=2.5mm]}, line width=0.8pt, dashed}
+    ]
 
-\node[claim] (initial) at (0,3.3) {
-    \textbf{Claim: ``X is one''}
-};
+    % ---------------------------------------------------------------
+    % Claim and its specification
+    % ---------------------------------------------------------------
+    \node[claimbox] (initial) {
+        \textbf{Claim: ``X is one''}
+    };
+    \node[specbox, below=0.8cm of initial] (specify) {
+        \textbf{Specify the claim}\\[3pt]
+        Subject; domain; respect; criterion; scope
+    };
 
-\node[specification] (specify) at (0,1.8) {
-    \textbf{Specify the claim}\\
-    Subject; domain; respect; criterion; scope
-};
+    % ---------------------------------------------------------------
+    % Four independent questions (2 x 2, no order among them)
+    % ---------------------------------------------------------------
+    \node[distbox, anchor=north east] (number) at
+        ($(specify.south)+(-0.15,-1.4)$) {
+        \textbf{Numerical Singularity}\\[3pt]
+        One unit under a specified counting criterion
+    };
+    \node[distbox, right=0.3cm of number] (unity) {
+        \textbf{Ontological Unity}\\[3pt]
+        Unity attributed to a subject in a specified respect
+    };
+    \node[distbox, below=0.3cm of number] (unique) {
+        \textbf{Uniqueness}\\[3pt]
+        No other item meets the relevant criterion
+    };
+    \node[distbox, below=0.3cm of unity] (identity) {
+        \textbf{Identity Question}\\[3pt]
+        Unity or plurality of identities requires independent grounds
+    };
 
-\node[distinction] (number) at (-4.8,-0.3) {
-    \textbf{Numerical Singularity}\\
-    One unit under a specified counting criterion
-};
+    \node[vsgroup, fit=(number)(unity)(unique)(identity)] (questions) {};
+    \node[grouplabel, anchor=south west] at (questions.north west) {
+        Distinct analytical questions
+    };
 
-\node[distinction] (unity) at (-1.6,-0.3) {
-    \textbf{Ontological Unity}\\
-    Unity attributed to a subject in a specified respect
-};
+    \draw[directed] (initial) -- (specify);
+    \draw[possible] (specify) -- (questions);
 
-\node[distinction] (unique) at (1.6,-0.3) {
-    \textbf{Uniqueness}\\
-    No other item meets the relevant criterion
-};
+    % ---------------------------------------------------------------
+    % Note
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of questions, text width=10.5cm, align=center,
+          font=\footnotesize\itshape] {
+        These are distinct analytical questions. The connections
+        indicate clarification, not entailment. No branch establishes
+        another without an additional ontological argument.
+    };
 
-\node[distinction] (identity) at (4.8,-0.3) {
-    \textbf{Identity Question}\\
-    Unity or plurality of identities requires independent grounds
-};
+    \end{tikzpicture}
 
-\draw[connection] (initial) -- (specify);
-\draw[connection] (specify.south west) -- (number.north);
-\draw[connection] (specify.south west) -- (unity.north);
-\draw[connection] (specify.south east) -- (unique.north);
-\draw[connection] (specify.south east) -- (identity.north);
-
-\node[
-    align=center,
-    text width=0.9\textwidth,
-    font=\footnotesize
-] at (0,-2.0) {
-    These are distinct analytical questions. The connections
-    indicate clarification, not entailment. No branch establishes
-    another without an additional ontological argument.
-};
-
-\end{tikzpicture}
-
-\caption{The Analytical Scope of Unity and Singularity Claims}
-\label{fig:scope-of-unity-and-singularity-claims}
+    \caption{The Analytical Scope of Unity and Singularity Claims}
+    \label{fig:scope-of-unity-and-singularity-claims}
 \end{figure}
 
 % =============================================================================

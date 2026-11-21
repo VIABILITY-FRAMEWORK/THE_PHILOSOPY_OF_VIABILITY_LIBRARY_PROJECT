@@ -13,98 +13,109 @@
 %   may be asserted, without implying a necessary hierarchy
 %   or numerical correspondence among them.
 %
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{positioning, fit}
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\begin{tikzpicture}[
-    levelbox/.style={
-        draw,
-        rounded corners=2pt,
-        align=center,
-        minimum width=2.8cm,
-        minimum height=0.95cm,
-        text width=2.55cm,
-        font=\small
-    },
-    identitybox/.style={
-        draw,
-        rounded corners=2pt,
-        thick,
-        align=center,
-        minimum width=3.5cm,
-        minimum height=1.15cm,
-        text width=3.2cm,
-        font=\small
-    },
-    relation/.style={
-        <->,
-        thick
-    },
-    note/.style={
-        draw,
-        rounded corners=2pt,
-        align=left,
-        text width=10.5cm,
-        inner sep=7pt,
-        font=\footnotesize
-    }
-]
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.4cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            inner sep=6pt, line width=0.7pt
+        },
+        % --- node roles ---
+        levelbox/.style={box, text width=2.8cm, minimum height=1.4cm,
+                         fill=blue!8, draw=blue!55!black},
+        identitybox/.style={box, text width=6.4cm, minimum height=1.3cm,
+                            fill=blue!16, draw=blue!55!black},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=left},
+        elabel/.style={font=\footnotesize\itshape, text=black!75,
+                       align=left, text width=4.6cm},
+        % --- undirected link (no arrowheads: no priority, no entailment) ---
+        vslink/.style={draw=black!55, dashed, line width=0.7pt}
+    ]
 
-\node[levelbox] (manifestation) at (-4.0,1.6) {
-    \textbf{Manifestation}\\
-    One or many forms
-};
+    % ---------------------------------------------------------------
+    % Row 1: three levels
+    % ---------------------------------------------------------------
+    \node[levelbox] (manifestation) {
+        \textbf{Manifestation}\\[3pt]
+        One or many forms
+    };
+    \node[levelbox, right=of manifestation] (components) {
+        \textbf{Components}\\[3pt]
+        One or many elements
+    };
+    \node[levelbox, right=of components] (relations) {
+        \textbf{Relations}\\[3pt]
+        One or many connections
+    };
 
-\node[levelbox] (components) at (0,1.6) {
-    \textbf{Components}\\
-    One or many elements
-};
+    % ---------------------------------------------------------------
+    % Row 2: two levels, centred under the row above
+    % ---------------------------------------------------------------
+    \node[levelbox, below=of components, xshift=-1.8cm] (source) {
+        \textbf{Source}\\[3pt]
+        One or many grounds
+    };
+    \node[levelbox, below=of components, xshift=1.8cm] (aggregate) {
+        \textbf{Aggregate}\\[3pt]
+        Unity by a grouping criterion
+    };
 
-\node[levelbox] (relations) at (4.0,1.6) {
-    \textbf{Relations}\\
-    One or many connections
-};
+    % ---------------------------------------------------------------
+    % Frame: five levels of equal rank
+    % ---------------------------------------------------------------
+    \node[vsgroup, fit=(manifestation)(components)(relations)
+                       (source)(aggregate)] (levels) {};
+    \node[grouplabel, anchor=south west] at (levels.north west) {
+        Levels at which unity and plurality may be asserted
+    };
 
-\node[levelbox] (source) at (-2.0,-0.2) {
-    \textbf{Source}\\
-    One or many grounds
-};
+    % ---------------------------------------------------------------
+    % Identity (outside the frame)
+    % ---------------------------------------------------------------
+    \node[identitybox, below=1.1cm of levels] (identity) {
+        \textbf{Identity}\\[3pt]
+        Unity or plurality requiring identity-level grounds
+    };
 
-\node[levelbox] (aggregate) at (2.0,-0.2) {
-    \textbf{Aggregate}\\
-    Unity by a grouping criterion
-};
+    \draw[vslink] (levels.south) -- (identity.north)
+        node[elabel, midway, right=5pt] {
+            possible relevance for inquiry
+        };
 
-\node[identitybox] (identity) at (0,-2.1) {
-    \textbf{Identity}\\
-    Unity or plurality requiring
-    identity-level grounds
-};
+    % ---------------------------------------------------------------
+    % Analytical constraint
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of identity, text width=10.5cm, align=center,
+          font=\footnotesize\itshape] {
+        \textbf{Analytical constraint:}
+        A unity or plurality claim at one level does not determine
+        the identity configuration at another level without
+        additional ontological grounds. The connection indicates
+        possible relevance for inquiry, not entailment, causation,
+        or a fixed hierarchy.
+    };
 
-\draw[relation] (manifestation.south) -- (identity.north west);
-\draw[relation] (components.south) -- (identity.north);
-\draw[relation] (relations.south) -- (identity.north east);
-\draw[relation] (source.south east) -- (identity.west);
-\draw[relation] (aggregate.south west) -- (identity.east);
+    \end{tikzpicture}
 
-\node[note] at (0,-4.0) {
-    \textbf{Analytical constraint:}
-    A unity or plurality claim at one level does not determine
-    the identity configuration at another level without
-    additional ontological grounds. The connections indicate
-    possible relevance for inquiry, not entailment, causation,
-    or a fixed hierarchy.
-};
-
-\end{tikzpicture}
-
-\caption{Distinct ontological levels relevant to the analysis of identity plurality}
-\label{fig:identity-plurality-across-ontological-levels}
-
+    \caption{Distinct ontological levels relevant to the analysis of
+    identity plurality}
+    \label{fig:identity-plurality-across-ontological-levels}
 \end{figure}
 
 % =============================================================================
 % END OF ASSET DG01
-% =============================================================================
+% =============================================================================

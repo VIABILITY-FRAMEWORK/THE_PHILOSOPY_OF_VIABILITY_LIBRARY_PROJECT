@@ -1,31 +1,847 @@
 % ============================================================
-% Project: THE PHILOSOPHY OF VIABILITY
-% Book: Book I — Ontology of Viability
-% Book ID: VS.B01
-% Chapter: Chapter 07 — Formal and Logical Reconstruction
-% File: 2_MAINMATTER\PART_I_IDENTITY_AND_MANIFESTATION\CHAPTER_07_FORMAL_AND_LOGICAL_RECONSTRUCTION\sections\section_12_formal_reconstruction_of_invariance.tex
-% Section: 12 — Formal Reconstruction of Invariance
-% Purpose: Formal reconstruction of the ontological framework developed in Part I.
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% File    : section_12_formal_reconstruction_of_invariance.tex
+% Section : Chapter 07, Section 12
+% Purpose : To reconstruct invariance formally by specifying
+%           domains, transformations, respects, invariant
+%           structures, and the limits of formal inference
+%           concerning ontological invariance.
 % ============================================================
 
 \section{Formal Reconstruction of Invariance}
-\label{sec:ch07_s12}
+\label{sec:formal-reconstruction-of-invariance}
 
-% ------------------------------------------------------------
-% CONTENT TO BE DEVELOPED
-% ------------------------------------------------------------
+\subsection{The Formal Problem of Invariance}
 
-% This file is a structural placeholder.
-% Its philosophical content must be developed through the
-% Book I revision and reconstruction protocol.
-%
-% Do not introduce unsupported ontological commitments.
-% Distinguish foundational commitments, definitions,
-% propositions, hypotheses, arguments, and open problems.
-%
-% Preserve the distinction between:
-% - Functional or logical form of a claim
-% - Epistemic or justificatory status of a claim
+Invariance concerns the preservation of a specified
+feature, relation, structure, or condition under a
+specified transformation or class of transformations.
+
+Its formal reconstruction requires more than the
+assertion that something remains unchanged. It
+requires the identification of what is preserved,
+under which transformation, within which domain,
+and according to which criterion of preservation.
+
+An invariance claim is therefore relational in its
+formal structure. It connects an object or structure
+to a transformation and specifies a respect in
+which the transformation leaves something invariant.
+
+The central thesis of this section is:
+
+\begin{quote}
+An invariance claim is formally meaningful only when
+its domain, transformation, respect of preservation,
+and criterion of invariance are sufficiently
+specified.
+\end{quote}
+
+This thesis provides the basis for distinguishing
+different forms of invariance and for preventing
+formal invariance from being treated as an automatic
+proof of ontological identity, persistence, continuity,
+or stability.
+
+The formal reconstruction must also distinguish
+between the invariance of a mathematical expression
+and the invariance of an ontological feature. The
+former is determined by a formal system and its
+interpretation. The latter requires an independently
+justified account of the relevant ontological
+structure.
+
+\subsection{The Components of an Invariance Claim}
+
+A complete invariance claim should identify at least
+five components:
+
+\begin{enumerate}
+    \item \textbf{Domain:} the objects, structures,
+    states, or relations to which the claim applies;
+
+    \item \textbf{Transformation:} the operation or
+    class of operations under which preservation
+    is examined;
+
+    \item \textbf{Respect:} the particular feature,
+    relation, or aspect considered invariant;
+
+    \item \textbf{Criterion:} the condition by which
+    preservation is determined;
+
+    \item \textbf{Scope:} the limits within which the
+    claim is asserted.
+\end{enumerate}
+
+These components are not interchangeable.
+
+A transformation may preserve one feature while
+altering another. A structure may remain invariant
+under one class of transformations but fail to
+remain invariant under a broader class. A property
+may be preserved within a restricted domain without
+being preserved across every possible domain.
+
+Consequently, the unqualified expression
+``the structure is invariant'' is insufficient
+unless the relevant conditions are already
+established by context.
+
+\subsection{A General Formal Schema}
+
+Let:
+
+\[
+    D
+\]
+
+denote a specified domain, and let:
+
+\[
+    T : D \rightarrow D
+\]
+
+be a transformation defined on that domain.
+
+Let \(R\) denote a specified respect of preservation,
+and let:
+
+\[
+    \Phi_R : D \rightarrow V_R
+\]
+
+represent a formal characterization of the feature
+being examined, where \(V_R\) is an appropriate
+codomain.
+
+A basic invariance condition may then be expressed as:
+
+\[
+    \forall x \in D,\qquad
+    \Phi_R(T(x)) = \Phi_R(x).
+\]
+
+This expression states that the value assigned by
+\(\Phi_R\) is preserved under \(T\).
+
+The notation is schematic. It assumes that:
+
+\begin{itemize}
+    \item \(T\) is defined for the relevant elements
+    of \(D\);
+
+    \item \(\Phi_R\) is defined on the relevant
+    transformed and untransformed elements;
+
+    \item equality in \(V_R\) is an appropriate
+    criterion for identifying preservation;
+
+    \item the chosen representation captures the
+    intended respect \(R\).
+\end{itemize}
+
+If the transformation is partial, the formula must
+be restricted to its domain of definition. If the
+transformation maps between different domains,
+the schema must be adjusted accordingly.
+
+More generally, let:
+
+\[
+    T : D_1 \rightarrow D_2.
+\]
+
+A preservation claim may then take the form:
+
+\[
+    \forall x \in D_1,\qquad
+    \Phi_R^{(2)}(T(x))
+    =
+    \Phi_R^{(1)}(x),
+\]
+
+provided that the two mappings express comparable
+features and that the relevant equality relation
+has been specified.
+
+This generalized form makes explicit that invariance
+does not always require a transformation from a
+domain into itself.
+
+\subsection{Invariance Under a Class of Transformations}
+
+An invariance claim may concern a single
+transformation or a collection of transformations.
+
+Let:
+
+\[
+    \mathcal{T}
+\]
+
+be a specified class of admissible transformations.
+
+A feature is invariant under this class when:
+
+\[
+    \forall T \in \mathcal{T}\;
+    \forall x \in D_T,\qquad
+    \Phi_R(T(x)) = \Phi_R(x),
+\]
+
+where \(D_T\) denotes the relevant domain of
+definition for each transformation.
+
+The strength of the claim depends on the
+transformation class.
+
+If:
+
+\[
+    \mathcal{T}_1 \subseteq \mathcal{T}_2,
+\]
+
+then invariance under \(\mathcal{T}_2\) entails
+invariance under \(\mathcal{T}_1\), provided that
+the same domain, respect, and preservation criterion
+are maintained.
+
+The converse does not generally hold.
+
+A feature may remain invariant under a restricted
+class of transformations while changing under
+a broader class.
+
+This has an important methodological consequence:
+the strength of an invariance claim cannot be
+evaluated independently of the scope of its
+transformation class.
+
+\subsection{Transformation and Preservation}
+
+The notion of transformation must be specified
+according to the formal subject under examination.
+
+A transformation may represent:
+
+\begin{enumerate}
+    \item a change in the representation of an object;
+    \item a change in its formal coordinates;
+    \item a change in its internal configuration;
+    \item a change in its relational arrangement;
+    \item a transition between formally described states;
+    \item an operation on a mathematical structure;
+    \item a change in the conditions under which
+    an ontological feature is examined.
+\end{enumerate}
+
+These cases do not necessarily have the same
+ontological significance.
+
+For example, a transformation that changes only
+the representation of a structure may preserve
+the structure itself. A transformation that changes
+the internal constitution of an existent may
+preserve some relational or organizational features
+while altering others.
+
+The formal system must therefore distinguish
+transformations that are merely representational
+from transformations that are intended to describe
+changes in the subject matter.
+
+The preservation of a feature under a
+representational transformation cannot automatically
+be interpreted as its preservation under an
+ontological transformation.
+
+\subsection{Different Respects of Invariance}
+
+The respect of invariance identifies what is
+preserved.
+
+A formal reconstruction may distinguish several
+possible respects, depending on the subject matter:
+
+\begin{itemize}
+    \item \textbf{Numerical invariance:} preservation
+    of a specified numerical value;
+
+    \item \textbf{Structural invariance:} preservation
+    of a specified structural arrangement;
+
+    \item \textbf{Relational invariance:} preservation
+    of a specified relation or relational pattern;
+
+    \item \textbf{Functional invariance:} preservation
+    of a specified functional relation or mapping;
+
+    \item \textbf{Geometrical invariance:} preservation
+    of a geometrical feature under a specified
+    transformation;
+
+    \item \textbf{Formal invariance:} preservation
+    of a specified property within a formal system;
+
+    \item \textbf{Ontological invariance:} preservation
+    of a specified ontological feature under a
+    transformation whose ontological relevance
+    has been justified.
+\end{itemize}
+
+This classification is not intended as an exhaustive
+taxonomy. It identifies different possible respects
+whose meanings and relations must be established
+in each application.
+
+In particular, the use of the same word
+``invariance'' across different domains does not
+prove that all these forms share one ontological
+foundation.
+
+\subsection{Invariant Functions and Invariant Relations}
+
+The preservation of a function and the preservation
+of a relation require different formal treatment.
+
+For a function:
+
+\[
+    f : D \rightarrow V,
+\]
+
+invariance under \(T\) may be expressed as:
+
+\[
+    f(T(x)) = f(x).
+\]
+
+For a relation:
+
+\[
+    R \subseteq D^n,
+\]
+
+preservation may be expressed by requiring that
+the relation hold for a tuple if and only if it
+holds for the transformed tuple, when the
+transformation acts appropriately on each component:
+
+\[
+    R(x_1,\ldots,x_n)
+    \leftrightarrow
+    R(T(x_1),\ldots,T(x_n)).
+\]
+
+The biconditional expresses preservation in both
+directions under the specified transformation.
+
+A one-directional condition may instead be
+appropriate when only preservation from the
+original structure to the transformed structure
+is required.
+
+The distinction matters because a transformation
+may preserve a relation without reflecting it.
+Preservation and reflection are separate formal
+conditions and should not be conflated.
+
+Similarly, the invariance of a function's value
+does not establish the invariance of every relation
+involving that function.
+
+The exact object of preservation must remain
+explicit.
+
+\subsection{Invariance and Group Actions}
+
+In some formal settings, transformations form a
+group or act on a domain through a group action.
+
+Let \(G\) be a group acting on \(D\). The action
+may be represented as:
+
+\[
+    \alpha : G \times D \rightarrow D.
+\]
+
+A function \(f\) is invariant under the action
+when:
+
+\[
+    f(\alpha(g,x)) = f(x)
+\]
+
+for every admissible \(g \in G\) and \(x \in D\).
+
+This formal structure is useful for studying
+symmetries and other transformation-based
+preservation conditions.
+
+However, group structure is not a universal
+requirement for invariance.
+
+Some transformations do not form groups. They
+may be irreversible, partial, non-invertible,
+or organized by weaker algebraic structures.
+
+Consequently, a formal reconstruction of
+invariance must not assume that every relevant
+transformation is reversible or that every
+invariance relation is a symmetry.
+
+The existence of a group action is a specific
+formal condition, not a general ontological
+presupposition.
+
+\subsection{Invariance, Identity, and the Principles
+of Being}
+
+The relation between invariance and identity
+requires particular care.
+
+An invariance claim concerns the preservation
+of a specified feature under a transformation.
+An identity claim concerns the identity of an
+existent.
+
+The two may be related in a particular argument,
+but neither is reducible to the other.
+
+Suppose a feature \(\Phi_R\) is invariant under
+a transformation \(T\):
+
+\[
+    \Phi_R(T(x)) = \Phi_R(x).
+\]
+
+This establishes the preservation of the specified
+feature under the specified transformation.
+
+It does not establish, without further premises,
+that:
+
+\[
+    T(x) = x.
+\]
+
+Nor does it establish that the identity of the
+existent is exhausted by \(\Phi_R\).
+
+A transformation may alter many features while
+preserving one. Conversely, a feature may change
+without this fact alone settling whether the
+existent retains its identity.
+
+The formal reconstruction must therefore avoid
+the following invalid transitions:
+
+\[
+    \text{Invariance}
+    \;\not\Rightarrow\;
+    \text{Identity},
+\]
+
+\[
+    \text{Non-invariance}
+    \;\not\Rightarrow\;
+    \text{Loss of identity}.
+\]
+
+These expressions indicate the absence of an
+automatic entailment, not the impossibility of
+establishing a relation through additional
+arguments.
+
+The distinction also protects the three
+foundational principles concerning being and
+identity.
+
+Analytical Distinction does not imply that
+invariance is the foundation of identity.
+Ontological Inseparability does not imply that
+identity is defined by the preservation of
+invariant features. Absence of Ontological
+Priority does not establish that invariance
+has no explanatory or formal relevance to
+questions concerning identity.
+
+Any proposed connection requires its own
+argument and must specify the respect in which
+the relation is asserted.
+
+\subsection{Invariance and Persistence}
+
+Persistence concerns the continued existence
+of an existent across some specified interval
+or sequence of conditions.
+
+Invariance concerns the preservation of a
+specified feature under a transformation.
+
+The two may intersect, but their formal structures
+are different.
+
+A persistence claim may be represented
+schematically as:
+
+\[
+    P(x,t_1,t_2),
+\]
+
+where \(P\) denotes a specified persistence
+relation over an interval.
+
+An invariance claim may be represented as:
+
+\[
+    \Phi_R(T(x)) = \Phi_R(x).
+\]
+
+Neither expression entails the other without
+additional premises connecting the relevant
+temporal and transformational structures.
+
+An existent may persist while undergoing changes
+that alter a particular feature. A feature may
+remain invariant under a formal transformation
+without the model establishing persistence
+through time.
+
+Consequently, persistence and invariance must
+be reconstructed independently before any
+connection between them is asserted.
+
+\subsection{Invariance and Continuity}
+
+Continuity may concern the organization of a
+transition, the relation between successive
+states, or the absence of specified forms of
+disruption.
+
+Invariance concerns preservation under a
+transformation.
+
+A continuous process need not preserve every
+feature. A discontinuous transition may preserve
+a particular formal or relational feature.
+
+The two notions therefore require distinct
+formal criteria.
+
+For example, continuity may be represented
+through a topological or analytical structure,
+whereas invariance may be represented through
+a transformation and a preservation condition.
+
+The choice of mathematical representation
+depends on the subject matter. No single formal
+schema should be assumed to capture every
+ontological use of continuity.
+
+The formal reconstruction must avoid treating
+continuity as a consequence of invariance or
+invariance as a consequence of continuity
+unless the relevant assumptions establish
+that relation.
+
+\subsection{Invariance and Stability}
+
+Stability concerns the behavior of a system
+under specified disturbances, perturbations,
+or changes in its conditions.
+
+Invariance concerns the preservation of a
+specified feature under specified transformations.
+
+A system may be stable in a defined sense while
+some of its features vary. It may also preserve
+a feature under a transformation without
+satisfying a broader stability condition.
+
+A stability claim typically requires additional
+formal resources, such as:
+
+\begin{itemize}
+    \item a state space;
+    \item a class of perturbations;
+    \item a criterion of acceptable deviation;
+    \item a measure of response or convergence;
+    \item a specified temporal or iterative structure.
+\end{itemize}
+
+These requirements are not automatically present
+in an invariance claim.
+
+The reconstruction must therefore avoid deriving
+stability from invariance alone or using the two
+terms as interchangeable descriptions of
+preservation.
+
+\subsection{Formal Invariance and Ontological Invariance}
+
+Formal invariance is established within a
+specified formal system and interpretation.
+
+Ontological invariance concerns the preservation
+of an ontological feature under a transformation
+whose relevance to the intended subject matter
+has been justified.
+
+The distinction may be represented schematically:
+
+\[
+    \text{Formal Invariance}
+    \neq
+    \text{Ontological Invariance}.
+\]
+
+The inequality indicates that the two claims
+have different justificatory requirements.
+
+A formal invariant may be an artifact of the
+chosen representation. For example, a quantity
+may remain constant because the formalism
+defines the transformation in a way that
+preserves it.
+
+To establish ontological significance, the
+reconstruction must explain why the represented
+quantity corresponds to a genuine feature of
+the intended subject matter and why the
+transformation captures a relevant ontological
+change.
+
+This requires a justified interpretive bridge
+between the formal model and the ontology.
+
+The bridge cannot be supplied by notation
+alone.
+
+\subsection{Invariance Across Alternative Models}
+
+The model-based method developed in Section 11
+provides a further test for invariance claims.
+
+Let \(\mathcal{M}\) be a specified class of
+admissible models.
+
+An invariance claim may be examined across
+this class by asking whether the relevant
+preservation condition holds in every model:
+
+\[
+    \forall \mathfrak{M} \in \mathcal{M},
+    \qquad
+    \mathfrak{M} \models \operatorname{Inv}(R,T).
+\]
+
+Here, \(\operatorname{Inv}(R,T)\) denotes
+the formal expression of invariance in the
+specified respect under transformation \(T\).
+
+If the condition holds in every admissible
+model, the result establishes invariance
+relative to that model class.
+
+It does not establish invariance across
+every conceivable interpretation.
+
+The result depends on the definition of
+admissibility and on the expressive and
+semantic limitations of the formal language.
+
+A model class may exclude interpretations
+that would otherwise challenge the claim.
+The adequacy of the model class must therefore
+be examined independently.
+
+\subsection{Invariance and the Scope of Formalization}
+
+Not every ontological feature can necessarily
+be represented by a single-valued function
+or a simple preservation equation.
+
+Some features may be relational, context-dependent,
+partially specified, or dependent on structures
+that the formal language does not adequately
+represent.
+
+In such cases, the basic schema:
+
+\[
+    \Phi_R(T(x)) = \Phi_R(x)
+\]
+
+may be insufficient.
+
+The formal reconstruction may require:
+
+\begin{enumerate}
+    \item relational rather than functional
+    representations;
+
+    \item partial functions or restricted domains;
+
+    \item multiple respects of preservation;
+
+    \item context-sensitive interpretation;
+
+    \item higher-order or many-sorted formal
+    resources;
+
+    \item a more precise account of the
+    transformations being considered.
+\end{enumerate}
+
+The introduction of more complex formal
+resources must be justified by the requirements
+of the subject matter.
+
+Formal complexity is not itself evidence
+of philosophical adequacy.
+
+The appropriate formalism is the one that
+represents the relevant distinctions with
+sufficient precision while avoiding unsupported
+ontological commitments.
+
+\subsection{A Protocol for Evaluating Invariance Claims}
+
+Every significant invariance claim in the
+formal reconstruction should be examined
+according to the following protocol:
+
+\begin{enumerate}
+    \item \textbf{Identify the subject:} specify
+    the object, structure, state, or relation
+    under examination.
+
+    \item \textbf{Specify the domain:} identify
+    the domain in which the claim is asserted.
+
+    \item \textbf{Define the transformation:}
+    specify the operation or class of operations
+    under which preservation is evaluated.
+
+    \item \textbf{Identify the respect:} state
+    exactly which feature or relation is
+    claimed to be preserved.
+
+    \item \textbf{State the criterion:} define
+    what counts as preservation in the relevant
+    formal or interpretive setting.
+
+    \item \textbf{Determine the scope:} identify
+    whether the claim applies to one
+    transformation, a restricted class, or
+    a broader class.
+
+    \item \textbf{Examine alternative models:}
+    determine whether the result holds across
+    the admissible interpretations.
+
+    \item \textbf{Separate formal and ontological
+    conclusions:} state which result has been
+    established at each level.
+
+    \item \textbf{Examine conceptual relations:}
+    identify whether any proposed connection
+    to identity, persistence, continuity, or
+    stability requires additional premises.
+
+    \item \textbf{Record limitations:} specify
+    unresolved assumptions and restrictions.
+\end{enumerate}
+
+This protocol makes invariance claims
+independently examinable and prevents the
+unqualified use of the term from concealing
+differences in domain, transformation, or
+preservation criterion.
+
+\subsection{Open Problems}
+
+Several problems remain open.
+
+First, the ontology requires a more complete
+account of which features can meaningfully
+be described as invariant and under what
+conditions.
+
+Second, the relation between formal
+transformations and ontologically significant
+changes requires further justification.
+
+Third, it remains necessary to determine
+whether different respects of invariance
+can be integrated into a more general
+framework without reducing their differences.
+
+Fourth, the relation between invariance
+and identity must be examined through
+independent arguments rather than assumed
+from formal preservation.
+
+Fifth, the possibility of ontological
+invariance without a corresponding
+single-valued formal invariant remains
+an open methodological question.
+
+Sixth, the relation between invariance
+and the persistence or continuity of
+existents requires a separate analysis
+that does not presuppose their equivalence.
+
+These questions identify the limits of
+the present formal reconstruction rather
+than deficiencies that can be resolved
+by notation alone.
+
+\subsection{Concluding Principle}
+
+Invariance is a structured preservation
+claim whose meaning depends on the
+domain, transformation, respect, criterion,
+and scope of its application.
+
+Its formal representation makes the claim
+precise enough to be examined across
+models and alternative interpretations.
+Its ontological significance, however,
+depends on the justification of the
+interpretation connecting the formal
+structure to the intended subject matter.
+
+The governing principle may therefore
+be stated as follows:
+
+\begin{quote}
+No invariance claim is complete without
+specifying what is preserved, under
+which transformation, in what respect,
+and within which limits. No formal
+invariance result, by itself, establishes
+the identity, persistence, continuity,
+or stability of the subject to which
+it is applied.
+\end{quote}
+
+This reconstruction establishes the
+formal conditions under which invariance
+can be discussed without collapsing
+distinct ontological questions into
+a single notion of preservation.
+
+The next section examines the formal
+reconstruction of unity and plurality,
+with particular attention to the
+distinction between unity, singularity,
+aggregation, composition, and plurality
+of identities.
 
 % ============================================================
 % END OF SECTION 12 OF CHAPTER 07

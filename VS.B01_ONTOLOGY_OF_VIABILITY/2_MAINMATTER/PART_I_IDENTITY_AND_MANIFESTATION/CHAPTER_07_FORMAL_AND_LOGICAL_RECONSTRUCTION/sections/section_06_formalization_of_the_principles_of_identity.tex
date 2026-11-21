@@ -1,32 +1,849 @@
-% ============================================================
-% Project: THE PHILOSOPHY OF VIABILITY
-% Book: Book I — Ontology of Viability
-% Book ID: VS.B01
-% Chapter: Chapter 07 — Formal and Logical Reconstruction
-% File: 2_MAINMATTER\PART_I_IDENTITY_AND_MANIFESTATION\CHAPTER_07_FORMAL_AND_LOGICAL_RECONSTRUCTION\sections\section_06_formalization_of_the_principles_of_identity.tex
-% Section: 06 — Formalization of the Principles of Identity
-% Purpose: Formal reconstruction of the ontological framework developed in Part I.
-% ============================================================
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+%
+% File:
+% VS.B01_ONTOLOGY_OF_VIABILITY/2_MAINMATTER/
+% PART_I_IDENTITY_AND_MANIFESTATION/
+% CHAPTER_07_FORMAL_AND_LOGICAL_RECONSTRUCTION/
+% sections/section_06_formalization_of_the_principles_of_identity.tex
+%
+% Section:
+% Chapter 07, Section 06 — Formalization of the Principles of Identity
+%
+% Structural Location:
+% VS.B01.P01.C07.S06
+%
+% Purpose:
+% To develop provisional formal schemas for the three foundational
+% commitments concerning Being and Identity, while preserving their
+% distinct logical contents and avoiding unintended ontological
+% commitments introduced by formal representation.
+%
+% =============================================================================
 
 \section{Formalization of the Principles of Identity}
 \label{sec:ch07_s06}
 
-% ------------------------------------------------------------
-% CONTENT TO BE DEVELOPED
-% ------------------------------------------------------------
+\subsection{The Task of Formalizing Foundational Principles}
 
-% This file is a structural placeholder.
-% Its philosophical content must be developed through the
-% Book I revision and reconstruction protocol.
-%
-% Do not introduce unsupported ontological commitments.
-% Distinguish foundational commitments, definitions,
-% propositions, hypotheses, arguments, and open problems.
-%
-% Preserve the distinction between:
-% - Functional or logical form of a claim
-% - Epistemic or justificatory status of a claim
+The preceding section identified three foundational commitments
+governing the relation between Being and Identity:
 
-% ============================================================
+\begin{enumerate}
+    \item Analytical Distinction;
+    \item Ontological Inseparability;
+    \item Absence of Ontological Priority.
+\end{enumerate}
+
+The present task is to examine how these commitments may be
+represented within a formal framework.
+
+Formalization requires more than translating philosophical
+sentences into symbolic expressions. A formal representation
+must identify the logical structure of a claim, specify the
+domain over which it applies, and make explicit the relations
+that its symbols are intended to represent.
+
+The central difficulty is that the three commitments concern
+different dimensions of the relation between Being and Identity.
+A formalization that represents them through a single equivalence,
+a single relation, or an undifferentiated conjunction would risk
+concealing their independent contents.
+
+The formal reconstruction must therefore preserve three
+distinct questions:
+
+\begin{itemize}
+    \item Can Being and Identity be distinguished analytically?
+    \item Are Being and Identity ontologically inseparable?
+    \item Does either possess ontological priority over the other?
+\end{itemize}
+
+These questions require different formal resources. Their
+representations must be connected without being collapsed
+into one another.
+
+The formal schemas developed below are provisional. They
+identify the logical requirements of each commitment and
+provide a basis for subsequent examination of their consistency,
+independence, and consequences. They do not claim that a
+complete formal language for the ontology has already been
+established.
+
+\subsection{Preliminary Formal Vocabulary}
+
+A formal representation requires a minimal vocabulary
+capable of distinguishing an existent from the analytical
+and ontological dimensions through which it is examined.
+
+Let \(D_E\) denote a domain of discourse whose members are
+the existents under consideration.
+
+Let the following expressions be used provisionally:
+
+\begin{itemize}
+    \item \(E(x)\): \(x\) is an existent within the domain
+    under consideration;
+
+    \item \(B(x)\): the dimension of Being is applicable
+    to the actuality of \(x\);
+
+    \item \(I(x)\): the dimension of Identity is applicable
+    to \(x\);
+
+    \item \(A(B,I)\): Being and Identity are analytically
+    distinguishable;
+
+    \item \(S_O(B,I)\): Being and Identity are ontologically
+    inseparable;
+
+    \item \(P_O(B,I)\): Being has ontological priority
+    over Identity;
+
+    \item \(P_O(I,B)\): Identity has ontological priority
+    over Being.
+\end{itemize}
+
+The expressions \(B(x)\) and \(I(x)\) must be interpreted
+with care. They are formal indicators of the applicability
+of the respective dimensions in the analysis of an existent.
+They are not definitions of Being and Identity as two
+independent entities, nor do they establish that Identity
+is an additional property attached to an already constituted
+existent.
+
+Likewise, \(A\), \(S_O\), and \(P_O\) are provisional
+meta-level predicates used to represent relations between
+theoretical dimensions. Their introduction does not
+presuppose that Being and Identity are members of a
+common ontological category.
+
+The formal vocabulary is therefore an instrument of
+representation. Its interpretation must remain governed
+by the ontological commitments it is intended to express.
+
+\subsection{Formalization of Analytical Distinction}
+
+\subsubsection{The Content of Analytical Distinction}
+
+Analytical Distinction states that Being and Identity
+can be examined through different conceptual questions
+and formulations.
+
+The distinction makes it possible to ask what it means
+for an existent to be actual and what it means for that
+existent to be the existent that it is.
+
+These questions are related, but they are not identical.
+The first concerns the actuality of what exists; the
+second concerns the identity of the existent.
+
+The formal task is to represent this difference without
+turning it into a claim that Being and Identity are
+ontologically independent.
+
+\subsubsection{A Provisional Formal Schema}
+
+Let \(\mathcal{Q}\) denote a domain of admissible analytical
+questions or conceptual roles.
+
+Let \(q_B\) designate a question directed toward Being,
+and \(q_I\) a question directed toward Identity.
+
+Analytical distinction may then be represented by the
+following schema:
+
+\[
+\mathsf{AD}:
+\quad
+q_B \neq q_I
+\quad \land \quad
+\mathsf{Content}(q_B)
+\neq
+\mathsf{Content}(q_I)
+\]
+
+The notation expresses that the two analytical questions
+are not interchangeable and that they have different
+conceptual contents.
+
+The schema is not a claim that two independent entities
+called Being and Identity must exist. It represents
+a distinction between analytical roles.
+
+A more explicit formulation may be stated as:
+
+\[
+\mathsf{AD}:
+\quad
+\exists q_B,q_I \in \mathcal{Q}
+\left[
+\mathsf{DirectedTo}(q_B,B)
+\land
+\mathsf{DirectedTo}(q_I,I)
+\land
+q_B \neq q_I
+\right]
+\]
+
+This formulation identifies the difference between
+the two analytical directions. It does not yet
+provide a complete semantic theory of the terms
+Being and Identity.
+
+\subsubsection{What the Formalization Does Not Establish}
+
+The distinction between \(q_B\) and \(q_I\) does not
+establish that Being and Identity can exist separately.
+
+In particular, the following inference is invalid:
+
+\[
+q_B \neq q_I
+\quad \therefore \quad
+B \text{ and } I
+\text{ are ontologically separable}
+\]
+
+The conclusion does not follow from the premise.
+A difference between analytical questions does not
+establish a corresponding separation in reality.
+
+Nor does the schema establish that Being and Identity
+are two properties of an existent. Their formal
+representation through different predicates or
+analytical indicators must not be mistaken for
+a commitment to a property-based ontology.
+
+The distinction is therefore analytical in its
+intended interpretation. Its ontological consequences
+must be assessed through the independent commitment
+of Ontological Inseparability.
+
+\subsection{Formalization of Ontological Inseparability}
+
+\subsubsection{The Content of Ontological Inseparability}
+
+Ontological Inseparability states that Being and
+Identity are inseparable in the actuality of an
+existent.
+
+An existent is not first constituted as an actuality
+that lacks identity and then supplemented by
+identity as a subsequent addition.
+
+Likewise, Identity is not treated as an independently
+constituted ontological item that can stand apart
+from the existent whose identity it is.
+
+The formalization must express the joint applicability
+of Being and Identity to an existent while preserving
+the fact that the two dimensions remain analytically
+distinguishable.
+
+\subsubsection{A Provisional Co-Applicability Schema}
+
+For the purposes of a first formal reconstruction,
+consider the following schema:
+
+\[
+\mathsf{OI}:
+\quad
+\forall x \in D_E
+\left[
+E(x)
+\rightarrow
+\left(B(x)\land I(x)\right)
+\right]
+\]
+
+The schema states that, for every existent in the
+relevant domain, both dimensions apply.
+
+It is intended to exclude a representation in which
+an existent is ontologically established as Being
+while Identity is wholly absent, or in which Identity
+is treated as an independently constituted actuality
+without the Being of the existent.
+
+However, the schema requires an important qualification.
+The conjunction \(B(x)\land I(x)\) represents
+co-applicability. It does not, by itself, capture
+the full meaning of ontological inseparability.
+
+In particular, co-applicability alone does not
+establish the ontological relation between the
+dimensions. It must therefore be supplemented
+by an explicit interpretation of inseparability.
+
+Let \(\mathsf{Sep}_O(B,I)\) denote the possibility
+of ontological separation between the two dimensions
+within the relevant framework. The commitment may
+then be represented at the meta-level as:
+
+\[
+\mathsf{OI}:
+\quad
+\neg \mathsf{Sep}_O(B,I)
+\]
+
+This expression is not intended to introduce
+a fully specified theory of ontological separation.
+It records the constraint that the framework
+does not admit an interpretation in which
+Being and Identity are independently constituted
+as separable ontological conditions.
+
+The two expressions therefore perform different
+tasks:
+
+\[
+\forall x \in D_E
+\left[
+E(x)\rightarrow(B(x)\land I(x))
+\right]
+\]
+
+expresses joint applicability, whereas
+
+\[
+\neg \mathsf{Sep}_O(B,I)
+\]
+
+expresses the ontological constraint against
+their separation.
+
+The precise semantics of \(\mathsf{Sep}_O\)
+must be specified before the second expression
+can function as a fully interpreted formula
+in a formal system.
+
+\subsubsection{Inseparability Without Conceptual Identity}
+
+Ontological Inseparability must not be formalized
+as the identity of Being and Identity.
+
+In particular, the following expression is
+not an adequate representation of the commitment:
+
+\[
+B(x) \leftrightarrow I(x)
+\]
+
+A biconditional of this kind may express
+coextension under a particular interpretation.
+It does not, by itself, express ontological
+inseparability while preserving analytical
+distinction.
+
+Depending on the semantics assigned to the
+predicates, it may instead suggest that
+Being and Identity have exactly the same
+extension or perform the same conceptual role.
+
+That result would exceed the intended commitment.
+
+The present framework requires a representation
+in which both dimensions apply to every
+existent while remaining distinguishable
+in their analytical contents.
+
+The distinction can therefore be expressed
+as a conjunction of independent requirements:
+
+\[
+\mathsf{AD}
+\land
+\mathsf{OI}
+\]
+
+The conjunction records that analytical
+distinction and ontological inseparability
+are jointly adopted. It does not reduce
+one to the other.
+
+\subsection{Formalization of Absence of Ontological Priority}
+
+\subsubsection{The Content of the Commitment}
+
+Absence of Ontological Priority states that
+neither Being nor Identity has ontological
+precedence over the other.
+
+The commitment addresses a question different
+from analytical distinction and inseparability.
+
+A framework might recognize that two dimensions
+are analytically distinguishable and ontologically
+inseparable while nevertheless claiming that
+one has explanatory or ontological priority.
+
+The present framework rejects such an ordering
+between Being and Identity.
+
+The formalization must therefore distinguish
+the absence of priority from the absence of
+any relation between the dimensions.
+
+\subsubsection{A Provisional Priority Relation}
+
+Let \(\prec_O\) denote a proposed relation
+of ontological priority between the relevant
+dimensions.
+
+The expression
+
+\[
+B \prec_O I
+\]
+
+indicates that Being has ontological priority
+over Identity.
+
+Likewise,
+
+\[
+I \prec_O B
+\]
+
+indicates that Identity has ontological
+priority over Being.
+
+Absence of Ontological Priority may then
+be represented as:
+
+\[
+\mathsf{AP}:
+\quad
+\neg(B\prec_O I)
+\land
+\neg(I\prec_O B)
+\]
+
+The schema excludes both directions of
+ontological priority.
+
+Its interpretation must remain limited
+to ontological priority. It does not
+exclude every possible relation between
+Being and Identity, nor does it establish
+that they are equivalent or unrelated.
+
+\subsubsection{Priority and Other Relations}
+
+The relation \(\prec_O\) must not be confused
+with every form of conceptual, explanatory,
+logical, temporal, causal, or epistemic
+ordering.
+
+A concept may be introduced before another
+in an exposition without being ontologically
+prior to it.
+
+A proposition may be used as a premise
+in an argument without the corresponding
+ontological dimension being prior in reality.
+
+A phenomenon may be recognized or described
+before another phenomenon without this
+order determining the ontological structure
+of the things involved.
+
+The present commitment concerns ontological
+priority specifically.
+
+Consequently, the following inference is
+invalid:
+
+\[
+\neg(B\prec_O I)
+\land
+\neg(I\prec_O B)
+\quad \therefore \quad
+B = I
+\]
+
+The rejection of priority does not establish
+identity or equivalence.
+
+Nor does it establish that Being and Identity
+have no relations other than inseparability.
+The framework leaves room for further
+analysis of their relation, provided that
+such analysis does not reintroduce an
+unsupported ontological hierarchy.
+
+\subsection{The Joint Formal Architecture}
+
+The three commitments must be represented
+as distinct components of the foundational
+architecture.
+
+Let:
+
+\[
+\begin{aligned}
+\mathsf{AD} &:
+\text{Analytical Distinction},\\
+\mathsf{OI} &:
+\text{Ontological Inseparability},\\
+\mathsf{AP} &:
+\text{Absence of Ontological Priority}.
+\end{aligned}
+\]
+
+Their joint adoption may be represented
+schematically as:
+
+\[
+\mathsf{F}_{BI}
+=
+\mathsf{AD}
+\land
+\mathsf{OI}
+\land
+\mathsf{AP}
+\]
+
+The expression \(\mathsf{F}_{BI}\) denotes
+the combined foundational position concerning
+Being and Identity.
+
+It must not be interpreted as a proof
+that one commitment follows from the other
+two. It records their joint adoption
+within the present framework.
+
+The logical architecture can be summarized
+as follows:
+
+\[
+\begin{array}{c}
+\mathsf{AD}\\[4pt]
+\mathsf{OI}\\[4pt]
+\mathsf{AP}
+\end{array}
+\quad
+\Longrightarrow_{\text{joint adoption}}
+\quad
+\mathsf{F}_{BI}
+\]
+
+The arrow is explanatory rather than
+a deductive inference. It indicates
+that the three commitments together
+constitute the adopted foundational
+position.
+
+A formal system may subsequently adopt
+their representations as separate axioms.
+If it does so, each axiom must retain
+its own content and interpretation.
+
+\subsection{The Difference Between Joint Adoption and Logical Derivation}
+
+The conjunction of the three commitments
+must not be mistaken for a derivation
+of any one commitment from the others.
+
+The formal reconstruction must therefore
+distinguish two relations:
+
+\begin{itemize}
+    \item \textbf{Joint adoption:} multiple
+    commitments are accepted together
+    as part of the foundational position.
+
+    \item \textbf{Logical derivation:} a claim
+    follows from specified premises under
+    specified rules of inference.
+\end{itemize}
+
+The present section establishes the
+first relation. It does not establish
+the second.
+
+To claim that Analytical Distinction
+follows from Ontological Inseparability
+and Absence of Ontological Priority,
+for example, would require a derivation
+within a specified formal language.
+
+The same applies to every other proposed
+dependency among the three commitments.
+
+Their mutual relations must be investigated
+through formal consistency and independence
+analysis rather than assumed from their
+philosophical association.
+
+\subsection{Formal Non-Equivalence and the Preservation of Distinctions}
+
+The three foundational commitments
+must be protected against several
+unwarranted substitutions.
+
+First, analytical distinction is not
+ontological separation.
+
+Second, ontological inseparability
+is not conceptual identity.
+
+Third, absence of ontological priority
+is not the absence of every possible
+relation.
+
+Fourth, joint adoption is not logical
+derivation.
+
+These distinctions can be represented
+as constraints on interpretation:
+
+\[
+\mathsf{AD}
+\not\equiv
+\mathsf{OI}
+\]
+
+\[
+\mathsf{OI}
+\not\equiv
+(B=I)
+\]
+
+\[
+\mathsf{AP}
+\not\equiv
+\neg\mathsf{Relation}(B,I)
+\]
+
+\[
+\mathsf{F}_{BI}
+\not\equiv
+\text{a derivation of each of its components}
+\]
+
+The symbol \(\not\equiv\) is used here
+to indicate non-equivalence of theoretical
+commitments, not to introduce a complete
+formal semantics of equivalence.
+
+These constraints are important because
+the choice of formal symbols can make
+different philosophical claims appear
+similar when their contents are not
+the same.
+
+The purpose of formal reconstruction
+is to expose such differences rather
+than conceal them.
+
+\subsection{The Risk of Reifying Formal Expressions}
+
+Formal languages often represent
+concepts through predicates, constants,
+functions, relations, and variables.
+
+These devices are useful for expressing
+logical structures, but their use
+can introduce unintended ontological
+assumptions.
+
+If Being and Identity are represented
+as two constants in an object language,
+the representation may suggest that
+they are two objects belonging to
+the same domain.
+
+If they are represented as properties,
+the formalization may suggest that
+Identity is a property added to
+an independently constituted existent.
+
+If they are represented as two
+independent domains, the representation
+may suggest that each can be specified
+without the other.
+
+None of these interpretations is
+licensed merely by the foundational
+commitments of Part I.
+
+The present formalization therefore
+uses meta-level expressions to
+represent the distinction and
+relations between Being and Identity.
+
+A more developed formal language
+may introduce additional structures,
+but it must explain why those
+structures preserve the intended
+ontological interpretation.
+
+The choice of formal representation
+is consequently not philosophically
+neutral. It must be assessed according
+to the commitments it makes explicit
+and the assumptions it may inadvertently
+introduce.
+
+\subsection{The Limits of the Present Formalization}
+
+The schemas developed in this section
+are sufficient to identify the logical
+requirements of the three commitments.
+They are not yet sufficient to establish
+a complete formal theory of Being and
+Identity.
+
+Several matters remain unresolved.
+
+\subsubsection{The Semantics of Ontological Applicability}
+
+The formal expressions \(B(x)\) and
+\(I(x)\) require a more precise semantic
+interpretation.
+
+The framework must determine how
+these indicators can be used without
+treating Being and Identity as
+independent properties of an existent.
+
+The issue cannot be resolved merely
+by choosing a different symbol.
+It requires an account of the
+ontological role of the dimensions
+being represented.
+
+\subsubsection{The Semantics of Inseparability}
+
+The expression \(\mathsf{Sep}_O(B,I)\)
+requires a formal account of what
+counts as ontological separation.
+
+Such an account must distinguish
+ontological separation from analytical
+distinction, conceptual abstraction,
+formal decomposition, and explanatory
+differentiation.
+
+Without this distinction, the
+formalization may either become
+too weak to express the commitment
+or too strong by excluding forms
+of analysis that the framework
+explicitly permits.
+
+\subsubsection{The Meaning of Ontological Priority}
+
+The relation \(\prec_O\) requires
+further specification.
+
+Ontological priority may involve
+different proposed forms of
+dependence, grounding, constitution,
+or explanatory precedence.
+
+These relations must not be treated
+as interchangeable without argument.
+
+The present schema rejects priority
+between Being and Identity at the
+level of the foundational commitment.
+It does not yet provide a complete
+theory of every possible relation
+that might be classified as priority.
+
+\subsubsection{The Formal Independence of the Commitments}
+
+The three commitments must be
+examined to determine whether
+any one can be derived from the
+others under a specified formal
+interpretation.
+
+This question requires explicit
+models, alternative interpretations,
+or derivation analysis.
+
+The fact that the commitments
+are conceptually distinct does
+not by itself prove their formal
+independence.
+
+\subsubsection{The Appropriate Formal Language}
+
+The present reconstruction has
+not committed to a final single-sorted,
+many-sorted, predicate-based,
+relational, or other formal language.
+
+The suitability of these alternatives
+depends upon the requirements of
+the ontology and the interpretive
+risks associated with each.
+
+The selection must be made only
+after the relevant formal domains,
+types, and semantic conditions
+have been sufficiently specified.
+
+\subsection{Concluding Principle}
+
+The formal reconstruction of the
+principles of identity requires
+three distinct representations.
+
+Analytical Distinction concerns
+the difference between the
+conceptual roles through which
+Being and Identity are examined.
+
+Ontological Inseparability concerns
+their inseparable status in the
+actuality of an existent.
+
+Absence of Ontological Priority
+concerns the rejection of an
+ontological ordering in which
+either dimension is prior to
+the other.
+
+Their joint adoption may be
+represented as a foundational
+architecture, but their
+individual contents must remain
+independent and available for
+separate examination.
+
+The governing principle of
+this formalization is:
+
+\begin{quote}
+A formal representation of
+Being and Identity must preserve
+their analytical distinction,
+their ontological inseparability,
+and the absence of ontological
+priority, without converting
+any one of these commitments
+into an assertion of conceptual
+identity, ontological separation,
+or an unsupported relation
+of dependence.
+\end{quote}
+
+The next section examines the
+formal propositions and derived
+claims that may be developed
+from these commitments. It
+must distinguish what is
+adopted as a starting point
+from what can be established
+through explicit inference.
+
+% =============================================================================
 % END OF SECTION 06 OF CHAPTER 07
-% ============================================================
+% =============================================================================

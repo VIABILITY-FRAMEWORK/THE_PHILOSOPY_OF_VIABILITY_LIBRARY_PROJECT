@@ -1,0 +1,98 @@
+% ============================================================
+% Project: THE PHILOSOPHY OF VIABILITY
+% Book: Book I — Ontology of Viability
+% Book ID: VS.B01
+% Part: Part I — Identity and Manifestation
+% Chapter: Chapter 07 — Formal and Logical Reconstruction
+% File: 4_ASSETS/diagrams/VS.B01.P01.C07.S02.SS02.P001.DG01.levels_of_ontological_and_formal_articulation.tex
+% Asset: DG01 — Levels of Ontological and Formal Articulation
+% Purpose: To distinguish ontological subject matter,
+% conceptual articulation, and formal representation.
+%
+% Requires (preamble):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta, positioning}
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
+
+    % separator used inside the level boxes
+    \def\vsdot{\enspace$\cdot$\enspace}
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.6cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=8.0cm, minimum height=1.9cm,
+            inner sep=7pt, line width=0.8pt
+        },
+        % --- node roles ---
+        ontbox/.style={box, fill=blue!8,  draw=blue!55!black},
+        concbox/.style={box, fill=blue!16, draw=blue!55!black},
+        formbox/.style={box, fill=gray!10, draw=black!60},
+        % --- arrows (methodological relations, not production) ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        feedback/.style={-{Stealth[length=2.5mm]}, line width=0.9pt, dashed},
+        elabel/.style={font=\footnotesize\itshape, text=black!75,
+                       align=left, text width=3.0cm}
+    ]
+
+    % ---------------------------------------------------------------
+    % Three levels
+    % ---------------------------------------------------------------
+    \node[ontbox] (ontological) {
+        \textbf{Ontological Subject Matter}\\[3pt]
+        Being\vsdot Existent\vsdot Identity\vsdot Determination\\
+        Relations, conditions, and manifestations
+    };
+    \node[concbox, below=of ontological] (conceptual) {
+        \textbf{Conceptual Articulation}\\[3pt]
+        Terms\vsdot Distinctions\vsdot Definitions\vsdot Claims\\
+        Interpretations and ontological arguments
+    };
+    \node[formbox, below=of conceptual] (formal) {
+        \textbf{Formal Representation}\\[3pt]
+        Variables\vsdot Predicates\vsdot Relations\vsdot Operators\\
+        Rules, models, and inferential structures
+    };
+
+    % ---------------------------------------------------------------
+    % Articulation (solid, downward, left) and critical feedback
+    % (dashed, upward, centre-right); labels sit beside the arrows
+    % ---------------------------------------------------------------
+    \draw[directed] ([xshift=-3.3cm]ontological.south) --
+        node[elabel, right=5pt] {is articulated as a subject of inquiry}
+        ([xshift=-3.3cm]conceptual.north);
+    \draw[directed] ([xshift=-3.3cm]conceptual.south) --
+        node[elabel, right=5pt] {is represented through formal expressions}
+        ([xshift=-3.3cm]formal.north);
+
+    \draw[feedback] ([xshift=0.8cm]conceptual.north) --
+        node[elabel, right=5pt] {ontological adequacy constrains conceptual articulation}
+        ([xshift=0.8cm]ontological.south);
+    \draw[feedback] ([xshift=0.8cm]formal.north) --
+        node[elabel, right=5pt] {formal analysis may require conceptual revision}
+        ([xshift=0.8cm]conceptual.south);
+
+    % ---------------------------------------------------------------
+    % Legend
+    % ---------------------------------------------------------------
+    \node[below=0.6cm of formal, font=\scriptsize] {
+        \tikz[baseline=-0.5ex]\draw[directed] (0,0) -- (0.7,0);~articulation
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[feedback] (0,0) -- (0.7,0);~critical feedback
+    };
+
+    \end{tikzpicture}
+
+    \caption{The distinction between ontological subject matter, conceptual articulation, and formal representation. The arrows indicate methodological relations and critical feedback, not the production of ontological reality by concepts or formal systems.}
+    \label{fig:ch07_levels_of_articulation}
+\end{figure}
+
+% ============================================================
+% END OF ASSET DG01 — CHAPTER 07, SECTION 02
+% ============================================================
