@@ -1,0 +1,43 @@
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Asset   : DG01 — Leibnizian Routes from Complete Concept to Indiscernibles
+% Asset ID: VS.B01.P01.C08.S07.SS09.P006.DG01
+% Path    : 4_ASSETS/diagrams/
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  node distance=1.25cm and 1.4cm,
+  every node/.style={font=\small, align=center},
+  premise/.style={draw, rounded corners, text width=0.34\textwidth,
+                  minimum height=1.0cm, inner sep=6pt},
+  conclusion/.style={draw, rounded corners, text width=0.34\textwidth,
+                     minimum height=1.0cm, inner sep=6pt},
+  question/.style={draw, dashed, rounded corners, text width=0.78\textwidth,
+                   minimum height=1.0cm, inner sep=7pt},
+  arr/.style={->, thick},
+  openarr/.style={->, thick, dashed}
+]
+\node[premise] (cic) {Complete Individual Concept\\
+Every true predicate belongs to the complete notion of the individual};
+\node[premise, right=of cic] (psr) {Principle of Sufficient Reason\\
+There must be a sufficient reason why things are as they are};
+\node[conclusion, below=of cic, xshift=2.0cm] (pii) {Identity of Indiscernibles\\
+No two distinct substances are wholly indiscernible};
+\draw[arr] (cic.south) -- (pii.north west);
+\draw[arr] (psr.south) -- (pii.north east);
+\node[question, below=of pii] (gap) {Further ontological question\\
+Does the completeness of an individual's predicates establish that predicate-totality
+is identical with the individual's ontological Identity?};
+\draw[openarr] (pii.south) -- (gap.north);
+\end{tikzpicture}
+\caption{Two Leibnizian routes associated with the Identity of Indiscernibles and the further question of ontological reduction. The dashed arrow marks an inference that requires additional argument; it is not presented as a conclusion established by the principle itself.}
+\label{fig:leibniz-routes-to-indiscernibles}
+\end{figure}
+
+% =============================================================================
+% END OF ASSET DG01
+% =============================================================================
