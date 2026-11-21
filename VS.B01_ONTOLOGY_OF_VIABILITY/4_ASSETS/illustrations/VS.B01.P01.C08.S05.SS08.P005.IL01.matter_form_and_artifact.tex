@@ -1,0 +1,116 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY_LIBRARY_PROJECT
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/illustrations/VS.B01.P01.C08.S05.SS08.P005.IL01.matter_form_and_artifact.tex
+%
+% Section / Chapter / Asset:
+%   Matter, Form, and Artifact
+%
+% Structural Identifier :
+%   VS.B01.P01.C08.S05.SS08.P005.IL01
+%
+% Asset Type : IL
+%
+% Purpose :
+%   To provide an aesthetically composed visual analogy for the
+%   distinction between material substrate, organization, and
+%   the resulting artifact.
+%
+% Dependencies :
+%   TikZ; positioning library, loaded by the project preamble.
+%
+% Representational limit :
+%   The illustration concerns an artifact and must not be taken
+%   as a complete representation of natural substances or as
+%   evidence for hylomorphism.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    material/.style={
+        draw=ViabilityGold,
+        fill=ViabilityPaleGold,
+        rounded corners=2mm,
+        line width=0.8pt,
+        minimum width=34mm,
+        minimum height=17mm,
+        align=center,
+        text=ViabilityBlack
+    },
+    form/.style={
+        draw=ViabilityDarkBlue,
+        fill=ViabilityPaleBlue,
+        rounded corners=2mm,
+        line width=0.8pt,
+        minimum width=34mm,
+        minimum height=17mm,
+        align=center,
+        text=ViabilityBlack
+    },
+    result/.style={
+        draw=ViabilityGreen,
+        fill=ViabilityPaleGreen,
+        rounded corners=2mm,
+        line width=0.8pt,
+        minimum width=43mm,
+        minimum height=21mm,
+        align=center,
+        text=ViabilityBlack
+    },
+    flow/.style={
+        -{Stealth[length=2.5mm]},
+        line width=1pt,
+        draw=ViabilityGray
+    }
+]
+
+\node[material] (wood) {
+    \textbf{Material}\\
+    Wood
+};
+
+\node[form, right=17mm of wood] (organization) {
+    \textbf{Organization}\\
+    Shape and arrangement
+};
+
+\node[result, below=18mm of $(wood)!0.5!(organization)$] (artifact) {
+    \textbf{Artifact}\\
+    A constituted wooden object
+};
+
+\draw[flow] (wood.south) -- ++(0,-6mm) -| (artifact.west);
+\draw[flow] (organization.south) -- ++(0,-6mm) -| (artifact.east);
+
+\node[
+    below=7mm of artifact,
+    text=ViabilityGray,
+    align=center,
+    font=\small,
+    text width=105mm
+] {
+    A limited analogy for the relation between what a thing is made
+    from and the organization through which it constitutes an artifact.
+};
+
+\end{tikzpicture}
+
+\caption{A visual analogy for the distinction between material
+substrate and organization in an artifact. The illustration is
+not a complete model of Aristotle's account of natural substances.}
+\label{fig:aristotle-matter-form-artifact}
+
+\end{figure}
+
+% =============================================================================
+% END OF ILLUSTRATION IL01
+% =============================================================================

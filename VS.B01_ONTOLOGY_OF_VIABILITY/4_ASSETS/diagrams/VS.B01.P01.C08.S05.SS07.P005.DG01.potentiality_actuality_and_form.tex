@@ -1,0 +1,110 @@
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY_LIBRARY_PROJECT
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/VS.B01.P01.C08.S05.SS07.P005.DG01.potentiality_actuality_and_form.tex
+%
+% Section / Chapter / Asset:
+%   Potentiality, Actuality, and Form
+%
+% Structural Identifier :
+%   VS.B01.P01.C08.S05.SS07.P005.DG01
+%
+% Asset Type : DG
+%
+% Purpose :
+%   To display the explanatory relation among matter, potentiality,
+%   form, and actuality without representing them as a universal
+%   linear hierarchy of being.
+%
+% Dependencies :
+%   TikZ; positioning library, loaded by the project preamble.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    node distance=19mm and 22mm,
+    concept/.style={
+        draw=ViabilityDarkBlue,
+        rounded corners=2mm,
+        line width=0.8pt,
+        fill=ViabilityPaleBlue,
+        text=ViabilityBlack,
+        align=center,
+        minimum width=35mm,
+        minimum height=13mm,
+        inner sep=4mm
+    },
+    relation/.style={
+        -{Stealth[length=2.5mm]},
+        draw=ViabilityGold,
+        line width=1pt
+    },
+    note/.style={
+        text=ViabilityGray,
+        align=center,
+        font=\small,
+        text width=34mm
+    }
+]
+
+\node[concept] (matter) {
+    \textbf{Matter}\\
+    \textit{hylē}
+};
+
+\node[concept, right=of matter] (potentiality) {
+    \textbf{Potentiality}\\
+    \textit{dynamis}
+};
+
+\node[concept, below=of potentiality] (form) {
+    \textbf{Form}\\
+    \textit{eidos / morphē}
+};
+
+\node[concept, right=of form] (actuality) {
+    \textbf{Actuality}\\
+    \textit{energeia / entelecheia}
+};
+
+\node[note, below=11mm of matter] (matterNote) {
+    Underlying subject\\
+    and capacity for determination
+};
+
+\node[note, below=11mm of actuality] (actualityNote) {
+    Realization and\\
+    determinate constitution
+};
+
+\draw[relation] (matter) -- node[above, font=\small] {considered as capable} (potentiality);
+
+\draw[relation] (potentiality) -- node[right, font=\small, align=left] {relation to\\determination} (form);
+
+\draw[relation] (form) -- node[above, font=\small] {actualizing role} (actuality);
+
+\draw[relation, dashed] (matter.south) -- (matterNote.north);
+\draw[relation, dashed] (actuality.south) -- (actualityNote.north);
+
+\end{tikzpicture}
+
+\caption{A schematic presentation of the relation between matter,
+potentiality, form, and actuality in Aristotle's hylomorphic
+analysis. The arrangement is explanatory rather than a universal
+sequence or hierarchy of all beings.}
+\label{fig:aristotle-potentiality-actuality-form}
+
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================
