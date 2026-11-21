@@ -1,0 +1,102 @@
+% ============================================================
+% Project: The Philosophy of Viability
+% Book: Book I — Ontology of Viability
+% Book ID: VS.B01
+% File: VS.B01.P01.C08.S06.SS05.P004.DG01.plotinian_procession_and_reversion.tex
+% Asset: Diagram — Plotinian Procession and Reversion
+% Purpose: Show ontological dependence without temporalizing it
+% ============================================================
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.35cm and 2.0cm,
+        principle/.style={
+            draw=ViabilityDarkBlue,
+            rounded corners=3pt,
+            line width=0.9pt,
+            fill=ViabilityPaleBlue,
+            text=ViabilityBlack,
+            align=center,
+            minimum width=3.2cm,
+            minimum height=1.0cm,
+            font=\small
+        },
+        relation/.style={
+            -{Latex[length=2.5mm]},
+            line width=0.9pt,
+            draw=ViabilityGold
+        },
+        return/.style={
+            -{Latex[length=2.5mm]},
+            line width=0.9pt,
+            dashed,
+            draw=ViabilityGreen
+        },
+        annotation/.style={
+            font=\footnotesize,
+            text=ViabilityGray,
+            align=center
+        }
+    ]
+
+    \node[principle] (one) {
+        \textbf{The One / Good}\\
+        Absolute simplicity
+    };
+
+    \node[principle, below=of one] (nous) {
+        \textbf{Intellect}\\
+        Being and intelligible multiplicity
+    };
+
+    \node[principle, below=of nous] (soul) {
+        \textbf{Soul}\\
+        Life and mediation
+    };
+
+    \node[principle, below=of soul] (cosmos) {
+        \textbf{Sensible Cosmos}\\
+        Ordered, differentiated manifestation
+    };
+
+    \draw[relation] (one) -- node[right, annotation] {
+        \textit{Procession}\\
+        ontological dependence
+    } (nous);
+
+    \draw[relation] (nous) -- node[right, annotation] {
+        \textit{Procession}\\
+        derivative activity
+    } (soul);
+
+    \draw[relation] (soul) -- node[right, annotation] {
+        \textit{Productive activity}\\
+        formative order
+    } (cosmos);
+
+    \draw[return] (nous.east) .. controls +(1.8,0.2) and +(1.8,-0.2) ..
+        node[right, annotation, xshift=0.65cm] {
+            \textit{Reversion}\\
+            toward the source
+        } (one.east);
+
+    \draw[return] (soul.east) .. controls +(2.2,0.2) and +(2.2,-0.2) ..
+        node[right, annotation, xshift=1.05cm] {
+            Contemplative\\
+            orientation
+        } (nous.east);
+
+    \node[annotation, below=0.45cm of cosmos] {
+        Schematic representation only: the relations are ontological,
+        not temporal stages.
+    };
+
+    \end{tikzpicture}
+    \caption{The Plotinian structure of procession and reversion.
+    The diagram represents asymmetrical ontological dependence and
+    return, not a temporal chain of events.}
+    \label{fig:plotinian-procession-reversion}
+\end{figure}
+
+% END OF ASSET
