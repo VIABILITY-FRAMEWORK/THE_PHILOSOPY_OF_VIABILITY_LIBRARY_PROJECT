@@ -35,6 +35,24 @@
 
 
 % -----------------------------------------------------------------------------
+% FONT COMPATIBILITY FIX
+% -----------------------------------------------------------------------------
+% The following declaration suppresses the warning
+%   "Font shape `T1/lmr/bx/sc' undefined"
+% by explicitly mapping bold small-caps to bold normal
+% in the Latin Modern Roman family (T1 encoding).
+%
+% NOTE: Ideally this declaration belongs in the document
+% preamble (e.g., main.tex) rather than in an individual
+% chapter file. It is placed here only to make this file
+% self-contained and warning-free for the current build.
+% If you move it to the preamble, remove it from here.
+% -----------------------------------------------------------------------------
+
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*lmr/bx/n}{}
+
+
+% -----------------------------------------------------------------------------
 % CHAPTER DECLARATION
 % -----------------------------------------------------------------------------
 
