@@ -1,102 +1,113 @@
-% ============================================================
-% Project: The Philosophy of Viability
-% Book: Book I — Ontology of Viability
-% Book ID: VS.B01
-% File: VS.B01.P01.C08.S06.SS05.P004.DG01.plotinian_procession_and_reversion.tex
-% Asset: Diagram — Plotinian Procession and Reversion
-% Purpose: Show ontological dependence without temporalizing it
-% ============================================================
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C08.S06.SS05.P004.DG01.plotinian_procession_and_reversion.tex
+%
+% Section / Chapter / Asset:
+%   Diagram DG01 — Plotinian Procession and Reversion
+%
+% Structural Identifier : VS.B01.P01.C08.S06.SS05.P004.DG01
+% Asset Type : DG
+%
+% Purpose :
+%   To show ontological dependence and return in the Plotinian structure
+%   without temporalizing it.
+%
+% Representational limit :
+%   The diagram represents asymmetrical ontological dependence and return,
+%   not a temporal chain of events.
+%
+% Dependencies :
+%   TikZ; libraries used: arrows.meta, positioning. All are loaded by the
+%   project preamble; no per-file package or library loading.
+%
+% =============================================================================
 
 \begin{figure}[htbp]
     \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
+
     \begin{tikzpicture}[
-        node distance=1.35cm and 2.0cm,
-        principle/.style={
-            draw=ViabilityDarkBlue,
-            rounded corners=3pt,
-            line width=0.9pt,
-            fill=ViabilityPaleBlue,
-            text=ViabilityBlack,
-            align=center,
-            minimum width=3.2cm,
-            minimum height=1.0cm,
-            font=\small
+        font=\small,
+        node distance=1.5cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=5.2cm, minimum height=1.4cm,
+            inner sep=5pt, line width=0.7pt, fill=blue!8,
+            draw=blue!55!black
         },
-        relation/.style={
-            -{Latex[length=2.5mm]},
-            line width=0.9pt,
-            draw=ViabilityGold
-        },
-        return/.style={
-            -{Latex[length=2.5mm]},
-            line width=0.9pt,
-            dashed,
-            draw=ViabilityGreen
-        },
-        annotation/.style={
-            font=\footnotesize,
-            text=ViabilityGray,
-            align=center
-        }
+        % --- arrows and labels ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        returnarrow/.style={-{Stealth[length=2.5mm]}, line width=0.9pt,
+                            dashed, draw=green!40!black},
+        elabel/.style={font=\footnotesize\itshape, text=black!75,
+                       align=left, text width=3.0cm}
     ]
 
-    \node[principle] (one) {
-        \textbf{The One / Good}\\
-        Absolute simplicity
+    % ---------------------------------------------------------------
+    % Four levels
+    % ---------------------------------------------------------------
+    \node[box] (one) {
+        \textbf{The One / Good}\\[2pt] Absolute simplicity
+    };
+    \node[box, below=of one] (nous) {
+        \textbf{Intellect}\\[2pt] Being and intelligible multiplicity
+    };
+    \node[box, below=of nous] (soul) {
+        \textbf{Soul}\\[2pt] Life and mediation
+    };
+    \node[box, below=of soul] (cosmos) {
+        \textbf{Sensible Cosmos}\\[2pt] Ordered, differentiated manifestation
     };
 
-    \node[principle, below=of one] (nous) {
-        \textbf{Intellect}\\
-        Being and intelligible multiplicity
+    % ---------------------------------------------------------------
+    % Procession (solid, downward; labels to the left of the axis)
+    % ---------------------------------------------------------------
+    \draw[directed] (one)  -- node[elabel, left=6pt, align=right]
+        {\textit{Procession}\\ ontological dependence} (nous);
+    \draw[directed] (nous) -- node[elabel, left=6pt, align=right]
+        {\textit{Procession}\\ derivative activity} (soul);
+    \draw[directed] (soul) -- node[elabel, left=6pt, align=right]
+        {\textit{Productive activity}\\ formative order} (cosmos);
+
+    % ---------------------------------------------------------------
+    % Return (dashed, upward; labels to the right)
+    % ---------------------------------------------------------------
+    \draw[returnarrow] (nous.east) .. controls +(1.8,0.2) and +(1.8,-0.2) ..
+        node[elabel, right, xshift=0.6cm]
+        {\textit{Reversion}\\ toward the source} (one.east);
+    \draw[returnarrow] (soul.east) .. controls +(2.2,0.2) and +(2.2,-0.2) ..
+        node[elabel, right, xshift=1.0cm]
+        {\textit{Contemplative orientation}} (nous.east);
+
+    % ---------------------------------------------------------------
+    % Legend and note
+    % ---------------------------------------------------------------
+    \node[below=0.7cm of cosmos, font=\scriptsize] (legend) {
+        \tikz[baseline=-0.5ex]\draw[directed] (0,0) -- (0.7,0);~procession
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[returnarrow] (0,0) -- (0.7,0);~reversion
     };
-
-    \node[principle, below=of nous] (soul) {
-        \textbf{Soul}\\
-        Life and mediation
-    };
-
-    \node[principle, below=of soul] (cosmos) {
-        \textbf{Sensible Cosmos}\\
-        Ordered, differentiated manifestation
-    };
-
-    \draw[relation] (one) -- node[right, annotation] {
-        \textit{Procession}\\
-        ontological dependence
-    } (nous);
-
-    \draw[relation] (nous) -- node[right, annotation] {
-        \textit{Procession}\\
-        derivative activity
-    } (soul);
-
-    \draw[relation] (soul) -- node[right, annotation] {
-        \textit{Productive activity}\\
-        formative order
-    } (cosmos);
-
-    \draw[return] (nous.east) .. controls +(1.8,0.2) and +(1.8,-0.2) ..
-        node[right, annotation, xshift=0.65cm] {
-            \textit{Reversion}\\
-            toward the source
-        } (one.east);
-
-    \draw[return] (soul.east) .. controls +(2.2,0.2) and +(2.2,-0.2) ..
-        node[right, annotation, xshift=1.05cm] {
-            Contemplative\\
-            orientation
-        } (nous.east);
-
-    \node[annotation, below=0.45cm of cosmos] {
+    \node[below=0.3cm of legend, text width=10cm, align=center,
+          font=\footnotesize\itshape] {
         Schematic representation only: the relations are ontological,
         not temporal stages.
     };
 
     \end{tikzpicture}
-    \caption{The Plotinian structure of procession and reversion.
-    The diagram represents asymmetrical ontological dependence and
+
+    \caption{The Plotinian structure of procession and reversion. The
+    diagram represents asymmetrical ontological dependence and
     return, not a temporal chain of events.}
     \label{fig:plotinian-procession-reversion}
 \end{figure}
 
-% END OF ASSET
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

@@ -2,21 +2,33 @@
 % Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 02 — Invariance
+% Chapter ID : VS.B01.P01.C02
 %
 % File    : 4_ASSETS/diagrams/VS.B01.P01.C02.S10.SS11.P004.DG01.scope_of_an_invariance_claim.tex
 %
-% Asset   : DG01 — Scope of an Invariance Claim
-% Type    : Diagram
-% Location: Section 10, Subsection 11, Paragraph 004
+% Section / Chapter / Asset:
+%   Diagram DG01 — Scope of an Invariance Claim
+%
+% Structural Identifier : VS.B01.P01.C02.S10.SS11.P004.DG01
+% Asset Type : DG
 %
 % Purpose :
-%   To display the elements that delimit an invariance claim and
-%   distinguish its warranted conclusion from conclusions that
-%   require independent ontological justification.
+%   To display the elements that delimit an invariance claim and distinguish
+%   its warranted conclusion from conclusions that require independent
+%   ontological justification.
 %
-% Requires (preamble):
-%   \usepackage{tikz}
-%   \usetikzlibrary{arrows.meta, calc, positioning, fit}
+% Representational limit :
+%   A justified preservation finding is restricted to its specified subject,
+%   determination, transformation, domain, respect, criterion, and
+%   conditions. Further ontological conclusions require independent
+%   justification.
+%
+% Dependencies :
+%   TikZ; libraries used: arrows.meta, calc, positioning, fit. All are loaded
+%   by the project preamble; no per-file package or library loading.
+%
 % =============================================================================
 
 \begin{figure}[htbp]
@@ -85,7 +97,7 @@
     % ---------------------------------------------------------------
     \coordinate (bnd) at ($(result.south)+(0,-1.0)$);
     \draw[boundary] (spec.west |- bnd) -- (spec.east |- bnd);
-    \node[grouplabel, anchor=south] at ($(bnd)+(1.75,0.03)$) {
+    \node[grouplabel, fill=white, inner sep=2pt] at ($(bnd)+(-1.75,0)$) {
         Inferential Boundary
     };
 
@@ -117,14 +129,14 @@
 
     \end{tikzpicture}
 
-    \caption{The scope of an invariance claim. A justified
-    preservation finding is restricted to its specified subject,
-    determination, transformation, domain, respect, criterion,
-    and conditions. Further ontological conclusions require
-    independent justification.}
+    \caption{The scope of an invariance claim. A justified preservation
+    finding is restricted to its specified subject, determination,
+    transformation, domain, respect, criterion, and conditions.
+    Further ontological conclusions require independent
+    justification.}
     \label{fig:scope-of-an-invariance-claim}
 \end{figure}
 
 % =============================================================================
 % END OF DIAGRAM DG01
-% =============================================================================
+% =============================================================================

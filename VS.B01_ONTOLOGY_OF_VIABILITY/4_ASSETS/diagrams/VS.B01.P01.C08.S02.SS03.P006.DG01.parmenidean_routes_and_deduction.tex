@@ -1,111 +1,146 @@
-
 % =============================================================================
-% Project : THE PHILOSOPHY OF VIABILITY
+% Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
-% Chapter : 08 — Comparative Philosophical Examination
-% Section : 02 — Parmenides
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
 %
-% Asset ID:
-%   VS.B01.P01.C08.S02.SS03.P006.DG01
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C08.S02.SS03.P006.DG01.parmenidean_routes_and_deduction.tex
 %
-% Type    : DG — Diagram
-% File    : parmenidean_routes_and_deduction.tex
+% Section / Chapter / Asset:
+%   Diagram DG01 — Parmenidean Routes and Deduction
+%
+% Structural Identifier : VS.B01.P01.C08.S02.SS03.P006.DG01
+% Asset Type : DG
 %
 % Purpose :
-%   Distinguish the two ways introduced in B2 from the mortal
-%   route in B6, and represent the inferential movement from
-%   the affirmation of what-is to the principal signs in B8.
+%   To distinguish the two ways introduced in B2 from the mortal route in B6,
+%   and to represent the inferential movement from the affirmation of what-is
+%   to the principal signs in B8.
 %
-% Limitation :
-%   The diagram is a reconstruction of the argumentative
-%   structure, not a claim that every interpretive dispute
-%   concerning the fragments has been settled.
+% Representational limit :
+%   The solid arrows mark the argumentative movement; the dashed arrows mark
+%   routes that the poem presents as unavailable or unstable. The
+%   reconstruction does not settle the interpretive disputes concerning the
+%   fragments.
+%
+% Dependencies :
+%   TikZ; libraries used: arrows.meta, calc, positioning, fit. All are loaded
+%   by the project preamble; no per-file package or library loading.
+%
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\begin{tikzpicture}[
-    >=stealth,
-    node distance=0.8cm,
-    route/.style={
-        draw,
-        rounded corners,
-        align=center,
-        text width=4.2cm,
-        minimum height=1.05cm
-    },
-    result/.style={
-        draw,
-        rounded corners,
-        align=center,
-        text width=3.1cm,
-        minimum height=0.9cm
-    },
-    arrow/.style={->,thick},
-    rejected/.style={->,thick,dashed}
-]
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.8cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=3.6cm, minimum height=1.5cm,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        route/.style={box, fill=blue!8, draw=blue!55!black},
+        deduction/.style={box, fill=blue!16, draw=blue!55!black,
+                          minimum height=1.3cm},
+        sign/.style={box, fill=green!8, draw=green!40!black,
+                     minimum height=1.0cm},
+        excluded/.style={box, dashed, fill=gray!10, draw=black!60,
+                         minimum height=1.3cm},
+        % --- frames and labels ---
+        vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
+                        inner sep=8pt, line width=0.5pt},
+        grouplabel/.style={font=\footnotesize\itshape, text=black!75,
+                           align=center},
+        % --- arrows ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        optional/.style={-{Stealth[length=2.5mm]}, line width=0.9pt, dashed}
+    ]
 
-% B2 routes
-\node[route] (being) at (-4.6,0)
-    {B2: What-is\\
-     \small It is and cannot not be};
+    % ---------------------------------------------------------------
+    % Ways of inquiry (B2) and the mortal route (B6)
+    % ---------------------------------------------------------------
+    \node[route] (being) {
+        \textbf{B2: What-is}\\[2pt]
+        It is and cannot not be
+    };
+    \node[route, right=0.8cm of being] (nonbeing) {
+        \textbf{B2: What-is-not}\\[2pt]
+        It is not and must not be
+    };
+    \node[route, right=0.8cm of nonbeing] (mortal) {
+        \textbf{B6: Mortal route}\\[2pt]
+        Confused treatment of being and not-being
+    };
+    \node[vsgroup, fit=(being)(nonbeing)(mortal)] (routes) {};
+    \node[grouplabel, above=0.1cm of routes] {Ways of inquiry};
 
-\node[route] (nonbeing) at (4.6,0)
-    {B2: What-is-not\\
-     \small It is not and must not be};
+    % ---------------------------------------------------------------
+    % Consequences of each route
+    % ---------------------------------------------------------------
+    \node[deduction, below=1.3cm of being] (b8) {
+        \textbf{B8: Deduction}\\[2pt]
+        What-is must be
+    };
+    \node[excluded, below=1.3cm of nonbeing] (unavailable) {
+        \textbf{Not available}\\[2pt]
+        No attainable object of inquiry
+    };
+    \node[excluded, below=1.3cm of mortal] (wandering) {
+        \textbf{Wandering inquiry}\\[2pt]
+        Unstable judgment
+    };
 
-\node[route] (mortal) at (0,-2.15)
-    {B6: Mortal route\\
-     \small Confused treatment of being and not-being};
+    % ---------------------------------------------------------------
+    % Principal signs of what-is (B8)
+    % ---------------------------------------------------------------
+    \node[sign, below=1.3cm of b8] (s1) {Ungenerated and imperishable};
+    \node[sign, below=0.3cm of s1] (s2) {Whole and continuous};
+    \node[sign, below=0.3cm of s2] (s3) {Unmoved and complete};
+    \node[vsgroup, fit=(s1)(s2)(s3)] (signs) {};
+    \node[grouplabel, right=0.2cm of signs, anchor=west, text width=2.6cm,
+          align=left] {Principal signs of what-is (B8)};
 
-\node[result] (impossible) at (4.6,-1.8)
-    {Not available\\
-     \small No attainable object of inquiry};
+    % ---------------------------------------------------------------
+    % Relations
+    % ---------------------------------------------------------------
+    \draw[directed] (being)   -- (b8);
+    \draw[directed] (b8)      -- (signs);
+    \draw[optional] (nonbeing) -- (unavailable);
+    \draw[optional] (mortal)   -- (wandering);
 
-\node[result] (wandering) at (0,-3.75)
-    {Wandering inquiry\\
-     \small Unstable judgment};
+    % ---------------------------------------------------------------
+    % Legend and interpretive caution
+    % ---------------------------------------------------------------
+    \coordinate (axis) at (nonbeing |- signs.south);
+    \node[below=0.5cm of axis, font=\scriptsize] (legend) {
+        \tikz[baseline=-0.5ex]\draw[directed] (0,0) -- (0.7,0);~argumentative movement
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[optional] (0,0) -- (0.7,0);~route presented as unavailable or unstable
+    };
+    \node[below=0.35cm of legend, text width=11cm, align=center,
+          font=\footnotesize\itshape] {
+        The relation between the mortal route, the deductions concerning
+        what-is, and the cosmology of Doxa remains a matter of
+        interpretation. The mortal route is not equated with absolute
+        non-being.
+    };
 
-% B8 deduction
-\node[result] (b8) at (-4.6,-2.0)
-    {B8: Deduction\\
-     \small What-is must be};
+    \end{tikzpicture}
 
-\node[result] (ungenerated) at (-7.7,-4.0)
-    {Ungenerated\\and imperishable};
-
-\node[result] (whole) at (-4.6,-4.0)
-    {Whole and\\continuous};
-
-\node[result] (unmoved) at (-1.5,-4.0)
-    {Unmoved and\\complete};
-
-% Main relations
-\draw[arrow] (being) -- (b8);
-\draw[rejected] (nonbeing) -- (impossible);
-\draw[rejected] (mortal) -- (wandering);
-
-\draw[arrow] (b8) -- (ungenerated);
-\draw[arrow] (b8) -- (whole);
-\draw[arrow] (b8) -- (unmoved);
-
-% Interpretive caution
-\node[draw=none,align=center,text width=12cm] at (0,-5.35)
-    {\footnotesize
-    The relation between the mortal route, the deductions
-    concerning what-is, and the cosmology of Doxa remains
-    a matter of interpretation. The diagram does not equate
-    the mortal route with absolute non-being.};
-
-\end{tikzpicture}
-
-\caption{The Ways of Inquiry and the Deductive Structure of B8}
-\label{fig:ch08-parmenides-routes-deduction}
-
+    \caption{The ways of inquiry in B2 and B6 and the deductive structure
+    of B8. The solid arrows mark the argumentative movement; the
+    dashed arrows mark routes that the poem presents as
+    unavailable or unstable. The reconstruction does not settle
+    the interpretive disputes concerning the fragments.}
+    \label{fig:ch08-parmenides-routes-deduction}
 \end{figure}
 
 % =============================================================================
-% END OF ASSET
+% END OF DIAGRAM DG01
 % =============================================================================

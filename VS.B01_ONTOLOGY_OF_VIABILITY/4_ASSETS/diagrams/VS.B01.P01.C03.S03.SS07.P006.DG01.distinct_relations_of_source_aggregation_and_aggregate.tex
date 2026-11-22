@@ -2,34 +2,39 @@
 % Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 03 — Unity and Plurality
+% Chapter ID : VS.B01.P01.C03
 %
 % File    : 4_ASSETS/diagrams/VS.B01.P01.C03.S03.SS07.P006.DG01.distinct_relations_of_source_aggregation_and_aggregate.tex
 %
-% Asset   : DG01 — Distinct Relations of Source, Aggregation,
-%           and Aggregate
+% Section / Chapter / Asset:
+%   Diagram DG01 — Distinct Relations of Source, Aggregation, and Aggregate
+%
+% Structural Identifier : VS.B01.P01.C03.S03.SS07.P006.DG01
+% Asset Type : DG
 %
 % Purpose :
-%   To represent several possible configurations in which
-%   source-relations and aggregate-relations may occur
-%   independently or together.
+%   To represent several possible configurations in which source-relations
+%   and aggregate-relations may occur independently or together.
 %
-% Diagram Policy :
-%   Connections are relational, not necessarily causal,
-%   temporal, or hierarchical. No configuration determines
-%   the number or unity of identities.
+% Representational limit :
+%   The two relations may occur independently or together; neither is
+%   presupposed by the other.
 %
-% Requires (preamble):
-%   \usepackage{tikz}
-%   \usetikzlibrary{positioning}
+% Dependencies :
+%   TikZ; libraries used: positioning. All are loaded by the project
+%   preamble; no per-file package or library loading.
+%
 % =============================================================================
 
 \begin{figure}[htbp]
     \centering
     \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-    % panel size 5.8 x 4.65 cm, gap 0.4 cm
+    % panel size 5.8 x 4.85 cm, gap 0.4 cm
     \def\pw{6.2}   % horizontal distance between panel centres
-    \def\ph{5.05}   % vertical distance between panel centres
+    \def\ph{5.25}   % vertical distance between panel centres
 
     \begin{tikzpicture}[
         font=\small,
@@ -62,7 +67,7 @@
     % Panel 1 — common source, separate manifestations
     % ---------------------------------------------------------------
     \begin{scope}
-        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.65) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {1. Common Source, Separate Manifestations};
 
         \node[src]  (s1)  at (0,0.55)     {Source S};
@@ -71,23 +76,23 @@
         \draw[srcrel] (s1) -- (m11);
         \draw[srcrel] (s1) -- (m12);
 
-        \node[pnote] at (0,-1.55) {No common aggregate is asserted};
+        \node[pnote] at (0,-1.75) {No common aggregate is asserted};
     \end{scope}
 
     % ---------------------------------------------------------------
     % Panel 2 — different sources, one aggregate
     % ---------------------------------------------------------------
     \begin{scope}[shift={(\pw,0)}]
-        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.65) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {2. Different Sources, One Aggregate};
 
         \node[src] (s21) at (-1.7,0.55) {Source S$_1$};
         \node[src] (s22) at (1.7,0.55)  {Source S$_2$};
 
-        \draw[aggregate] (-1.5,-1.45) rectangle (1.5,-0.25);
-        \node[elem] (c21) at (-0.75,-0.65) {C$_1$};
-        \node[elem] (c22) at (0.75,-0.65)  {C$_2$};
-        \node[aglabel] at (0,-1.17) {Aggregate A};
+        \draw[aggregate] (-1.5,-1.5) rectangle (1.5,-0.2);
+        \node[elem] (c21) at (-0.75,-0.6) {C$_1$};
+        \node[elem] (c22) at (0.75,-0.6)  {C$_2$};
+        \node[aglabel] at (0,-1.27) {Aggregate A};
 
         \draw[srcrel] (s21) -- (c21);
         \draw[srcrel] (s22) -- (c22);
@@ -97,27 +102,27 @@
     % Panel 3 — common source and aggregate relation
     % ---------------------------------------------------------------
     \begin{scope}[shift={(0,-\ph)}]
-        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.65) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {3. Common Source and Aggregate Relation};
 
         \node[src] (s3) at (0,0.55) {Source S};
 
-        \draw[aggregate] (-1.5,-1.45) rectangle (1.5,-0.25);
-        \node[elem] (m31) at (-0.75,-0.65) {M$_1$};
-        \node[elem] (m32) at (0.75,-0.65)  {M$_2$};
-        \node[aglabel] at (0,-1.17) {Aggregate A};
+        \draw[aggregate] (-1.5,-1.5) rectangle (1.5,-0.2);
+        \node[elem] (m31) at (-0.75,-0.6) {M$_1$};
+        \node[elem] (m32) at (0.75,-0.6)  {M$_2$};
+        \node[aglabel] at (0,-1.27) {Aggregate A};
 
         \draw[srcrel] (s3) -- (m31);
         \draw[srcrel] (s3) -- (m32);
 
-        \node[pnote] at (0,-1.55) {Both relations occur, but remain distinct};
+        \node[pnote] at (0,-1.75) {Both relations occur, but remain distinct};
     \end{scope}
 
     % ---------------------------------------------------------------
     % Panel 4 — multiple sources and aggregates
     % ---------------------------------------------------------------
     \begin{scope}[shift={(\pw,-\ph)}]
-        \draw[panel] (-2.9,-2.45) rectangle (2.9,2.2);
+        \draw[panel] (-2.9,-2.65) rectangle (2.9,2.2);
         \node[ptitle] at (0,2.1) {4. Multiple Sources and Aggregates};
 
         \node[src] (s41) at (-1.7,0.55) {S$_1$};
@@ -129,14 +134,14 @@
         \draw[srcrel] (s41) -- (a41);
         \draw[srcrel] (s42) -- (a42);
 
-        \node[pnote] at (0,-1.55) {Further relations may connect the configurations};
+        \node[pnote] at (0,-1.75) {Further relations may connect the configurations};
     \end{scope}
 
     % ---------------------------------------------------------------
     % Legend (defines the two relation types once for all panels)
     % ---------------------------------------------------------------
     \node[src, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
-          anchor=west] (l1) at (-1.6,-7.85) {};
+          anchor=west] (l1) at (-1.6,-8.3) {};
     \node[legtext, right=0.12cm of l1] (t1) {source};
 
     \node[elem, minimum width=0.6cm, minimum height=0.35cm, inner sep=0pt,
@@ -153,11 +158,12 @@
 
     \end{tikzpicture}
 
-    \caption{Possible Configurations of Source-Relations and
-    Aggregate-Relations}
+    \caption{Possible configurations of source-relations and
+    aggregate-relations. The two relations may occur independently
+    or together; neither is presupposed by the other.}
     \label{fig:distinct-relations-of-source-aggregation-and-aggregate}
 \end{figure}
 
 % =============================================================================
-% END OF ASSET DG01
-% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

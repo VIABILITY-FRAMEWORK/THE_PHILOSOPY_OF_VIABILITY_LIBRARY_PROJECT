@@ -2,25 +2,30 @@
 % Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 02 — Invariance
+% Chapter ID : VS.B01.P01.C02
 %
-% File    : 4_ASSETS/diagrams/
-%           VS.B01.P01.C02.S09.SS02.P004.DG01.forms_and_domains_of_invariance.tex
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C02.S09.SS02.P004.DG01.forms_and_domains_of_invariance.tex
 %
-% Asset   : DG01 — Forms and Domains of Invariance
-% Location: Chapter 02 / Section 09 / Subsection 02 / Paragraph 004
+% Section / Chapter / Asset:
+%   Diagram DG01 — Forms and Domains of Invariance
+%
+% Structural Identifier : VS.B01.P01.C02.S09.SS02.P004.DG01
+% Asset Type : DG
 %
 % Purpose :
-%   To visualize the analytical independence of forms of
-%   invariance and domains of invariance.
+%   To visualize the analytical independence of forms of invariance and
+%   domains of invariance.
 %
-% Conceptual Caution :
-%   The figure represents possible analytical cross-classification.
-%   It does not assert that every combination is instantiated
-%   or ontologically established.
+% Representational limit :
+%   The diagram presents their independence without asserting that every
+%   possible form-domain combination has been established.
 %
-% Requires (preamble):
-%   \usepackage{tikz}
-%   \usetikzlibrary{calc, positioning, fit}
+% Dependencies :
+%   TikZ; libraries used: calc, positioning, fit. All are loaded by the
+%   project preamble; no per-file package or library loading.
+%
 % =============================================================================
 
 \begin{figure}[htbp]
@@ -38,7 +43,7 @@
         % --- node roles (names avoid clashes with built-in TikZ keys) ---
         formbox/.style={box, text width=3.4cm, minimum height=2.3cm,
                         fill=blue!8, draw=blue!55!black},
-        domainbox/.style={box, text width=2.4cm, minimum height=1.4cm,
+        domainbox/.style={box, text width=2.6cm, minimum height=1.4cm,
                           fill=gray!10, draw=black!60},
         % --- frames, titles, labels ---
         vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
@@ -108,13 +113,12 @@
 
     \end{tikzpicture}
 
-    \caption{Forms and domains constitute distinct analytical
-    dimensions. The diagram presents their independence without
-    asserting that every possible form-domain combination has
-    been established.}
+    \caption{Forms and domains constitute distinct analytical dimensions.
+    The diagram presents their independence without asserting that
+    every possible form-domain combination has been established.}
     \label{fig:forms-and-domains-of-invariance}
 \end{figure}
 
 % =============================================================================
 % END OF DIAGRAM DG01
-% =============================================================================
+% =============================================================================

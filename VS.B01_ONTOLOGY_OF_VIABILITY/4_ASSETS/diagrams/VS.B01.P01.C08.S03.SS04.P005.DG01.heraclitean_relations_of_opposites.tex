@@ -1,112 +1,96 @@
 % =============================================================================
-% Project : THE_PHILOSOPHY_OF_VIABILITY_LIBRARY_PROJECT
+% Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
-% Part    : Part I — Identity and Manifestation
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
 % Chapter : Chapter 08 — Comparative Philosophical Examination
 % Chapter ID : VS.B01.P01.C08
 %
-% File :
-%   4_ASSETS/diagrams/
-%   VS.B01.P01.C08.S03.SS04.P005.DG01.heraclitean_relations_of_opposites.tex
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C08.S03.SS04.P005.DG01.heraclitean_relations_of_opposites.tex
 %
 % Section / Chapter / Asset:
 %   Diagram DG01 — Heraclitean Relations of Opposites
 %
-% Structural Identifier:
-%   VS.B01.P01.C08.S03.SS04.P005.DG01
-%
+% Structural Identifier : VS.B01.P01.C08.S03.SS04.P005.DG01
 % Asset Type : DG
 %
-% Purpose:
-%   To distinguish four interpretively relevant forms of relation
-%   among opposites without reducing them to one logical structure.
+% Purpose :
+%   To distinguish four interpretively relevant forms of relation among
+%   opposites without reducing them to one logical structure.
+%
+% Representational limit :
+%   The categories are analytical guides for comparison, not a formal
+%   taxonomy attributed directly to Heraclitus.
+%
+% Dependencies :
+%   TikZ; libraries used: calc, positioning. All are loaded by the project
+%   preamble; no per-file package or library loading.
 %
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\begin{tikzpicture}[
-    node distance=1.25cm and 1.15cm,
-    concept/.style={
-        draw=ViabilityDarkBlue!75,
-        fill=ViabilityPaper,
-        rounded corners=2pt,
-        align=center,
-        text width=3.2cm,
-        minimum height=1.0cm,
-        inner sep=6pt,
-        font=\small
-    },
-    central/.style={
-        draw=ViabilityGold!85!black,
-        fill=ViabilityGold!12,
-        rounded corners=3pt,
-        align=center,
-        text width=4.0cm,
-        minimum height=1.1cm,
-        inner sep=7pt,
-        font=\small\bfseries
-    },
-    relation/.style={
-        -{Stealth[length=2.2mm]},
-        draw=ViabilityBlue!80,
-        line width=0.9pt
-    }
-]
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.3cm and 1.2cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=3.2cm, minimum height=1.4cm,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        relationbox/.style={box, fill=blue!8, draw=blue!55!black},
+        centrebox/.style={box, text width=3.6cm, fill=blue!16,
+                          draw=blue!55!black, font=\small\bfseries},
+        % --- undirected link: no priority between the four relations ---
+        vslink/.style={draw=black!60, line width=0.7pt}
+    ]
 
-\node[central] (centre) {
-    Relations among\\
-    Opposites
-};
+    % ---------------------------------------------------------------
+    % Central theme and four interpretive relations
+    % ---------------------------------------------------------------
+    \node[centrebox] (centre) {Relations among Opposites};
 
-\node[concept, above left=of centre] (context) {
-    Contextual Contrast\\
-    \footnotesize B61
-};
+    \node[relationbox, above left=of centre]  (context) {
+        \textbf{Contextual Contrast}\\[2pt] {\footnotesize B61}
+    };
+    \node[relationbox, above right=of centre] (reciprocal) {
+        \textbf{Reciprocal Dependence}\\[2pt] {\footnotesize B10}
+    };
+    \node[relationbox, below left=of centre]  (alternation) {
+        \textbf{Temporal Alternation}\\[2pt] {\footnotesize B88}
+    };
+    \node[relationbox, below right=of centre] (tension) {
+        \textbf{Tension and Attunement}\\[2pt] {\footnotesize B51, B54}
+    };
 
-\node[concept, above right=of centre] (reciprocal) {
-    Reciprocal Dependence\\
-    \footnotesize B10
-};
+    \draw[vslink] (context)     -- (centre);
+    \draw[vslink] (reciprocal)  -- (centre);
+    \draw[vslink] (alternation) -- (centre);
+    \draw[vslink] (tension)     -- (centre);
 
-\node[concept, below left=of centre] (alternation) {
-    Temporal Alternation\\
-    \footnotesize B88
-};
+    % ---------------------------------------------------------------
+    % Note (centred below the lower pair)
+    % ---------------------------------------------------------------
+    \coordinate (mid) at ($(alternation.south)!0.5!(tension.south)$);
+    \node[below=0.7cm of mid, text width=11cm, align=center,
+          font=\footnotesize\itshape] {
+        These are distinguishable interpretive relations. The diagram
+        does not assert that the opposed terms are identical, that every
+        opposition has the same structure, or that the relations are
+        exhaustive of Heraclitus' thought.
+    };
 
-\node[concept, below right=of centre] (tension) {
-    Tension and Attunement\\
-    \footnotesize B51, B54
-};
+    \end{tikzpicture}
 
-\draw[relation] (context) -- (centre);
-\draw[relation] (reciprocal) -- (centre);
-\draw[relation] (alternation) -- (centre);
-\draw[relation] (tension) -- (centre);
-
-\node[
-    below=1.0cm of centre,
-    text width=10.8cm,
-    align=center,
-    font=\footnotesize,
-    text=ViabilityGray
-] (limit) {
-    These are distinguishable interpretive relations.
-    The diagram does not assert that the opposed terms are identical,
-    that every opposition has the same structure, or that all
-    relations are exhaustive of Heraclitus' thought.
-};
-
-\end{tikzpicture}
-
-\caption{Four distinguishable ways in which Heraclitus' fragments
-present relations among opposites. The categories are analytical
-guides for comparison, not a formal taxonomy attributed directly
-to Heraclitus.}
-\label{fig:VS.B01.P01.C08.S03.SS04.P005.DG01}
-
+    \caption{Four distinguishable ways in which Heraclitus' fragments
+    present relations among opposites. The categories are
+    analytical guides for comparison, not a formal taxonomy
+    attributed directly to Heraclitus.}
+    \label{fig:VS.B01.P01.C08.S03.SS04.P005.DG01}
 \end{figure}
 
 % =============================================================================
