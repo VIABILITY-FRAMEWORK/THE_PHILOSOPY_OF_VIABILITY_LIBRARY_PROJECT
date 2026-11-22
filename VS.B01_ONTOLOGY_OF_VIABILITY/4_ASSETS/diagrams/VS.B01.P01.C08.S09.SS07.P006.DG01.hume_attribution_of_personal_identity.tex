@@ -1,0 +1,125 @@
+
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/
+%   VS.B01.P01.C08.S09.SS07.P006.DG01.hume_attribution_of_personal_identity.tex
+%
+% Section / Chapter / Asset:
+%   Diagram DG01 — Hume's Account of the Attribution of Personal Identity
+%
+% Structural Identifier:
+%   VS.B01.P01.C08.S09.SS07.P006.DG01
+%
+% Asset Type : DG
+%
+% Purpose:
+%   To represent the relations and psychological transitions
+%   through which Hume explains the attribution of personal
+%   identity to a succession of perceptions.
+%
+% Representational Limit:
+%   The diagram represents Hume's explanatory account of
+%   identity attribution. It does not establish that an
+%   ontological identity is constituted by these psychological
+%   relations or operations.
+%
+% Dependencies:
+%   TikZ; positioning library.
+%   Loaded by the project preamble.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.72cm,
+        process/.style={
+            draw=blue!55!black,
+            fill=blue!7,
+            rounded corners=3pt,
+            line width=0.7pt,
+            text width=8.2cm,
+            minimum height=0.85cm,
+            align=center,
+            inner sep=6pt
+        },
+        central/.style={
+            process,
+            fill=blue!14,
+            font=\small\bfseries
+        },
+        qualification/.style={
+            draw=black!45,
+            fill=black!3,
+            rounded corners=2pt,
+            text width=11.2cm,
+            align=center,
+            font=\footnotesize,
+            inner sep=7pt
+        },
+        flow/.style={
+            ->,
+            draw=black!65,
+            line width=0.8pt
+        }
+    ]
+
+    \node[process] (perceptions) {
+        \textbf{Distinct and Successive Perceptions}\\
+        Impressions and ideas occurring in succession
+    };
+
+    \node[process, below=of perceptions] (relations) {
+        \textbf{Relations among Perceptions}\\
+        Resemblance \quad Contiguity \quad Causation
+    };
+
+    \node[process, below=of relations] (memory) {
+        \textbf{Memory and Custom}\\
+        Recollection of past perceptions and the formation
+        of habitual transitions
+    };
+
+    \node[process, below=of memory] (imagination) {
+        \textbf{Easy Transition of the Imagination}\\
+        Related perceptions are contemplated as though
+        they belonged to one uninterrupted object
+    };
+
+    \node[central, below=of imagination] (attribution) {
+        Attribution of Personal Identity
+    };
+
+    \draw[flow] (perceptions) -- (relations);
+    \draw[flow] (relations) -- (memory);
+    \draw[flow] (memory) -- (imagination);
+    \draw[flow] (imagination) -- (attribution);
+
+    \node[qualification, below=0.85cm of attribution] (limit) {
+        \textbf{Interpretive qualification:}
+        This sequence explains how identity is attributed
+        in Hume's account. It does not, by itself, establish
+        that the ontological identity of a person is identical
+        with the relations or psychological operations shown.
+    };
+
+    \end{tikzpicture}
+
+    \caption{Hume's account of the attribution of personal
+    identity through relations among successive perceptions,
+    memory, custom, and the imagination.}
+    \label{fig:VS.B01.P01.C08.S09.SS07.P006.DG01}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================
