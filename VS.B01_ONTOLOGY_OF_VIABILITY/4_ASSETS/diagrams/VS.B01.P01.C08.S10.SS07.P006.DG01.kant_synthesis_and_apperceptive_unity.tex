@@ -1,0 +1,172 @@
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Part ID : VS.B01.P01
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/
+%   VS.B01.P01.C08.S10.SS07.P006.DG01.kant_synthesis_and_apperceptive_unity.tex
+%
+% Section :
+%   Section 10 — Immanuel Kant
+%
+% Asset :
+%   Diagram DG01 — Kant's Synthesis and Apperceptive Unity
+%
+% Structural Identifier :
+%   VS.B01.P01.C08.S10.SS07.P006.DG01
+%
+% Asset Type : DG
+%
+% Purpose :
+%   To distinguish the manifold of intuition, synthesis,
+%   the transcendental unity of apperception, and the
+%   representation of an object in possible experience.
+%
+% Intellectual Benefit :
+%   The diagram makes visible the structure of Kant's
+%   transcendental account and clarifies the relation
+%   between apperceptive unity and objectivity.
+%
+% Aesthetic / Experiential Benefit :
+%   It provides a visual pause within a conceptually dense
+%   discussion and gives the reader a compact overview of
+%   the central argument.
+%
+% Representational Limit :
+%   The diagram represents the conditions of possible
+%   experience in Kant's account. It does not depict an
+%   ontological production of beings by the subject.
+%   The lower distinction explicitly marks the limit
+%   of the inference from apperceptive unity to a
+%   substantial or numerically persistent soul.
+%
+% Dependencies :
+%   TikZ; positioning library.
+%   Both are used elsewhere in the project.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=0.68cm,
+        process/.style={
+            draw=blue!55!black,
+            fill=blue!6,
+            rounded corners=3pt,
+            line width=0.7pt,
+            text width=9.0cm,
+            minimum height=0.82cm,
+            align=center,
+            inner sep=6pt
+        },
+        central/.style={
+            process,
+            fill=blue!15,
+            font=\small\bfseries
+        },
+        result/.style={
+            draw=teal!55!black,
+            fill=teal!7,
+            rounded corners=3pt,
+            line width=0.7pt,
+            text width=9.0cm,
+            minimum height=0.82cm,
+            align=center,
+            inner sep=6pt
+        },
+        limit/.style={
+            draw=black!55,
+            fill=black!4,
+            rounded corners=3pt,
+            line width=0.7pt,
+            text width=11.0cm,
+            align=center,
+            font=\footnotesize,
+            inner sep=7pt
+        },
+        flow/.style={
+            ->,
+            draw=black!65,
+            line width=0.8pt
+        },
+        distinction/.style={
+            draw=red!55!black,
+            fill=red!4,
+            rounded corners=3pt,
+            line width=0.7pt,
+            text width=11.0cm,
+            align=center,
+            font=\footnotesize,
+            inner sep=7pt
+        }
+    ]
+
+    \node[process] (manifold) {
+        \textbf{Manifold of Sensible Intuition}\\
+        Representations given under the forms of space and time
+    };
+
+    \node[process, below=of manifold] (synthesis) {
+        \textbf{Synthesis of the Manifold}\\
+        Combination according to rules of the understanding
+    };
+
+    \node[central, below=of synthesis] (apperception) {
+        \textbf{Transcendental Unity of Apperception}\\
+        The manifold must be capable of belonging to one
+        self-consciousness: the unity of the ``I think''
+    };
+
+    \node[result, below=of apperception] (categories) {
+        \textbf{Categories and Objective Unity}\\
+        The manifold is represented under rules that make
+        the cognition of objects possible
+    };
+
+    \node[result, below=of categories] (experience) {
+        \textbf{Unified Possible Experience}\\
+        Objects can be represented within one rule-governed
+        experience
+    };
+
+    \draw[flow] (manifold) -- (synthesis);
+    \draw[flow] (synthesis) -- (apperception);
+    \draw[flow] (apperception) -- (categories);
+    \draw[flow] (categories) -- (experience);
+
+    \node[limit, below=0.85cm of experience] (limit) {
+        \textbf{Critical limit of the inference}\\
+        The unity required for objective experience does not,
+        by itself, establish that the transcendental subject
+        is a simple, enduring, substantial soul.
+    };
+
+    \node[distinction, below=0.55cm of limit] (ontology) {
+        \textbf{Ontological question left open}\\
+        What constitutes the identity of a being independently
+        of the conditions under which it is represented as
+        an object of possible experience?
+    };
+
+    \end{tikzpicture}
+
+    \caption{Kant's account of synthesis, transcendental
+    apperception, and the unity of possible experience.
+    The diagram distinguishes the conditions of objective
+    cognition from the ontological constitution of the
+    subject or of the objects represented.}
+
+    \label{fig:VS.B01.P01.C08.S10.SS07.P006.DG01}
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================
