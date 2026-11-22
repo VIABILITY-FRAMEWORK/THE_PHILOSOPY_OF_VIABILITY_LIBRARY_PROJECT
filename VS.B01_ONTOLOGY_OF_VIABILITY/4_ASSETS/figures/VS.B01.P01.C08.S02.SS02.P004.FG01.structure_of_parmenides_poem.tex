@@ -1,80 +1,121 @@
-
 % =============================================================================
-% Project : THE PHILOSOPHY OF VIABILITY
+% Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
-% Chapter : 08 — Comparative Philosophical Examination
-% Section : 02 — Parmenides
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
 %
-% Asset ID:
-%   VS.B01.P01.C08.S02.SS02.P004.FG01
+% File    : 4_ASSETS/figures/VS.B01.P01.C08.S02.SS02.P004.FG01.structure_of_parmenides_poem.tex
 %
-% Type    : FG — Figure
-% File    : structure_of_parmenides_poem.tex
+% Section / Chapter / Asset:
+%   Figure FG01 — Structure of Parmenides' Poem
+%
+% Structural Identifier : VS.B01.P01.C08.S02.SS02.P004.FG01
+% Asset Type : FG
 %
 % Purpose :
-%   Represent the principal textual movements of Parmenides'
-%   poem and make visible the interpretive problem concerning
-%   the relation between Aletheia and Doxa.
+%   To represent the principal textual movements of Parmenides' poem and to
+%   make visible the interpretive problem concerning the relation between
+%   Aletheia and Doxa.
+%
+% Representational limit :
+%   The diagram follows the sequence of the text; it does not settle the
+%   interpretive dispute concerning the relation between Aletheia and Doxa.
+%
+% Dependencies :
+%   TikZ; libraries used: arrows.meta, calc, positioning. All are loaded by
+%   the project preamble; no per-file package or library loading.
+%
 % =============================================================================
 
 \begin{figure}[htbp]
-\centering
+    \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
-\begin{tikzpicture}[
-    node distance=1.25cm,
-    every node/.style={
-        draw,
-        rounded corners,
-        align=center,
-        minimum width=4.2cm,
-        minimum height=0.95cm
-    },
-    flow/.style={->,thick},
-    uncertain/.style={->,dashed,thick}
-]
+    \begin{tikzpicture}[
+        font=\small,
+        node distance=1.0cm,
+        % --- base box ---
+        box/.style={
+            draw, rounded corners=3pt, align=center,
+            text width=4.2cm, minimum height=1.4cm,
+            inner sep=5pt, line width=0.7pt
+        },
+        % --- node roles ---
+        movement/.style={box, fill=blue!8, draw=blue!55!black},
+        openbox/.style={box, text width=9.6cm, dashed, fill=gray!10,
+                        draw=black!60},
+        % --- arrows and labels ---
+        directed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt},
+        disputed/.style={-{Stealth[length=2.5mm]}, line width=0.9pt, dashed},
+        elabel/.style={font=\footnotesize\itshape, text=black!75,
+                       align=center, text width=2.4cm}
+    ]
 
-\node (proem) {Proem\\
-    \small Journey, gates, divine reception};
+    % ---------------------------------------------------------------
+    % Textual sequence
+    % ---------------------------------------------------------------
+    \node[movement] (proem) {
+        \textbf{Proem}\\[2pt]
+        Journey, gates, divine reception
+    };
+    \node[movement, below=of proem] (program) {
+        \textbf{Program of Revelation}\\[2pt]
+        Truth and mortal opinions
+    };
 
-\node (program) [below=of proem] {Program of Revelation\\
-    \small Truth and mortal opinions};
+    % ---------------------------------------------------------------
+    % The two principal accounts
+    % ---------------------------------------------------------------
+    \node[movement] (aletheia) at ($(program)+(-3.0,-3.0)$) {
+        \textbf{Aletheia}\\[2pt]
+        What-is and the deductions of B8
+    };
+    \node[movement] (doxa) at ($(program)+(3.0,-3.0)$) {
+        \textbf{Doxa}\\[2pt]
+        Cosmological account and mortal naming
+    };
 
-\node (aletheia) [below left=1.5cm and 1.1cm of program]
-    {Aletheia\\
-    \small What-is and the deductions of B8};
+    % ---------------------------------------------------------------
+    % Interpretive problem
+    % ---------------------------------------------------------------
+    \coordinate (accounts) at ($(aletheia)!0.5!(doxa)$);
+    \node[openbox, below=2.2cm of accounts] (problem) {
+        \textbf{Interpretive Problem}\\[2pt]
+        What is the ontological and explanatory relation between the
+        two accounts?
+    };
 
-\node (doxa) [below right=1.5cm and 1.1cm of program]
-    {Doxa\\
-    \small Cosmological account and mortal naming};
+    % ---------------------------------------------------------------
+    % Relations
+    % ---------------------------------------------------------------
+    \draw[directed] (proem)   -- (program);
+    \draw[directed] (program) -- (aletheia);
+    \draw[directed] (program) -- (doxa);
+    \draw[disputed] (aletheia.south) -- (aletheia.south |- problem.north)
+        node[elabel, midway, right=4pt] {relation disputed};
+    \draw[disputed] (doxa.south) -- (doxa.south |- problem.north)
+        node[elabel, midway, left=4pt] {status disputed};
 
-\node (problem) [below=2.0cm of program,
-    minimum width=9.3cm]
-    {Interpretive Problem\\
-    \small What is the ontological and explanatory relation
-    between the two accounts?};
+    % ---------------------------------------------------------------
+    % Legend
+    % ---------------------------------------------------------------
+    \node[below=0.6cm of problem, font=\scriptsize] {
+        \tikz[baseline=-0.5ex]\draw[directed] (0,0) -- (0.7,0);~sequence of the text
+        \quad\quad
+        \tikz[baseline=-0.5ex]\draw[disputed] (0,0) -- (0.7,0);~relation open to interpretive dispute
+    };
 
-\draw[flow] (proem) -- (program);
-\draw[flow] (program) -- (aletheia);
-\draw[flow] (program) -- (doxa);
+    \end{tikzpicture}
 
-\draw[uncertain] (aletheia.south) --
-    node[left,draw=none,align=center]
-    {\scriptsize relation\\[-1pt]\scriptsize disputed}
-    (problem.north west);
-
-\draw[uncertain] (doxa.south) --
-    node[right,draw=none,align=center]
-    {\scriptsize status\\[-1pt]\scriptsize disputed}
-    (problem.north east);
-
-\end{tikzpicture}
-
-\caption{The Principal Textual Movements of Parmenides' Poem}
-\label{fig:ch08-parmenides-poem-structure}
-
+    \caption{The principal textual movements of Parmenides' poem. The solid
+    arrows follow the sequence of the text; the dashed arrows mark
+    the relation between Aletheia and Doxa, which remains a matter
+    of interpretive dispute.}
+    \label{fig:ch08-parmenides-poem-structure}
 \end{figure}
 
 % =============================================================================
-% END OF ASSET
+% END OF FIGURE FG01
 % =============================================================================

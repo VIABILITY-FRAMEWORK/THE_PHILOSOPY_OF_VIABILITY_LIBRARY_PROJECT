@@ -2,23 +2,24 @@
 % Project : THE_PHILOSOPHY_OF_VIABILITY
 % Book    : Book I — Ontology of Viability
 % Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation (VS.B01.P01)
+% Chapter : Chapter 02 — Invariance
+% Chapter ID : VS.B01.P01.C02
 %
 % File    : 4_ASSETS/figures/VS.B01.P01.C02.S01.SS04.P001.FG01.invariance_and_transformation.tex
 %
 % Section / Chapter / Asset:
-%   Chapter 02 — Invariance
 %   Figure FG01 — Invariance and Transformation
 %
-% Asset ID:
-%   VS.B01.P01.C02.S01.SS04.P001.FG01.invariance_and_transformation
+% Structural Identifier : VS.B01.P01.C02.S01.SS04.P001.FG01
+% Asset Type : FG
 %
 % Purpose :
-%   To distinguish initial and resulting configurations under
-%   transformation and to illustrate the possible coexistence
-%   of preservation and alteration with respect to different
-%   determinations or relations.
+%   To distinguish initial and resulting configurations under transformation
+%   and to illustrate the possible coexistence of preservation and alteration
+%   with respect to different determinations or relations.
 %
-% Conceptual Policy:
+% Conceptual policy :
 %   1. The figure does not presuppose that an invariant exists.
 %   2. Preservation and alteration are distinct analytical possibilities.
 %   3. They may coexist with respect to different specified features.
@@ -31,32 +32,38 @@
 %   7. The figure is schematic and does not assert a universal
 %      ontological mechanism.
 %
-% Requires (preamble):
-%   \usepackage{tikz}
-%   \usetikzlibrary{arrows.meta, calc, positioning, fit}
+% Representational limit :
+%   The figure is schematic and does not assert a universal ontological
+%   mechanism; it does not presuppose that an invariant exists.
+%
+% Dependencies :
+%   TikZ; libraries used: arrows.meta, calc, positioning, fit. All are loaded
+%   by the project preamble; no per-file package or library loading.
+%
 % =============================================================================
 
 \begin{figure}[htbp]
     \centering
+    \hyphenpenalty=10000 \exhyphenpenalty=10000\relax  % no hyphenation inside diagram labels
 
     \begin{tikzpicture}[
         font=\small,
-        node distance=0.9cm,
+        node distance=0.8cm,
         % --- base box ---
         box/.style={
             draw, rounded corners=3pt, align=center,
             inner sep=5pt, line width=0.7pt
         },
         % --- node roles ---
-        config/.style={box, text width=3.2cm, minimum height=1.9cm,
+        config/.style={box, text width=3.5cm, minimum height=1.9cm,
                        fill=blue!8, draw=blue!55!black},
-        transformation/.style={box, text width=2.4cm, minimum height=1.5cm,
+        transformation/.style={box, text width=3.0cm, minimum height=1.5cm,
                        fill=blue!16, draw=blue!55!black},
         outcome/.style={box, text width=5.0cm, minimum height=2.0cm,
                        fill=gray!10, draw=black!60},
         coexist/.style={box, text width=8.0cm, minimum height=1.6cm,
                        fill=green!8, draw=green!40!black},
-        chip/.style={box, text width=2.3cm, minimum height=0.95cm,
+        chip/.style={box, text width=2.6cm, minimum height=0.95cm,
                      font=\footnotesize, fill=white, draw=black!55},
         % --- frames and labels ---
         vsgroup/.style={draw=black!45, dashed, rounded corners=5pt,
@@ -147,8 +154,11 @@
 
     \end{tikzpicture}
 
-    \caption{Preservation and Alteration as Distinct Possibilities
-    Under Transformation}
+    \caption{Preservation and alteration as distinct possibilities under
+    transformation. The figure is schematic: it does not
+    presuppose that an invariant exists, and neither preservation
+    nor alteration establishes numerical identity or non-identity
+    across configurations.}
     \label{fig:invariance-and-transformation}
 \end{figure}
 
