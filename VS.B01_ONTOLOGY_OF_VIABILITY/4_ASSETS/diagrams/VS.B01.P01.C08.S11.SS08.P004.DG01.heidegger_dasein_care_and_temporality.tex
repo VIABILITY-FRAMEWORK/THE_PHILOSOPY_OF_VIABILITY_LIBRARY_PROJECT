@@ -1,0 +1,193 @@
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Part ID : VS.B01.P01
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/
+%   VS.B01.P01.C08.S11.SS08.P004.DG01.heidegger_dasein_care_and_temporality.tex
+%
+% Section : Section 11 — Martin Heidegger
+%
+% Asset :
+%   Diagram DG01 — Dasein, Care, and Temporality
+%
+% Structural Identifier :
+%   VS.B01.P01.C08.S11.SS08.P004.DG01
+%
+% Purpose :
+%   To represent the structural relations among
+%   being-in-the-world, care, and ecstatic temporality.
+%
+% Intellectual Benefit :
+%   Clarifies the internal organization of Heidegger's
+%   existential analytic and prevents a linear reading
+%   of its interdependent structures.
+%
+% Aesthetic / Experiential Benefit :
+%   Provides a compact visual synthesis of a dense argument.
+%
+% Representational Limit :
+%   The diagram is an interpretive map of Dasein.
+%   It is not a causal sequence or an ontology of all beings.
+%
+% Dependencies :
+%   TikZ; positioning library; project colors.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    font=\small,
+    node distance=0.55cm,
+    structure/.style={
+        draw=ViabilityBlue!75!black,
+        fill=ViabilityPaleBlue,
+        rounded corners=3pt,
+        line width=0.7pt,
+        text width=3.5cm,
+        minimum height=1.0cm,
+        align=center,
+        inner sep=5pt
+    },
+    central/.style={
+        draw=ViabilityGold!85!black,
+        fill=ViabilityPaleGold,
+        rounded corners=3pt,
+        line width=1pt,
+        text width=10.6cm,
+        minimum height=0.9cm,
+        align=center,
+        font=\small\bfseries,
+        inner sep=6pt
+    },
+    temporal/.style={
+        draw=ViabilityGreen!75!black,
+        fill=ViabilityPaleGreen,
+        rounded corners=3pt,
+        line width=0.8pt,
+        text width=3.1cm,
+        minimum height=0.85cm,
+        align=center,
+        inner sep=5pt
+    },
+    limit/.style={
+        draw=ViabilityGray,
+        fill=ViabilityLightGray!35,
+        rounded corners=3pt,
+        text width=10.6cm,
+        align=center,
+        font=\footnotesize,
+        inner sep=6pt
+    },
+    relation/.style={
+        draw=ViabilityDarkBlue,
+        line width=0.8pt,
+        -{Stealth[length=2mm]}
+    }
+]
+
+\node[structure] (world) {
+    \textbf{Worldhood}\\
+    Referential context and significance
+};
+
+\node[structure,right=0.35cm of world] (who) {
+    \textbf{Who}\\
+    Being-with and the anyone-self
+};
+
+\node[structure,right=0.35cm of who] (beingin) {
+    \textbf{Being-in}\\
+    Disposedness, understanding, discourse
+};
+
+\node[central,below=0.8cm of who] (whole) {
+    Being-in-the-world\\
+    A unitary existential phenomenon
+};
+
+\draw[relation] (world.south) -- (whole.north west);
+\draw[relation] (who.south) -- (whole.north);
+\draw[relation] (beingin.south) -- (whole.north east);
+
+\node[central,below=0.65cm of whole] (care) {
+    Care (\textit{Sorge}) — the structural whole of Dasein
+};
+
+\draw[relation] (whole) -- (care);
+
+\node[structure,below=0.55cm of care,xshift=-3.55cm] (projection) {
+    \textbf{Being-ahead-of-itself}\\
+    Projection into possibilities
+};
+
+\node[structure,below=0.55cm of care] (thrown) {
+    \textbf{Already-being-in}\\
+    Thrownness and facticity
+};
+
+\node[structure,below=0.55cm of care,xshift=3.55cm] (involvement) {
+    \textbf{Being-alongside}\\
+    Involvement with entities
+};
+
+\draw[relation] (care.south) -- (projection.north);
+\draw[relation] (care.south) -- (thrown.north);
+\draw[relation] (care.south) -- (involvement.north);
+
+\node[central,below=0.8cm of thrown] (temporality) {
+    Temporality — the ontological meaning of care
+};
+
+\draw[relation] (projection.south) -- (temporality.north west);
+\draw[relation] (thrown.south) -- (temporality.north);
+\draw[relation] (involvement.south) -- (temporality.north east);
+
+\node[temporal,below=0.55cm of temporality,xshift=-3.55cm] (future) {
+    \textbf{Future}\\
+    Coming-toward
+};
+
+\node[temporal,below=0.55cm of temporality] (past) {
+    \textbf{Having-been}\\
+    Inherited situation
+};
+
+\node[temporal,below=0.55cm of temporality,xshift=3.55cm] (present) {
+    \textbf{Present}\\
+    Making-present
+};
+
+\draw[relation] (temporality.south) -- (future.north);
+\draw[relation] (temporality.south) -- (past.north);
+\draw[relation] (temporality.south) -- (present.north);
+
+\node[limit,below=0.75cm of past] (boundary) {
+    \textbf{Comparative limit}\\
+    This structure concerns Dasein's existential analytic.
+    It is not a causal model, a universal inventory of beings,
+    or a definition of Identity in the Ontology of Viability.
+};
+
+\end{tikzpicture}
+
+\caption{The existential structure of Dasein in Heidegger's
+analysis. Being-in-the-world is interpreted through care,
+whose temporal meaning is articulated through the ecstatic
+unity of future, having-been, and present. The relations
+are structural rather than a sequence of efficient causes.}
+
+\label{fig:VS.B01.P01.C08.S11.SS08.P004.DG01}
+
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================
