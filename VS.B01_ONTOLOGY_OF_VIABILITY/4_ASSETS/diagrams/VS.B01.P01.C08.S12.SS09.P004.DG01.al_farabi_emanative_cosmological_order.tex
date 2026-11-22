@@ -1,0 +1,224 @@
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Part ID : VS.B01.P01
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/
+%   VS.B01.P01.C08.S12.SS09.P004.DG01.al_farabi_emanative_cosmological_order.tex
+%
+% Section : Section 12 — Al-Farabi
+%
+% Asset :
+%   Diagram DG01 — Al-Farabi's Emanative Cosmological Order
+%
+% Structural Identifier :
+%   VS.B01.P01.C08.S12.SS09.P004.DG01
+%
+% Purpose :
+%   To represent the broad causal architecture of Al-Farabi's
+%   emanative cosmology and distinguish the First Existent,
+%   the secondary intellects, the celestial order, the Active
+%   Intellect, and the sublunary domain.
+%
+% Intellectual Benefit :
+%   Clarifies the broad relations of causal dependence while
+%   avoiding an unsupported one-to-one mapping of every
+%   intellect to a celestial sphere across all relevant texts.
+%
+% Aesthetic / Experiential Benefit :
+%   Provides a compact visual synthesis of a complex cosmological
+%   structure.
+%
+% Representational Limits :
+%   1. The diagram is schematic, not exhaustive.
+%   2. It does not represent a temporal sequence.
+%   3. The arrangement of immediate effects differs between
+%      the Perfect State and the Political Regime.
+%   4. The Active Intellect is shown separately to clarify
+%      its function; it belongs to the relevant series of
+%      separate intellects.
+%   5. The diagram is not a representation of the domains
+%      or hubs proposed in Book I.
+%   6. The Active Intellect is not identified with Light.
+%
+% Dependencies :
+%   TikZ; positioning library; arrows.meta.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    font=\small,
+    node distance=0.65cm,
+    first/.style={
+        draw=orange!75!black,
+        fill=yellow!15,
+        rounded corners=4pt,
+        line width=1.0pt,
+        text width=8.6cm,
+        minimum height=1.05cm,
+        align=center,
+        font=\small\bfseries,
+        inner sep=7pt
+    },
+    intellect/.style={
+        draw=blue!75!black,
+        fill=blue!8,
+        rounded corners=4pt,
+        line width=0.8pt,
+        text width=8.6cm,
+        minimum height=1.15cm,
+        align=center,
+        inner sep=7pt
+    },
+    celestial/.style={
+        draw=blue!65!black,
+        fill=gray!8,
+        rounded corners=4pt,
+        line width=0.7pt,
+        text width=5.0cm,
+        minimum height=1.15cm,
+        align=center,
+        inner sep=6pt
+    },
+    active/.style={
+        draw=green!55!black,
+        fill=green!9,
+        rounded corners=4pt,
+        line width=0.9pt,
+        text width=5.0cm,
+        minimum height=1.15cm,
+        align=center,
+        inner sep=6pt
+    },
+    sublunary/.style={
+        draw=blue!65!black,
+        fill=gray!15,
+        rounded corners=4pt,
+        line width=0.8pt,
+        text width=8.6cm,
+        minimum height=1.15cm,
+        align=center,
+        inner sep=7pt
+    },
+    note/.style={
+        draw=gray!65,
+        fill=gray!5,
+        rounded corners=3pt,
+        text width=8.6cm,
+        align=left,
+        font=\footnotesize,
+        inner sep=7pt
+    },
+    relation/.style={
+        draw=blue!65!black,
+        line width=0.85pt,
+        -{Stealth[length=2mm]}
+    },
+    explanatory/.style={
+        draw=gray!65,
+        line width=0.7pt,
+        dashed,
+        -{Stealth[length=1.8mm]}
+    }
+]
+
+% ---------------------------------------------------------------------------
+% First Existent
+% ---------------------------------------------------------------------------
+
+\node[first] (first) {
+    The First Existent / First Cause\\
+    Uncaused, independent, and simple
+};
+
+% ---------------------------------------------------------------------------
+% Secondary Separate Intellects
+% ---------------------------------------------------------------------------
+
+\node[intellect, below=of first] (secondary) {
+    Secondary Separate Intellects\\
+    An ordered series of intellectual principles
+};
+
+\draw[relation]
+    (first.south) --
+    node[right, font=\footnotesize, align=left]
+    {Causal\\dependence}
+    (secondary.north);
+
+% ---------------------------------------------------------------------------
+% Celestial Order and Active Intellect
+% ---------------------------------------------------------------------------
+
+\node[celestial, below left=0.85cm and 0.25cm of secondary] (spheres) {
+    \textbf{Celestial Order}\\
+    Spheres and their associated order
+};
+
+\node[active, below right=0.85cm and 0.25cm of secondary] (active) {
+    \textbf{Active Intellect}\\
+    Terminal separate intellect in the familiar sublunary scheme
+};
+
+\draw[relation]
+    (secondary.south west) -- (spheres.north);
+
+\draw[relation]
+    (secondary.south east) -- (active.north);
+
+% ---------------------------------------------------------------------------
+% Sublunary Domain
+% ---------------------------------------------------------------------------
+
+\node[sublunary, below=1.0cm of active] (sublunary) {
+    \textbf{Sublunary Domain}\\
+    Material beings, forms, souls, generation, and corruption
+};
+
+\draw[relation]
+    (active.south) --
+    node[right, font=\footnotesize, align=left]
+    {Governing and\\formative relation}
+    (sublunary.north);
+
+% ---------------------------------------------------------------------------
+% Interpretive Limits
+% ---------------------------------------------------------------------------
+
+\node[note, below=0.75cm of sublunary] (limits) {
+    \textbf{Interpretive limits}\\
+    This diagram presents a broad schematic of Al-Farabi's
+    cosmological account. It does not establish a uniform
+    one-to-one correspondence between every separate intellect
+    and every celestial sphere across all relevant treatises.
+    The Active Intellect is displayed separately for clarity,
+    not as an independent principle outside the intellectual
+    series. The relations shown are metaphysical and causal,
+    not temporal stages.
+};
+
+\end{tikzpicture}
+
+\caption{Schematic representation of the broad causal architecture
+of Al-Farabi's emanative cosmology. The First Existent is the
+first cause of the ordered series of existents. The secondary
+intellects are associated with the celestial order, while the
+Active Intellect occupies a distinctive position in relation
+to the sublunary domain. The diagram does not imply that
+the relevant treatises present an identical arrangement.}
+
+\label{fig:VS.B01.P01.C08.S12.SS09.P004.DG01}
+
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================

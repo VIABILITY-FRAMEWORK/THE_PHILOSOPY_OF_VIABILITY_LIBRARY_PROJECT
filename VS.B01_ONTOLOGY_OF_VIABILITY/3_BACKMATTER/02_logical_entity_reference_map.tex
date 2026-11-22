@@ -24,7 +24,7 @@
 %
 % Dependencies:
 %   Standard LaTeX commands;
-%   array, tabularx, booktabs, xurl, hyperref.
+%   array, tabularx, booktabs, xurl, hyperref, seqsplit.
 %
 % =============================================================================
 
@@ -100,9 +100,10 @@ documentary reference levels of the philosophical library.
 
 \begin{center}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\textwidth}{
+    >{\raggedright\arraybackslash}p{0.13\textwidth}
     >{\raggedright\arraybackslash}p{0.20\textwidth}
-    >{\raggedright\arraybackslash}p{0.23\textwidth}
     >{\raggedright\arraybackslash}X
 }
 \toprule
@@ -170,16 +171,17 @@ A representative full-length structural identifier is:
 
 \begin{center}
 \small
-\url{VS.B01.P01.C01.S01.SS01.P001}
+\path{VS.B01.P01.C01.S01.SS01.P001}
 \end{center}
 
 Its components are interpreted as follows:
 
 \begin{center}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\textwidth}{
-    >{\raggedright\arraybackslash}p{0.14\textwidth}
-    >{\raggedright\arraybackslash}p{0.21\textwidth}
+    >{\raggedright\arraybackslash}p{0.12\textwidth}
+    >{\raggedright\arraybackslash}p{0.18\textwidth}
     >{\raggedright\arraybackslash}X
 }
 \toprule
@@ -270,6 +272,7 @@ according to their respective documentary functions.
 
 \begin{center}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\textwidth}{
     >{\raggedright\arraybackslash}p{0.20\textwidth}
     >{\raggedright\arraybackslash}p{0.23\textwidth}
@@ -376,7 +379,7 @@ A representative asset identifier is:
 
 \begin{center}
 \small
-\url{VS.B01.P01.C01.S01.SS01.P001.TL01}
+\path{VS.B01.P01.C01.S01.SS01.P001.TL01}
 \end{center}
 
 In this example, the final component identifies the asset
@@ -387,6 +390,7 @@ The principal asset codes are:
 
 \begin{center}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\textwidth}{
     >{\raggedright\arraybackslash}p{0.13\textwidth}
     >{\raggedright\arraybackslash}p{0.20\textwidth}
@@ -510,6 +514,7 @@ The established functional codes are:
 
 \begin{center}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\textwidth}{
     >{\raggedright\arraybackslash}p{0.13\textwidth}
     >{\raggedright\arraybackslash}p{0.25\textwidth}
@@ -888,6 +893,7 @@ its own responsibility within the project architecture.
 
 \begin{center}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\textwidth}{
     >{\raggedright\arraybackslash}p{0.32\textwidth}
     >{\raggedright\arraybackslash}X

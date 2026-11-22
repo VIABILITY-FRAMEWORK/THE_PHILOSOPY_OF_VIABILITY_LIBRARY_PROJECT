@@ -130,6 +130,8 @@
 }
 
 \usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta}
 
 % Frequently used TikZ libraries.
 \usetikzlibrary{
@@ -214,7 +216,12 @@
     labelsep=0.65em
 }
 
-
+\setlist[description]{
+    leftmargin=3em,
+    labelsep=0.5em,
+    style=nextline,
+    font=\normalfont\bfseries
+}
 % #############################################################################
 % 07. TECHNICAL AND EXPLANATORY BOXES
 % #############################################################################
