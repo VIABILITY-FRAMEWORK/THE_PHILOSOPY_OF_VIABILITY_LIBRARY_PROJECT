@@ -47,7 +47,8 @@
 %   6. The Active Intellect is not identified with Light.
 %
 % Dependencies :
-%   TikZ; positioning library; arrows.meta.
+%   TikZ; positioning library; arrows.meta. (no other libraries required;
+%   all widths scale with \linewidth).
 %
 % =============================================================================
 
@@ -56,66 +57,56 @@
 
 \begin{tikzpicture}[
     font=\small,
-    node distance=0.65cm,
+    node distance=0.95cm,
+    box/.style={
+        rounded corners=4pt,
+        align=center,
+        inner sep=6pt,
+        minimum height=1.2cm
+    },
     first/.style={
+        box,
         draw=orange!75!black,
         fill=yellow!15,
-        rounded corners=4pt,
         line width=1.0pt,
-        text width=8.6cm,
-        minimum height=1.05cm,
-        align=center,
-        font=\small\bfseries,
-        inner sep=7pt
+        text width=0.50\linewidth
     },
     intellect/.style={
+        box,
         draw=blue!75!black,
         fill=blue!8,
-        rounded corners=4pt,
         line width=0.8pt,
-        text width=8.6cm,
-        minimum height=1.15cm,
-        align=center,
-        inner sep=7pt
-    },
-    celestial/.style={
-        draw=blue!65!black,
-        fill=gray!8,
-        rounded corners=4pt,
-        line width=0.7pt,
-        text width=5.0cm,
-        minimum height=1.15cm,
-        align=center,
-        inner sep=6pt
+        text width=0.50\linewidth
     },
     active/.style={
+        box,
         draw=green!55!black,
         fill=green!9,
-        rounded corners=4pt,
         line width=0.9pt,
-        text width=5.0cm,
-        minimum height=1.15cm,
-        align=center,
-        inner sep=6pt
+        text width=0.50\linewidth
+    },
+    celestial/.style={
+        box,
+        draw=blue!65!black,
+        fill=gray!8,
+        line width=0.7pt,
+        text width=0.26\linewidth
     },
     sublunary/.style={
+        box,
         draw=blue!65!black,
         fill=gray!15,
-        rounded corners=4pt,
         line width=0.8pt,
-        text width=8.6cm,
-        minimum height=1.15cm,
-        align=center,
-        inner sep=7pt
+        text width=0.50\linewidth
     },
     note/.style={
         draw=gray!65,
         fill=gray!5,
         rounded corners=3pt,
-        text width=8.6cm,
+        text width=0.80\linewidth,
         align=left,
         font=\footnotesize,
-        inner sep=7pt
+        inner sep=6pt
     },
     relation/.style={
         draw=blue!65!black,
@@ -127,93 +118,102 @@
         line width=0.7pt,
         dashed,
         -{Stealth[length=1.8mm]}
+    },
+    elabel/.style={
+        font=\scriptsize,
+        align=left,
+        inner sep=2pt
     }
 ]
 
 % ---------------------------------------------------------------------------
-% First Existent
+% Main vertical axis: First Existent -> Secondary Intellects -> Active Intellect
 % ---------------------------------------------------------------------------
 
 \node[first] (first) {
-    The First Existent / First Cause\\
+    \textbf{The First Existent / First Cause}\\
     Uncaused, independent, and simple
 };
 
-% ---------------------------------------------------------------------------
-% Secondary Separate Intellects
-% ---------------------------------------------------------------------------
-
 \node[intellect, below=of first] (secondary) {
-    Secondary Separate Intellects\\
+    \textbf{Secondary Separate Intellects}\\
     An ordered series of intellectual principles
 };
 
-\draw[relation]
-    (first.south) --
-    node[right, font=\footnotesize, align=left]
-    {Causal\\dependence}
-    (secondary.north);
-
-% ---------------------------------------------------------------------------
-% Celestial Order and Active Intellect
-% ---------------------------------------------------------------------------
-
-\node[celestial, below left=0.85cm and 0.25cm of secondary] (spheres) {
-    \textbf{Celestial Order}\\
-    Spheres and their associated order
-};
-
-\node[active, below right=0.85cm and 0.25cm of secondary] (active) {
+\node[active, below=of secondary] (active) {
     \textbf{Active Intellect}\\
     Terminal separate intellect in the familiar sublunary scheme
 };
 
-\draw[relation]
-    (secondary.south west) -- (spheres.north);
-
-\draw[relation]
-    (secondary.south east) -- (active.north);
-
-% ---------------------------------------------------------------------------
-% Sublunary Domain
-% ---------------------------------------------------------------------------
-
-\node[sublunary, below=1.0cm of active] (sublunary) {
+\node[sublunary, below=1.15cm of active] (sublunary) {
     \textbf{Sublunary Domain}\\
     Material beings, forms, souls, generation, and corruption
 };
 
-\draw[relation]
-    (active.south) --
-    node[right, font=\footnotesize, align=left]
-    {Governing and\\formative relation}
+% ---------------------------------------------------------------------------
+% Celestial Order (beside the series, outside it)
+% ---------------------------------------------------------------------------
+
+\node[celestial, right=1.7cm of secondary] (spheres) {
+    \textbf{Celestial Order}\\
+    Spheres and their associated order
+};
+
+% ---------------------------------------------------------------------------
+% Frame: the Active Intellect belongs to the series of separate intellects
+% ---------------------------------------------------------------------------
+
+\draw[blue!60!black, densely dotted, line width=0.6pt, rounded corners=6pt]
+    ([xshift=-3.5mm, yshift=9mm]secondary.north west) rectangle
+    ([xshift= 3.5mm, yshift=-3.5mm]active.south east);
+
+\node[font=\scriptsize\itshape, text=blue!60!black, anchor=north west,
+      inner sep=2pt]
+    at ([xshift=-3.5mm, yshift=9mm]secondary.north west)
+    {Series of separate intellects};
+
+% ---------------------------------------------------------------------------
+% Relations
+% ---------------------------------------------------------------------------
+
+\draw[relation] (first.south) -- 
+    node[elabel, right, xshift=2pt] {Causal dependence}
+    (secondary.north);
+
+\draw[relation] (secondary.south) -- 
+    node[elabel, right, xshift=2pt] {Continued ordered dependence}
+    (active.north);
+
+\draw[explanatory] (secondary.east) -- 
+    node[elabel, above, align=center] {associated\\with}
+    (spheres.west);
+
+\draw[relation] (active.south) -- 
+    node[elabel, right, xshift=2pt] {Governing and formative relation}
     (sublunary.north);
 
 % ---------------------------------------------------------------------------
-% Interpretive Limits
+% Interpretive limits
 % ---------------------------------------------------------------------------
 
-\node[note, below=0.75cm of sublunary] (limits) {
-    \textbf{Interpretive limits}\\
-    This diagram presents a broad schematic of Al-Farabi's
-    cosmological account. It does not establish a uniform
-    one-to-one correspondence between every separate intellect
-    and every celestial sphere across all relevant treatises.
-    The Active Intellect is displayed separately for clarity,
-    not as an independent principle outside the intellectual
-    series. The relations shown are metaphysical and causal,
-    not temporal stages.
+\node[note, anchor=north west]
+    (limits) at ([xshift=-3.5mm, yshift=-7mm]sublunary.south west) {
+    \textbf{Interpretive limits.} Schematic only: no uniform one-to-one
+    correspondence between each separate intellect and each celestial
+    sphere is claimed across all treatises. The Active Intellect is
+    displayed apart for clarity, not as a principle outside the intellectual
+    series. Relations are metaphysical and causal, not temporal stages.
 };
 
 \end{tikzpicture}
 
-\caption{Schematic representation of the broad causal architecture
-of Al-Farabi's emanative cosmology. The First Existent is the
-first cause of the ordered series of existents. The secondary
-intellects are associated with the celestial order, while the
-Active Intellect occupies a distinctive position in relation
-to the sublunary domain. The diagram does not imply that
-the relevant treatises present an identical arrangement.}
+\caption{Schematic representation of the broad causal architecture of
+Al-Farabi's emanative cosmology. The First Existent is the first cause of
+the ordered series of existents. The secondary intellects are associated
+with the celestial order, while the Active Intellect, as the terminal member
+of the series, stands in a governing and formative relation to the sublunary
+domain. The diagram does not imply that the relevant treatises present an
+identical arrangement.}
 
 \label{fig:VS.B01.P01.C08.S12.SS09.P004.DG01}
 
