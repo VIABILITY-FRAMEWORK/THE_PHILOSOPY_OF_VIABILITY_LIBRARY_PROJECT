@@ -38,191 +38,190 @@
 %   They are not Al-Farabi's own taxonomy of claims or knowledge.
 %
 % Dependencies :
-%   longtable, booktabs, array.
+%   longtable, booktabs, array. (column widths scale with \linewidth;
+%   all formatting changes are local to a group and do not leak.)
 %
 % =============================================================================
 
+\begingroup
 \small
-\renewcommand{\arraystretch}{1.20}
+\renewcommand{\arraystretch}{1.18}
 \setlength{\tabcolsep}{4pt}
+\setlength{\LTcapwidth}{\linewidth}
 
-\begin{longtable}{
-    >{\raggedright\arraybackslash}p{2.0cm}
-    >{\raggedright\arraybackslash}p{2.6cm}
-    >{\raggedright\arraybackslash}p{2.25cm}
-    >{\raggedright\arraybackslash}p{2.55cm}
-    >{\raggedright\arraybackslash}p{4.0cm}
-}
+% ---- local helpers (group-local; safe to input more than once) ----
+\def\colw#1{\dimexpr(\linewidth-8\tabcolsep)*#1/100\relax}
+\def\rowsep{\specialrule{0.2pt}{3pt}{3pt}}
+\def\tablehead{%
+    \toprule
+    \textbf{Claim or issue} &
+    \textbf{Historical reconstruction} &
+    \textbf{Functional or logical form} &
+    \textbf{Epistemic or justificatory status} &
+    \textbf{Comparative limit for Book~I} \\
+    \midrule}
+\def\grouprow#1{%
+    \multicolumn{5}{@{}l}{\footnotesize\textsc{#1}} \\
+    \cmidrule{1-5}
+    \addlinespace[1pt]}
+% Epistemic-status labels (exact wording preserved)
+\def\EpArg{Argued or Derived Claims}
+\def\EpCond{Conditionally Supported Claims}
+\def\EpOpen{Unresolved or Open Problems}
+
+\begin{longtable}{@{}
+    >{\raggedright\arraybackslash}p{\colw{13}}
+    >{\raggedright\arraybackslash}p{\colw{25}}
+    >{\raggedright\arraybackslash}p{\colw{14}}
+    >{\raggedright\arraybackslash}p{\colw{15}}
+    >{\raggedright\arraybackslash}p{\colw{33}}
+@{}}
 
 \caption{Al-Farabi's Principal Claims and Their Comparative Limits}
 \label{tab:VS.B01.P01.C08.S12.SS16.P003.TL01} \\
-
-\toprule
-\textbf{Claim or issue}
-&
-\textbf{Historical reconstruction}
-&
-\textbf{Functional or logical form}
-&
-\textbf{Epistemic or justificatory status}
-&
-\textbf{Comparative limit for Book I}
-\\
-\midrule
+\tablehead
 \endfirsthead
 
-\toprule
-\textbf{Claim or issue}
-&
-\textbf{Historical reconstruction}
-&
-\textbf{Functional or logical form}
-&
-\textbf{Epistemic or justificatory status}
-&
-\textbf{Comparative limit for Book I}
-\\
-\midrule
+\multicolumn{5}{@{}l}{\footnotesize\textit{Table~\thetable\ (continued): Al-Farabi's Principal Claims and Their Comparative Limits}} \\
+\tablehead
 \endhead
 
-\midrule
-\multicolumn{5}{r}{\footnotesize\textit{Continued on next page}}\\
+\multicolumn{5}{@{}r}{\footnotesize\textit{Continued on next page}} \\
 \endfoot
 
 \bottomrule
 \endlastfoot
 
-Being
+\grouprow{Being and unity}
+
+\textbf{Being}
 &
 Al-Farabi distinguishes several senses of Being, including Being as true and Being as circumscribed by a quiddity outside the soul.
 &
 Proposition
 &
-Argued or Derived Claims
+\EpArg
 &
 The differentiation of senses does not establish that Being is identical with Identity or that its ontological status depends upon cognition.
 \\
+\rowsep
 
-\addlinespace
-
-Unity
+\textbf{Unity}
 &
 Al-Farabi distinguishes numerical unity, continuity, indivisibility, uniqueness, and circumscription by quiddity.
 &
 Proposition
 &
-Argued or Derived Claims
+\EpArg
 &
 The plurality of senses of Unity supports conceptual differentiation but does not establish that Unity is identical with Identity, Singularity, or Composition.
 \\
+\rowsep
 
-\addlinespace
-
-Unity and quiddity
+\textbf{Unity and quiddity}
 &
 A particular sense of being one is connected with the circumscription of an existent by its quiddity.
 &
 Proposition
 &
-Conditionally Supported Claims
+\EpCond
 &
 A specified relation between Unity and quiddity cannot be generalized into an identity of Unity, quiddity, and Identity.
 \\
+\rowsep
 
-\addlinespace
+\grouprow{Cosmology and causal order}
 
-The First Existent
+\textbf{The First Existent}
 &
 The First is presented as uncaused, independent, simple, unique, and the first cause of the existence of other beings.
 &
 Foundational Commitment within Al-Farabi's system
 &
-Conditionally Supported Claims
+\EpCond
 &
 The First Existent is not equivalent to Being as such, Identity, or any proposed realm of Book I.
 \\
+\rowsep
 
-\addlinespace
-
-Emanation
+\textbf{Emanation}
 &
 Dependent existents proceed from the First without adding to its perfection or requiring an alteration in it.
 &
 Thesis
 &
-Conditionally Supported Claims
+\EpCond
 &
 Causal production is not equivalent to Expression or Manifestation, and causal dependence does not by itself explain the Identity of the dependent existent.
 \\
+\rowsep
 
-\addlinespace
-
-Secondary intellects and celestial order
+\textbf{Secondary intellects and celestial order}
 &
 The First is followed by an ordered series of separate intellects associated with the celestial structure; details differ between relevant treatises.
 &
 Proposition
 &
-Conditionally Supported Claims
+\EpCond
 &
 The cosmological hierarchy is not equivalent to the proposed domains and hubs of Book I.
 \\
+\rowsep
 
-\addlinespace
-
-Active Intellect
+\textbf{Active Intellect}
 &
 The Active Intellect occupies a distinct position in the separate-intellect order and is connected with the sublunary domain and human intellectual activity.
 &
 Proposition
 &
-Argued or Derived Claims
+\EpArg
 &
 The Active Intellect is not identical with Light or with a foundational component of the ontology of Book I.
 \\
+\rowsep
 
-\addlinespace
+\grouprow{Political analogy}
 
-The virtuous city
+\textbf{The virtuous city}
 &
 The city is related analogically to the ordered cosmos and to the differentiated organization of an organism.
 &
 Thesis
 &
-Conditionally Supported Claims
+\EpCond
 &
 The analogy does not by itself establish the normative legitimacy of a political hierarchy or define the Identity of a social entity.
 \\
+\rowsep
 
-\addlinespace
+\grouprow{Comparative position}
 
-Relation to Book I
+\textbf{Relation to Book I}
 &
 Al-Farabi's analysis of Being, Unity, quiddity, and causal dependence overlaps with problems examined in Part I but uses a distinct explanatory architecture.
 &
 Thesis
 &
-Argued or Derived Claims
+\EpArg
 &
 The relation is critical proximity without conceptual equivalence or direct doctrinal continuity.
 \\
+\rowsep
 
-\addlinespace
-
-Identity and quiddity
+\textbf{Identity and quiddity}
 &
 The relation between Al-Farabi's account of circumscription by quiddity and the ontological status of Identity remains open to further analysis.
 &
 Open Problem
 &
-Unresolved or Open Problems
+\EpOpen
 &
 The question cannot be settled by substituting Identity for quiddity or by treating the two terms as interchangeable.
 \\
 
 \end{longtable}
 
-\normalsize
+\endgroup
 
 % =============================================================================
 % END OF TABLE TL01
