@@ -1,0 +1,156 @@
+
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : Part I — Identity and Manifestation
+% Part ID : VS.B01.P01
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Chapter ID : VS.B01.P01.C08
+%
+% File :
+%   4_ASSETS/diagrams/
+%   VS.B01.P01.C08.S13.SS08.P005.DG01.avicenna_modal_causal_dependence.tex
+%
+% Asset :
+%   DG01 — Avicenna's Modal and Causal Dependence
+%
+% Structural Identifier :
+%   VS.B01.P01.C08.S13.SS08.P005.DG01
+%
+% Purpose :
+%   To distinguish the possible existent considered in itself
+%   from the same existent considered as necessary through
+%   its complete cause, and to indicate the explanatory
+%   dependence of caused existents upon the First Principle.
+%
+% Dependencies :
+%   tikz, positioning, arrows.meta.
+%   These are already loaded by the Book I preamble.
+%
+% Philosophical and Representational Limits :
+%   1. The diagram is schematic and not an exhaustive map
+%      of Avicenna's cosmology.
+%   2. The two modal descriptions concern the same caused
+%      existent under different respects; they are not
+%      successive temporal stages.
+%   3. The arrows indicate causal or explanatory dependence,
+%      not temporal succession.
+%   4. The causal series is simplified for explanatory clarity.
+%   5. The diagram does not imply that the First Principle
+%      is identical with Being as such or First Determination.
+%   6. The diagram does not map Avicenna's cosmology onto
+%      the proposed realms and hubs of Book I.
+%   7. Causal dependence is not equated with Manifestation.
+%
+% =============================================================================
+
+\begin{figure}[htbp]
+    \centering
+
+    \begin{tikzpicture}[
+        node distance=0.78cm,
+        principle/.style={
+            draw=ViabilityGold,
+            fill=ViabilityPaleGold,
+            rounded corners=2pt,
+            line width=0.8pt,
+            text width=0.70\linewidth,
+            align=center,
+            inner sep=7pt
+        },
+        mediation/.style={
+            draw=ViabilityBlue,
+            fill=ViabilityPaleBlue,
+            rounded corners=2pt,
+            line width=0.7pt,
+            text width=0.70\linewidth,
+            align=center,
+            inner sep=7pt
+        },
+        caused/.style={
+            draw=ViabilityGreen,
+            fill=ViabilityPaleGreen,
+            rounded corners=2pt,
+            line width=0.8pt,
+            text width=0.82\linewidth,
+            align=center,
+            inner sep=8pt
+        },
+        dependence/.style={
+            -{Stealth[length=2.2mm]},
+            draw=ViabilityDarkBlue,
+            line width=0.85pt
+        },
+        relationlabel/.style={
+            fill=white,
+            text=ViabilityDarkBlue,
+            font=\footnotesize,
+            inner sep=2pt,
+            align=center
+        }
+    ]
+
+    \node[principle] (first) {
+        \textbf{Necessary Existent in Itself}\\[3pt]
+        Uncaused; independent; not necessitated by another
+    };
+
+    \node[mediation, below=of first] (series) {
+        \textbf{Causal Order}\\[3pt]
+        Intermediate causes and relations of dependence
+    };
+
+    \node[mediation, below=of series] (cause) {
+        \textbf{Complete Cause of a Caused Existent}\\[3pt]
+        The causal conditions sufficient for its existence
+    };
+
+    \node[caused, below=of cause] (effect) {
+        \textbf{One Caused Existent Considered under Two Respects}\\[7pt]
+
+        \begin{tabular}{c}
+            \textbf{In itself:}\\
+            Possible Existent
+            \\[5pt]
+            \textbf{In relation to its complete cause:}\\
+            Necessary through Another
+        \end{tabular}
+    };
+
+    \draw[dependence]
+        (first) --
+        node[relationlabel, right] {ultimate causal\\grounding}
+        (series);
+
+    \draw[dependence]
+        (series) --
+        node[relationlabel, right] {mediated causal\\dependence}
+        (cause);
+
+    \draw[dependence]
+        (cause) --
+        node[relationlabel, right] {necessitation\\through another}
+        (effect);
+
+    \end{tikzpicture}
+
+    \caption[
+        Avicenna's distinction between possibility in itself
+        and necessity through another
+    ]{
+        Avicenna's modal and causal account of a caused existent.
+        The possible existent remains possible when considered
+        in itself, while its existence is necessary through
+        another when considered in relation to its complete
+        cause. The causal order is represented schematically;
+        the diagram does not depict a temporal sequence.
+    }
+
+    \label{fig:VS.B01.P01.C08.S13.SS08.P005.DG01}
+
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM DG01
+% =============================================================================
