@@ -12,17 +12,13 @@
 | Branch | `main` |
 | Document type | Philosophical research and book-production project (LaTeX) |
 | Document role | Single entry point: framework, method, architecture, rules, workflow |
+| Repository state recorded | 23 November 2026 (§24) |
 
 ---
 
 # 0. How to Use This Document
 
-This README is written so that an AI agent with **no prior knowledge of the project or its author** can pick up the work and continue it correctly. It consolidates four source documents:
-
-1. The earlier project README (overview, directory documentation, editorial principles).
-2. The *Revised Book Architecture and Chapter Contents* (the 4-Part, 40-chapter architecture).
-3. The *Consolidated Writing and Revision Protocol* and its *Addendum* (the binding procedures for research, writing, sourcing, referencing, assets, validation and delivery).
-4. The *Operational Writing, Revision, Asset Production, and Commit Protocol* (mandatory response structure, claim-registry prefix meanings, complete-file delivery, compilation-claim levels, commit message, local/remote workflow).
+This README is written so that an AI agent with **no prior knowledge of the project or its author** can pick up the work and continue it correctly. It combines, in one binding document, the book's architecture and chapter contents; the research, writing, sourcing, referencing, asset and validation protocols; the operational delivery rules (mandatory response structure, claim-registry prefix meanings, complete-file delivery, compilation-claim levels, commit message, local/remote workflow); and a dated, verified record of the repository as it actually exists (§12, §24).
 
 ## 0.1 Reading order for a new agent
 
@@ -30,7 +26,7 @@ This README is written so that an AI agent with **no prior knowledge of the proj
 2. Read §6–§9 (architecture, commitments, distinctions, open questions) before touching any philosophical content.
 3. Read §10–§13 (claim status, chapter boundaries, repository structure, identifiers) and §18 (assets) before producing any file.
 4. Read §14 (the mandatory algorithm) and follow it for **every** task.
-5. Use §15–§22 as reference while working (§21.3–§21.6 fix the structure of every delivery, including the commit message), and §23–§25 (rewrite order, known discrepancies, definition of done) as the final checklist.
+5. Use §15–§22 as reference while working (§21.3–§21.6 fix the structure of every delivery, including the commit message), and §23–§25 (order of work, verified repository state and open items, definition of done) as the final checklist.
 
 ## 0.2 Normative language
 
@@ -86,7 +82,7 @@ It is **not** a mere introduction to a position. It is a systematic reconstructi
 
 - `VS` = Viability System. Book I is the ontological base on which later books build.
 - Epistemological topics (knowledge, mind, perception, language, self-consciousness, ignorance, and the **cognitive four-column framework**) belong mainly to a **separate epistemological investigation (Book II)**. They MUST NOT serve as the foundation of Book I.
-- Do not import material from other books or volumes unless the author explicitly authorizes it.
+- Do not import material from other books or volumes unless the author explicitly authorizes it. The author's own legacy corpus (`My_Legacy_Works`; §14 Phase 3 and §14.2) is the authorized raw material of Book I and is not covered by this restriction.
 - Book I prepares the ground for the theory of viability but MUST NOT force a premature or unsupported definition of Viability (see §7.7).
 
 ## 2.4 Two simultaneous duties of every reconstruction
@@ -175,7 +171,8 @@ Aesthetic consistency does not mean that every asset must look identical. The de
 
 The reader is not merely a recipient of propositions. The book should be intellectually demanding without being visually exhausting. Plan visual assets to support attention, orientation, imagination, memory, pacing and reading pleasure. Consider where a reader would benefit from a visual pause, a concrete scene, a compact overview, a comparison, or a memorable visual treatment of an important theme.
 
-At the same time, visual design must respect philosophical accuracy. Aesthetic composition must not silently turn an open question into a settled answer, imply unsupported causality or hierarchy, or make a provisional construction appear established by visual treatment
+At the same time, visual design must respect philosophical accuracy. Aesthetic composition must not silently turn an open question into a settled answer, imply unsupported causality or hierarchy, or make a provisional construction appear established by visual treatment.
+
 ---
 
 # 4. Authority and Conflict Resolution
@@ -185,7 +182,7 @@ At the same time, visual design must respect philosophical accuracy. Aesthetic c
 1. **Explicit current instructions from the author.**
 2. **The live repository** (real paths, real filenames, real current text, real commit state) — authoritative for *what exists*.
 3. **This README** — authoritative for philosophy, architecture, process and rules.
-4. **The author's previous works** (`main.pdf`, `main1.pdf`, `main2.pdf`, `main3.pdf`, `v3`, `v4`, and other library documents) — a repository of ideas and the history of the theory; **not** a final or uncriticizable authority.
+4. **The author's legacy works** (the corpus in `My_Legacy_Works`; files whose names begin with `PH` are philosophical, files whose names begin with `SC` are scientific; §14.2) — the raw material of Book I, a repository of ideas and the history of the theory; **not** a final or uncriticizable authority.
 5. External sources — evidence and interlocutors, never authorities that override the author's system.
 
 ## 4.2 Three-way reconciliation
@@ -193,7 +190,7 @@ At the same time, visual design must respect philosophical accuracy. Aesthetic c
 Every rewrite is the product of reconciling three sets of material:
 
 1. **Real remote text and structure** (what is in the repository now).
-2. **The author's previous works** (how the theory developed).
+2. **The author's legacy works in `My_Legacy_Works`** (how the theory developed).
 3. **Book I's current foundations and outlook** (what is adopted, conditional, or open).
 
 If these conflict, the agent MUST identify the conflict and decide with theoretical coherence in mind. It MUST NOT hide real philosophical disagreements to create superficial harmony.
@@ -202,8 +199,8 @@ If these conflict, the agent MUST identify the conflict and decide with theoreti
 
 - **Paths, filenames, directory layout:** the repository is the truth. Never fabricate or "fix" a path to match this README. If a file is not where expected, inspect the real repository structure; do not invent an alternative.
 - **Philosophy, rules and process:** this README governs unless the author instructs otherwise.
-- Record the discrepancy and report it (see §24 for known discrepancies).
-- **Operational protocol precedence:** the operational protocol (merged into §10.3, §13, §18, §20 and §21.3–§21.6) governs the workflow and structure of deliveries but does not override more specific philosophical, structural or technical requirements; where a more specific rule exists, it governs. Its meanings of the registry prefixes (`TH` = Theorem, `PF` = Proof) are authoritative and supersede the earlier README's meanings (see §10.3 and §24).
+- Record the discrepancy and report it (see §24 for the verified repository state and open items).
+- **Operational protocol precedence:** the operational protocol (merged into §10.3, §13, §18, §20 and §21.3–§21.6) governs the workflow and structure of deliveries but does not override more specific philosophical, structural or technical requirements; where a more specific rule exists, it governs. Its meanings of the registry prefixes (`TH` = Theorem, `PF` = Proof) are authoritative (§10.3).
 
 ---
 
@@ -216,6 +213,7 @@ If these conflict, the agent MUST identify the conflict and decide with theoreti
 - The author MUST NOT have to repeat established protocols and instructions.
 - Distinguish verified results from assumptions in every report.
 - Never claim access, modification, commit, push, compilation or validation that did not actually happen.
+- If a needed file or directory lies outside what the agent can access (for example the legacy corpus `My_Legacy_Works`), say so once, state exactly what was not inspected, and request access or the files. Never reconstruct their content from memory or from filenames.
 
 ---
 
@@ -241,52 +239,52 @@ The four Parts form one connected investigation:
 
 ## 6.3 Chapter map
 
-| Part | Ch. | Directory / topic | Function |
-| --- | --- | --- | --- |
-| I | 01 | `CHAPTER_01_IDENTITY` | Ontological status of identity and its relation to being |
-| I | 02 | `CHAPTER_02_INVARIANCE` | Invariance as a distinct ontological/conceptual problem |
-| I | 03 | `CHAPTER_03_UNITY_AND_PLURALITY` | Unity and the possibility of plurality (9 sections) |
-| I | 04 | `CHAPTER_04_EXPRESSION` | Expression and its relation to identity and manifestation (9 sections) |
-| I | 05 | `CHAPTER_05_IDENTITY_AND_CONTINUITY` | Persistence, continuity, change (7 sections) |
-| I | 06 | `CHAPTER_06_SYNTHESIS_OF_IDENTITY` | Conceptual synthesis of Part I (4 sections) |
-| I | 07 | `CHAPTER_07_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Formal reconstruction of Part I |
-| I | 08 | `CHAPTER_08_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Comparative and dialectical examination of Part I |
-| II | 09 | `CHAPTER_09_ARCHITECTURE_OF_THE_REALMS` | Problem and proposed architecture of realms |
-| II | 10 | `CHAPTER_10_FIRST_DETERMINATION` | First Determination |
-| II | 11 | `CHAPTER_11_STRUCTURAL_DETERMINATION` | Structural Determination |
-| II | 12 | `CHAPTER_12_RELATIONAL_MANIFESTATION` | Relational Manifestation |
-| II | 13 | `CHAPTER_13_MATERIAL_MANIFESTATION` | Material Manifestation |
-| II | 14 | `CHAPTER_14_HUB_OF_DECREE` | Hub of Decree |
-| II | 15 | `CHAPTER_15_HUB_OF_SIGNIFICATION` | Hub of Signification |
-| II | 16 | `CHAPTER_16_HUB_OF_REALIZATION` | Hub of Realization |
-| II | 17 | `CHAPTER_17_SYNTHESIS_OF_THE_REALMS` | Synthesis of realms and hubs |
-| II | 18 | `CHAPTER_18_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Formal reconstruction of the realms |
-| II | 19 | `CHAPTER_19_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Comparative examination of the realms |
-| III | 20 | `CHAPTER_20_ONTOLOGY_OF_LIGHT` | Light as an ontological problem |
-| III | 21 | `CHAPTER_21_LIGHT_AND_IDENTITY` | Light and identity |
-| III | 22 | `CHAPTER_22_LIGHT_AND_THE_REALMS` | Light and the architecture of Part II |
-| III | 23 | `CHAPTER_23_FORMS_AND_DYNAMICS_OF_LIGHT` | Forms and dynamic functions of light |
-| III | 24 | `CHAPTER_24_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Formal reconstruction of light |
-| III | 25 | `CHAPTER_25_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Comparative examination of light |
-| IV | 26 | `CHAPTER_26_ONTOLOGY_OF_DYNAMICS` | The ontological problem of dynamics |
-| IV | 27 | `CHAPTER_27_BECOMING_AND_CHANGE` | Becoming and change |
-| IV | 28 | `CHAPTER_28_RELATIONS_AND_INTERACTION` | Relations and interaction |
-| IV | 29 | `CHAPTER_29_EMERGENCE_AND_FORMATION` | Emergence and formation |
-| IV | 30 | `CHAPTER_30_MANIFESTATION` | Manifestation as a dynamic process |
-| IV | 31 | `CHAPTER_31_CONTINUITY_AND_DISCONTINUITY` | Continuity and discontinuity in dynamic being |
-| IV | 32 | `CHAPTER_32_TEMPORALITY` | Time and temporality |
-| IV | 33 | `CHAPTER_33_TRANSFORMATION_AND_TRANSITION` | Transformation and transition |
-| IV | 34 | `CHAPTER_34_GENERATION_AND_DISSOLUTION` | Generation and dissolution |
-| IV | 35 | `CHAPTER_35_REVERSIBILITY_AND_IRREVERSIBILITY` | Reversibility and irreversibility |
-| IV | 36 | `CHAPTER_36_COST_RESIDUE_AND_CONSEQUENCE` | Cost, residue, consequence |
-| IV | 37 | `CHAPTER_37_LIMITS_OF_ONTOLOGICAL_DYNAMICS` | Limits of the dynamic account |
-| IV | 38 | `CHAPTER_38_INTEGRATED_ONTOLOGICAL_RECONSTRUCTION` | Final conceptual synthesis of Book I |
-| IV | 39 | `CHAPTER_39_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Integrated formal reconstruction of the whole book |
-| IV | 40 | `CHAPTER_40_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Integrated comparative examination of the whole ontology |
+| Part | Ch. | Directory / topic | Function | Repository status |
+| --- | --- | --- | --- | --- |
+| I | 01 | `CHAPTER_01_IDENTITY` | Ontological status of identity and its relation to being | Present — 11 section files |
+| I | 02 | `CHAPTER_02_INVARIANCE` | Invariance as a distinct ontological/conceptual problem | Present — 11 section files |
+| I | 03 | `CHAPTER_03_UNITY_AND_PLURALITY` | Unity and the possibility of plurality (9 sections) | Present — 9 section files |
+| I | 04 | `CHAPTER_04_EXPRESSION` | Expression and its relation to identity and manifestation (9 sections) | Present — 9 section files |
+| I | 05 | `CHAPTER_05_IDENTITY_AND_CONTINUITY` | Persistence, continuity, change (7 sections) | Present — 7 section files |
+| I | 06 | `CHAPTER_06_SYNTHESIS_OF_IDENTITY` | Conceptual synthesis of Part I (4 sections) | Present — 4 section files |
+| I | 07 | `CHAPTER_07_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Formal reconstruction of Part I | Present — 18 section files |
+| I | 08 | `CHAPTER_08_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Comparative and dialectical examination of Part I | Present — 24 section files (01–10 developed; 11–24 structural placeholders) |
+| II | 09 | `CHAPTER_09_ARCHITECTURE_OF_THE_REALMS` | Problem and proposed architecture of realms | Not created |
+| II | 10 | `CHAPTER_10_FIRST_DETERMINATION` | First Determination | Not created |
+| II | 11 | `CHAPTER_11_STRUCTURAL_DETERMINATION` | Structural Determination | Not created |
+| II | 12 | `CHAPTER_12_RELATIONAL_MANIFESTATION` | Relational Manifestation | Not created |
+| II | 13 | `CHAPTER_13_MATERIAL_MANIFESTATION` | Material Manifestation | Not created |
+| II | 14 | `CHAPTER_14_HUB_OF_DECREE` | Hub of Decree | Not created |
+| II | 15 | `CHAPTER_15_HUB_OF_SIGNIFICATION` | Hub of Signification | Not created |
+| II | 16 | `CHAPTER_16_HUB_OF_REALIZATION` | Hub of Realization | Not created |
+| II | 17 | `CHAPTER_17_SYNTHESIS_OF_THE_REALMS` | Synthesis of realms and hubs | Not created |
+| II | 18 | `CHAPTER_18_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Formal reconstruction of the realms | Not created |
+| II | 19 | `CHAPTER_19_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Comparative examination of the realms | Not created |
+| III | 20 | `CHAPTER_20_ONTOLOGY_OF_LIGHT` | Light as an ontological problem | Not created |
+| III | 21 | `CHAPTER_21_LIGHT_AND_IDENTITY` | Light and identity | Not created |
+| III | 22 | `CHAPTER_22_LIGHT_AND_THE_REALMS` | Light and the architecture of Part II | Not created |
+| III | 23 | `CHAPTER_23_FORMS_AND_DYNAMICS_OF_LIGHT` | Forms and dynamic functions of light | Not created |
+| III | 24 | `CHAPTER_24_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Formal reconstruction of light | Not created |
+| III | 25 | `CHAPTER_25_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Comparative examination of light | Not created |
+| IV | 26 | `CHAPTER_26_ONTOLOGY_OF_DYNAMICS` | The ontological problem of dynamics | Not created |
+| IV | 27 | `CHAPTER_27_BECOMING_AND_CHANGE` | Becoming and change | Not created |
+| IV | 28 | `CHAPTER_28_RELATIONS_AND_INTERACTION` | Relations and interaction | Not created |
+| IV | 29 | `CHAPTER_29_EMERGENCE_AND_FORMATION` | Emergence and formation | Not created |
+| IV | 30 | `CHAPTER_30_MANIFESTATION` | Manifestation as a dynamic process | Not created |
+| IV | 31 | `CHAPTER_31_CONTINUITY_AND_DISCONTINUITY` | Continuity and discontinuity in dynamic being | Not created |
+| IV | 32 | `CHAPTER_32_TEMPORALITY` | Time and temporality | Not created |
+| IV | 33 | `CHAPTER_33_TRANSFORMATION_AND_TRANSITION` | Transformation and transition | Not created |
+| IV | 34 | `CHAPTER_34_GENERATION_AND_DISSOLUTION` | Generation and dissolution | Not created |
+| IV | 35 | `CHAPTER_35_REVERSIBILITY_AND_IRREVERSIBILITY` | Reversibility and irreversibility | Not created |
+| IV | 36 | `CHAPTER_36_COST_RESIDUE_AND_CONSEQUENCE` | Cost, residue, consequence | Not created |
+| IV | 37 | `CHAPTER_37_LIMITS_OF_ONTOLOGICAL_DYNAMICS` | Limits of the dynamic account | Not created |
+| IV | 38 | `CHAPTER_38_INTEGRATED_ONTOLOGICAL_RECONSTRUCTION` | Final conceptual synthesis of Book I | Not created |
+| IV | 39 | `CHAPTER_39_FORMAL_AND_LOGICAL_RECONSTRUCTION` | Integrated formal reconstruction of the whole book | Not created |
+| IV | 40 | `CHAPTER_40_COMPARATIVE_PHILOSOPHICAL_EXAMINATION` | Integrated comparative examination of the whole ontology | Not created |
 
-Each chapter directory contains at minimum `00_chapter_NN.tex` (the chapter aggregator). Each Part directory contains `00_part_0N.tex`; the main matter has `00_mainmatter.tex`. Section files live beneath the chapter directory as they exist in the real repository (see §12 and §24).
+Each chapter directory contains `00_chapter_NN.tex` (the chapter aggregator) and a `sections/` subdirectory holding the section files `section_NN_<slug>.tex` (verified for Part I; see §12.6). Each Part directory contains `00_part_0N.tex`; the main matter has `00_mainmatter.tex`.
 
-> **Part I note.** An earlier remote state of Part I assembled six conceptual chapters and kept Formal Reconstruction and Comparative Studies as explanatory placeholders. In the target architecture those two become real chapters 07 and 08, and the same rule applies to all other Parts. When rewriting, harmonize chapter numbering (the earlier 32-chapter numbering must be migrated to this 40-chapter numbering), `\input` paths, aggregator files, cross-references and Frontmatter guides with this architecture.
+> **Current implementation.** Part I is assembled with eight chapters (01–08). The part files for Parts II, III and IV exist but are empty (0 bytes), and no chapter directory exists for Chapters 09–40. The chapter names above are the approved target architecture; when Chapters 09–40 are created, harmonize their `\input` paths, aggregators, cross-references and Frontmatter guides with it (§12.5, §24).
 
 ## 6.4 Chapter-by-chapter content directives
 
@@ -324,7 +322,7 @@ Contents: formal language and notation; domains and variables; definitions; comm
 Constraint: nothing is presented as a **theorem** unless actually demonstrated under explicitly stated assumptions.
 
 **Ch. 08 — Comparative Philosophical Examination and Dialectical Controversies (Part I).**
-Contents: identity in Aristotle and classical Western tradition; being and identity in Avicenna; individuation and identity in medieval philosophy; identity and substance in early modern philosophy; personal and numerical identity in contemporary philosophy; identity and difference in Hegel and other traditions; unity/plurality/identity in Indian and Buddhist philosophy; identity/change/continuity in Chinese traditions; relevant contemporary metaphysics.
+Contents (current organization in the repository): Section 01 — method and criteria of comparison; Sections 02–22 — one section per interlocutor, in this order: Parmenides, Heraclitus, Plato, Aristotle, Plotinus, Leibniz, Locke, Hume, Kant, Heidegger, Al-Farabi, Avicenna, Suhrawardi, Averroes, Ibn Arabi, Mulla Sadra, Nagarjuna, Vasubandhu, Shankara, Laozi, Zhuangzi; Section 23 — cross-traditional comparison; Section 24 — critical assessment and open questions. Sections 11–24 are currently structural placeholders (§24.3). Traditions named in the previous version of this directive but absent from the current list (for example Hegel, medieval philosophy, relevant contemporary metaphysics) are not part of the current structure; adding, removing or reordering sections is a structural decision (§12.5, §24.4).
 **Eight-step dialectical protocol, for each selected philosopher or theory** (reused in every comparative chapter):
 
 1. Reconstruct the original position from its actual sources.
@@ -373,7 +371,7 @@ Constraint: must not become a general history of philosophy or a collection of s
 
 **Ch. 22 — Light and the Realms.** Light across the proposed realms; Light and fundamental realms / intermediary hubs; realm-specific possibilities; constraints; relations to differentiation of being; limits. Constraint: MUST NOT classify Light as another realm or hub without sufficient independent justification.
 
-**Ch. 23 — Forms and Dynamics of Light.** Forms of ontological Light; Light and potentiality / realization / transition / transformation; limits and non-equivalences; integrated account. Constraint: distinguish established claims from hypotheses about the nature and operation of Light. (This chapter also carries the integrating role that other Parts give to a synthesis chapter; see §24.)
+**Ch. 23 — Forms and Dynamics of Light.** Forms of ontological Light; Light and potentiality / realization / transition / transformation; limits and non-equivalences; integrated account. Constraint: distinguish established claims from hypotheses about the nature and operation of Light. (This chapter also carries the integrating role that other Parts give to a synthesis chapter; see §24.4, D1.)
 
 **Ch. 24 — Formal and Logical Reconstruction (Light).** Vocabulary and definitions; formal status of Light; commitments and axioms; relations among Light, being, identity, manifestation; propositions and derivations; models and alternative interpretations; consistency and dependency analysis; countermodels; limits. Constraint: no function of Light is formalized as a theorem without supplied premises and proof.
 
@@ -420,15 +418,15 @@ The Introduction and Methodology MUST clearly distinguish **ontology from episte
 
 **Backmatter**
 
-| Component | Content |
-| --- | --- |
-| Conclusion | Concise final conclusion: principal ontological results, limits, open questions |
-| Appendices A–G | A Formal Notation; B Ontological Principles; C Definitions and Propositions; D Formal Dependency Maps; E Supplementary Proofs; F Comparative Tables; G Technical Terminology |
-| Logical Entity Reference Map | Navigational map of relations among entities, claims, arguments and their locations |
-| Bibliography | Sources actually cited or explicitly used; verified records only; plus source-usage map (§17) |
-| Glossary | Controlled explanations of principal terms |
-| Acronyms | Abbreviations used |
-| Indexes | Subject, Name, Concept |
+| Component | Content | Current repository status |
+| --- | --- | --- |
+| Conclusion | Concise final conclusion: principal ontological results, limits, open questions | Not present: no file exists and `00_backmatter.tex` does not assemble one |
+| Appendices A–G | A Formal Notation; B Ontological Principles; C Definitions and Propositions; D Formal Dependency Maps; E Supplementary Proofs; F Comparative Tables; G Technical Terminology | `01_appendices/00_appendices.tex` exists and is empty (0 bytes); the appendix files A–G do not exist |
+| Logical Entity Reference Map | Navigational map of relations among entities, claims, arguments and their locations | Present: `02_logical_entity_reference_map.tex` |
+| Bibliography | Sources actually cited or explicitly used; verified records only; plus source-usage map (§17) | Present: `03_bibliography/bibliography.tex`, `references.bib`, `source_usage_map.csv` |
+| Glossary | Controlled explanations of principal terms | Present: `04_glossary.tex` |
+| Acronyms | Abbreviations used | Present: `05_acronyms.tex` |
+| Indexes | Subject, Name, Concept | Present: `06_indexes/subject_index.tex`, `name_index.tex`, `concept_index.tex` |
 
 ---
 
@@ -579,10 +577,10 @@ Approved registry prefixes (authoritative):
 | `AR-` | Argument | An argument |
 | `PF-` | **Proof** | Only when an actual proof is being recorded |
 
-- `TH = Theorem` and `PF = Proof` are authoritative. The earlier README's meanings (`TH` = Thesis, `PF` = Philosophical Foundation) are **superseded** and MUST NOT be used.
+- `TH` = Theorem and `PF` = Proof are authoritative. The meanings Thesis and Philosophical Foundation MUST NOT be used for these prefixes. (Two backmatter files still use those meanings: see §24.3, item 4.)
 - Do not assign a theorem identifier to a methodological thesis or an unproved philosophical claim. Do not assign a proof identifier unless a real proof is recorded. This agrees with the rule of Chapters 07, 18, 24 and 39 that nothing is presented as a theorem unless demonstrated.
 - If a claim is not eligible for a registry identifier, **state why** (for example: "Thesis — unproved, so not eligible for `TH-`").
-- Axis-1 forms with no registry prefix at present: **Foundational Commitment, Thesis, Open Problem** (§10.1). They are tracked in the manuscript and the logical entity reference map; do **not** invent prefixes for them. This gap is an open structural question for the author (§24, item 10).
+- Axis-1 forms with no registry prefix at present: **Foundational Commitment, Thesis, Open Problem** (§10.1). They are tracked in the manuscript and the logical entity reference map; do **not** invent prefixes for them. This gap is an open structural question for the author (§24.4, D2).
 - An identifier refers to one specific entity and MUST NOT be reused for an unrelated one.
 - The CSV registers are the structured records of the project; the publication-oriented registers in the backmatter serve presentation. Registers, the logical entity reference map and the manuscript MUST stay consistent. Registers record both axes of status (§10.1). (Location and naming of the register files: see §12.3 and §24.)
 
@@ -631,22 +629,21 @@ To prevent overlap, each section has one function:
 
 # 12. Repository Structure
 
-## 12.1 Authoritative tree (target architecture)
+## 12.1 Current verified tree
 
-The real repository is the final authority on what exists (§4.3). This tree is the approved target.
+The real repository is the final authority on what exists (§4.3). The tree below records the directory `VS.B01_ONTOLOGY_OF_VIABILITY/` as verified on 23 November 2026 (basis and limits: §24.1). Components declared by the architecture but not yet present are listed in §12.2.
 
 ```text
 VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 ├── main.tex            (assembly entry point; also places front/back cover pages)
-├── preamble.tex        (packages, typography, layout, hyperref, document settings)
+├── preamble.tex        (packages, typography, layout, hyperref, natbib, cleveref, imakeidx)
 ├── metadata.tex        (title, subtitle, author, publication data)
-├── macros.tex          (custom commands, internal-reference macros)
-├── acronyms.tex        (acronym definitions)
-├── glossary.tex        (glossary configuration; distinct from the printed glossary)
+├── macros.tex          (custom commands: structural references, entity-identifier presenters, …)
 ├── README.md           (this file)
-├── .gitignore
 ├── main.pdf            (compiled output; not a source manuscript)
+├── main.aux, .toc, .bbl, .blg, .log, .fls, .fdb_latexmk, .synctex.gz   (LaTeX/BibTeX build files)
+├── subject.* , name.* , concept.*    (.idx, .ilg, .ind index-build files)
 │
 ├── 1_FRONTMATTER/
 │   ├── 00_frontmatter.tex
@@ -662,27 +659,24 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │
 ├── 2_MAINMATTER/
 │   ├── 00_mainmatter.tex
-│   ├── PART_I_IDENTITY_AND_MANIFESTATION/        (00_part_01.tex; chapters 01–08)
-│   ├── PART_II_THE_REALMS_OF_BEING/              (00_part_02.tex; chapters 09–19)
-│   ├── PART_III_LIGHT/                           (00_part_03.tex; chapters 20–25)
-│   └── PART_IV_DYNAMICS_OF_BEING/                (00_part_04.tex; chapters 26–40)
-│        each chapter: CHAPTER_NN_NAME/00_chapter_NN.tex (+ section files as in the real repo)
+│   ├── PART_I_IDENTITY_AND_MANIFESTATION/
+│   │   ├── 00_part_01.tex
+│   │   └── CHAPTER_NN_NAME/                 (NN = 01–08)
+│   │       ├── 00_chapter_NN.tex
+│   │       └── sections/section_NN_<slug>.tex
+│   ├── PART_II_THE_REALMS_OF_BEING/         (00_part_02.tex only; empty file)
+│   ├── PART_III_LIGHT/                      (00_part_03.tex only; empty file)
+│   └── PART_IV_DYNAMICS_OF_BEING/           (00_part_04.tex only; empty file)
 │
 ├── 3_BACKMATTER/
 │   ├── 00_backmatter.tex
 │   ├── 01_appendices/
-│   │   ├── 00_appendices.tex
-│   │   ├── appendix_A_formal_notation.tex
-│   │   ├── appendix_B_ontological_principles.tex
-│   │   ├── appendix_C_definitions_and_propositions.tex
-│   │   ├── appendix_D_formal_dependency_maps.tex
-│   │   ├── appendix_E_supplementary_proofs.tex
-│   │   ├── appendix_F_comparative_tables.tex
-│   │   └── appendix_G_technical_terminology.tex
+│   │   └── 00_appendices.tex                (empty file)
 │   ├── 02_logical_entity_reference_map.tex
 │   ├── 03_bibliography/
 │   │   ├── bibliography.tex
-│   │   └── references.bib
+│   │   ├── references.bib
+│   │   └── source_usage_map.csv
 │   ├── 04_glossary.tex
 │   ├── 05_acronyms.tex
 │   └── 06_indexes/
@@ -690,38 +684,55 @@ VS.B01_ONTOLOGY_OF_VIABILITY/
 │       ├── name_index.tex
 │       └── concept_index.tex
 │
-├── 4_ASSETS/                                     (independent assets; never inside chapters)
-│   ├── tables/
-│   ├── figures/
-│   ├── diagrams/
-│   ├── illustrations/
-│   └── cover/
-│       ├── front_cover.png
-│       └── back_cover.png
-│
-└── (registers)   axioms_register.csv, definitions_register.csv, propositions_register.csv,
-                  theses_register.csv, hypotheses_register.csv, arguments_register.csv,
-                  philosophical_foundations_register.csv      (location and naming: see §10.3, §12.3 and §24)
+└── 4_ASSETS/                                (independent assets; never inside chapters)
+    ├── tables/          (33 files)
+    ├── figures/         (2 files)
+    ├── diagrams/        (26 files)
+    ├── illustrations/   (16 files)
+    └── cover/
+        ├── front_cover.png
+        └── back_cover.png
 ```
 
-## 12.2 Root files
+## 12.2 Root files and components not present
 
-- `main.tex` assembles the book in publication order: configuration, frontmatter, mainmatter, backmatter; controls front/back cover placement.
-- `preamble.tex`, `metadata.tex`, `macros.tex`, `acronyms.tex`, `glossary.tex` hold configuration and reusable definitions; manuscript content is kept separate from configuration.
-- `main.pdf` is a build output and MUST correspond to the current sources if committed.
-- `.gitignore` excludes generated/temporary build artifacts. There is **no** separate `7_BUILD/` directory.
+- `main.tex` assembles the book in publication order: configuration, front cover, frontmatter, mainmatter, backmatter, back cover. It uses `\input` only; `\include` and `\includeonly` are not used.
+- `preamble.tex`, `metadata.tex` and `macros.tex` hold configuration and reusable definitions; manuscript content is kept separate from configuration.
+- `main.pdf` and the LaTeX/BibTeX/index build files at the root are build output. They were not shown to correspond to the current sources (§24.1), and `main.pdf` MUST correspond to the current sources if committed.
+- **Declared by the architecture but not present in the directory:** Chapters 09–40 (directories and aggregators); the appendix files A–G; the Conclusion; the seven register CSV files (`axioms_register.csv`, `definitions_register.csv`, `propositions_register.csv`, `theses_register.csv`, `hypotheses_register.csv`, `arguments_register.csv`, `philosophical_foundations_register.csv`, named in comments in `3_BACKMATTER/00_backmatter.tex`).
+- **Not part of the structure:** root-level `acronyms.tex` and `glossary.tex` do not exist and are not required; the glossary and the acronym list are `3_BACKMATTER/04_glossary.tex` and `3_BACKMATTER/05_acronyms.tex`, which declare standard LaTeX commands only. A `.gitignore` is not present in this directory (Git configuration, if any, was not inspectable: §24.1).
 
-## 12.3 Registries and bibliography locations (ambiguity)
+## 12.3 Registries and bibliography locations
 
-The documents describe register/bibliography locations in more than one way (see §24). Rule: inspect the real repository; **use the real location; do not move, rename or duplicate** registries or bibliography files without an explicit structural decision. Keep the CSV registers (structured records) and the backmatter publication registers (presentation) synchronized.
+The bibliography files are `3_BACKMATTER/03_bibliography/bibliography.tex`, `references.bib` and `source_usage_map.csv`. No register CSV file exists anywhere in the directory. Rule: inspect the real repository; **use the real location; do not move, rename or duplicate** registries or bibliography files without an explicit structural decision. When the registers are created, their location and naming are a structural decision for the author (§24.4, D8); keep the CSV registers (structured records) and the backmatter publication registers (presentation) synchronized.
 
 ## 12.4 Covers
 
-`front_cover.png` and `back_cover.png` live in `4_ASSETS/cover/`. The front cover is an independent opening page of the final PDF (before the title page); the back cover is an independent closing page (after the last content page). Storage location ≠ position in the PDF: placement is controlled by `main.tex` (or files it includes). Neither cover belongs inside `1_FRONTMATTER/` or `3_BACKMATTER/`.
+`front_cover.png` and `back_cover.png` live in `4_ASSETS/cover/`. The front cover is an independent opening page of the final PDF (before the title page); the back cover is an independent closing page (after the last content page). Storage location ≠ position in the PDF: placement is controlled by `main.tex` (verified: it places both covers through its cover-page macro). Neither cover belongs inside `1_FRONTMATTER/` or `3_BACKMATTER/`.
 
 ## 12.5 Structural integrity rules
 
 Files and directories MUST NOT be renamed, relocated, merged, split, added or removed without an explicit structural decision. Chapter-local asset directories (`tables/`, `figures/` inside chapters) MUST NOT be reintroduced without explicit authorization.
+
+## 12.6 Section inventory of Part I (verified 23 November 2026)
+
+Section files live in `2_MAINMATTER/PART_I_IDENTITY_AND_MANIFESTATION/<chapter directory>/sections/`. A file is a *placeholder* when it consists only of a header, a `\section` command, a label, a comment stating that it is a structural placeholder, and an end marker (about 1.4 KB).
+
+**`CHAPTER_01_IDENTITY/sections/`** — 11 files: 01 ontological_problem_of_identity; 02 being_and_identity; 03 identity_and_determination; 04 identity_and_unity; 05 identity_and_distinction; 06 identity_and_individuation; 07 identity_and_numerical_identity; 08 identity_and_signature; 09 identity_and_non_reduction; 10 scope_and_limits_of_identity; 11 synthesis_of_identity.
+
+**`CHAPTER_02_INVARIANCE/sections/`** — 11 files: 01 ontological_problem_of_invariance; 02 invariance_and_identity; 03 defining_invariants; 04 invariance_and_transformation; 05 invariance_and_difference; 06 invariance_and_structure; 07 invariance_and_composition; 08 invariance_and_continuity; 09 forms_and_domains_of_invariance; 10 limits_of_invariance; 11 synthesis_of_invariance.
+
+**`CHAPTER_03_UNITY_AND_PLURALITY/sections/`** — 9 files: 01 ontological_problem_of_unity_and_plurality; 02 unity_of_identity; 03 unity_of_source_and_aggregate; 04 plurality_of_identities; 05 plurality_and_composition; 06 identity_and_multiplicity; 07 non_equivalence_of_unity_and_singularity; 08 limits_of_unity_and_plurality; 09 synthesis_of_unity_and_plurality.
+
+**`CHAPTER_04_EXPRESSION/sections/`** — 9 files: 01 ontological_problem_of_expression; 02 identity_and_expression; 03 expression_and_determination; 04 expression_and_invariance; 05 expression_and_source; 06 expression_and_multiplicity; 07 expression_and_manifestation_distinction; 08 limits_of_expression; 09 synthesis_of_expression.
+
+**`CHAPTER_05_IDENTITY_AND_CONTINUITY/sections/`** — 7 files: 01 problem_of_identity_continuity; 02 identity_and_persistence; 03 invariance_and_continuity; 04 identity_and_non_identity_through_difference; 05 conditions_of_identity_preservation; 06 limits_of_identity_continuity; 07 synthesis_of_identity_and_continuity.
+
+**`CHAPTER_06_SYNTHESIS_OF_IDENTITY/sections/`** — 4 files: 01 integrated_account_of_identity; 02 identity_principles_and_propositions; 03 open_ontological_questions; 04 transition_to_the_realms_of_being.
+
+**`CHAPTER_07_FORMAL_AND_LOGICAL_RECONSTRUCTION/sections/`** — 18 files: 01 scope_and_objectives_of_formal_reconstruction; 02 ontological_vocabulary_and_primitive_terms; 03 formal_domains_and_types; 04 definitions_and_conceptual_dependencies; 05 foundational_commitments_and_axiomatic_candidates; 06 formalization_of_the_principles_of_identity; 07 formal_propositions_and_derived_claims; 08 arguments_proofs_and_derivation_rules; 09 logical_dependency_and_inference_structure; 10 consistency_independence_and_conflict_analysis; 11 models_countermodels_and_alternative_interpretations; 12 formal_reconstruction_of_invariance; 13 formal_reconstruction_of_unity_and_plurality; 14 formal_reconstruction_of_expression_and_manifestation; 15 formal_reconstruction_of_identity_and_continuity; 16 claim_status_and_justificatory_classification; 17 limits_of_formalization_and_ontological_commitment; 18 integrated_formal_system_and_open_problems.
+
+**`CHAPTER_08_COMPARATIVE_PHILOSOPHICAL_EXAMINATION/sections/`** — 24 files: 01 method_and_criteria_of_comparison; 02 parmenides; 03 heraclitus; 04 plato; 05 aristotle; 06 plotinus; 07 leibniz; 08 locke; 09 hume; 10 kant; 11 heidegger (placeholder); 12 al_farabi (placeholder); 13 avicenna (placeholder); 14 suhrawardi (placeholder); 15 averroes (placeholder); 16 ibn_arabi (placeholder); 17 mulla_sadra (placeholder); 18 nagarjuna (placeholder); 19 vasubandhu (placeholder); 20 shankara (placeholder); 21 laozi (placeholder); 22 zhuangzi (placeholder); 23 cross_traditional_comparison (placeholder); 24 critical_assessment_and_open_questions (placeholder).
 
 ---
 
@@ -819,7 +830,7 @@ This sequence is mandatory. No step may be silently omitted. The target file is 
 - **03.** Inspect the complete relevant directory structure (real paths and filenames; never guess).
 - **04.** Read the target file and all relevant dependencies: the file's aggregators (chapter, part, mainmatter), neighbouring and prerequisite sections, existing definitions, propositions, formalizations, examples, open problems, chapter conclusions and transitions.
 - **05.** Inspect frontmatter, mainmatter, backmatter and assets (scope: `1_FRONTMATTER/`, `2_MAINMATTER/`, `3_BACKMATTER/`, `4_ASSETS/` within `VS.B01_ONTOLOGY_OF_VIABILITY/`).
-- **06.** Inspect `main.tex`, `preamble.tex`, `metadata.tex`, `macros.tex`, `acronyms.tex`, `glossary.tex`, bibliography configuration, hyperlink configuration, internal-reference macros, label and anchor conventions; establish which packages and macros actually exist.
+- **06.** Inspect `main.tex`, `preamble.tex`, `metadata.tex`, `macros.tex`, `3_BACKMATTER/00_backmatter.tex`, `3_BACKMATTER/04_glossary.tex`, `3_BACKMATTER/05_acronyms.tex`, bibliography configuration (`bibliography.tex`, `references.bib`, `source_usage_map.csv`), hyperlink configuration, internal-reference macros, label and anchor conventions; establish which packages and macros actually exist.
 
 Do not rely on memory, old copies or incomplete summaries when the real file is available. Do not assume a section is consistent merely because it was previously written or approved. Do not re-ask the author for anything available in the repository. If the source file cannot be accessed, state that limitation explicitly and do not claim to have verified content that was not inspected; a filename, summary, placeholder or earlier description is not a substitute for inspecting the actual file.
 
@@ -833,7 +844,7 @@ Do not rely on memory, old copies or incomplete summaries when the real file is 
 
 ## Phase 3 — Author-Source Reconstruction
 
-- **12.** Search the author's previous works **comprehensively** (all relevant works, not the first search hit): `main.pdf`, `main1.pdf`, `main2.pdf`, `main3.pdf`, versions `v3`, `v4`, and other library documents.
+- **12.** Search the author's legacy corpus in `My_Legacy_Works` **exhaustively**, never by first hit: every file whose name begins with `PH` (philosophical) and every file whose name begins with `SC` (scientific), for every concept, claim, definition, distinction, argument, example, formalization, diagram and open question related to the target section. This obligation applies to **every** writing or editing task, not only to the first draft of a chapter. Record a **coverage log**: the files searched, the search terms and reading method, the files found relevant, and the files examined and found irrelevant. If the corpus or any file in it cannot be accessed, say so explicitly; do not infer content from filenames and do not claim a completed search (§22, item 25).
 - **13.** Extract concepts, definitions, arguments, distinctions, propositions, hypotheses, examples, formalizations, diagrams/conceptual structures, unresolved questions, relevant passages (with page/paragraph identifiers where available) and conceptual developments across works. Detect concepts that appear under different names or argumentative contexts.
 - **14.** Classify every extracted element:
     1. **Reusable** — incorporate with minimal modification.
@@ -842,9 +853,9 @@ Do not rely on memory, old copies or incomplete summaries when the real file is 
     4. **Superseded** — replaced by a more developed position.
     5. **Incompatible** — conflicts with Book I's foundational commitments.
     6. **Contextual** — useful as background, not for direct incorporation.
-    Do not treat an earlier formulation as authoritative merely because it is the author's; do not discard one without examining its conceptual contribution. Do not transfer epistemological definitions directly into ontology.
+    Do not treat an earlier formulation as authoritative merely because it is the author's; do not discard one without examining its conceptual contribution. Do not transfer epistemological definitions directly into ontology, and do not transfer scientific claims directly into ontological foundations (§14.2).
 - **15.** Compare earlier material with the current Book I position (consistencies, contradictions, developments, changes of terminology, ambiguities, open questions).
-- **16.** Record provenance of reusable material: stable identifiers if they exist; otherwise source filename + most precise location. Distinguish direct textual reuse / rewritten conceptual material / developed arguments / retained-but-transformed ideas. Never invent source locations or claim textual continuity without evidence.
+- **16.** Record provenance of reusable material: stable identifiers if they exist; otherwise source filename + most precise location. Distinguish direct textual reuse / rewritten conceptual material / developed arguments / retained-but-transformed ideas. Never invent source locations or claim textual continuity without evidence. Extraction is followed by development and optimization: extracted material enters the book only after it has been reconstructed, developed and tested against Book I's foundations, through the section blueprint (Phase 5) and under every rule of this README.
 
 ## Phase 4 — External Research
 
@@ -924,7 +935,7 @@ Provide a concise but complete report containing:
 1. **Repository state** — commit and files actually inspected.
 2. **Target diagnosis** — purpose, condition, problems.
 3. **Consistency dependencies** — files to revise first or concurrently.
-4. **Previous author works** — relevant works and extracted material.
+4. **Legacy corpus (`My_Legacy_Works`)** — the coverage log (files searched, `PH` and `SC` files found relevant, files examined and found irrelevant) and the extracted material with its classification (Step 14).
 5. **External sources** — primary and secondary required.
 6. **Source-use plan** — quotations, paraphrases, implicit use, footnotes.
 7. **Internal reference plan** — paragraph identifiers, hyperlinks.
@@ -935,15 +946,22 @@ Provide a concise but complete report containing:
 
 The report distinguishes facts established by inspection from hypotheses and proposed decisions, and never presents a proposed revision as an already completed repository change. In a single-response delivery this report may be given as items 1–2 of the response structure in §21.3; for a major revision it may be delivered separately before drafting. In either case no substantive drafting precedes it.
 
-## 14.2 Source classification: philosophy vs. science
+## 14.2 The legacy corpus: philosophy (`PH`) and science (`SC`)
 
-Previous **philosophical manuscripts** are the primary materials for reconstructing the system. **Scientific publications** are not direct philosophical source texts; they may give supplementary context but their scientific arguments MUST NOT automatically enter the philosophical foundations. The following are excluded from the direct philosophical source corpus:
+All of the author's earlier work is kept in `My_Legacy_Works`. It is the raw material of Book I. Its files are classified by the prefix of the filename:
 
-- `1_Systemic_Identity_and_Flow__SIF__Theory__4_.pdf`
-- `Hasibi_2026_FTM.pdf`
-- `Hasibi_2026_GTR.pdf`
-- `Hasibi_2026_SMCP.pdf`
-- `Hasibi_2026_TCoM.pdf`
+| Prefix | Class | Role in Book I |
+| --- | --- | --- |
+| `PH` | Philosophical works | Primary material for reconstructing the system. |
+| `SC` | Scientific works | Searched and extracted from like any other part of the corpus; scientific content is classified (Step 14) and enters the ontology only through philosophical reconstruction and independent justification. |
+
+Rules:
+
+1. Both classes are searched exhaustively for every task (Step 12). A search that covers only `PH` files, or only `SC` files, is not a complete search.
+2. Provenance (Step 16) records the prefix class of every extracted element.
+3. A scientific argument, model or result MUST NOT automatically become a philosophical foundation, premise or definition. It may enter as Contextual material, or as Developable material after philosophical reconstruction, with its status stated, unless the author directs otherwise.
+4. A file in `My_Legacy_Works` that carries neither prefix is reported to the author, not classified by guess.
+5. The location of `My_Legacy_Works` relative to the project directory is recorded in §24.4 (D5) until the author states it.
 
 ## 14.3 Research and writing pipeline (conceptual summary)
 
@@ -1071,8 +1089,8 @@ Do not: assign a source to a subsection where it was not used; invent paragraph 
 
 ## 17.4 Citation system and BibTeX behaviour
 
-- Before applying citation commands, inspect `preamble.tex`, `main.tex`, the backmatter main file, the bibliography aggregator, `bibliography.tex`, `references.bib`. If the project uses `natbib`, commands like `\citet`/`\citep` must match the real configuration. Style, commands, package order and `hyperref` settings must match the existing project.
-- A `references.bib` file's existence does not mean BibTeX must be active at every stage. If no real citation command exists yet and the bibliography call is intentionally commented out, the message `I found no \citation commands` is **expected** and is not evidence of breakage. Never add empty/formal citations merely to silence it.
+- Before applying citation commands, inspect `preamble.tex`, `main.tex`, the backmatter main file, the bibliography aggregator, `bibliography.tex`, `references.bib`. The project uses `natbib` (option `[round]`) with the style `plainnat`; the commands `\cite`, `\citep` and `\citet` must match this configuration. Style, commands, package order and `hyperref` settings must match the existing project.
+- The bibliography call in `3_BACKMATTER/03_bibliography/bibliography.tex` is **active** (`\bibliographystyle{plainnat}` and `\bibliography{3_BACKMATTER/03_bibliography/references}`), and real citation commands exist in the sources (§24.2). A BibTeX or LaTeX message about an undefined citation key is therefore evidence of a real defect to repair, not an expected message. Never add empty or formal citations merely to silence a message.
 - Once real citations are in the text: activate the bibliography call; check the citation configuration; match keys to `references.bib`; run BibTeX; inspect `.blg`/`.bbl` warnings and errors.
 - **Audit `references.bib`** at every review: duplicate keys; duplicate entries under different keys; incomplete data; wrong titles/publication details; wrong author/translator names; uncertain years; provisional/unverified entries; entry type validity; presence of keys cited in the text. Preserve old keys where possible so valid citations do not break, but preserving a key never legitimizes a duplicate or wrong entry.
 
@@ -1171,7 +1189,7 @@ The assessment must lead to an explicit decision for each asset type:
 
 There is no quota requiring one asset of each type in every Section. There is, however, a mandatory assessment of every type. Equally, there is no rule that an asset must be indispensable to comprehension before it can be produced.
 
-**Reading rule for the operational protocol's benefit test.** The operational protocol (§21.3 ff.) asks that a table clarify structured comparison, a figure represent a meaningful visual or formal object, a diagram clarify a process, relationship, architecture or logical structure, and an illustration provide a genuine explanatory or conceptual benefit. Read together with §3.4, "benefit" includes the aesthetic and reader-experience criterion; an asset with no intelligible editorial purpose remains prohibited (§22). This reading is flagged for author confirmation in §24, item 11.
+**Reading rule for the operational protocol's benefit test.** The operational protocol (§21.3 ff.) asks that a table clarify structured comparison, a figure represent a meaningful visual or formal object, a diagram clarify a process, relationship, architecture or logical structure, and an illustration provide a genuine explanatory or conceptual benefit. Read together with §3.4, "benefit" includes the aesthetic and reader-experience criterion; an asset with no intelligible editorial purpose remains prohibited (§22). This reading is flagged for author confirmation in §24.4, D3.
 
 ## 18.5 Book-level visual planning and visual rhythm
 
@@ -1581,6 +1599,8 @@ Forbidden:
 22. Treating superficial terminological similarity as proof of philosophical agreement.
 23. Concealing unresolved philosophical or technical issues; replacing the established project architecture with an improvised structure; silently merging, splitting, renaming, relocating or deleting files.
 24. Creating decorative or redundant assets merely to satisfy a numerical target.
+25. Claiming that the legacy corpus (`My_Legacy_Works`) has been searched without a coverage log (Step 12); searching only one of its classes (`PH` or `SC`); classifying a file by guess when it carries neither prefix.
+26. Admitting scientific (`SC`) content into the ontological foundations without philosophical reconstruction and stated status (§14.2).
 
 ---
 
@@ -1595,7 +1615,7 @@ Forbidden:
 5. **Stage 5 — Chapter 04 (Expression):** nine Sections, then aggregator.
 6. **Stage 6 — Chapter 05 (Identity and Continuity):** seven Sections, then aggregator.
 7. **Stage 7 — Chapter 06 (Synthesis of Identity):** four Sections, then aggregator and the Part I file.
-8. **Stage 8 — Technical and integrity control:** `main.tex`, `preamble.tex`, `macros.tex`, `acronyms.tex`, `glossary.tex`, backmatter and bibliography files, all asset paths and references.
+8. **Stage 8 — Technical and integrity control:** `main.tex`, `preamble.tex`, `macros.tex`, `3_BACKMATTER/04_glossary.tex`, `3_BACKMATTER/05_acronyms.tex`, other backmatter and bibliography files, all asset paths and references.
 
 Chapters 07 and 08 (formal and comparative, Part I) follow the conceptual chapters. If the actual repository structure differs from the names in this list, **the real structure governs**.
 
@@ -1605,21 +1625,53 @@ Apply the same logic to Parts II–IV: guidance files first; conceptual chapters
 
 ---
 
-# 24. Known Discrepancies and Items to Verify in the Repository
+# 24. Verified Repository State and Open Items
 
-These arise from the three source documents having been written at different times. The agent MUST verify each against the live repository and report, not silently resolve:
+This section is a dated record, not a rule. It is replaced whenever the repository is re-inspected. Rules live in §1–§23; where this record and a rule appear to conflict, §4.3 applies.
 
-1. **Assets directory name.** The earlier README used `6_ASSETS/` (with `cover/`, `figures/`, `diagrams/`, `illustrations/`) and placed tables and figures inside chapter directories (`chapter_xx_name/{chapter.tex, sections/, tables/, figures/}`). The revised architecture and the protocol require **`4_ASSETS/`** with `tables/`, `figures/`, `diagrams/`, `illustrations/`, `cover/`, and **forbid chapter-local asset directories**. This README adopts the latter; confirm the real state.
-2. **Chapter file layout.** The earlier README described `chapter.tex` + `sections/`; the revised architecture shows `00_chapter_NN.tex` in each chapter directory, while the protocol repeatedly refers to Section files (e.g., "Section 05 of Chapter 01"). Confirm where section files live in the real repository and keep that layout.
-3. **Backmatter layout.** The earlier README listed `01_conclusion/`, `02_appendices/`, `03_logical_entity_reference_map/`, `04_bibliography/`, `05_glossary/`, `06_indexes/`, `07_registers/`. The revised architecture lists `01_appendices/`, `02_logical_entity_reference_map.tex`, `03_bibliography/`, `04_glossary.tex`, `05_acronyms.tex`, `06_indexes/` and describes the Conclusion without placing it in the tree. Confirm the real layout and the real location of the Conclusion.
-4. **Registers and bibliography sources.** The earlier README placed CSV registries in `4_REGISTRIES/` and bibliography collections (`references.bib`, `primary_sources.bib`, `secondary_sources.bib`, `comparative_sources.bib`) in `5_BIBLIOGRAPHY/`. The revised architecture places `references.bib` in `3_BACKMATTER/03_bibliography/` and names register files as `*_register.csv` under `07_registers/`. Determine the real location(s) and keep them synchronized; do not move or duplicate.
-5. **Frontmatter aggregator.** `00_frontmatter.tex` (and `00_mainmatter.tex`, `00_backmatter.tex`) appear in the revised architecture but not in the earlier README; verify.
-6. **Chapter numbering migration.** Remote Part I earlier assembled six conceptual chapters; the target has eight (with real chapters 07 and 08). The earlier 32-chapter numbering must be migrated to 40 chapters, with aggregators, `\input` paths, cross-references and Frontmatter guides updated.
-7. **Part III has no separate synthesis chapter** although the structural principles call for a synthesis chapter in each Part; Chapter 23 carries an "integrated account". Treat this as an open structural question: do not silently add or rename chapters; raise it with the author if it affects the task.
-8. **Scope statement.** The protocol's active scope lists `1_FRONTMATTER/`, `2_MAINMATTER/`, `3_BACKMATTER/`, `4_ASSETS/`; the earlier README also lists registry, bibliography and cover paths. Use the real repository to establish what is in scope.
-9. **Repository access.** The protocol was written for an assistant connected directly to the GitHub repository. If the current agent has no repository access, say so plainly, request the needed files once, and never pretend to have inspected the repository.
-10. **Registry prefix meanings (changed).** The earlier README defined `TH` = Thesis and `PF` = Philosophical Foundation; the operational protocol declares `TH` = Theorem and `PF` = Proof authoritative. This README adopts the latter (§10.3). Consequences to resolve with the author, not to improvise: the documented register files `theses_register.csv` and `philosophical_foundations_register.csv` no longer match any prefix; and Foundational Commitment, Thesis and Open Problem (Axis-1 forms) have no registry prefix. Do not rename register files or invent prefixes without an explicit decision.
-11. **Wording of the asset-benefit test.** The operational protocol requires an illustration to give a "genuine explanatory or conceptual benefit" and forbids redundant assets; §3.4 and §18 additionally recognize aesthetic and reader-experience value as a legitimate, independent reason. This README reads "benefit" as including both (§18.4) and keeps the prohibition on assets with no intelligible editorial purpose. Author confirmation requested.
+## 24.1 Basis and limits of verification
+
+- **Date and method.** 23 November 2026. Files and directory listings of `VS.B01_ONTOLOGY_OF_VIABILITY/` were read through a filesystem connection and the files as read were analysed by script. Counts below are measured, not estimated. "Developed" means "not a structural placeholder".
+- **Verification levels reached (§20.3):** (1) source-level inspection and (2) static consistency checking. **No LaTeX or BibTeX run was performed**; levels 3–5 were not reached, so compilation status is unverified. The build files at the root were not shown to match the current sources: the BibTeX log `main.blg` records no missing-entry warnings, although the current sources cite keys that `references.bib` does not contain (§24.3, item 5).
+- **Read in full:** `main.tex`, `preamble.tex`, `macros.tex`, `metadata.tex`, this README, `references.bib`, `source_usage_map.csv`; all ten frontmatter files; the mainmatter, Part and chapter aggregators; all 93 section files of Part I; the 74 asset files that sections `\input`; the backmatter assembly file, `bibliography.tex`, `05_acronyms.tex`, `02_logical_entity_reference_map.tex`, `04_glossary.tex` and the three index files. Directory listings were taken for every directory below the root.
+- **Not inspectable:** Git state (repository, branch, commit, remote); the compiled PDF; and the directory `My_Legacy_Works`, which lies outside the directories the agent could access (§24.4, D5).
+
+## 24.2 Verified current state
+
+- **Assembly.** `main.tex` uses `\input` only: preamble, metadata, macros, front cover, frontmatter, mainmatter, backmatter, back cover. `00_frontmatter.tex` inputs the nine frontmatter files and generates the table of contents after the epigraph and before the preface. `00_mainmatter.tex` inputs the four Part files; `00_part_01.tex` inputs the eight chapter aggregators; each aggregator inputs its section files. All of these paths resolve to existing files.
+- **Part I.** 93 section files: 79 developed and 14 placeholders (Chapter 08, Sections 11–24). Parts II–IV contain only an empty part file each.
+- **Assets.** 79 files in `4_ASSETS/`: tables 33, diagrams 26, figures 2, illustrations 16, covers 2. Section files contain 74 asset `\input` commands (Chapter 01: 9, Chapter 02: 15, Chapter 03: 24, Chapter 07: 6, Chapter 08: 20); every one resolves to an existing file; no asset path is input twice. Chapters 04, 05 and 06 have no assets. All 55 `\ref`-type references in the section files resolve to a label defined in a section file or an asset file; no label is duplicated among the 651 labels defined in section files.
+- **Backmatter.** The assembly file inputs the (empty) appendices file, the entity reference map, the bibliography, the glossary, the acronyms and the three indexes, in that order. No registers exist.
+- **Citation system.** BibTeX with `natbib` (`[round]`) and `plainnat`. `bibliography.tex` is active and points at `3_BACKMATTER/03_bibliography/references`. `references.bib` holds 106 entries (82 `@BOOK`, 16 `@INCOLLECTION`, 4 `@MISC`, 4 `@ARTICLE`) with no duplicate keys; five works are held under two keys each (`HeraclitusFragments` / `KahnHeraclitus1979`, `GrahamHeraclitusSEP2023` / `CurdHeraclitusSEP2023`, `LadymanEveryThingMustGo` / `LadymanStructuralRealism`, `FrenchStructure` / `FrenchStructureWorld`, `LouxZimmermanMetaphysics` / `LouxZimmermanMetaphysicsLegacy`); one entry carries an authorship-verification note.
+- **Citations in the text.** 138 citation commands (131 `\cite`, 6 `\citep`, 1 `\nocite`): one in `05_preface.tex` and 137 in Chapter 08, Sections 02–05 and 07–10. They cite 33 distinct keys; 27 exist in `references.bib` and 6 do not (§24.3, item 5). Of the 106 bibliography entries, 79 are not cited in any inspected source file.
+- **Other scholarly apparatus in sections.** 31 `\footnote` commands and 90 `\index` commands.
+- **Internal references in sections.** 31 raw `\ref`, 1 `\Cref`, 19 `\SectionRef`, 4 `\StructuralRef`. Paragraph destinations exist as `\phantomsection\label{para:<structural identifier>}` in Chapter 08, Sections 01–03 and 05–10 (484 unique labels).
+- **Macros.** `macros.tex` defines the `\StructuralRef` family (built on `cleveref`), the entity-identifier presenters (`\EntityID`, `\AxiomID` … `\ProofID`, `\Identified…`) and display-only structural-identifier macros. The entity-identifier macros are not used in any inspected section file.
+
+## 24.3 Defects and gaps (verified; none is repaired by this README)
+
+1. **Parts II–IV are empty.** `00_part_02.tex`, `00_part_03.tex` and `00_part_04.tex` are 0-byte files that `00_mainmatter.tex` inputs; they contribute nothing to the book. Chapters 09–40 do not exist.
+2. **Chapter 08 is partly placeholders.** Sections 11–24 (Heidegger through the critical assessment) are structural placeholders of about 1.4 KB each. The illustration `VS.B01.P01.C08.S11.SS05.P001.IL01.heidegger_equipmental_world.tex` exists but Section 11 does not input it.
+3. **Backmatter is incomplete.** There is no Conclusion; `00_appendices.tex` is 0 bytes and appendices A–G do not exist; none of the seven register CSV files named in `00_backmatter.tex` exists (a name search found only `references.bib` and `source_usage_map.csv`).
+4. **Registry-prefix conflict.** `05_acronyms.tex` and `02_logical_entity_reference_map.tex` define `TH` = Thesis and `PF` = Philosophical Foundation. `macros.tex` (comments) and §10.3 define `TH` = Theorem and `PF` = Proof. The register file names in `00_backmatter.tex` (`theses_register.csv`, `philosophical_foundations_register.csv`) follow the old meanings.
+5. **Undefined citation keys.** `section_09_hume.tex` cites six keys that have no entry in `references.bib`: `Cottrell2015`, `Garrett1981`, `HumeEnquiry`, `Millican1995`, `QuRadcliffeHume2026`, `StrawsonSecretConnexion1989`. Their citations cannot resolve and the works cannot appear in the bibliography.
+6. **Source-usage map is incomplete.** `source_usage_map.csv` has 23 rows and 22 distinct keys and covers only Chapter 08, Sections 02, 03, 05, 07 and 08. Citation commands also occur in Sections 04, 09 and 10. Five cited keys that do exist in `references.bib` are absent from the map: `HumeTreatise`, `KantCritiquePureReason`, `PlatoParmenides`, `PlatoSophist`, `PlatoTimaeus`. The key `AristotleMetaphysics` appears in two rows (Sections 03 and 05), which is consistent with per-section mapping.
+7. **Input-path convention.** §13.5 and §18.9 require `\input` paths without the `.tex` extension. All 47 section inputs in the aggregators of Chapters 03, 04, 05, 06 and 07 carry `.tex`, as do 8 asset inputs (Chapter 07 Section 04: 2; Chapter 08 Sections 01, 07 and 09: 2 each). Chapters 01, 02 and 08 and all other aggregators omit it. Both forms resolve.
+8. **Internal-reference architecture.** The macro `\InternalRef` required by §13.4 is not defined. Section files mix raw `\ref`, `\Cref`, `\SectionRef` and `\StructuralRef`. Paragraph destinations exist only in Chapter 08, as standard `\phantomsection\label{para:…}` labels, which §13.4 allows only as a temporary or approved alternative; no inspected cross-reference targets them. Paragraph identifiers in other chapters appear only inside asset file names, and the asset `\input` commands there are not tied to a paragraph destination.
+9. **Header, identifier and end-marker conformance.** Of the 79 developed section files, 57 have a `File:` header line, 6 have a `Structural Identifier` header line and 61 end with an `END OF SECTION` marker (measured by script on the first lines and the full text). Asset headers and end markers vary in form across the 74 asset files read. Chapter aggregators differ in their metadata macros (`\def\CurrentChapterID` in Chapter 01; `\newcommand{\ChapterTwoID}` and similar in Chapters 02–06; none in Chapters 07 and 08) and in label style (`ch:…` in Chapters 01–06; `chap:07` and `chap:08`).
+10. **Asset anomalies.** Three asset files are not referenced by any section: `…C01.S07.SS14.P001.TL01.numerical_identity_and_persistence_distinctions.tex` (Section 07 of Chapter 01 does not input its table), `…C03.S04.SS06.P003.DG01.identity_plurality_across_ontological_levels.tex` (a second file with the same description as the referenced `…P004…` diagram), and the illustration named in item 2. Label styles in assets are mixed (kebab-case, `ch07_…` underscore style, and full structural identifiers).
+11. **Technical details.** `main.tex` loads `graphicx` and `tikz` again after `preamble.tex` already loads them (§13.5 forbids loading a package twice). `preamble.tex` gives the plural form `Subsubsections` as the singular name in `\Crefname{subsubsection}`. `05_preface.tex` (line 103) contains the Markdown-style emphasis `*Categories*`, which LaTeX prints with literal asterisks. `bibliography.tex` writes the `\bibliography` argument across lines with surrounding whitespace; the last BibTeX log shows the database was opened, but that log is not known to be current. The Chapter 04 aggregator has an "OPENING QUOTATION" comment banner with no quotation beneath it.
+
+## 24.4 Decisions requested from the author
+
+- **D1. Part III synthesis chapter.** The structural principles call for a synthesis chapter in each Part, but Part III has none; Chapter 23 carries an "integrated account". Do not silently add or rename chapters; the author decides whether it matters for the task at hand.
+- **D2. Registry prefixes.** Authorize or decline a repair of `05_acronyms.tex` and `02_logical_entity_reference_map.tex` to `TH` = Theorem and `PF` = Proof (§24.3, item 4). Decide what happens to the documented register names `theses_register.csv` and `philosophical_foundations_register.csv`, and whether Foundational Commitment, Thesis and Open Problem (Axis-1 forms with no prefix, §10.1) receive prefixes. Do not rename register files or invent prefixes without that decision.
+- **D3. Asset-benefit wording.** The operational protocol requires an illustration to give a "genuine explanatory or conceptual benefit". §3.4 and §18 also recognize aesthetic and reader-experience value; this README reads "benefit" as including both (§18.4). Confirm.
+- **D4. Scientific corpus.** Confirm the rule of §14.2 for `SC` files (searched and extracted from; scientific content enters the ontology only after philosophical reconstruction), and state whether any specific file, including the five scientific PDFs that an earlier version of this README excluded by name, is to be treated differently.
+- **D5. Access to `My_Legacy_Works`.** State its location relative to the project directory and make it available to the agent (for example as an additional accessible directory, or by providing the files). Until then, no claim that the legacy corpus was searched may be made (Step 12, §22 item 25).
+- **D6. Root `glossary.tex` and `acronyms.tex`.** Confirm that they are obsolete and that the backmatter files `04_glossary.tex` and `05_acronyms.tex` are the glossary and acronym list (§12.2); and state where `.gitignore` is kept.
+- **D7. Scope of Chapter 08.** Confirm the current 24-section plan (one section per interlocutor), including whether any tradition named in the previous directive (for example Hegel or medieval philosophy) is to be added (§6.4).
+- **D8. Registers, appendices and Conclusion.** Decide the location and naming of the register files, and whether and when the appendices A–G and the Conclusion are to be created (§12.2, §12.3).
 
 ---
 
