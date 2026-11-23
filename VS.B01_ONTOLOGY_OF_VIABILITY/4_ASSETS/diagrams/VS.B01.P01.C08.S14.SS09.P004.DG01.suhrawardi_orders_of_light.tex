@@ -1,0 +1,136 @@
+
+% =============================================================================
+% Project : THE PHILOSOPHY OF VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Chapter : Chapter 08 — Comparative Philosophical Examination
+% Section : Section 14 — Suhrawardi
+% Asset   : Diagram 01 — Orders of Light and Classes of Existent Things
+% Asset ID: VS.B01.P01.C08.S14.SS09.P004.DG01
+% File    : 4_ASSETS/diagrams/VS.B01.P01.C08.S14.SS09.P004.DG01.suhrawardi_orders_of_light.tex
+%
+% Qualification:
+%   The two panels represent distinct classificatory dimensions.
+%   The four classes on the right are not arranged as a causal sequence.
+% =============================================================================
+
+\begin{figure}[htbp]
+\centering
+
+\begin{tikzpicture}[
+    >=Stealth,
+    font=\small,
+    lightnode/.style={
+        draw=ViabilityDarkBlue,
+        fill=ViabilityPaleBlue,
+        rounded corners=2pt,
+        align=center,
+        text width=5.0cm,
+        minimum height=10mm,
+        inner sep=5pt
+    },
+    ordernode/.style={
+        draw=ViabilityGold,
+        fill=ViabilityPaleGold,
+        rounded corners=2pt,
+        align=center,
+        text width=4.8cm,
+        minimum height=12mm,
+        inner sep=5pt
+    },
+    classnode/.style={
+        draw=ViabilityGreen,
+        fill=ViabilityPaleGreen,
+        rounded corners=2pt,
+        align=center,
+        text width=5.0cm,
+        minimum height=11mm,
+        inner sep=5pt
+    },
+    paneltitle/.style={
+        font=\bfseries,
+        align=center,
+        text width=5.2cm
+    }
+]
+
+% Panel A: Orders of lights
+
+\node[paneltitle] at (0,0)
+    {Two Orders of Immaterial Lights};
+
+\node[lightnode] (lol) at (0,-1.0)
+    {\textbf{Light of Lights}\\
+     First principle of the Illuminationist order};
+
+\node[ordernode] (vertical) at (-1.45,-2.7)
+    {\textbf{Vertical Order}\\
+     Dominating lights and ontological dependence};
+
+\node[ordernode] (horizontal) at (1.45,-2.7)
+    {\textbf{Horizontal Order}\\
+     Equal-rank lights, mother-lights, and Lords of Species};
+
+\node[lightnode] (managing) at (0,-4.45)
+    {\textbf{Managing Lights}\\
+     Soul-related lights associated with corporeal orders};
+
+\draw[->,thick,draw=ViabilityDarkBlue]
+    (lol.south) -- (vertical.north);
+
+\draw[<->,dashed,thick,draw=ViabilityGold]
+    (vertical.east) -- (horizontal.west);
+
+\draw[densely dotted,thick,draw=ViabilityDarkBlue]
+    (vertical.south) -- (managing.north);
+
+\node[align=center,font=\scriptsize,text width=5.2cm]
+    at (0,-5.35)
+    {The dotted connection indicates association, not a further
+     stage in a single linear sequence};
+
+% Panel B: Four classes
+
+\node[paneltitle] at (8.2,0)
+    {Four Principal Classes of Existent Things};
+
+\node[classnode] at (8.2,-1.0)
+    {\textbf{Pure Immaterial Lights}\\
+     Self-subsistent and incorporeal};
+
+\node[classnode] at (8.2,-2.2)
+    {\textbf{Dark Barriers}\\
+     Corporeal and extended entities};
+
+\node[classnode] at (8.2,-3.4)
+    {\textbf{Accidental Lights}\\
+     Luminous states inhering in another};
+
+\node[classnode] at (8.2,-4.6)
+    {\textbf{Dark Accidents}\\
+     Non-luminous states inhering in another};
+
+\node[
+    draw=gray,
+    fill=white,
+    rounded corners=2pt,
+    align=center,
+    text width=11.0cm,
+    inner sep=5pt
+] at (4.1,-6.0)
+    {\textit{The two panels show different classificatory dimensions.
+    No one-to-one correspondence between them is implied.}};
+
+\end{tikzpicture}
+
+\caption{Schematic distinction between Suhrawardi's vertical and
+horizontal orders of immaterial lights and his four principal
+classes of existent things. The diagram is non-temporal and
+does not imply that the four classes form a causal sequence.}
+\label{fig:ch08-s14-suhrawardi-orders-of-light}
+
+\end{figure}
+
+% =============================================================================
+% END OF DIAGRAM 01 — SUHRAWARDI
+% =============================================================================

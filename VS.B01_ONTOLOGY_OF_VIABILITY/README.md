@@ -9,10 +9,480 @@
 | Book ID | `VS.B01` |
 | Project directory | `VS.B01_ONTOLOGY_OF_VIABILITY/` |
 | Repository | `recruitmenttorahoper-tech/THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT` (the spelling "PHILOSOPY" is the real repository name; do not "correct" it) |
+| Remote repository URL | `https://github.com/recruitmenttorahoper-tech/THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT` |
 | Branch | `main` |
+| Author's legacy corpus | `My_Legacy_Works/` at the **repository root** (not inside `VS.B01_ONTOLOGY_OF_VIABILITY/`) |
 | Document type | Philosophical research and book-production project (LaTeX) |
-| Document role | Single entry point: framework, method, architecture, rules, workflow |
-| Repository state recorded | 23 November 2026 (§24) |
+| Document role | Single entry point. **Part A:** operating core, from purpose down to file format. **Part B:** reference manual (§0–§25), detail and lists. |
+| Repository state recorded | 23 November 2026 (§24); always re-verify against the live repository (§A4) |
+
+---
+
+# PART A — OPERATING CORE
+
+Part A is complete on its own for deciding **what to do, in what order, and in what form**. It is arranged from the largest question (why does this project exist?) down to the smallest (what does the header of a file look like?). Read it fully before touching anything. Part B (§0–§25) holds the detail that Part A points to.
+
+## A0. How this document is layered
+
+| Layer | Question it answers | Where |
+| --- | --- | --- |
+| L0 Purpose | Why does the project exist, and what counts as success? | §A1 |
+| L1 Principles | Which ten rules generate everything else? | §A2 |
+| L2 Decision rules | What do I do when rules collide or no rule fits? | §A3 |
+| L3 Session gate | What is the very first thing I do, in any environment? | §A4, §A5 |
+| L4 Task procedure | What exactly do I do, scaled to the size of the task? | §A6, §A7 |
+| L5 File standards | What must every file look like? | §A8 |
+| L6 Delivery | How do I report and hand over? | §A9 |
+| Field record | Which past failures does each rule prevent? | §A10 |
+| Reference | Chapter directives, commitments, identifier systems, assets, registers | Part B |
+
+**Precedence.** Part A governs the *order of actions* and the *first-action gate*. Part B governs *detail*. Where Part A is silent, Part B applies. If the two conflict, Part A wins and the conflict MUST be reported to the author, never resolved silently. All `§` numbers without the letter A refer to Part B.
+
+**Normative language.** MUST / MUST NOT are binding without exception unless the author explicitly authorizes one. SHOULD is the default; deviate only with a stated reason. "The author" is the owner of the project and the philosophical system. "The agent" is you, whether human or AI.
+
+---
+
+## A1. L0 — Purpose and success condition
+
+1. Book I builds the **ontological foundation** of the Philosophy of Viability. It is a **reconstruction and development of the author's own ontology**, built from the author's previous works, critically evaluated, in dialogue with real philosophical sources (§2).
+2. Success is not text that is tidy, elegant or academic. Success is an ontological system that is **coherent, independent, precise, argued and theoretically productive** (§2.1).
+3. The unit of responsibility is **the whole book**. Every task, however small, is an operation on one connected documentary system: manuscript, backmatter, bibliography, assets and structure (§3.2, S3).
+4. Every action you take MUST be explainable by one of these three sentences. If it cannot be, do not take it.
+
+---
+
+## A2. L1 — Ten generative rules
+
+| # | Rule | Meaning |
+| --- | --- | --- |
+| R1 | **Reality first** | The live repository is the truth about what exists. Record the exact commit before acting. Never guess a path, name, identifier or state. |
+| R2 | **The author's material first** | Before writing or editing content, find out what the author has already written on the topic (`My_Legacy_Works/`). Only then consult external sources. |
+| R3 | **Sources are verified and traceable** | Every external source is verified, used substantively, and mapped to a paragraph-level destination. No invented quotations, pages or editions. |
+| R4 | **Construct, do not defend** | Each section builds a positive thesis. Claim status is kept on two axes (§10). Open questions stay open (§9). |
+| R5 | **Repair before expansion** | Never build on a contradiction or defective definition. Name the defect and fix the prerequisite first (§14, Phase 2). |
+| R6 | **One system, one task** | Every content change is synchronized across **all** affected backmatter files in the same task, never postponed (§A7, §19). |
+| R7 | **Complete files, no silent structure change** | Deliver complete files, not patches. Never silently rename, move, merge, split, add or delete files, identifiers or chapters (§12.5). |
+| R8 | **Honest status** | Say only what was actually done and verified. Partial work is labelled partial. Never claim access, reading, compilation, commit or push that did not happen (§20.3). |
+| R9 | **Do not ask for what exists; do not stop for what you can do** | Never ask the author for information available in the repository, memory or conversation. When blocked, do all permitted work and name the exact missing item (§A3.3). |
+| R10 | **The author decides philosophy and structure** | Undecided matters (§24.4, D1–D8) are reported, not decided. Language: Persian to the author; English in the book and in all project files (§5). |
+
+---
+
+## A3. L2 — Decision rules
+
+### A3.1 Priority when rules or instructions collide
+
+1. **Truthful reporting.** No instruction can make a false status claim acceptable.
+2. **Explicit current instruction from the author.**
+3. **The live repository**, for what exists (paths, text, commit state).
+4. **Part A.**
+5. **Part B** (where two Part B rules collide, the more specific one governs).
+6. **The author's legacy works** — raw material and history of the theory, not an uncriticizable authority.
+7. **External sources** — evidence and interlocutors, never authorities that override the author's system.
+
+### A3.2 Four-question test for any action no rule covers
+
+Proceed only if all four answers are "yes". If any answer is "no", convert the action into a **proposal in the report** and do not perform it.
+
+1. Does it serve L0: coherence, independence, precision, argument, productivity?
+2. Is it grounded in something verified: the live repository, legacy text actually read, or a verified source?
+3. Does it stay inside the task? (Changing structure, philosophical decisions, or files outside the task's scope needs explicit authorization.)
+4. Will the author be able to see exactly what was done and what was not?
+
+### A3.3 When blocked
+
+1. State the block **once**, plainly.
+2. Name **exactly** what is missing and the cheapest way for the author to supply it.
+3. Perform **all** work that remains permitted (see the gate table in §A4, G6).
+4. Label every output with its blocked or unverified status.
+5. Never substitute memory, filenames, summaries or earlier descriptions for the missing material.
+
+---
+
+## A4. L3 — Session gate: the first actions, in order
+
+Do these **before** drafting, before research, and before answering any substantive question about the book. No step is skipped.
+
+### G0. Identify your environment
+
+| Environment | How to recognize it | Go to |
+| --- | --- | --- |
+| **E1 Remote-only agent** (web or cloud assistant with a GitHub connector; no local filesystem, no local MCP) | You cannot open local paths; you can read the remote repository through a connector | G1-R |
+| **E2 Local agent** (CLI, IDE or MCP with a local clone) | You can run `git` and read local files | G1-L |
+| **E3 Uploads only** | The author attached files; you have no repository access | G1-U |
+
+### G1-R. Remote-only agent: connect to the remote repository first
+
+1. Connect to `recruitmenttorahoper-tech/THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT`, branch `main`.
+2. Record the **latest commit**: full SHA, commit message, date.
+3. List the real tree of: the repository root, `VS.B01_ONTOLOGY_OF_VIABILITY/` (including `1_FRONTMATTER/`, `2_MAINMATTER/`, `3_BACKMATTER/`, `4_ASSETS/`), and `My_Legacy_Works/`.
+4. Read the target file and its dependencies **from the remote repository**.
+5. **Never ask the author for a ZIP or for copies of files that are in the repository.** The author has stated this explicitly; asking again is a violation of R9.
+6. The remote is **read-only** unless the author explicitly authorizes writing. State which mode you are in.
+7. If a file type cannot be read through the connector (for example a PDF delivered as binary), record it as **"listed, not read"** and apply §A5.
+
+### G1-L. Local agent
+
+1. Run `git rev-parse HEAD`, `git status`, `git branch --show-current`, and `git fetch`; compare with `origin/main`.
+2. Record the SHA, the branch, whether the working tree is clean, and whether local is behind or ahead of the remote.
+3. Never overwrite uncommitted changes. If the tree is dirty, report it before editing.
+
+### G1-U. Uploads only
+
+1. Say once that the repository is not accessible to you.
+2. Work only on the uploaded material. Label **every** output "unverified against the repository".
+3. Ask once for an access method. Do not produce anything described as a final repository file.
+
+### G2. Write the State Snapshot
+
+Put this block at the top of your first response and update it when anything changes:
+
+```text
+STATE SNAPSHOT
+Repository      : <owner/name>
+Branch / Commit : <branch> / <full SHA>  —  "<commit message>"  (<date>)
+Access mode     : <E1 remote read-only | E1 remote write-authorized | E2 local | E3 uploads>
+Inspected       : <exact files and directories actually opened>
+Not inspected   : <exact files and directories not opened, and why>
+Legacy corpus   : <path found, N files, N PH, N SC, N unprefixed; access level per §A5>
+Discrepancies   : <differences from §12 / §24 of this README>
+```
+
+### G3. Locate and classify the legacy corpus
+
+1. The corpus is `My_Legacy_Works/` at the **repository root** (author's statement).
+2. List **every** file with its exact name. Count by prefix: `PH_` (philosophical), `SC_` (scientific), and files with **neither** prefix. Report the counts exactly as the listing shows them; do not round, merge or reconcile them from memory.
+3. If a look-alike directory exists (for example a different spelling or a space instead of an underscore, such as `My Legacy Works`), report **both** directories, their counts, and their prefix status. Do not decide which one is authoritative and do not classify unprefixed files by guess (§14.2, rule 4); ask the author once.
+4. If two of your own reports of the same directory disagree, stop, re-list the directory, and report the discrepancy.
+
+### G4. Establish the access level of every legacy file
+
+Apply the four levels of §A5.3 to each file. This decides whether drafting is allowed (G6).
+
+### G5. Read in this order
+
+Part A → §1–§5 → §6–§9 → §10–§13 and §18 → §14 → the target file, its aggregators, its neighbours, frontmatter guides, `macros.tex`, `preamble.tex`, the bibliography files and the backmatter files (§14, Phase 1).
+
+### G6. Gate decision: what is permitted
+
+| Condition | Permitted | Not permitted |
+| --- | --- | --- |
+| Repository not accessible (E3) | Analysis of uploaded material; proposals marked unverified | Any claim about the repository; any file described as final |
+| Repository accessible; legacy access level below L2 for the relevant works | Repository audit; consistency diagnosis; repair of prerequisites; backmatter checks; the pre-writing report with the blocked item named; asking the author once to supply the legacy text layer (§A5.4) | **Drafting the substantive content of the target (tiers T2–T4).** External research is deferred by the order rule of §A5.1 unless the author explicitly waives it for this task |
+| Repository accessible; legacy at L2 or above | The full algorithm (§14) | — |
+
+---
+
+## A5. L3 — Legacy-first rule
+
+### A5.1 Fixed order of knowledge-gathering
+
+```text
+Repository state → Legacy corpus (extract) → External sources (research) → Blueprint → Draft → Synchronize → Validate → Deliver
+```
+
+This order MUST NOT be reversed. External research does **not** precede reading what the author has already written on the topic.
+
+### A5.2 What the rule guarantees
+
+Before you write or edit any content, you know whether the author has already written about the section's topic, in which works, under which names, how the idea developed, what was criticized, and what was dropped. Writing that ignores the author's earlier work is a violation even if the prose is excellent (§22, items 6 and 25).
+
+### A5.3 Access levels
+
+| Level | Meaning | Allowed claim |
+| --- | --- | --- |
+| **L0** | File is listed (name, size, path) | "listed" |
+| **L1** | Title or metadata only | "metadata inspected" |
+| **L2** | **Text of the file obtained and searched** by keyword across all `PH_` and `SC_` files, with the search recorded | "searched" |
+| **L3** | Relevant works **read in full**, with page-level or paragraph-level locations | "read" |
+
+- "The legacy corpus was searched" is allowed **only** when **every** `PH_` and `SC_` file reached at least L2 for this task.
+- A search that covers only `PH_` files, or only `SC_` files, is incomplete (§14.2).
+- A PDF that you could not extract is **L0**, whatever its title suggests. Do not describe its content.
+- A report of what was *not* possible (a "preliminary documented audit") is correct and welcome. Calling it "a complete study" is a violation.
+
+### A5.4 The legacy text layer (when the corpus exists only as PDF)
+
+1. The standard fix is a text copy of every PDF in `My_Legacy_Works/extracted_text/<same basename>.txt`, committed to `main` by the author (command in §A11).
+2. The PDF remains the authority; the `.txt` is a derivative. Report extraction errors you notice.
+3. `pdftotext` separates pages with a form feed (`\f`). Compute page numbers by counting form feeds. Never cite a page number you did not compute or verify.
+4. An agent that can extract text itself inside its own sandbox may do so, must record the method, and MUST NOT write into the repository without authorization.
+5. If neither is possible, you are blocked at L0. Apply §A3.3 and the gate table (G6). Ask the author **once**: "Please commit `My_Legacy_Works/extracted_text/` (command in §A11)."
+
+### A5.5 Per-task procedure (tiers T2–T4)
+
+1. **Derive search terms:** the target concept, its synonyms and variant spellings, its Persian and English forms, and the adjacent concepts the section depends on.
+2. **Search all** `PH_` and `SC_` files for those terms.
+3. **Read** every hit in context (not the snippet alone).
+4. **Classify** each extracted element: Reusable / Developable / Revisable / Superseded / Incompatible / Contextual (§14, Step 14).
+5. **Record provenance:** source file plus the most precise location; mark whether the use is direct reuse, rewritten, developed, or retained-but-transformed (§14, Step 16).
+6. **Apply the scientific-content rule:** `SC_` content enters the ontology only after philosophical reconstruction and with a stated status (§14.2, rule 3). Epistemological definitions are not transferred directly into ontology.
+7. **Produce the Coverage Log** (below).
+
+### A5.6 Coverage Log (mandatory in every T2–T4 report)
+
+```text
+LEGACY COVERAGE LOG
+Task            : <section / file>
+Search terms    : <list>
+Files in corpus : <N total: N PH, N SC, N unprefixed>
+Access level    : <per file or per group: L0 / L1 / L2 / L3>
+Found relevant  : <file — location — one-line content — classification>
+Examined, none  : <files examined and found irrelevant>
+Not examined    : <files and the reason (for example: PDF not extractable)>
+Claim allowed   : <listed | metadata inspected | searched | read>
+```
+
+---
+
+## A6. L4 — Task tiers: scale the procedure to the task
+
+If unsure which tier applies, take the **higher** one. A task that changes any claim, definition, argument or source is **never** T1.
+
+| Tier | Definition | Required |
+| --- | --- | --- |
+| **T1 Micro-fix** | Typo, grammar without change of meaning, formatting, a broken path or label | G0–G2; read the file and its neighbours; make the fix; verify affected references; check whether any identifier, label, glossary term or index entry is affected (§A7); short report |
+| **T2 Content revision** | Changes to the argument, definitions, claims, quotations or sources of an existing section | G0–G6; legacy-first (§A5); external sources for any changed claim; **full Backmatter Sync Matrix (§A7)**; full report (§A9) |
+| **T3 Section writing** | New section, complete rewrite, or new asset | The **entire** algorithm (§14, Steps 1–66), the pre-writing report (§14.1), the Asset Plan (§18.12), the full Sync Matrix, full report |
+| **T4 Structural** | Chapter aggregators, new chapters, renaming, moving, merging, splitting, identifiers, registries, macros, preamble | **Explicit author authorization first** (§12.5); everything in T3; global consistency checks (§11); report every structural consequence |
+
+---
+
+## A7. L4 — Backmatter Synchronization Matrix
+
+Backmatter is updated **in the same task** as the manuscript change, never postponed (§19; §22, item 15). For every T2–T4 task, **every row of this matrix receives an explicit status** in the report. A missing row is a defect, equal to having failed to update the file.
+
+| # | Component | Path | It MUST be updated when… |
+| --- | --- | --- | --- |
+| 1 | Glossary | `3_BACKMATTER/04_glossary.tex` | a technical term is introduced, materially redefined, sharply distinguished from another, superseded, or its claim status changes |
+| 2 | Acronyms | `3_BACKMATTER/05_acronyms.tex` | an acronym or abbreviation is introduced, changed or becomes obsolete (mind the open prefix conflict, §24.3 item 4, D2) |
+| 3 | Logical Entity Reference Map | `3_BACKMATTER/02_logical_entity_reference_map.tex` | any entity (definition, foundational commitment, axiom, proposition, thesis, hypothesis, argument, open problem, distinction, formal structure) is introduced, renamed, moved, split, merged, superseded or substantially redefined |
+| 4 | Bibliography | `3_BACKMATTER/03_bibliography/references.bib` | a new source is cited; first check whether the key already exists; every cited key MUST exist (§24.3 item 5 lists existing defects) |
+| 5 | Source-usage map | `3_BACKMATTER/03_bibliography/source_usage_map.csv` | any quotation, paraphrase or implicit use is added or changed; destinations are **paragraph-level**, never chapter-level (§17) |
+| 6 | Bibliography configuration | `3_BACKMATTER/03_bibliography/bibliography.tex` | only if the bibliography configuration itself changes |
+| 7 | Indexes | `3_BACKMATTER/06_indexes/subject_index.tex`, `name_index.tex`, `concept_index.tex` | a new thinker, tradition, concept, ontological category, formal principle or problem enters the text |
+| 8 | Registers (CSV) | location undecided (§24.4, D8) | entities change; **BLOCKED until the author decides** (do not create or rename them) |
+| 9 | Assets and asset records | `4_ASSETS/…` and the chapter or section that `\input`s them | an asset is added or changed; the Asset Plan (§18.12) is recorded for all four classes |
+| 10 | Aggregators | `…/00_chapter_NN.tex`, `00_part_NN.tex` | a section or asset file is added, so that its `\input` exists and resolves |
+| 11 | Back-matter assembly, appendices, conclusion | `3_BACKMATTER/00_backmatter.tex`, `01_appendices/` | only structurally; **BLOCKED** until the author decides (§24.4, D8) |
+
+### Status vocabulary (use exactly these)
+
+| Status | Meaning | What the report must contain |
+| --- | --- | --- |
+| **UPDATED** | The file changed in this task | The **complete** updated file (§21.1), and a list of the entries added or changed |
+| **CHECKED — NO CHANGE** | You examined the content and nothing needed changing | A one-line, content-specific reason, for example "all 6 technical terms in the new text already defined consistently in 04_glossary.tex" |
+| **BLOCKED** | A decision or access is missing | The exact blocker and the decision or item needed |
+| **NOT APPLICABLE** | The row's trigger cannot occur in this task | The reason (permitted only for rows 6, 8, 10 and 11) |
+
+### Rules
+
+1. "No change needed" is a **result of checking**, not an assumption. For the glossary, list the technical terms in the new or changed text and show each one is covered or added. For the entity map, list the entities introduced or changed.
+2. Entries correspond to actual use in the manuscript. A glossary definition never carries a stronger commitment than the arguments establish. No decorative or speculative entries (§19).
+3. Every updated backmatter file is delivered as a **complete file**, like any other file.
+4. Backmatter updates are based on actual changes, not on speculative future content (§14, Phase 7).
+
+---
+
+## A8. L5 — File standards at a glance
+
+Full rules: §13 (identifiers, headers, end markers, links), §15–§17 (writing, sources), §18 (assets). Where an existing sibling file deviates from §13, follow §13 and report the deviation (§24.3 item 9); do not copy the deviation.
+
+### A8.1 Where files live and how they are named
+
+```text
+VS.B01_ONTOLOGY_OF_VIABILITY/
+├── 1_FRONTMATTER/    2_MAINMATTER/    3_BACKMATTER/    4_ASSETS/
+2_MAINMATTER/PART_<NN>_<NAME>/CHAPTER_<NN>_<NAME>/sections/section_<NN>_<slug>.tex
+2_MAINMATTER/PART_<NN>_<NAME>/CHAPTER_<NN>_<NAME>/00_chapter_<NN>.tex     (aggregator)
+4_ASSETS/{tables,figures,diagrams,illustrations,cover}/                      (never inside chapters)
+```
+
+Never rename, relocate, merge, split, add or remove files or directories without explicit authorization (§12.5). Use the real path from the repository (§12.1 shows the tree verified on 23 November 2026).
+
+### A8.2 Identifier
+
+```text
+VS.B01.P01.C01.S01.SS01.P001      Book . Part . Chapter . Section . Subsection . Paragraph
+```
+
+Unique, stable, tied to a real paragraph, never reassigned after deletion, never invented (§13.1).
+
+### A8.3 Standard header (every section, chapter and asset file)
+
+```latex
+% =============================================================================
+% Project : THE_PHILOSOPHY_OF_VIABILITY
+% Book    : Book I — Ontology of Viability
+% Book ID : VS.B01
+% Part    : [Part title and ID, where applicable]
+% Chapter : [Chapter title, where applicable]
+% Chapter ID : [Chapter ID, where applicable]
+%
+% File    : [exact relative file path]
+%
+% Section / Chapter / Asset:
+%   [exact title]
+%
+% Structural Identifier : [full structural identifier, where applicable]
+% Asset Type : [TL / FG / DG / IL — asset files only]
+%
+% Purpose :
+%   [precise statement of the file's function]
+%
+% =============================================================================
+```
+
+Path, title and purpose MUST match the real file. A field that does not apply is omitted, never invented.
+
+### A8.4 End marker (numbers and titles MUST match the real file)
+
+```latex
+% =============================================================================
+% END OF SECTION 05 OF CHAPTER 01
+% =============================================================================
+```
+
+Chapter: `END OF CHAPTER 01`. Asset: `END OF TABLE TL01` (and likewise `FIGURE FG`, `DIAGRAM DG`, `ILLUSTRATION IL`).
+
+### A8.5 Section file skeleton
+
+```latex
+% <standard header, §A8.3>
+
+\section{<exact section title>}
+\label{<label in the project's convention; check uniqueness>}
+
+% Blueprint order (used flexibly, never as a mechanical template):
+% problem → central thesis → foundational commitments → definitions and distinctions →
+% arguments → examples → engagement with alternatives → implications →
+% limitations → open questions → transition
+
+% Use ONLY macros that exist in the real macros.tex.
+% Paragraph destinations and clickable internal references: §13.4.
+% Citations and footnotes with exact locations: §16.
+% Independent assets: \input{<path without .tex>} only when the asset file is delivered (§18.9).
+% Claim status on both axes: §10.
+
+% <standard end marker, §A8.4>
+```
+
+### A8.6 Rules that apply to every file
+
+| Rule | Source |
+| --- | --- |
+| Book text and project files in **academic philosophical English**; communication with the author in **Persian** | §5 |
+| `\input` paths **omit** `.tex`; verify every path; never load a package twice; never redefine a macro; add packages or macros only with a stated purpose | §13.5 |
+| Internal references are **clickable hyperlinks produced by macros**, not comments or plain text | §13.4 |
+| Quotations under a hard requirement of exact location; no invented quotations, pages, editions or translators | §16.5, §22 |
+| Footnotes carry scholarly support and clarification | §16.6 |
+| Each claim carries a status on **both** axes; no hypothesis presented as principle | §10, §22 |
+| Complete file every time; end marker present; nothing omitted with "continue as before" | §21.1 |
+| Assets: all four classes (Table, Figure, Diagram, Illustration) assessed against both criteria; independent files under `4_ASSETS/`; none created merely to hit a number | §18 |
+
+---
+
+## A9. L6 — Delivery and reporting
+
+### A9.1 Order of every T2–T4 delivery
+
+1. **State Snapshot** (§A4, G2).
+2. **Task identification:** book, Part, Chapter, Section and IDs; exact target path; new writing / rewrite / revision / structural; scope.
+3. **Legacy Coverage Log** with classification (§A5.6).
+4. **Philosophical and editorial decisions:** the pre-writing report (§14.1), the diagnosis, claim classification on both axes.
+5. **Complete main file** (one code block, header and end marker).
+6. **Independent asset files** (one code block each) and the **Asset Plan** for all four classes (§18.12).
+7. **References, footnotes and internal linking** (§16, §13.4).
+8. **Backmatter Sync Report:** all eleven rows of §A7 with their statuses, and every UPDATED file as a complete file.
+9. **Validation:** the checks actually performed, using the five levels of §20.3 (source inspection; static consistency; compilation; PDF generation; visual inspection).
+10. **Commit message** (§21.4), describing exactly the files delivered, nothing else.
+11. **Delivery status** (below) and the **carry-forward notes** for the next file.
+
+### A9.2 Status lines
+
+Each line is one of **DONE / PARTIAL / NOT DONE / BLOCKED / UNVERIFIED**, with a reason when not DONE:
+
+```text
+Repository state recorded      : …     Legacy corpus searched (level)  : …
+Complete main file delivered   : …     Independent assets delivered    : …
+External sources verified      : …     Footnotes added                 : …
+Paragraph identifiers assigned : …     Internal hyperlinks implemented : …
+Backmatter Sync (11 rows)      : …     Compilation performed           : …
+PDF visually inspected         : …     Commit created / push verified  : …
+```
+
+### A9.3 Reporting rules
+
+- Report in **Persian**, concisely; file contents in **English**.
+- Separate: verified vs. unverified; delivered files vs. files actually written to the repository; proposed commit message vs. an actual commit (§21.5, §21.6).
+- A proposed repair is a proposal, never "done". A defect found is reported, never concealed (§22, item 23).
+- Do not repeat apologies or restate protocol. State facts, then act.
+
+---
+
+## A10. Field record: observed failures and the rule that prevents each
+
+These were observed while an AI agent worked under an earlier version of this protocol. Each is now a binding rule.
+
+| Observed failure | Binding rule |
+| --- | --- |
+| The agent asked the author to send a ZIP of files that were already in the remote repository | G1-R, items 4–5: read from the remote; never ask for files that exist (R9) |
+| It was unclear whether the first move of a cloud agent without local MCP is to connect to the remote and record the current state | G0–G2: environment check, remote connection, State Snapshot with SHA and message, **before** anything else |
+| The agent could begin drafting without having read the author's earlier works | §A5.1 fixed order; G6 gate blocks drafting below access level L2 |
+| Reports of the legacy directory disagreed (different counts, a look-alike directory with unprefixed files) | G3 items 2–4: exact listing, exact counts, both directories reported, no silent reconciliation |
+| The corpus existed only as PDFs the agent could not read; the report honestly called itself a preliminary audit | §A5.3 access levels; §A5.4 legacy text layer; §A5.3 last bullet (honest partial reports are correct) |
+| Backmatter files (`04_glossary.tex`, `05_acronyms.tex`, entity map, indexes and others) were not updated or even mentioned | §A7: eleven-row matrix; every row gets an explicit status; a missing row is a defect |
+| A long, nineteen-part blueprint plus asset decisions without a visible tie to the author's goals | §A1 item 4 and §A3.2: every element must trace to L0; the Asset Plan is assessed per class with both criteria (§18.4) |
+| Substantive work and housekeeping were not distinguished by size | §A6: tiers T1–T4 scale the procedure |
+
+---
+
+## A11. Appendix — legacy text layer commands
+
+Run by the **author** in the repository root, then commit `My_Legacy_Works/extracted_text/` to `main`. The original PDFs are not modified.
+
+**Windows PowerShell** (requires `pdftotext` from Poppler on the PATH):
+
+```powershell
+$source = ".\My_Legacy_Works"
+$target = Join-Path $source "extracted_text"
+
+New-Item -ItemType Directory -Force -Path $target | Out-Null
+
+Get-ChildItem $source -File -Filter "*.pdf" |
+    Where-Object { $_.Name -match "^(PH|SC)_" } |
+    ForEach-Object {
+        $output = Join-Path $target ($_.BaseName + ".txt")
+
+        pdftotext -layout -enc UTF-8 $_.FullName $output
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "Extraction failed: $($_.Name)"
+        }
+        else {
+            Write-Host "Extracted: $($_.Name)"
+        }
+    }
+```
+
+**Bash** (Linux or macOS):
+
+```bash
+mkdir -p My_Legacy_Works/extracted_text
+for f in My_Legacy_Works/PH_*.pdf My_Legacy_Works/SC_*.pdf; do
+  [ -e "$f" ] || continue
+  pdftotext -layout -enc UTF-8 "$f" "My_Legacy_Works/extracted_text/$(basename "${f%.pdf}").txt" \
+    || echo "Extraction failed: $f"
+done
+```
+
+A scanned PDF with no text layer produces an empty or near-empty `.txt`; report it as "no text layer (OCR needed)" and do not treat it as read.
+
+---
+
+# PART B — REFERENCE MANUAL
+
+Part B is the detailed manual. Its section numbers (§0–§25) are unchanged so that every reference in this document and in the repository stays valid. Part A takes precedence over Part B where they differ (§A0).
 
 ---
 
@@ -22,6 +492,7 @@ This README is written so that an AI agent with **no prior knowledge of the proj
 
 ## 0.1 Reading order for a new agent
 
+0. Read **Part A** completely and execute the Session Gate (§A4) before any other action; Part A fixes the order of actions and the first moves in every environment.
 1. Read §1–§5 (identity, mission, strategy, authority, language) before anything else.
 2. Read §6–§9 (architecture, commitments, distinctions, open questions) before touching any philosophical content.
 3. Read §10–§13 (claim status, chapter boundaries, repository structure, identifiers) and §18 (assets) before producing any file.
@@ -821,6 +1292,8 @@ Numbers and titles MUST match the real file.
 
 # 14. The Mandatory Algorithm for Every Writing or Revision Task
 
+> **Execution note (Part A).** The Session Gate (§A4) runs before Phase 1; the Legacy-first rule and access levels (§A5) govern Phase 3 and block drafting (Phase 6) when the legacy corpus has not been searched at level L2 or above; the procedure is scaled by task tier (§A6); and Phase 7 is executed through the Backmatter Synchronization Matrix (§A7). Where this section's order differs from Part A, Part A governs.
+
 This sequence is mandatory. No step may be silently omitted. The target file is the immediate object of work; **the whole book is the unit of responsibility**. The agent MUST NOT begin substantive drafting merely because a target filename was supplied.
 
 ## Phase 1 — Repository Discovery
@@ -961,7 +1434,7 @@ Rules:
 2. Provenance (Step 16) records the prefix class of every extracted element.
 3. A scientific argument, model or result MUST NOT automatically become a philosophical foundation, premise or definition. It may enter as Contextual material, or as Developable material after philosophical reconstruction, with its status stated, unless the author directs otherwise.
 4. A file in `My_Legacy_Works` that carries neither prefix is reported to the author, not classified by guess.
-5. The location of `My_Legacy_Works` relative to the project directory is recorded in §24.4 (D5) until the author states it.
+5. The location of `My_Legacy_Works` is the **repository root** (`My_Legacy_Works/`), as stated by the author (§A4, G3). Access levels, the legacy text layer and the Coverage Log are defined in §A5; a look-alike directory (for example `My Legacy Works`) is reported, not silently merged (§A4, G3).
 
 ## 14.3 Research and writing pipeline (conceptual summary)
 
@@ -1440,6 +1913,8 @@ Never claim that an asset was created, rendered, inserted, registered or compile
 
 # 19. Continuous Backmatter Synchronization
 
+> The operational form of this section, with an explicit status for every backmatter file in every task, is the Backmatter Synchronization Matrix of §A7. This section states the principles; §A7 states the procedure.
+
 Backmatter is **not** a final-stage activity. It evolves with every substantive change and reflects the actual contents of mainmatter.
 
 | Component | Update when… | Rule |
@@ -1502,7 +1977,7 @@ Repository: `THE_PHILOSOPY_OF_VIABILITY_LIBRARY_PROJECT`. Keep source files dist
 
 ## 21.3 Mandatory response structure
 
-Every writing or revision delivery follows this order:
+Every writing or revision delivery follows this order (Part A, §A9.1, adds the State Snapshot, the Legacy Coverage Log and the Backmatter Sync Report to it; follow §A9.1 for the complete order):
 
 1. **Task identification and scope** — project; book title and Book ID; Part title and ID; Chapter title and ID; Section title and ID (where applicable); exact target filename and directory; whether the task is new writing, complete rewriting, revision, restructuring or asset production; purpose and scope. Existing titles, approved section sequences, filenames, structural identifiers and directory conventions are preserved unless a change is explicitly authorized; files are never silently renamed, relocated, merged, split or deleted.
 2. **Philosophical and editorial decisions** — the substance of the pre-writing report (§14.1) and the diagnosis (§15.6, claim classification on both axes).
@@ -1668,7 +2143,7 @@ This section is a dated record, not a rule. It is replaced whenever the reposito
 - **D2. Registry prefixes.** Authorize or decline a repair of `05_acronyms.tex` and `02_logical_entity_reference_map.tex` to `TH` = Theorem and `PF` = Proof (§24.3, item 4). Decide what happens to the documented register names `theses_register.csv` and `philosophical_foundations_register.csv`, and whether Foundational Commitment, Thesis and Open Problem (Axis-1 forms with no prefix, §10.1) receive prefixes. Do not rename register files or invent prefixes without that decision.
 - **D3. Asset-benefit wording.** The operational protocol requires an illustration to give a "genuine explanatory or conceptual benefit". §3.4 and §18 also recognize aesthetic and reader-experience value; this README reads "benefit" as including both (§18.4). Confirm.
 - **D4. Scientific corpus.** Confirm the rule of §14.2 for `SC` files (searched and extracted from; scientific content enters the ontology only after philosophical reconstruction), and state whether any specific file, including the five scientific PDFs that an earlier version of this README excluded by name, is to be treated differently.
-- **D5. Access to `My_Legacy_Works`.** State its location relative to the project directory and make it available to the agent (for example as an additional accessible directory, or by providing the files). Until then, no claim that the legacy corpus was searched may be made (Step 12, §22 item 25).
+- **D5. Access to `My_Legacy_Works` (location resolved; access still open).** Location: repository root, as stated by the author. Still open: the corpus is available as PDF files; to reach access level L2 (§A5.3) the author commits the text layer `My_Legacy_Works/extracted_text/` (§A5.4, §A11), and decides how the look-alike directory without classified prefixes (if present) is to be treated (§A4, G3). Until L2 is reached for the relevant works, no claim that the legacy corpus was searched may be made (Step 12, §22 item 25) and substantive drafting is blocked (§A4, G6).
 - **D6. Root `glossary.tex` and `acronyms.tex`.** Confirm that they are obsolete and that the backmatter files `04_glossary.tex` and `05_acronyms.tex` are the glossary and acronym list (§12.2); and state where `.gitignore` is kept.
 - **D7. Scope of Chapter 08.** Confirm the current 24-section plan (one section per interlocutor), including whether any tradition named in the previous directive (for example Hegel or medieval philosophy) is to be added (§6.4).
 - **D8. Registers, appendices and Conclusion.** Decide the location and naming of the register files, and whether and when the appendices A–G and the Conclusion are to be created (§12.2, §12.3).
