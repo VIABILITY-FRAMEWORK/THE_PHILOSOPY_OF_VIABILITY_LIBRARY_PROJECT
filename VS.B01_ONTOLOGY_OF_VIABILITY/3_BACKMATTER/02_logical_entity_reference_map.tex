@@ -171,77 +171,26 @@ A representative full-length structural identifier is:
 
 \begin{center}
 \small
-\path{VS.B01.P01.C01.S01.SS01.P001}
-\end{center}
-
-Its components are interpreted as follows:
-
-\begin{center}
-\small
 \setlength{\tabcolsep}{4pt}
-\begin{tabularx}{\textwidth}{
-    >{\raggedright\arraybackslash}p{0.12\textwidth}
-    >{\raggedright\arraybackslash}p{0.18\textwidth}
-    >{\raggedright\arraybackslash}X
-}
+\renewcommand{\arraystretch}{1.15}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{2.2cm}p{3.3cm}p{9.2cm}@{}}
 \toprule
 \textbf{Component} &
 \textbf{Structural Level} &
 \textbf{Reference Function}
 \\
 \midrule
-
-\texttt{VS}
-&
-Project
-&
-Identifies \textit{The Philosophy of Viability}.
-\\
-
-\texttt{B01}
-&
-Book
-&
-Identifies Book I.
-\\
-
-\texttt{P01}
-&
-Part
-&
-Identifies Part I.
-\\
-
-\texttt{C01}
-&
-Chapter
-&
-Identifies Chapter 01 within the designated part.
-\\
-
-\texttt{S01}
-&
-Section
-&
-Identifies Section 01 within the designated chapter.
-\\
-
-\texttt{SS01}
-&
-Subsection
-&
-Identifies Subsection 01 within its designated section.
-\\
-
-\texttt{P001}
-&
-Paragraph
-&
-Identifies a formally numbered paragraph within
-its designated structural location.
-\\
+\texttt{VS}   & Project    & Identifies \textit{The Philosophy of Viability}. \\
+\texttt{B01}  & Book       & Identifies Book I. \\
+\texttt{P01}  & Part       & Identifies Part I. \\
+\texttt{C01}  & Chapter    & Identifies Chapter 01 within the designated part. \\
+\texttt{S01}  & Section    & Identifies Section 01 within the designated chapter. \\
+\texttt{SS01} & Subsection & Identifies Subsection 01 within its designated section. \\
+\texttt{P001} & Paragraph  & Identifies a formally numbered paragraph within its designated structural location. \\
 \bottomrule
-\end{tabularx}
+\end{tabular}%
+}
 \end{center}
 
 The complete identifier provides a documentary address
