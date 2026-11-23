@@ -1,0 +1,905 @@
+       A General Theory of Representation
+      Observable Restriction, Identification, and the Two Sources of
+                            Information Loss
+
+                                       Saeed Hasibi
+                                         July 2026
+
+                                             Abstract
+         Every scientific model, simulation, digital twin, measurement, map, machine
+     learning model, CAD model, and BIM model is fundamentally a representation of
+     reality, and every such representation loses information relative to the system it
+     represents. This paper develops a mathematical framework, grounded in the For-
+     mal Theory of Manifestation (FTM), for describing exactly how that loss occurs.
+     We give a formal definition of a deterministic representation and show that every
+     such representation loses information through two distinct mechanisms: Observ-
+     able Restriction (the choice of which observables to retain) and Identification
+     (the merging of distinguishable states via a quotient), and that these two mech-
+     anisms are not interchangeable in order: restriction is necessarily the first stage
+     whenever the identification in question represents observational indistinguishabil-
+     ity. This paper does not claim novelty for the underlying mathematical theorems:
+     the minimality of a generated σ-algebra, the categorical first isomorphism theo-
+     rem in exact categories, and the Shannon entropy chain rule are all classical. The
+     novelty lies in recognizing that, read simultaneously as statements about represen-
+     tation, these results jointly force a structural decomposition that, to our knowledge,
+     has not previously been identified as such: every deterministic representation fac-
+     tors canonically and uniquely as Observable Restriction followed by Identification
+     (Theorems 8.2, 7.2, 9.1), and this decomposition admits a domain-independent
+     quantitative language, the Restriction Index (RI) and Identification Index (II), ap-
+     plicable uniformly across CAD, BIM, GIS, robotics, medical imaging, knowledge
+     graphs, computer vision, and machine learning. We situate the framework against
+     sufficient-statistics theory, rate-distortion theory, and the information bottleneck
+     method, give explicit axioms for the effective-dimension functions underlying RI
+     and II, and illustrate the framework with a single running example (a digital cam-
+     era’s image pipeline) alongside eight domain-specific worked examples in uniform
+     format.
+
+     Keywords: Formal Theory of Manifestation, Representation Theory, Observable
+     Restriction, Identification, Digital Twin, Sufficient Statistics, Rate-Distortion The-
+     ory, Information Bottleneck, Quotient Spaces, Information Loss.
+
+
+Contents
+1 Introduction                                                                                4
+  1.1 Relation to the Formal Theory of Manifestation . . . . . . . . . . . . . .              5
+
+                                               1
+2 Representation, Formalized                                                               5
+  2.1 A Running Example: The Digital Camera Pipeline . . . . . . . . . . . .               6
+
+3 Observable Restriction: Choosing What to Measure                                         6
+  3.1 Effective Dimension . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      7
+  3.2 The Restriction Index . . . . . . . . . . . . . . . . . . . . . . . . . . . .        8
+
+4 Identification: Quotient by an Equivalence Relation                                      8
+
+5 A General Diagram of Representation                                                      9
+  5.1 Why Restriction Must Come First . . . . . . . . . . . . . . . . . . . . . .         10
+
+6 Related Work                                                                            10
+  6.1 Positioning the Framework . . . . . . . . . . . . . . . . . . . . . . . . . .       11
+
+7 The Representation–Observable Algebra Correspondence                                    11
+
+8 Factorization in Exact Categories                                                       12
+
+9 Separability and Additivity of Information Loss                                         13
+
+10 Computational Considerations                                                           14
+
+11 Worked Examples                                                                        14
+
+12 Static and Dynamic Representation                                                      16
+   12.1 Static Representation . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   16
+   12.2 Dynamic Representation . . . . . . . . . . . . . . . . . . . . . . . . . . .      16
+   12.3 Higher-Order Representations . . . . . . . . . . . . . . . . . . . . . . . .      16
+
+13 Limitations                                                                            16
+
+14 Future Directions                                                                      17
+
+15 Conclusion                                                                             17
+
+A Summary of Definitions                                                                  19
+
+B Open Direction: An RI–II Tradeoff Bound                                                 19
+
+
+
+
+                                             2
+Notation
+        Symbol              Meaning
+            Γ               The full state space of the system being represented (“re-
+                            ality”)
+         A, BD              The σ-algebra on Γ; the Borel σ-algebra on D
+      O = {fi }i∈I          An observable structure: a family of morphisms fi : Γ →
+                            Xi
+          J ⊆I              A chosen subset of observables
+         RJ , ΓJ            The observable restriction to J, and its image (the re-
+                            stricted space)
+          Q, D              An identification (quotient map), and its codomain (the
+                            final representation)
+      ϕ = Q ◦ RJ            A full deterministic representation
+          σ(ϕ)              The canonical minimal observable sub-σ-algebra induced
+                            by ϕ
+       dimeff (X)           The effective dimension of X (Definition 3.4)
+          RI, II            Restriction Index, Identification Index
+  H(·), H(· | ·), I(·; ·)   Shannon entropy, conditional entropy, mutual information
+       ℓϕ , ℓRJ , ℓQ        Total, restriction, and identification information loss
+
+
+
+
+                                              3
+1     Introduction
+Every scientific model, simulation, digital twin, measurement, map, machine learning
+model, CAD model, BIM model, and knowledge graph is, at bottom, a representation
+of reality: a finite, structured stand-in for a system too large, too continuous, or too
+inaccessible to be manipulated directly. Every such representation is necessarily lossy.
+Yet despite the ubiquity of representation as a scientific and engineering activity, there
+has been no general mathematical language for describing how a representation loses
+information, or for comparing the loss incurred by representations built by entirely differ-
+ent disciplines. A simplified terrain mesh, a discretized structural model, and a trained
+image classifier all discard information, but no shared vocabulary has existed for saying
+precisely what kind of information each discards, or how much.
+    One instance of this general problem, and the one that originally motivated this
+work, is the digital twin. The concept has gained significant traction in engineering,
+urban planning, and industrial systems. Despite its widespread use, it lacks a rigorous
+formal definition of what constitutes a complete digital twin. The Formal Theory of
+Manifestation (FTM) [1] supplies part of the needed foundation. It defines a digital twin
+as a local section of a manifestation sheaf F over a context site (C, J):
+
+                               Digital Twin Tk = sk ∈ F(Uk ),
+
+where Uk ⊆ C is the context of the twin. FTM, however, is a theory of what reality and
+its manifestations are. It is not a theory of how a specific finite representation of that
+reality is built, nor of how it loses fidelity in the process. That is the gap this paper fills.
+The resulting theory applies far beyond digital twins, to any representation of a physical
+or informational system whatsoever.
+
+Why this could not simply have been written twenty years ago. The individ-
+ual mathematical ingredients used here — the minimality of a generated σ-algebra, the
+first isomorphism theorem for exact categories, and the Shannon entropy chain rule —
+have each been available for decades, in some cases nearly a century. The novelty of this
+work does not lie in any individual theorem employed, but in identifying a structural
+decomposition that becomes visible only when these classical results are interpreted si-
+multaneously as statements about representation. To our knowledge, no previous work
+has recognized Observable Restriction and Identification as the two universal and or-
+dered mechanisms underlying deterministic representation across scientific domains, nor
+derived their canonical ordering from the minimality property of Theorem 7.2. Sufficient
+statistics theory addresses a closely related but distinct question — see Section 6 — and
+rate-distortion theory and the information bottleneck optimize a restriction rather than
+deriving one canonically from an already-given map. It is the combination, not any single
+component, that is new.
+
+What is new here, precisely. This work does not claim novelty for the underlying
+mathematical theorems themselves. It introduces (i) a formal definition of representa-
+tion (Definition 2.1) and a conceptual decomposition of representation into Observable
+Restriction and Identification; (ii) the demonstration that classical results jointly imply
+this decomposition and force a specific ordering between its two stages; and (iii) a uni-
+fied, dimension-free, cross-domain language — the indices RI and II — for reasoning
+
+
+                                               4
+about representation loss. Section 6 makes explicit, result by result, which parts of the
+framework are classical, which are reinterpretations, and which are new.
+
+1.1     Relation to the Formal Theory of Manifestation
+FTM and the present theory operate at different layers and answer different questions.
+    FTM asks: what is reality, and what does it mean for something to man-
+ifest? It supplies the sheaf-theoretic machinery (F, contexts Uk , local sections sk ) by
+which a digital twin is defined as a legitimate manifestation of a system within a context.
+    This paper asks: given that a representation exists, how does it lose in-
+formation relative to what it represents? It takes the existence of a representation
+ϕ : Γ → D as given, whether or not that representation arises as an FTM manifestation,
+and analyzes the internal structure of the loss ϕ incurs.
+    Every FTM manifestation is, in particular, a representation in the sense of this paper,
+and so is subject to the Observable Restriction / Identification decomposition. The
+converse is not asserted: a representation need not be phrased in FTM’s sheaf-theoretic
+vocabulary for the results here to apply. This is why the framework extends past digital
+twins to CAD, GIS, robotics, medical imaging, and machine learning.
+
+
+2     Representation, Formalized
+Definition 2.1 (Deterministic Representation). Let Γ be an object of a concrete category
+C, modeling a physical or informational system (“reality”). A deterministic repre-
+sentation of Γ is a morphism
+                                     ϕ:Γ→D
+in C, where D is intended to retain only selected observable information about Γ. We
+say ϕ is deterministic because it is a genuine morphism of C (a function, in the concrete
+setting) rather than a stochastic kernel; the stochastic case, where ϕ is replaced by a
+Markov kernel Γ ⇝ D, is discussed as a future direction in Section 14.
+    All subsequent theorems in this paper are theorems about the object ϕ of Definition 2.1:
+Theorem 8.2 concerns its factorization in an exact category, Theorem 7.2 concerns the
+canonical σ-algebra it induces when C = Meas, and Theorem 9.1 concerns the entropy
+loss it incurs when Γ additionally carries a probability measure.
+
+Principle 2.1 (Two Sources of Information Loss). Every deterministic representation
+ϕ : Γ → D of an open physical system loses information through two distinct mechanisms:
+
+    1. Observable Restriction: the choice of which observables, degrees of freedom, or
+       measurement contexts to retain from reality.
+
+    2. Identification: the merging of distinguishable states within the retained observ-
+       ables, i.e., passing to a quotient by an equivalence relation.
+
+These mechanisms are separable in the following precise sense: for a fixed restricted space
+Γ′ , the identification loss depends only on the quotient map Γ′ ↠ D, not on how Γ′ was
+obtained from Γ; conversely, the restriction loss depends only on the map Γ → Γ′ , not
+on any subsequent identification. We use separable rather than independent to avoid
+suggesting a probabilistic-independence claim; see the remark following Proposition 9.2.
+
+
+                                             5
+2.1    A Running Example: The Digital Camera Pipeline
+To keep the abstract machinery grounded, we use a single running example throughout
+the paper, revisited after each major definition and theorem.
+Example 2.2 (Running Example: Digital Camera Pipeline). Let Γ = {0, . . . , 255}n×m×3
+be the space of n × m RGB images, one byte per color channel per pixel, so dimeff (Γ) =
+24nm bits. The camera’s on-device pipeline produces, in sequence:
+                            grayscale conversion       thresholding
+           RGB image Γ −−−−−−−−−−−→ ΓJ −−−−−−→ D (binary image).
+
+Grayscale conversion retains, per pixel, a single fixed linear combination of the three
+channels (an observable restriction: it discards two of the three retained bytes of infor-
+mation per pixel, keeping only luminance). Thresholding at a fixed level then merges all
+grayscale values above the threshold into one symbol and all values below into another (an
+identification: it merges the 256 distinguishable gray levels per pixel into 2).
+
+
+3     Observable Restriction: Choosing What to Mea-
+      sure
+Definition 3.1 (Observable Structure and Restriction). Let Γ be a physical system mod-
+eled as an object in a concrete category C (typically Set, Meas, or Man). An observ-
+able structure on Γ is a family O = {fi : Γ → Xi }i∈I of morphisms in C, where each
+Xi is a value space.
+    An observable restriction relative to a subset J ⊆ I is the map
+                                    Y
+                         RJ : Γ →      Xj , RJ (s) = (fj (s))j∈J .
+                                      j∈J
+
+
+We denote the image by ΓJ := Im(RJ ) and call it the restricted space. The restriction
+RJ is surjective onto ΓJ by construction.
+
+ Running Example (continued)
+ For Example 2.2, take I = {R, G, B} with fR , fG , fB the three per-pixel channel maps,
+ and J = {Y } for a single derived luminance observable fY = 0.299fR + 0.587fG +
+ 0.114fB (rounded to a byte). Then ΓJ = {0, . . . , 255}n×m , with dimeff (ΓJ ) = 8nm
+ bits.
+
+Remark 3.2 (What Counts as an Observable Restriction). Definition 3.1 is deliberately
+abstract so that it captures, as special cases, activities that different disciplines treat as
+unrelated:
+    • Sensing: a physical sensor fi measuring one physical quantity (temperature, strain,
+      position) is an observable in O; the set of installed sensors defines J.
+
+    • Measurement: any experimental protocol reporting a value for some quantity,
+      silent about all others, is a restriction to the reported quantities.
+
+    • Abstraction: replacing a detailed object with a simplified description (bounding
+      box, centroid, mass) is a restriction to those derived observables.
+
+                                                   6
+   • Dimensional reduction: PCA, autoencoding, or any projection to a lower-dimensional
+     coordinate system is a restriction to the retained components.
+
+   • Feature extraction: a neural network’s hidden layer, or a hand-designed feature
+     vector, defines a family of learned or engineered observables.
+
+   • Context selection: choosing which subsystem, time window, or spatial region Uk
+     to model is itself a restriction, prior to any individual observable chosen within it.
+
+Recognizing these as instances of the same construction is what lets RI be computed
+identically whether the observable is a physical sensor or a learned neural feature.
+
+3.1    Effective Dimension
+Definition 3.3 (Axioms for Effective Dimension). A function dimeff assigning to each
+object X of C a value in [0, ∞] is an effective dimension if it satisfies:
+
+(D1) Invariance: if X ∼
+                      = Y , then dimeff (X) = dimeff (Y ).
+(D2) Monotonicity: if X is a subobject of Y (a regular monomorphism X ,→ Y ),
+     then dimeff (X) ≤ dimeff (Y ); dually, if Z is a quotient of Y (a regular epimorphism
+     Y ↠ Z), then dimeff (Z) ≤ dimeff (Y ).
+
+(D3) Additivity: dimeff (X × Y ) = dimeff (X) + dimeff (Y ).
+
+Definition 3.4 (Effective Dimension: Instances). For an object X in C, dimeff (X) is
+defined contextually:
+
+   • For a finite-dimensional vector space, dimeff (X) = dim(X).
+
+   • For a finite set, dimeff (X) = log2 |X| (Hartley entropy).
+
+   • For a manifold, dimeff (X) = dimmanifold (X).
+
+   • For a measurable space with probability measure µ, dimeff (X) = H(X, µ) (Shannon
+     entropy).
+
+Remark 3.5. Each instance in Definition 3.4 satisfies (D1)–(D3). Vector-space dimen-
+sion and manifold dimension satisfy all three by standard linear algebra and topology (a
+submanifold has dimension ≤ that of the ambient manifold; products add dimensions).
+Hartley entropy log2 |X| satisfies (D2) because an injection into Y forces |X| ≤ |Y | and
+a surjection from Y forces |Z| ≤ |Y |, and (D3) because |X × Y | = |X||Y |. Shannon
+entropy satisfies (D2) because conditioning (restricting to a sub-σ-algebra or coarsening
+a partition) cannot increase entropy, and (D3) is the standard entropy-of-independent-
+product identity. This is why the same symbol dimeff and the same formulas for RI, II
+can be reused unchanged across Definitions 3.1–3.4’s four settings.
+
+
+
+
+                                            7
+3.2    The Restriction Index
+Existing notions of representation fidelity are almost always domain-specific: a mesh-
+simplification error metric does not transfer to an image classifier, and a sensor-coverage
+metric does not transfer to a knowledge graph. The Restriction Index is intended as
+a domain-independent quantity, applicable wherever an effective dimension satisfying
+(D1)–(D3) can be assigned, measuring exactly one of the two orthogonal sources of loss
+identified in Principle 2.1.
+Definition 3.6 (Restriction Index). For a restriction RJ : Γ → ΓJ , the Restriction
+Index is
+                                         dimeff (ΓJ )
+                               RI(RJ ) =              ,
+                                          dimeff (Γ)
+provided dimeff (Γ) > 0. Intuitively, RI answers: how much of reality remains observable
+after the restriction?
+ Running Example (continued)
+ RI(RJ ) = 8nm/24nm = 1/3 for the grayscale conversion: exactly one third of the raw
+ byte-count survives restriction.
+
+
+4     Identification: Quotient by an Equivalence Rela-
+      tion
+Definition 4.1 (Identification). Let Γ′ be a restricted space. An identification is a
+surjective morphism
+                                      Q : Γ′ ↠ D
+in C that merges distinguishable states. Equivalently, D ∼= Γ′ /∼ for some equivalence
+               ′
+relation ∼ on Γ , and Q is the canonical quotient map.
+ Running Example (continued)
+ Thresholding partitions ΓJ = {0, . . . , 255}n×m pixelwise into two classes (above/below
+ threshold τ ), giving D = {0, 1}n×m . Here ∼ identifies all grayscale values ≥ τ with
+ each other, and all values < τ with each other, independently per pixel.
+
+Remark 4.2 (Instances of Identification). Identification names a single construction that
+recurs, under different names, across disciplines:
+    • Mesh simplification: collapsing groups of vertices or faces of a 3D mesh into a
+      single coarser element.
+
+    • State aggregation: replacing a fine-grained state space with coarser macro-states.
+
+    • Image segmentation: partitioning an image’s pixels into a small number of la-
+      beled regions.
+
+    • Clustering: replacing individual data points with cluster labels.
+
+    • Finite element discretization: replacing a continuum field with values at finitely
+      many nodes.
+
+                                            8
+    • Symbolic abstraction: replacing continuous sensor readings with discrete sym-
+      bolic states.
+
+Definition 4.3 (Identification Index). The Identification Index is
+
+                                                    dimeff (D)
+                                         II(Q) =                 ,
+                                                    dimeff (Γ′ )
+
+provided dimeff (Γ′ ) > 0. Intuitively, II answers: how much distinction remains after
+abstraction?
+ Running Example (continued)
+ II(Q) = nm/8nm = 1/8: the binary image retains one eighth of the grayscale image’s
+ bit-count.
+
+Remark 4.4 (Scope of the Non-Uniqueness of Observable Families). Different observable
+families may generate the same σ-algebra, and Theorem 7.2 shows that only the gener-
+ated σ-algebra σ(ϕ), not the particular generating family {fi }, is canonical. The theory
+therefore identifies observable structures only up to their generated σ-algebra. This mir-
+rors standard practice in probability theory, where a random variable’s distribution and
+conditional structure depend only on the σ-algebra it generates, not on the specific func-
+tions used to generate it, and it avoids making RI or II depend on an arbitrary choice of
+generating family.
+
+
+5     A General Diagram of Representation
+Figure 1 summarizes the pipeline established above.
+
+                                                           Reality
+                                                             Γ
+                                                                   Observable Restriction RJ
+            Restriction Loss ℓRJ = H(Γ) − H(ΓJ )                    (sensing / measurement /
+                                                                 abstraction / feature extraction)
+
+                                                     Restricted Space
+                                                            ΓJ
+                                                                        Identification Q
+           Identification Loss ℓQ = H(ΓJ ) − H(D)                (clustering / segmentation /
+                                                                 discretization / aggregation)
+
+                                                        Representation
+                                                              D
+
+
+Figure 1: The general representation pipeline: reality Γ passes through Observable Re-
+striction to ΓJ , then Identification to D. Total loss is ℓϕ = H(Γ) − H(D) = H(Γ | D)
+(Theorem 9.1).
+
+
+
+
+                                                    9
+5.1    Why Restriction Must Come First
+The correct pipeline is
+
+Γ −→ choose what can be observed −→ Γ′ −→ merge distinguishable states −→ D,
+
+not the reverse. To “merge states” before any observable is chosen presupposes an equiv-
+alence relation on Γ itself, and such a relation can only be specified in terms of some
+observable structure: two states are declared equivalent because they agree on some set
+of retained observables, or because some retained measurement cannot distinguish them.
+Definitions 3.1 and 4.1 reflect this: the equivalence relation ∼ is defined on the already-
+restricted space Γ′ , never directly on Γ.
+
+Remark 5.1 (Scope of the Claim). This claim is not that one cannot mathematically
+write down an equivalence relation directly on Γ — one always can, since any equiva-
+lence relation is by definition a subset of Γ × Γ. The claim is narrower, and concerns
+observational indistinguishability: whenever ∼ is meant to encode which states cannot be
+told apart by some retained measurement or representation, ∼ is necessarily induced by
+an antecedent choice of observable structure, in the sense that it refines the kernel rela-
+tion of some restriction RJ . An equivalence relation imposed on Γ without reference to
+any observable does not correspond to identification in the sense of Definition 4.1, which
+requires ∼ to live on an already-restricted space Γ′ .
+
+   Theorem 7.2 makes this precise: any deterministic representation ϕ, however it was
+actually constructed, is provably equivalent to one that first restricts to the canonical
+minimal observable algebra σ(ϕ) and only then quotients. This is why Theorems 8.2
+and 7.2 together should be read as a single claim: restriction-then-identification is the
+canonical, and up to the freedom in Remark 8.3, essentially forced factorization of any
+deterministic representation.
+
+
+6     Related Work
+Sufficient statistics and generated σ-algebras. The minimality property underlying
+Theorem 7.2 is the classical fact that the σ-algebra generated by a measurable map is
+the coarsest one making the map measurable. This is foundational to the theory of
+sufficient statistics developed by Halmos and Savage [7], and appears as a standard lemma
+in Kallenberg [9]. The two theories nonetheless address different problems. Sufficient
+statistics theory solves an inference problem: given a family of probability distributions
+indexed by a parameter, it identifies a statistic that retains all information relevant to
+estimating that parameter, discarding the rest as noise. The present framework instead
+characterizes the internal structure of an arbitrary given representation, independent of
+any inference target or parametric family: σ(ϕ) is canonical relative to ϕ alone, not
+relative to a statistical model ϕ is meant to help estimate. A sufficient statistic can be
+viewed as one particular identification that happens to lose no task-relevant information;
+the present theory applies whether or not any such task is specified. Blackwell’s theory of
+comparison of experiments [8] formalizes when one restriction is informationally coarser
+than another, close in spirit to comparing RI across choices of J.
+    Rate-distortion theory and the information bottleneck. The additive decom-
+position of Theorem 9.1 is an instance of the Shannon entropy chain rule [5, 10]. Splitting
+
+                                            10
+a lossy encoding into a restriction stage and a quotient stage parallels rate-distortion the-
+ory [10], where an encoder is chosen under a distortion budget, and the information
+bottleneck method [11], where a representation is optimized to preserve task-relevant
+information. The distinction is that both of these treat restriction as a free design vari-
+able to optimize, whereas Theorem 7.2 shows that, for an already fixed deterministic
+representation, a canonical minimal restriction is induced by the map itself, not chosen.
+The framework does not yet supply a tradeoff bound between RI and II analogous to a
+rate-distortion function R(D); see Appendix B.
+    Exact categories and the first isomorphism theorem. Theorem 8.2 applies the
+axioms of an exact category [6]. The requirement that every equivalence relation be a
+kernel pair with a coequalizer is what makes the categorical first isomorphism theorem
+available in this generality; see also Mac Lane [4].
+    Digital twins and representation in engineering. The applied motivation is
+widely discussed in the digital twin literature, typically without a shared formal vocabu-
+lary for comparing loss across domains.
+
+6.1     Positioning the Framework
+
+      Existing Theory             Focus
+      Information Bottleneck      Optimizing a compressive encoding to preserve task-
+      [11]                        relevant information
+      Rate-Distortion    The-     Optimal tradeoff between compression rate and re-
+      ory [10]                    construction distortion
+      Sufficient Statistics [7,   Identifying statistics retaining all information rele-
+      8]                          vant to an inference problem
+      Digital Twin Engineer-      Ad hoc, domain-specific notions of model fidelity and
+      ing Practice                completeness
+      General Theory of           Universal, domain-agnostic decomposition of any de-
+      Representation (this        terministic representation into restriction loss and
+      work)                       identification loss, with a canonical ordering and a
+                                  shared index pair (RI, II)
+
+         Table 1: Positioning the present framework relative to related theories.
+
+
+
+7     The Representation–Observable Algebra Correspon-
+      dence
+Definition 7.1 (Observable Algebra). Let (Γ, A) be a measurable space. An observable
+algebra on Γ is a sub-σ-algebra B ⊆ A.
+
+Theorem 7.2 (Representation–Observable Algebra Correspondence). Let (Γ, A) be a
+standard Borel space, and let ϕ : Γ → D be a deterministic representation (Definition 2.1)
+
+
+                                              11
+with D a standard Borel space. Then there exists a canonical observable sub-σ-algebra
+
+                                   σ(ϕ) := ϕ−1 (BD ) ⊆ A
+
+with the following properties:
+
+    (i) Minimality: σ(ϕ) is the minimal sub-σ-algebra of A through which ϕ factors mea-
+        surably: if B ⊆ A is any sub-σ-algebra with ϕ B-measurable, then σ(ϕ) ⊆ B.
+
+ (ii) Canonical Factorization: ϕ = Qϕ ◦ Rσ(ϕ) , where Rσ(ϕ) restricts to a generating
+      family of σ(ϕ) and Qϕ is the quotient by the kernel equivalence relation of ϕ.
+
+(iii) Equivalence: representations ϕ1 , ϕ2 with σ(ϕ1 ) = σ(ϕ2 ) are equivalent up to mea-
+      surable isomorphism after replacing their codomains by their image spaces.
+
+Proof. (i) By definition of the generated σ-algebra, σ(ϕ) is the smallest sub-σ-algebra
+making ϕ measurable; if ϕ is B-measurable then ϕ−1 (BD ) ⊆ B.
+    (ii) Since σ(ϕ) is countably generated (D standard Borel), let {Bn }n∈N generate BD
+and set fn = 1ϕ−1 (Bn ) : Γ → {0, 1} (the pullback of Bn , since observables must be
+functions on Γ). Then O = {fn } generates σ(ϕ), and RN maps Γ onto a subset of
+{0, 1}N ; since {Bn } separates points of D, RN (γ) = RN (γ ′ ) implies ϕ(γ) = ϕ(γ ′ ), so ϕ
+factors through RN , with Qϕ the induced map on the kernel equivalence relation.
+    (iii) If σ(ϕ1 ) = σ(ϕ2 ), both induce the same measurable partition of Γ (up to null
+sets), so the image measurable spaces are isomorphic by the standard Borel isomorphism
+theorem.
+
+                                             ϕ
+                            Γ                                D
+
+
+                           Rσ(ϕ)                   Qϕ
+                            Γ/ ker ϕ ∼
+                                     = Im(σ(ϕ))
+
+
+Figure 2: Theorem 7.2: any deterministic ϕ factors through its canonical minimal ob-
+servable algebra σ(ϕ); the triangle commutes, and no smaller sub-σ-algebra admits such
+a factorization.
+
+
+ Running Example (continued)
+ For the composite ϕ = Q ◦ RJ : Γ → D of Example 2.2 (RGB image to binary image),
+ σ(ϕ) is generated by the pixelwise events “luminance at pixel (i, j) exceeds threshold
+ τ ” — the coarsest algebra recording exactly the binary output, strictly smaller than
+ the algebra generated by the full RGB values.
+
+
+8      Factorization in Exact Categories
+Theorem 7.2 is stated in Meas. To obtain the same factorization result in categories
+without a σ-algebra structure — such as Set, or categories of sheaves relevant to FTM
+
+                                            12
+— we need a categorical setting in which quotients by equivalence relations are guar-
+anteed to exist and to behave as ordinary quotients do in Set or Meas. Exactness, in
+the sense of Barr [6], is precisely the structure that guarantees this: it ensures every
+equivalence relation on an object is the kernel pair of some morphism, so that “quotient
+by observational indistinguishability” is always a well-defined operation, not merely a
+coincidence of Set or Meas.
+
+Definition 8.1 (Exact Category). A category C is exact if:
+
+    • It has finite limits.
+
+    • Every morphism factors as a regular epimorphism followed by a monomorphism.
+
+    • Regular epimorphisms are stable under pullback.
+
+    • Every equivalence relation is a kernel pair of some morphism (equivalently, has a
+      coequalizer).
+
+Examples include Set, Meas (surjective measurable maps as regular epimorphisms), and
+any topos.
+
+Theorem 8.2 (Factorization Relative to an Observable Restriction). Let C be an exact
+category, O = {fi : Γ → Xi }i∈I an observable structure on Γ, and ϕ : Γ → D a
+deterministic representation. Suppose J ⊆ I is such that ϕ factors as ϕ = ψ ◦ RJ for
+some ψ : ΓJ → D. Then ϕ admits an essentially unique factorization
+
+                                       ϕ = Q ◦ RJ ,
+
+where Q : ΓJ ↠ D is the coequalizer of the kernel pair of ψ.
+
+Proof. RJ : Γ → ΓJ is a regular epimorphism onto its image (exactness). The kernel
+pair K ⇒ ΓJ of ψ has a coequalizer Q : ΓJ ↠ ΓJ /K (exactness), and ψ factors uniquely
+through Q; since K is exactly the kernel pair of ψ, the induced map ΓJ /K → D is both
+mono and epi, hence an isomorphism, so D ∼= ΓJ /K. Uniqueness follows from uniqueness
+of coequalizers up to isomorphism.
+
+Remark 8.3. J is not uniquely determined by ϕ. However, Theorem 7.2 shows that in
+measurable settings, there is a canonical minimal choice: J corresponding to the genera-
+tors of σ(ϕ). Any other factorization factors through this minimal one.
+
+
+9     Separability and Additivity of Information Loss
+We work in Meas with a probability measure on Γ. Additivity below is the Shannon
+entropy chain rule [5, 10].
+
+Theorem 9.1 (Additivity of Information Loss). Let Γ be a probability space, and let
+ϕ = Q ◦ RJ : Γ → D be a deterministic representation. Then
+
+              ℓϕ = ℓRJ + ℓQ ,   ℓRJ = H(Γ) − H(ΓJ ),    ℓQ = H(ΓJ ) − H(D),
+
+and ℓϕ = H(Γ) − H(D) = H(Γ | D), all entropies Shannon entropy under the induced
+measures.
+
+                                            13
+Proof. Since ϕ is deterministic, H(D | Γ) = 0, so by the chain rule H(Γ) = I(Γ; D)+H(Γ |
+D) = H(D) + H(Γ | D), giving H(Γ | D) = H(Γ) − H(D). Writing H(Γ) − H(D) =
+[H(Γ) − H(ΓJ )] + [H(ΓJ ) − H(D)] gives the decomposition, exactly, with the first bracket
+depending only on RJ and the second only on Q.
+
+Proposition 9.2 (Separability of Loss Components). For fixed ΓJ : (1) ℓRJ depends only
+on RJ , not on Q; (2) ℓQ depends only on the partition of ΓJ defining D, not on how ΓJ
+was obtained from Γ.
+
+Proof. (1) The quantity involves only Γ, ΓJ . (2) Once ΓJ is fixed, H(ΓJ ) − H(D) depends
+only on the partition defining D.
+
+Remark 9.3. We say separable, not independent: the proposition states the two loss
+terms are computed from disjoint data, not that they are probabilistically independent
+random quantities.
+
+ Running Example (continued)
+ Take n = m = 100. Then ℓRJ = 24(104 ) − 8(104 ) = 1.6 × 105 bits (chrominance
+ discarded), ℓQ = 8(104 ) − 1(104 ) = 7 × 104 bits (grayscale detail discarded), and
+ ℓϕ = 2.3 × 105 bits total, matching H(Γ) − H(D) directly.
+
+
+10     Computational Considerations
+Remark 10.1 (Computing RI and II in Practice). For finite Γ, D given explicitly, dimeff
+reduces to a cardinality count or an entropy computable in time linear in |Γ| or |D|
+given the induced measure. For continuous or high-dimensional Γ (natural images, neural
+feature spaces), dimeff (Γ) = H(Γ, µ) generally cannot be computed exactly and must be
+estimated, e.g., via k-nearest-neighbor entropy estimators or variational bounds. The
+cost and accuracy of such estimators, not any obstruction in the framework itself, are the
+practical bottleneck to computing RI, II for realistic machine learning pipelines.
+
+Proposition 10.2 (Invariance under Isomorphism). If Γ ∼ =Γ e via an isomorphism carry-
+                                   e J (so ΓJ ∼
+ing RJ to a compatible restriction R          =ΓeJ compatibly), then RI(RJ ) = RI(R
+                                                                                  e J ).
+                                                     ′
+Likewise II(Q) is invariant under isomorphisms of Γ and D compatible with Q. This
+follows immediately from axiom (D1).
+
+
+11     Worked Examples
+Each example below follows the same template: Reality, Observable Restriction, Identi-
+fication, RI, II, Loss Decomposition.
+
+Example 11.1 (Map Projection with Discretized Grid). Reality: Γ = {1, . . . , N }2 ×
+{1, . . . , H} (longitude, latitude, altitude), |Γ| = N 2 H.
+Observable Restriction: retain longitude/latitude, discard altitude; Γ′ = {1, . . . , N }2 .
+Identification: group into M × M blocks, D = set of M 2 blocks.
+RI: log(N 2 )/ log(N 2 H). II: log(M 2 )/ log(N 2 ).
+Loss: ℓR = log H; ℓQ = 2 log(N/M ); ℓϕ = log H + 2 log(N/M ).
+
+
+                                            14
+Example 11.2 (Digital Twin of a Building). Reality: BIM state space, dimeff (Γ) =
+ns log K + nt log L (structural/thermal observables at K, L levels).
+Observable Restriction: retain the ns structural observables.
+Identification: FEM discretization reduces structural detail by factor c < 1.
+RI: ns log K/(ns log K + nt log L). II: c.
+Loss: ℓR = nt log L; ℓQ = (1 − c)ns log K.
+
+Example 11.3 (Machine Learning Feature Extractor). Reality: images Γ = {0, . . . , 255}n×m×3 .
+Observable Restriction: feature extractor f : Γ → Rd ; Γf = f (Γ), dimension ≤ db (b
+= bit precision).
+Identification: classifier g partitions Γf into K regions, D = {1, . . . , K}.
+RI: ≤ db/(8nm · 3). II: log K/H(Γf ).
+Loss: restriction loss = pixel-to-feature information discarded; identification loss =
+feature-to-class information discarded. (Parallels the information bottleneck’s encoder/predictor
+split [11], though f, g are given, not jointly optimized.)
+
+Example 11.4 (Geographic Information Systems). Reality: land-cover raster, N × N
+cells, C fine categories, dimeff (Γ) = N 2 log C.
+Observable Restriction: retain only an N ′ × N ′ study boundary.
+Identification: reclassify C subtypes into K < C coarse classes.
+RI: N ′2 /N 2 . II: log K/ log C.
+Loss: ℓR = (N 2 − N ′2 ) log C; ℓQ = N ′2 (log C − log K).
+
+Example 11.5 (Robotics: Occupancy Grid Mapping). Reality: continuous configura-
+tion space of obstacle positions.
+Observable Restriction: lidar observes only a horizontal slice within sensor range/field
+of view.
+Identification: continuous occupancy probability per cell thresholded into {free, occu-
+pied, unknown}.
+RI: fraction of the environment’s effective dimension covered by the slice. II: log 3/H(cell occupancy).
+Loss: restriction loss = unobserved regions; identification loss = collapse of graded oc-
+cupancy to a ternary symbol (symbolic abstraction, Remark 4.2).
+
+Example 11.6 (Medical Imaging: Tumor Segmentation). Reality: MRI intensity field
+over a 3D voxel grid Γ = {1, . . . , N }3 .
+Observable Restriction: field of view and chosen contrast sequence (e.g., T1-weighted
+only).
+Identification: segmentation into {tumor, healthy tissue, background}.
+RI: fraction of physiological state accessible under the chosen modality. II: log 3/H(Γ′ ).
+Loss: restriction loss = physiological information no modality in the protocol can ac-
+cess; identification loss = intensity detail discarded per voxel (image segmentation, Re-
+mark 4.2).
+
+Example 11.7 (Knowledge Graphs). Reality: unstructured text corpus Γ.
+Observable Restriction: extraction restricted to a fixed ontology’s predicate vocabulary
+J.
+Identification: coreference resolution merges mentions into one graph node.
+RI: fraction of semantic content within the ontology’s vocabulary.     II: node-count /
+mention-count ratio.
+Loss: restriction loss = semantic content outside the ontology (sentiment, hedging);
+
+                                            15
+identification loss = distinctions between merged mentions (symbolic abstraction, Re-
+mark 4.2).
+
+Example 11.8 (Computer Vision: Object Detection). Reality: raw image Γ = {0, . . . , 255}n×m×3 .
+Observable Restriction: backbone convolutional features at reduced spatial resolution.
+Identification: non-maximum suppression merges overlapping candidate boxes per in-
+stance.
+RI: fraction of pixel-level detail retained in the feature map. II: detections / candidate-
+boxes ratio.
+Loss: restriction loss = fine texture discarded by the backbone; identification loss =
+near-duplicate boxes collapsed (clustering, Remark 4.2).
+
+
+12     Static and Dynamic Representation
+The following constructions are schematic and indicate how the present framework extends
+to dynamic settings.
+
+12.1    Static Representation
+                        Γ0 = Γ(F),     ϕ0 = Q0 ◦ RJ0 : Γ0 → D0 .
+
+12.2    Dynamic Representation
+            Γ1 = Traj(Γ0 ) = {γ : [0, T ] → Γ0 },   ϕ1 = Q1 ◦ RJ1 : Γ1 → D1 .
+
+12.3    Higher-Order Representations
+                               RJn       Q
+                                         n
+The factorization iterates: Γn −−→ ΓJn −−→ Dn .
+
+
+13     Limitations
+   • Determinism. Theorems 7.2 and 9.1 require H(D | Γ) = 0. Stochastic represen-
+     tations, where ϕ is a Markov kernel, require a non-vanishing conditional entropy
+     term, and the minimal-σ-algebra construction does not directly carry over.
+
+   • Standard Borel / finite settings. Theorem 7.2 assumes standard Borel spaces;
+     genuinely infinite-dimensional systems (function-space-valued states) are outside
+     the present scope.
+
+   • No tradeoff bound. No inequality relating RI and II is established; see Ap-
+     pendix B.
+
+   • Static factorization. The dynamic/higher-order treatment in Section 9 is schematic
+     and has not been extended to trajectory spaces in full generality.
+
+   • Choice of dimeff . dimeff is defined case-by-case rather than from one unifying
+     construction; cross-category comparisons require a further compatibility argument.
+
+
+
+                                             16
+14     Future Directions
+   • Optimal observable selection: characterizing, for a fixed budget on RI, the
+     choice of J minimizing total loss.
+
+   • Dynamic representations: extending Theorems 7.2 and 9.1 to trajectory spaces
+     and stochastic processes.
+
+   • Stochastic representations: replacing deterministic ϕ with a Markov kernel Γ ⇝
+     D and re-deriving additivity via conditional mutual information; this is the natural
+     setting for probabilistic encoders and variational autoencoders (VAEs), where the
+     encoder q(z | x) plays the role of a stochastic observable restriction and the decoder
+     plays the role of identification, and for which H(D | Γ) > 0 in general.
+
+   • Representation geometry: a metric or divergence on the space of representations
+     of a fixed Γ based on (RI, II).
+
+   • A representation category: formalizing Rep(Γ) with morphisms as refinements
+     of restriction/identification pairs.
+
+   • AI representations: connecting RI, II to existing probing and interpretability
+     metrics for intermediate neural network layers.
+
+   • Viability-aware representations: connecting back to FTM’s notion of system
+     viability.
+
+   • Digital twin completeness metrics: (RI, II) as a standardized, cross-vendor
+     completeness metric.
+
+   • An RI–II tradeoff bound: a rate-distortion-style inequality relating RI, II, ℓϕ
+     (Appendix B).
+
+
+15     Conclusion
+This paper has organized a family of classical results — the minimality of a generated
+σ-algebra, the categorical first isomorphism theorem in exact categories, and the Shannon
+entropy chain rule — around a single decomposition of representation loss, and shown
+that together they force a specific structural claim not automatic from any one result
+alone: observable restriction is the necessary, non-arbitrary first stage of any determin-
+istic representation, and identification the necessarily subsequent stage. Rather than
+proposing yet another representation model, this work proposes a structural language for
+analyzing every deterministic representation through the universal notions of Observable
+Restriction and Identification. It is this common language, spanning digital twins, scien-
+tific modeling, machine learning, simulation, and beyond, rather than any single theorem
+in isolation, that constitutes the contribution of this work.
+
+
+
+
+                                            17
+References
+ [1] Hasibi, S. (2026). A Sheaf-Theoretic Formalization of Manifestation: Identity, Con-
+     text, and the Reconstruction of System Viability. Zenodo. https://doi.org/10.
+     5281/zenodo.21401086
+
+ [2] Hasibi, S. (2026). Categorical Foundations of the Formal Theory of Manifestation: A
+     Categorical Semantics for Invariant Identity. Submitted to Journal of Philosophical
+     Logic.
+
+ [3] Hasibi, S. (2026). The Spatial Measure Conservation Principle: A Monoidal Formal-
+     ization of the Spatial Manifestation Framework. Preprint.
+
+ [4] Mac Lane, S. (1998). Categories for the Working Mathematician (2nd ed.). Springer-
+     Verlag.
+
+ [5] Shannon, C. E. (1948). A Mathematical Theory of Communication. Bell System
+     Technical Journal, 27(3), 379–423.
+
+ [6] Barr, M., Grillet, P. A., & van Osdol, D. H. (1971). Exact Categories and Categories
+     of Sheaves. Springer Lecture Notes in Mathematics, Vol. 236.
+
+ [7] Halmos, P. R., & Savage, L. J. (1949). Application of the Radon-Nikodym Theorem
+     to the Theory of Sufficient Statistics. Annals of Mathematical Statistics, 20(2), 225–
+     241.
+
+ [8] Blackwell, D. (1953). Equivalent Comparisons of Experiments. Annals of Mathemat-
+     ical Statistics, 24(2), 265–272.
+
+ [9] Kallenberg, O. (2002). Foundations of Modern Probability (2nd ed.). Springer-Verlag.
+
+[10] Cover, T. M., & Thomas, J. A. (2006). Elements of Information Theory (2nd ed.).
+     Wiley-Interscience.
+
+[11] Tishby, N., Pereira, F. C., & Bialek, W. (1999). The Information Bottleneck Method.
+     Proceedings of the 37th Annual Allerton Conference on Communication, Control,
+     and Computing, 368–377.
+
+
+
+
+                                            18
+A      Summary of Definitions
+
+    Concept                 Definition                   Interpretation
+
+    Restriction     Index   dimeff (ΓJ )/dimeff (Γ)      How much of reality remains
+    (RI)                                                 observable
+
+    Identification Index    dimeff (D)/dimeff (Γ′ )      How much distinction re-
+    (II)                                                 mains after abstraction
+
+    Manifestation Cover-    |Γ/∼|/|Γ|                    Distinguishing power (In-
+    age (MCI)                                            cluded for comparison with
+                                                         the FTM framework)
+
+    Ontological Distance    1 − MCI                      Information lost to con-
+    (OD)                                                 text (Included for compar-
+                                                         ison with the FTM frame-
+                                                         work)
+
+    Restriction Loss        H(Γ) − H(ΓJ )                Information eliminated by
+                                                         restriction
+
+    Identification Loss     H(ΓJ ) − H(D)                Information merged by quo-
+                                                         tient
+
+    Total Loss              H(Γ) − H(D) = H(Γ | D)       Conditional entropy
+
+
+B      Open Direction: An RI–II Tradeoff Bound
+The framework as developed reports RI and II side by side but does not prove any
+relationship between them. A natural next result would be a bound
+
+                                        ℓϕ ≥ g(RI, II)
+
+for some function g, analogous to a rate-distortion function, characterizing the minimum
+achievable total loss for given RI, II. Establishing such a bound, rather than only the
+additive accounting of Theorem 9.1, would be a genuinely new quantitative contribution
+beyond the classical results this paper otherwise recasts.
+
+
+
+
+                                              19
+

@@ -1,0 +1,460 @@
+       Identity Beyond Classical Logic: A
+      Sheaf-Theoretic and Topos-Theoretic
+    Framework for Non-Classical Metaphysics
+
+                     Prepared for: Philosophical Studies Special Issue
+                      Non-Classical Metaphysics: New Perspectives
+
+                                           Abstract
+         Recent developments in non-classical metaphysics have challenged classical as-
+     sumptions about identity, existence, and unity. This paper introduces a rigorous
+     mathematical framework for non-classical metaphysics grounded in sheaf theory, cat-
+     egory theory, and topos theory. I define identity as an invariant equivalence class in a
+     quotient space Ω/G rather than as a classical logical predicate, and manifestations as
+     local sections of a sheaf over a context site. The framework rests on a set of axioms
+     formalized in the Formal Theory of Manifestation (FTM) and its categorical founda-
+     tions. I prove the Identity Rigidity Theorem, demonstrating that fibred equivalences
+     between manifestation fibers induce isomorphisms of the underlying identities, and
+     the Characterization Theorem, establishing that every contextual manifestation fibra-
+     tion satisfying six axioms is equivalent to a unique sheaf over a context site. Three
+     case studies demonstrate the framework’s non-classical applications: (1) the Ship of
+     Theseus paradox, resolved by distinguishing identity from material manifestations; (2)
+     the Buddhist Anattman doctrine, reinterpreted through the Observer Incompleteness
+     Theorem; and (3) Ibn Arabi’s Unity of Existence, formalized via the Classifying
+     Topos for FTM. By providing a unified formal language, this framework aims to
+     bring isolated non-classical approaches into a systematic dialogue. I conclude by
+     discussing implications for dialetheism, fragmentalism, and non-standard mereology,
+     and by proposing future directions for paraconsistent and many-valued extensions.
+
+     Keywords: Non-classical metaphysics, Identity, Sheaf theory, Category theory,
+     Topos theory, Dialetheism, Fragmentalism
+
+
+Contents
+1 Introduction: The Crisis of Identity in Classical Metaphysics                                 3
+
+2 Mathematical Preliminaries                                                                    4
+  2.1 Category Theory as a Language for Metaphysics . . . . . . . . . . . . . . .               4
+  2.2 Sheaf Theory: Locality, Gluing, and Context . . . . . . . . . . . . . . . . .             4
+  2.3 Topos Theory: Internal Logic and Universality . . . . . . . . . . . . . . . .             4
+
+3 The Formal Theory of Manifestation (FTM)                                                      4
+  3.1 The Substrate and Group Action . . . . . . . . . . . . . . . . . . . . . . .              4
+  3.2 Manifestation Sheaves . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           5
+  3.3 The Observer Incompleteness Theorem . . . . . . . . . . . . . . . . . . . .               5
+
+4 Categorical Foundations                                                                       5
+  4.1 The Category of Manifestations . . . . . . . . . . . . . . . . . . . . . . . .            5
+  4.2 The Identity Rigidity Theorem . . . . . . . . . . . . . . . . . . . . . . . . .           6
+
+                                                1
+   4.3 The Characterization Theorem . . . . . . . . . . . . . . . . . . . . . . . . .    6
+   4.4 Topos-Theoretic Extensions . . . . . . . . . . . . . . . . . . . . . . . . . .    6
+
+5 Non-Classical Applications                                                             7
+  5.1 The Ship of Theseus: Identity and Material Manifestation . . . . . . . . .         7
+  5.2 The Anattman Doctrine: Observer Incompleteness and Personal Identity .             7
+  5.3 Ibn Arabi’s Unity of Existence: The Classifying Topos . . . . . . . . . . .        8
+
+6 Implications for Non-Classical Metaphysics                                             8
+  6.1 Dialetheism and Identity . . . . . . . . . . . . . . . . . . . . . . . . . . . .   8
+  6.2 Fragmentalism and Time . . . . . . . . . . . . . . . . . . . . . . . . . . . .     8
+  6.3 Non-Standard Mereology . . . . . . . . . . . . . . . . . . . . . . . . . . . .     8
+
+7 Conclusion                                                                             9
+
+
+
+
+                                            2
+1    Introduction: The Crisis of Identity in Classical Meta-
+     physics
+Classical metaphysics, from Aristotle to contemporary analytic philosophy, has been
+structured around two foundational logical principles: the principle of identity (x = x)
+and the principle of non-contradiction (¬(P ∧ ¬P )). These principles have shaped how
+philosophers understand existence, identity, time, and modality. Yet three persistent
+paradoxes suggest that classical logic may be insufficient for capturing the full complexity
+of identity:
+    The Ship of Theseus. If all planks of a ship are gradually replaced, is it still the
+same ship? If the old planks are reassembled, which one is the original? Classical logic
+forces a binary choice, yet both answers seem intuitively defensible.
+    The Anattman Doctrine. Buddhism denies a permanent self, arguing that the five
+aggregates (skandhas) are all impermanent. Yet if there is no self, what reincarnates?
+What attains nirvana? Classical logic cannot accommodate both the denial of self and the
+continuity of personal identity.
+    Unity of Existence. Ibn Arabi’s doctrine that "all is the manifestation of the Real"
+asserts both unity (all is one) and diversity (observers perceive many things). Classical
+logic treats unity and diversity as contradictories, yet mystical traditions maintain their
+coexistence.
+    These paradoxes share a common structure: they arise from conflating identity with
+manifestations. A ship is not its planks; a person is not their memories or aggregates; the
+Real is not its manifestations. Yet classical logic, with its binary categories and principle
+of non-contradiction, cannot model this distinction without generating paradoxes.
+    Recent developments in non-classical metaphysics—dialetheism [Priest(2006)], frag-
+mentalism [Fine(2005)], and non-standard mereologies [Varzi(2016)]—have opened new
+avenues for rethinking these foundational notions. However, these approaches have largely
+evolved in isolation, lacking a unified mathematical language that could systematically
+model identity across contexts and transformations.
+    By providing a unified formal language, this framework aims to bring these isolated
+non-classical approaches into a systematic dialogue. It clarifies their shared metaphysical
+commitments regarding identity and context, showing how apparent contradictions often
+arise not from logical failure, but from the conflation of the invariant identity level with
+the contingent manifestation level.
+    This paper introduces a rigorous mathematical framework for non-classical metaphysics
+grounded in sheaf theory, category theory, and topos theory. The framework,
+developed in the Formal Theory of Manifestation (FTM) [Hasibi(2026a)] and its categorical
+foundations [Hasibi(2026b)], offers a unified language for modeling identity, manifestation,
+and context. My central thesis is:
+
+      Identity is not a logical predicate but an invariant equivalence class
+      under transformations; manifestations are local sections of a sheaf
+      over a context site.
+
+    This inversion—from "identity as substance" to "identity as equivalence class"—
+constitutes a fundamental departure from classical metaphysics. It enables the modeling
+of identities that persist through change, that are inaccessible to any single observer, and
+that simultaneously exhibit unity and diversity.
+
+
+                                             3
+2     Mathematical Preliminaries
+2.1     Category Theory as a Language for Metaphysics
+Category theory provides a natural language for non-classical metaphysics because it
+focuses on relationships rather than substances. A category C consists of objects and
+morphisms (arrows) between them, with composition and identity laws. In this framework:
+
+    • Identities are objects in a base category B.
+
+    • Contexts are objects in a context category C.
+
+    • Manifestations are elements of a sheaf F : Cop → Set.
+
+2.2     Sheaf Theory: Locality, Gluing, and Context
+A sheaf F on a topological space C assigns to each open set U ⊆ C a set F(U ) of local
+sections, with restriction maps ρU V : F(U ) → F(V ) for V ⊆ U . Two axioms characterize
+sheaves:
+
+    1. Locality: If two sections agree on every open set in a cover of U , they are identical.
+
+    2. Gluing: If local sections agree on overlaps, they can be uniquely glued into a global
+       section.
+
+    Sheaves are the mathematical structures that model how local observations (mani-
+festations) compose into global entities (identities) while preserving consistency across
+overlapping contexts.
+
+2.3     Topos Theory: Internal Logic and Universality
+A topos E is a category that behaves like the category of sets, but with a richer internal
+logic. Topos theory enables reasoning about identities, contexts, and manifestations within
+the mathematical structure itself, without relying on external set theory. Key results
+include:
+
+    1. The Internal Logic of a topos allows quantification over identities and manifesta-
+       tions.
+
+    2. Geometric Morphisms preserve manifestation structure across toposes.
+
+    3. The Classifying Topos for FTM provides a universal structure for all models of
+       the theory.
+
+
+3     The Formal Theory of Manifestation (FTM)
+3.1     The Substrate and Group Action
+Let Ω be a set of primitive entities, and let G be a group acting on Ω. I define:
+
+
+
+                                              4
+Definition 3.1 (Identity). An identity is an equivalence class in the quotient space Ω/G.
+For x ∈ Ω, its identity is
+                             Ix = {g · x : g ∈ G} ∈ Ω/G.
+   This definition captures the non-classical intuition that an identity is not a substance
+but the structure that remains invariant under transformations.
+Axiom 3.1 (Identity Approximation Principle). No observer has direct access to an
+identity I. Everything produced about I is strictly an approximation: P I ≈ I but P I ̸= I.
+
+3.2     Manifestation Sheaves
+Definition 3.2 (Manifestation). Let H ⊆ G be a subgroup. For an identity I and
+representative x ∈ I, the manifestation of I under H is the H-orbit:
+                                 (H)
+                               MI (x) = {h · x : h ∈ H} ⊆ I.
+
+Definition 3.3 (Manifestation Sheaf). Let C be a context site with Grothendieck topology
+J. A manifestation sheaf is a sheaf F : Cop → Set such that:
+    1. F(U ) is the set of local manifestations in context U .
+    2. Restriction maps ρU V model the loss of detail when moving from broader to narrower
+       contexts.
+    3. The sheaf axioms ensure locality and gluing of manifestations.
+
+3.3     The Observer Incompleteness Theorem
+Theorem 3.1 (Observer Incompleteness). Let F be a manifestation sheaf. For any proper
+                                                       ̸ s2 ∈ Γ(F) with ρC,U (s1 ) = ρC,U (s2 ).
+context U ⊊ C, there exist distinct global sections s1 =
+A single observer is strictly insufficient to uniquely reconstruct identity.
+   This theorem has profound non-classical implications: complete knowledge of any
+identity is impossible in principle. As I shall demonstrate, this resolves the Buddhist
+Anattman doctrine and the problem of observer-dependence in metaphysics.
+
+
+4     Categorical Foundations
+4.1     The Category of Manifestations
+I construct the Category of Manifestations Man via the Grothendieck construction of an
+indexed category derived from a manifestation sheaf.
+Definition 4.1 (Fiber Category). For each identity I ∈ B, the fiber category M(I) has:
+    • Objects: triples (U, u, σ) where U ∈ C, u : U → K(I), and σ ∈ F(U ).
+    • Morphisms: h : (U1 , u1 , σ1 ) → (U2 , u2 , σ2 ) where h : U1 → U2 , u2 ◦ h = u1 , and
+      F(h)(σ2 ) = σ1 .
+Theorem 4.1 (Fibration Structure). The canonical projection fib : Man → B is a cloven
+Grothendieck fibration.
+
+                                               5
+4.2    The Identity Rigidity Theorem
+Theorem 4.2 (Identity Rigidity). Assume K : B → C is fully faithful. If there exists a
+                              ∼
+                              → M(I2 ) compatible with C-restriction maps, then I1 ∼
+fibred equivalence Φ : M(I1 ) −                                                    = I2
+in B.
+
+Proof. The fibred equivalence preserves not just the fiber categories but the entire fibration
+structure, including the action of context morphisms. It preserves terminal objects, inducing
+                             ∼
+an isomorphism α : K(I1 ) −  → K(I2 ) in C. Since K is fully faithful, this isomorphism lifts
+to an isomorphism f : I1 → I2 in B.
+   This theorem establishes that identity is not an arbitrary label but is rigidly determined
+by the fibration structure. If two identities have equivalent manifestations in all contexts,
+they are isomorphic. This provides a non-classical criterion for identity that does not rely
+on classical logical principles.
+
+4.3    The Characterization Theorem
+Axiom 4.1 (Axioms for Contextual Manifestation Fibrations). A cloven Grothendieck
+fibration p : E → B is a contextual manifestation fibration if it satisfies:
+
+  1. The fibers EI are equivalent to categories of elements over C/K(I) .
+
+  2. The cleavage is given by pullbacks in C.
+
+  3. The Beck-Chevalley condition holds for all pullbacks in B.
+
+  4. The functor K : B → C is fully faithful.
+
+  5. The functor K is essentially surjective on objects.
+
+  6. The descent condition: for every cover {Ui → U } in J, the induced functor EK−1 (U ) →
+     limi EK−1 (Ui ) is an equivalence.
+
+Theorem 4.3 (Characterization Theorem). Let p : E → B be a contextual manifestation
+fibration satisfying the axioms above. Then there exists a unique sheaf
+                                                                  R     F ∈ Sh(C, J) such
+that p is equivalent, over B, to the Grothendieck construction B MF . The sheaf F is
+explicitly given by:
+                                     F(U ) = Γ(U, EIU )
+where IU is the unique identity with K(IU ) ∼
+                                            = U.
+
+   The Characterization Theorem is a representation theorem that proves every contextual
+manifestation fibration arises uniquely from a sheaf. This establishes that the non-classical
+framework of identity and manifestation has a precise mathematical structure.
+
+4.4    Topos-Theoretic Extensions
+Theorem 4.4 (Classifying Topos for FTM). There exists a geometric theory TFTM such
+that:
+                           Sh(C, J; E) ∼
+                                       = Mod(TFTM , E)
+for any topos E. The theory TFTM has:
+
+
+                                              6
+    • Sorts: Identity, Context, Manifestation.
+
+    • Relations: manifest_in(Identity, Context), is_section(Manifestation, Context).
+
+    • Axioms: the sheaf condition, the fibration axioms, and the identity rigidity axiom.
+
+    The classifying topos provides a universal property: any model of TFTM in a topos E
+corresponds uniquely to a geometric morphism E → Sh(C, J). This means FTM is not
+just a mathematical framework but a universal framework for reasoning about identity
+and manifestation in any topos.
+
+
+5     Non-Classical Applications
+5.1     The Ship of Theseus: Identity and Material Manifestation
+The paradox arises from identifying the ship with its material components. In my
+framework:
+
+    1. The ship’s identity Iship is an object in B, independent of its planks.
+
+    2. Planks are manifestations of the ship in the material context site Cmaterial .
+
+    3. When planks are replaced, the manifest set M(Iship ) changes, but Iship remains
+       invariant.
+
+    4. By the Identity Rigidity Theorem, Iship ∼
+                                               = Iship under all transformations, ensuring
+       persistence.
+
+   The classical paradox is resolved by distinguishing identity (invariant equivalence class)
+from manifestation (context-dependent local section). The reassembled old planks are not
+the original ship—they are a different spatial configuration, a different manifestation of
+the same identity only if the structural constraints so determine.
+
+5.2     The Anattman Doctrine: Observer Incompleteness and Per-
+        sonal Identity
+Buddhism’s doctrine of non-self (anattman) asserts that the five aggregates (skandhas) are
+all impermanent, and therefore that there is no permanent self. Yet this raises a question:
+if there is no self, what reincarnates? What attains nirvana?
+    My framework offers a non-classical resolution:
+
+    1. The five aggregates are manifestations of identity in the psychological context site
+       Cpsychological .
+
+    2. The Observer Incompleteness Theorem establishes that a single observer (even
+       oneself) cannot reconstruct the full identity from these manifestations.
+
+    3. Identity Iperson ∈ B exists independently of any single context.
+
+    4. The Anattman doctrine correctly identifies the impermanence of manifestations but
+       incorrectly concludes that identity does not exist.
+
+                                              7
+    This reinterpretation is non-classical in two ways. First, it denies that the self is
+a substance while affirming that identity exists as an invariant structure. Second, it
+introduces observer-dependence into the concept of self: the self is not directly accessible
+from any single context.
+
+5.3     Ibn Arabi’s Unity of Existence: The Classifying Topos
+Ibn Arabi’s doctrine of wahdat al-wujud (unity of existence) asserts that all things are
+manifestations of the Real (al-Haqq). In my framework:
+
+    1. The Real corresponds to the Classifying Topos EFTM for FTM.
+
+    2. All identities I ∈ B are objects in this topos.
+
+    3. Diversity arises at the level of local sections F(U ) in different contexts.
+
+    4. Unity is at the base level; diversity is at the manifestation level.
+
+   The Classifying Topos Theorem provides a mathematical model for this non-classical
+metaphysics: unity and diversity coexist because they exist at different levels of the
+same structure. Unity is the universal structure (the topos), while diversity is the local
+manifestations.
+
+
+6     Implications for Non-Classical Metaphysics
+6.1     Dialetheism and Identity
+Dialetheism accepts true contradictions. My framework can accommodate dialetheism by
+allowing identities that are both same and different across contexts. For example, the Ship
+of Theseus can be both the same ship (as identity in B) and different (as manifestation in
+Cmaterial ). The contradiction is not in the logic but in the conflation of levels.
+
+6.2     Fragmentalism and Time
+Fragmentalism holds that reality is composed of fragments that are internally coherent but
+mutually inconsistent. My framework models this through context sites: each context U
+defines a fragment. The sheaf condition ensures that fragments are consistent on overlaps,
+but different contexts may yield different manifestations of the same identity.
+
+6.3     Non-Standard Mereology
+Non-standard mereologies challenge the classical part-whole relation. My framework offers
+a context-dependent mereology: parts and wholes are manifestations in contexts. A part
+in context U may be a whole in context V , depending on the restriction maps.
+
+
+
+
+                                               8
+7     Conclusion
+This paper has introduced a rigorous mathematical framework for non-classical metaphysics
+grounded in sheaf theory, category theory, and topos theory. The framework establishes:
+
+    1. Identity is an equivalence class in a quotient space Ω/G, not a logical predicate.
+
+    2. Manifestations are local sections of a sheaf over a context site.
+
+    3. The Observer Incompleteness Theorem demonstrates that no single observer can
+       reconstruct full identity.
+
+    4. The Identity Rigidity Theorem shows that fibred equivalences of manifestations
+       imply isomorphic identities.
+
+    5. The Characterization Theorem proves that every contextual manifestation fibration
+       arises uniquely from a sheaf.
+
+    6. The Classifying Topos for FTM provides a universal structure for all models.
+
+    Three case studies demonstrate the framework’s non-classical applications:
+
+    1. The Ship of Theseus is resolved by distinguishing identity from material manifesta-
+       tions.
+
+    2. The Anattman doctrine is reinterpreted through observer incompleteness.
+
+    3. Ibn Arabi’s Unity of Existence is formalized via the classifying topos.
+
+   The framework offers a relational metaphysics in which identity is not a substance
+but an invariant structure under transformations, while diversity emerges at the level of
+contextual manifestations. This provides a unified mathematical language for non-classical
+approaches to identity, existence, time, and modality.
+
+
+Future Directions
+Several directions for future research emerge:
+
+    1. Paraconsistent Logics: Extending the framework to paraconsistent logics, allowing
+       identity to be both true and false in different contexts.
+
+    2. Many-Valued Logics: Modeling identities with degrees of membership across
+       contexts using many-valued logics.
+
+    3. Quantum Metaphysics: Applying the framework to quantum identity, where
+       particles are indistinguishable and identity is context-dependent.
+
+    4. Computational Implementation: Developing software tools for reasoning about
+       non-classical identity in digital twin systems.
+
+
+
+
+                                              9
+References
+[Fine(2005)] Fine, K. (2005). Tense and reality. In Modality and Tense. Oxford University
+     Press.
+
+[Hasibi(2026a)] Hasibi, S. (2026). A sheaf-theoretic formalization of manifestation: Identity,
+    context, and the reconstruction of system viability. Zenodo. https://doi.org/10.
+    5281/zenodo.21316947
+
+[Hasibi(2026b)] Hasibi, S. (2026). Categorical foundations of the Formal Theory of Mani-
+    festation: A categorical semantics for invariant identity. Zenodo. https://doi.org/
+    10.5281/zenodo.21354711
+
+[Hasibi(2026c)] Hasibi, S. (2026). A general theory of representation: Observable re-
+    striction, identification, and the two sources of information loss. Zenodo. https:
+    //doi.org/10.5281/zenodo.21428176
+
+[Hasibi(2026d)] Hasibi, S. (2026). The spatial measure conservation principle: A monoidal
+    formalization of the spatial manifestation framework. Zenodo. https://doi.org/10.
+    5281/zenodo.21329717
+
+[Mac Lane(1998)] Mac Lane, S. (1998). Categories for the Working Mathematician (2nd
+    ed.). Springer-Verlag.
+
+[Mac Lane & Moerdijk(1994)] Mac Lane, S., & Moerdijk, I. (1994). Sheaves in Geometry
+    and Logic: A First Introduction to Topos Theory. Springer-Verlag.
+
+[Priest(2006)] Priest, G. (2006). Doubt Truth to be a Liar. Oxford University Press.
+
+[Priest(2014)] Priest, G. (2014). One: Being an Investigation into the Unity of Reality and
+     of its Parts, including the Singular Object which is Nothingness. Oxford University
+     Press.
+
+[Varzi(2016)] Varzi, A. C. (2016). Mereology. In E. N. Zalta (Ed.), The Stanford Encyclope-
+    dia of Philosophy (Winter 2016 Edition). https://plato.stanford.edu/archives/
+    win2016/entries/mereology/
+
+[Johnstone(2002)] Johnstone, P. T. (2002). Sketches of an Elephant: A Topos Theory
+    Compendium (Vol. 1 & 2). Oxford University Press.
+
+
+
+
+                                             10
+

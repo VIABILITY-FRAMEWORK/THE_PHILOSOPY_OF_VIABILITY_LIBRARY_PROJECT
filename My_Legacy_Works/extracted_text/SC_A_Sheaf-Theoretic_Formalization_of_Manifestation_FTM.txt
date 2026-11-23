@@ -1,0 +1,801 @@
+A Sheaf-Theoretic Formalization
+               of Manifestation
+                                                     Identity, Context,
+
+                   and the Reconstruction
+                      of System Viability
+
+
+  Revised Edition, with Worked Example, Computational Verification,
+               and an Observability Complexity Theorem
+
+
+
+
+                          Saeed Hasibi
+
+                       Independent Researcher
+
+                       saeed.hasibi@outlook.de
+
+
+
+                          October 27, 2026
+FTM – Revised Edition                                                                                1
+
+
+
+
+    Computational modeling of complex systems traditionally conflates identity with state.
+    This paper introduces the Formal Theory of Manifestation (FTM), a mathematical
+    framework that separates these notions by treating identity as an invariant equivalence
+    class over a reality substrate (I ∈ Ω/G) and treating state as a local section of a sheaf over
+    a context site. We define Manifestation Sheaves, equipped with policy-lattice structure, and
+    prove the Observer Incompleteness Theorem, the Minimum Observability Cover Theorem,
+    a sharpened Fallacy of Super Identity, and a Viability Monotonicity result with an explicit
+    set-inclusion lemma. Beyond re-instantiating standard sheaf-theoretic facts, we establish
+    one new result with independent mathematical content: for the broad class of function
+    sheaves on a finite point set, the Minimum Observability Cover problem is exactly the
+    classical Minimum Set Cover problem, and is therefore NP-hard and, under standard
+    complexity assumptions, hard to approximate below a logarithmic factor (Section 6.6).
+    We give a fully explicit worked example (a three-zone bridge sensor network, Section 7) in
+    which every axiom and theorem in the paper is verified against concrete data, and we report
+    a computational experiment (Section 8) that brute-force verifies locality, gluing, minimal
+    observability, and the failure of the Cartesian-product reconstruction, cross-checked against
+    the new theorem’s closed-form prediction. We are explicit throughout about which results
+    are genuinely new, which are standard facts instantiated in a new setting, and which are
+    definitional (Section 11). We close by relating FTM to established literature on system
+    viability and hazard propagation, and by defining Digital Twins as local sections of a
+    manifestation sheaf.
+
+Keywords: Formal Theory of Manifestation, Sheaf Theory, Category Theory, System Identity,
+Digital Twins, Complex Systems, Ontology, Set Cover, NP-Hardness, Observability
+
+1     Introduction: The Ontological Hierarchy and the Necessity of
+      Sheaves
+In classical information systems, an entity is modeled as a “Golden Record”—a hypothetical global
+object containing all attributes across all contexts. FTM proposes an inversion of this default:
+state is the local observation of identity through context.
+1.1    The Ontological Hierarchy
+FTM organizes manifestation into a directional hierarchy:
+1. Reality (Ω): the raw, unstructured substrate.
+2. Identity (I): the invariant structure extracted from Reality.
+3. Context Universe (C): the topological space of structural constraints.
+4. Context / Observer (U ⊆ C): an information vantage point (open set) inhabiting the
+   Context Universe.
+5. Local Section (sU ): the manifestation of Identity within the Observer’s vantage point.
+6. Measurement: the final extraction of data from the Local Section.
+FTM – Revised Edition                                                                          2
+
+
+
+Observers do not create Contexts; they inhabit them. Contexts exist independently as structural
+constraint spaces. This hierarchy is a modeling choice, not a theorem; its value is judged by
+whether it clarifies real systems, which Section 7 tests directly against a concrete example.
+1.2    Why Sheaf Theory?
+Table 1 compares candidate structures against three requirements a manifestation model needs:
+locality of observation, partial observability, and consistent gluing of compatible local data.
+
+          Table 1: Comparison of mathematical structures for modeling manifestation
+          Structure       Locality    Partial Obs.      Gluing   Suitable for FTM?
+
+          Graph / Set         ×             ×             ×              No
+          Category         Partial       Partial          ×            Partial
+          Fiber Bundle       Yes          Weak          Weak           Partial
+          Sheaf              Yes           Yes           Yes            Yes
+
+• Graphs/Sets lack a topology of “overlaps” and cannot express partial observability.
+• Ordinary categories give morphisms but no built-in notion of an open cover, which we need
+  to model how observers partition the context universe.
+• Fiber bundles assume local triviality, which is too rigid once governance rules impose non-
+  trivial, asymmetric constraints across contexts.
+• Sheaves provide exactly the two ingredients FTM needs: restriction maps ρU V , and a gluing
+  condition that decides when locally observed manifestations assemble into a globally valid
+  identity.
+This is a design justification, not a uniqueness proof: we are not claiming sheaves are the
+only adequate structure, only that they are the minimal standard structure satisfying all three
+requirements simultaneously.
+
+2     The Substrate: Reality, Identity, and Categorical Interpretation
+
+    Let Ω be a measurable space representing the raw substrate of all possible existential
+    states.
+
+
+
+    Let G be a group of allowable transformations acting on Ω.
+
+    Definition 2.3: Identity as an Invariant Equivalence Class
+    An identity I is an element of the quotient space
+
+                                           I ∈ Ω/G,                                      (1)
+FTM – Revised Edition                                                                                3
+
+
+
+
+    i.e. an orbit of G on Ω. Identity is thus the structure that remains fixed under the
+    action of G; two substrate states represent the same identity exactly when a permitted
+    transformation carries one to the other.
+
+2.1    The Ontological Projection Diagram
+                                   π                     Φ                  ρU
+                            Ω             Ω/G = I                Γ(F)               F(U )
+
+
+            Raw Substrate
+
+
+
+Here π is the quotient map, Φ is the instantiation of an abstract identity as a global section, and
+ρU is restriction to a local observer.
+2.2    Categorical Interpretation
+1. Identity lives in a quotient category: the category Id has as objects the orbits of G on Ω.
+2. Context induces a site: the Context Universe C, equipped with a Grothendieck topology J,
+   forms a site (C, J).
+3. Manifestation is a sheaf on that site: state assignments form a sheaf F ∈ Sh(C, J).
+4. Reconstruction is a right adjoint: the global-section functor Γ is right adjoint to the
+   constant-sheaf functor. Concretely, Γ(F) is the terminal object among cones over the diagram of
+   local sections and restriction maps — the largest space of global data consistent with everything
+   observed locally. This is a standard categorical fact about sheafification/global sections, applied
+   here to the manifestation setting rather than a new adjunction being constructed.
+
+3     The Topology of Manifestation: Context Universe and Observers
+
+    Let C be a locally compact Hausdorff topological space representing the totality of structural
+    constraints and governance rules of a system.
+
+
+
+    A context is an open set U ⊆ C. An observer is an information vantage point inhabiting
+    a context, modeled as a specific open U ⊆ C. The collection of all observer vantage points
+    forms an open cover U = {Ui }i∈I of C.
+FTM – Revised Edition                                                                                   4
+
+
+
+4     The Manifestation Sheaf
+
+    A sheaf F ∈ Sh(C, Top), together with a distinguished identity I ∈ Ω/G, is a manifestation
+    sheaf for I, written FI , if it satisfies:
+    1. Policy lattice structure: for each open U , the space F(U ) carries a lattice ΠU of valid
+       subspaces, representing contextual constraints on which local states are admissible.
+    2. Identity marking: the global sections Γ(FI ) are equipped with a distinguished point
+       ιI ∈ Γ(FI ), and the assignment I 7→ ιI is required to be well defined and injective
+       across identities: I1 ̸= I2 ⇒ ιI1 ̸= ιI2 under any common embedding of the Γ(FI )’s.
+
+
+
+    We have revised the identity-compatibility clause from an earlier version of this framework.
+    Requiring Γ(FI ) itself to be homeomorphic to the entire quotient Ω/G cannot be right
+    for a sheaf attached to a single identity I: it would force the global sections of every
+    identity’s sheaf to be the same space, regardless of I, since Ω/G does not depend on I.
+    The corrected clause above instead asks only that identities be recoverable as distinguished
+    points of their sheaves, and that this marking be injective.
+
+
+
+    For each open U , F(U ) = ΣU is the topological space of valid local states. For V ⊆ U , the
+    restriction map ρU V : F(U ) → F(V ) is continuous.
+
+
+
+    F satisfies the standard sheaf axioms:
+    1. Locality: if s, t ∈ F(U ) and ρU,Ui (s) = ρU,Ui (t) for every Ui in an open cover of U , then
+       s = t.
+    2. Gluing: if si ∈ F(Ui ) agree on overlaps, there is a unique s ∈ F(U ) with ρU,Ui (s) = si
+       for all i.
+
+
+
+    Γ(F) carries the subspace topology inherited from
+                                                           Q
+                                                               U ∈U F(U ).
+
+
+    Example 4.6: The Function-Sheaf Class
+    A large and practically important family of manifestation sheaves arises as follows. Let X
+    be a finite (or discrete) set of monitorable points and V a set of possible readings with
+    |V | ≥ 2. Let C have opens corresponding to subsets U ⊆ X (a discrete context universe on
+    the power set of X, ordered by inclusion), and set
+
+                        F(U ) = Maps(U, V ),        ρU W (s) = s|W for W ⊆ U.
+
+    This trivially satisfies the sheaf axioms (it is the sheaf of V -valued functions on the discrete
+FTM – Revised Edition                                                                                          5
+
+
+
+
+     space X), and becomes a manifestation sheaf once equipped with a trivial policy lattice
+     (ΠU = {F(U )}, i.e. no constraints beyond well-definedness) and an identity marking ιI
+     picking out one specific function in Γ(F) = Maps(X, V ). We call such F a function sheaf
+     on X. Section 7 instantiates this class concretely, and Section 6.6 proves an exact structural
+     theorem about it.
+
+
+5      The Fallacy of Super Identity
+The naive alternative to sheaf gluing is to represent an entity by the raw Cartesian product of all
+its local observations. The next result makes precise, and proves rather than asserts, why this
+fails.
+
+
+     Let U = {Ui }i∈I be an open cover of C and let P =             i∈I F(Ui ). Let
+                                                                Q
+
+                                                                         
+                                 ι : Γ(F) −→ P,          ι(s) = ρC,Ui (s) i∈I
+
+     be the canonical restriction map. Then:
+    (a) ι is injective (by locality).
+    (b) If some two contexts overlap, Ui ∩ Uj ≠ ∅, and the sheaf is non-trivial on that overlap,
+        then ι is not surjective: P contains tuples (si )i∈I with ρUi ,Ui ∩Uj (si ) ̸= ρUj ,Ui ∩Uj (sj ) for
+        some i, j, and any such tuple lies outside ι(Γ(F)).
+     Consequently Γ(F) is (isomorphic   to) aQproper subspace of P in general — concretely, the
+     equalizer of the two maps i F(Ui ) ⇒ i,j F(Ui ∩ Uj ) — and P itself does not reconstruct
+                                Q
+     the entity.
+
+
+Proof. (a) Injectivity of ι is exactly the locality axiom: if ι(s) = ι(t) then s, t agree on every Ui
+in the cover, hence s = t.
+(b) Suppose Ui ∩ Uj ̸= ∅ and F(Ui ∩ Uj ) has at least two distinct points (non-triviality). Pick
+si ∈ F(Ui ), sj ∈ F(Uj ) arbitrarily subject only to ρUi ,Ui ∩Uj (si ) ̸= ρUj ,Ui ∩Uj (sj ); such a pair exists
+by non-triviality of the overlap. Extend to a full tuple (sk )k∈I ∈ P by choosing sk arbitrarily for
+k≠ i, j. This tuple violates the compatibility condition on Ui ∩ Uj , so by the gluing axiom no
+s ∈ Γ(F) restricts to it; hence it is not in ι(Γ(F)).
+The equalizer description follows because Γ(F) is, by the sheaf axioms, exactly the set of tuples
+in P that agree on all pairwise overlaps.
+
+
+     Part (a) shows P never loses information relative to Γ(F); part (b) shows it strictly gains
+     spurious, globally-inconsistent elements whenever contexts overlap non-trivially. Section 7
+     exhibits an explicit such tuple with concrete numbers, and Section 8 verifies computationally
+     that it is unglueable.
+FTM – Revised Edition                                                                                 6
+
+
+
+6     Core Theorems of the Formal Theory of Manifestation
+6.1    Observer Incompleteness Theorem
+
+
+    There exists a proper open set U ⊊ C and distinct global sections s1 ̸= s2 ∈ Γ(F) with
+    ρC,U (s1 ) = ρC,U (s2 ).
+
+
+
+    Under Observational Non-degeneracy, a single observer U ⊊ C is strictly insufficient to
+    uniquely reconstruct the identity object I.
+
+
+                                             ̸ s2 , the local section ρC,U (s1 ) does not determine
+Proof. Since ρC,U (s1 ) = ρC,U (s2 ) with s1 =
+which of s1 , s2 produced it. If s1 , s2 mark distinct identities (Section 4), the local observation
+is genuinely ambiguous between them, so identity reconstruction from U alone is impossible
+whenever Observational Non-degeneracy holds for that U .
+
+
+    This theorem is conditional on its assumption, which is not automatic: for a manifestation
+    sheaf where every proper open U already separates all global sections, the assumption fails
+    and single-observer reconstruction is possible. The content of the theorem is therefore best
+    read as: ambiguity-producing contexts, if they exist, are genuinely disqualifying — not a
+    claim that every context is insufficient.
+
+6.2    Minimum Observability Cover Theorem
+
+
+    A subcover V = {U1 , . . . , Uk } ⊆ U is an observability cover if the combined restriction map
+                                        k
+                                        Y
+                         ρV : Γ(F) →          F(Ui ),   ρV (s) = (ρC,Ui (s))ki=1
+                                        i=1
+
+    is injective, i.e. it separates every pair of distinct global sections.
+
+
+
+    Nobs (F) is the minimum cardinality of an observability cover.
+
+
+
+    Nmin = Nobs (F), where Nmin is the minimum number of observers whose joint restriction
+    map is injective on Γ(F).
+
+
+Proof. By definition, Nmin = min{ |V| : V ⊆ U, ρV injective }, which is precisely the definition
+of Nobs (F). This minimum is well defined whenever some finite subcover is separating: U itself is
+FTM – Revised Edition                                                                                7
+
+
+
+always separating (its restriction map recovers ι from Section 5(a), always injective), so the set of
+separating subcovers is non-empty, and if U is finite a minimum cardinality is attained.
+
+
+   We removed an earlier phrasing in terms of a “trivial kernel” of ρV : Γ(F) and F(Ui ) are
+   topological spaces, not groups in general, so kernels are not defined. Injectivity/separation
+   is the correct and sufficient notion, and is what Section 6.6 below builds on.
+
+6.3   Identity Preservation
+
+
+   Let Id be the category of identities and Sh(C, Top) the category of sheaves of topological
+   spaces on C. The instantiation functor Φ : Id → Sh(C, Top) sends I to its manifestation
+   sheaf FI .
+
+
+
+   If Φ is injective on objects up to isomorphism, then I1 ̸= I2 =⇒ FI1 ̸∼
+                                                                         = FI2 .
+
+
+Proof. Immediate from the definition of injectivity on objects.
+
+
+   Relabeled a Proposition: the proof is definitional. Section 6.3 gives a checkable sufficient
+   condition rather than assuming the conclusion.
+
+
+
+   Φ is injective on objects if and only if for every pair of distinct identities I1 ̸= I2 , there
+   exists a context U ∈ U such that the marked points satisfy
+
+                                       ρC,U (ιI1 ) ̸= ρC,U (ιI2 ).
+
+   Equivalently, Φ is injective iff {Ui }i∈I is an observability cover for the family {ιI }I∈Id .
+
+
+Proof. (⇐) If some U separates ιI1 from ιI2 for every distinct pair, then FI1 ∼ ̸= FI2 as pointed
+sheaves whenever I1 ̸= I2 , giving injectivity of Φ. (⇒) If Φ is injective, any witnessing non-
+isomorphism must fail to identify the marked points on some context, else the identification would
+extend (by gluing) to a full isomorphism of pointed sheaves, contradicting non-isomorphism.
+FTM – Revised Edition                                                                              8
+
+
+
+6.4   Viability Monotonicity Theorem
+
+
+   For a policy-lattice element Π, let Σ(Π) ⊆ F(U ) denote the set of states satisfying the
+   constraints encoded by Π.
+
+
+
+   If Π1 ≤ Π2 in the policy lattice, then Σ(Π1 ) ⊆ Σ(Π2 ).
+
+
+Proof. Π1 ≤ Π2 means the constraints of Π2 are implied by those of Π1 : every state satisfying
+Π1 ’s constraints also satisfies Π2 ’s, since Π2 forbids no state that Π1 permits. Hence s ∈ Σ(Π1 ) ⇒
+s ∈ Σ(Π2 ).
+
+
+
+   If a context morphism f : C1 → C2 satisfies Π1 ≤ Π2 , then the survival measure SCi (t) :=
+   µ(Σ(Πi ) ∩ Reach(t)), for µ a Radon measure on C and Reach(t) the set of states reachable
+   by time t, satisfies SC1 (t) ≤ SC2 (t) for all t.
+
+
+Proof. By Section 6.4, Σ(Π1 ) ⊆ Σ(Π2 ), hence Σ(Π1 ) ∩ Reach(t) ⊆ Σ(Π2 ) ∩ Reach(t) for every t.
+Monotonicity of the Radon measure µ under inclusion gives SC1 (t) ≤ SC2 (t).
+
+6.5   Manifestation Stability Theorem
+
+
+   Let C be parameterized by a continuous evolution parameter τ , and let F be a sheaf valued
+   in Top. If each local manifestation sU (τ ) varies continuously in τ for all U ∈ U, then the
+        Q global section s(τ ) ∈ Γ(F) varies continuously in the subspace topology inherited
+   induced
+   from U F(U ).
+
+
+Proof. Γ(F) is the equalizer of the restriction maps and hence a subspace of U F(U ) (closed, if
+                                                                             Q
+Hausdorff). By the universal property of the product topology, a map into a product is continuous
+iff each composite with a projection is continuous; each sU (τ ) is continuous by hypothesis, so
+τ 7→ (sU (τ ))U is continuous, and its image lies in Γ(F).
+
+
+   This is a direct instantiation of two standard facts (universal property of the product
+   topology; equalizer characterization of global sections), presented as a sanity check rather
+   than a novel topological result.
+FTM – Revised Edition                                                                                  9
+
+
+
+6.6    Observability Complexity: A Set-Cover Characterization
+The results so far either restate definitions or instantiate standard facts. This subsection proves
+a result with independent mathematical content: for the function-sheaf class of Section 4, the
+observability covering number Nobs (F) (Section 6.2) is exactly the classical Minimum Set Cover
+number, and inherits its computational hardness. This is not visible from general sheaf theory,
+because general sheaf theory has no notion of “observability covering number”; it is a genuine
+consequence of combining that FTM-specific invariant with a classical combinatorial optimization
+problem.
+
+
+   Let F be a function sheaf on a finite set X with target V , |V | ≥ 2 (Section 4), with cover
+   U = {Ui }i∈I , Ui ⊆ X. A subcover V ⊆ U is an observability cover if and only if
+                                           [
+                                              U = X.
+                                             U ∈V
+
+   Consequently,
+                                  Nobs (F) = SetCover(X, {Ui }i∈I ),
+   the minimum number of sets from {Ui } whose union is X.
+
+
+Proof. (⇐) Suppose U ∈V U = SX. Let s ̸= t ∈ Γ(F) = Maps(X, V ). Since s ̸= t, there is
+                         S
+x0 ∈ X with s(x0 ) ̸= t(x0 ). As V = X, some U ∈ V contains x0 , so ρX,U (s)(x0 ) = s(x0 ) ̸=
+t(x0 ) = ρX,U (t)(x0 ), i.e. ρX,U (s) ̸= ρX,U (t). Hence ρV (s) ̸= ρV (t), so ρV is injective and V is an
+observability cover.
+(⇒) Suppose U ∈V U =       ̸ X; pick x0 ∈ X \ V. Since |V | ≥ 2, choose v =         ̸ v ′ ∈ V and define
+               S                                    S
+s, t ∈ Maps(X, V ) by s(x0 ) = v, t(x0 ) = v , and s(x) = t(x) for all x ̸= x0 (any fixed choice).
+                                                  ′
+
+Then s ̸= t, but for every U ∈ V, since x0 ∈     / U , ρX,U (s) = ρX,U (t) (they agree everywhere on U ).
+Hence ρV (s) = ρV (t) with s ̸= t: ρV is not injective, so V is not an observability cover.
+Both directions together give the stated equivalence; taking the minimum cardinality over
+separating V on the left, and over covering V on the right, gives Nobs (F) = SetCover(X, {Ui }).
+
+
+
+   Computing Nobs (F) for a general manifestation sheaf is NP-hard, and deciding “Nobs (F) ≤
+   k” is NP-complete.
+
+
+Proof. Minimum Set Cover is NP-hard, and its decision version is NP-complete (Karp, 1972).
+Section 6.6 exhibits, for every Set Cover instance (X, {Ui }), a function sheaf F (take any V with
+|V | = 2) whose observability covering number equals the Set Cover number of that instance —
+a polynomial-time (in fact linear-time) reduction, since F is read off directly from (X, {Ui }).
+Hardness of Set Cover therefore transfers to hardness of computing Nobs for function sheaves,
+which are a special case of manifestation sheaves; NP-completeness of the decision version  follows
+since a candidate V with |V| ≤ k can be verified in polynomial time by checking V = X.
+                                                                                     S
+FTM – Revised Edition                                                                             10
+
+
+
+
+    Unless P = NP, no polynomial-time algorithm approximates Nobs (F) for function sheaves
+    within a factor of (1 − o(1)) ln |X| (Feige, 1998). The standard greedy algorithm —
+    repeatedly choose the context Ui covering the most currently-unobserved points — achieves
+    an H|X| ≈ ln |X| approximation ratio (Johnson, 1974; Chvátal, 1979) and is a practical
+    heuristic for large manifestation sheaves where exact computation of Nobs is infeasible.
+
+
+Proof. Both bounds are Feige’s and Johnson/Chvátal’s classical results for Set Cover, transferred
+through the identity reduction of Section 6.6: since the observability-cover problem for function
+sheaves is a Set Cover instance (not merely reducible to one via some lossy transformation), any
+algorithm or hardness result for Set Cover applies verbatim to Nobs on this class, with no loss in
+the approximation ratio.
+
+
+    This result is deliberately modest in scope: it applies to the function-sheaf class, not to
+    arbitrary manifestation sheaves with non-discrete context universes or non-trivial policy
+    lattices. We regard it as a first genuinely new theorem in this line of work — one that
+    connects an invariant introduced by FTM to an independently well-studied problem, with
+    consequences (hardness, an approximation guarantee) that could not have been read off
+    from an existing sheaf theory textbook, precisely because Nobs is not a standard sheaf-
+    theoretic invariant. Extending the characterization beyond the function-sheaf class — e.g.
+    relating Nobs to the nerve of the cover for sheaves valued in more general categories — is
+    open and is, in our view, the most promising direction for a deeper structural theorem.
+
+
+7     A Worked Example: Three-Zone Bridge Sensor Network
+We now instantiate every construction above on an explicit, numerically concrete example, so that
+the sheaf axioms, the Fallacy of Super Identity, and the Minimum Observability Cover Theorem
+can each be checked by hand rather than taken on faith. This is a fully specified synthetic
+instantiation, not measured data from a deployed sensor network; Section 11 is explicit about
+that distinction.
+7.1    Setup
+Consider a bridge deck instrumented with vibration sensors at five points,
+
+                                        X = {p1 , p2 , p3 , p4 , p5 },
+
+where p1 lies on span A, p5 lies on span C, p3 lies on span B, and p2 , p4 sit at the two expansion
+joints A–B and B–C respectively (hence are physically shared between adjacent spans’ monitoring
+zones). Three overlapping sensor zones cover the deck:
+
+                     U1 = {p1 , p2 },      U2 = {p2 , p3 , p4 },         U3 = {p4 , p5 }.
+
+Each sensor reports a Boolean reading, V = {0, 1}: 0 for “vibration within normal range,” 1 for
+“vibration threshold exceeded.” This is exactly the function-sheaf construction of Section 4 with
+|X| = 5, |V | = 2, so |Γ(F )| = 25 = 32 possible full readings of the deck.
+FTM – Revised Edition                                                                                    11
+
+
+
+7.2    Verifying the Sheaf Axioms
+Locality. If two candidate global readings s, t ∈ Γ(F) agree on U1 , U2 , U3 , they agree at p1 , . . . , p5
+(since U1 ∪ U2 ∪ U3 = X), hence s = t: locality holds for the full cover.
+Gluing. Given local readings s1 = (1, 0) on U1 (meaning p1 =1, p2 =0), s2 = (0, 1, 0) on U2
+(p2 =0, p3 =1, p4 =0), s3 = (0, 1) on U3 (p4 =0, p5 =1): these agree on the overlaps (p2 =0 from
+both s1 , s2 ; p4 =0 from both s2 , s3 ), so gluing predicts a unique global section s = (1, 0, 1, 0, 1).
+Section 8 verifies this by brute-force search over all 32 candidates.
+7.3    The Fallacy of Super Identity, Concretely
+Now choose local readings that do not agree on overlaps:
+
+                 s1 = (1, 0) on U1 ,       s2 = (1, 0, 1) on U2 ,     s3 = (0, 1) on U3 .
+
+Here s1 reports p2 =0 but s2 reports p2 =1 (conflict on U1 ∩ U2 ); s2 reports p4 =1 but s3 reports
+p4 =0 (conflict on U2 ∩ U3 ). The tuple (s1 , s2 , s3 ) ∈ F(U1 ) × F(U2 ) × F(U3 ) = P is a perfectly
+good element of the Cartesian product — exactly the kind of object a naive “collect all sensor
+readings into one record” design would accept — but by Section 5 it does not correspond to
+any actual state of the bridge, since no single deck-wide reading vector restricts to all three
+simultaneously. Section 8 confirms this by checking all 32 candidates.
+7.4    Minimum Observability Cover
+By Section 6.6, since p1 appears only in U1 , p3 only in U2 , and p5 only in U3 , no subcover of size
+≤ 2 can cover X (dropping any zone leaves its exclusive point unmonitored), so Nobs (F) = 3: all
+three sensor zones are necessary to uniquely reconstruct the deck’s state. Section 8 verifies this
+exhaustively over all 23 = 8 subcovers.
+
+8     Computational Verification
+We implemented the worked example of Section 7 in Python and verified, by direct enumeration
+over all 25 = 32 global sections and all 23 = 8 subcovers, every quantitative claim made above.
+The complete script is reproduced in Section 8; we report the actual output below rather than
+restating predicted values. The following excerpts illustrate the core algorithms used in the
+reference implementation. The complete source code, test suite, and executable simulator are
+available in the archived repository [16].
+FTM – Revised Edition                                                                                       12
+
+
+
+
+1    X = [ ’ p1 ’ , ’ p2 ’ , ’ p3 ’ , ’ p4 ’ , ’ p5 ’]
+2    zones = { ’ U1 ’: [ ’ p1 ’ , ’ p2 ’] , ’ U2 ’: [ ’ p2 ’ , ’ p3 ’ , ’ p4 ’] , ’ U3 ’: [ ’ p4 ’ , ’ p5
+        ’ ]}
+3    V = [0 , 1]
+4    global_sections = list ( itertools . product (V , repeat = len ( X ) ) ) # |
+        Gamma ( F ) | = 32
+5
+6    def restrict ( section , zone_points ) :
+7        idx = [ X . index ( p ) for p in zone_points ]
+8        return tuple ( section [ i ] for i in idx )
+9
+10   def is_separating ( subcover_names ) :
+11       seen = {}
+12       for s in global_sections :
+13           key = tuple ( restrict (s , zones [ name ]) for name in
+                subcover_names )
+14           if key in seen and seen [ key ] != s :
+15                return False
+16           seen [ key ] = s
+17       return True
+
+
+Results
+Locality / separation over all 23 = 8 subcovers. Brute-force testing confirmed that exactly
+one subcover separates all 32 global sections: {U1 , U2 , U3 } itself. Every proper subcover (including
+all three pairs) failed to separate at least one pair of distinct global sections. Concretely:
+                                                              S
+                 Subcover          Covered points                 = X?        Separating?
+
+                 {U1 }                  {p1 , p2 }                No               No
+                 {U2 }                {p2 , p3 , p4 }             No               No
+                 {U3 }                  {p4 , p5 }                No               No
+                 {U1 , U2 }         {p1 , p2 , p3 , p4 }   No (missing p5 )        No
+                 {U1 , U3 }         {p1 , p2 , p4 , p5 }   No (missing p3 )        No
+                 {U2 , U3 }         {p2 , p3 , p4 , p5 }   No (missing p1 )        No
+                 {U1 , U2 , U3 }     {p1 , . . . , p5 }           Yes             Yes
+
+This confirms Section 6.6’s prediction exactly: separating ⇔ covering, in every one of the 8 cases
+tested.
+Observability covering number. The brute-force minimum separating subcover size was
+Nobs (F) = 3, matching the independently computed classical Set-Cover minimum over (X, {Ui }),
+also 3, achieved by the same subcover {U1 , U2 , U3 } — a direct, computed confirmation of
+Section 6.6 on this instance (not merely a restatement of it).
+Reconstruction. For ground-truth reading s = (1, 0, 1, 0, 1), the local observations under the
+FTM – Revised Edition                                                                               13
+
+
+
+minimal cover were U1 7→ (1, 0), U2 7→ (0, 1, 0), U3 7→ (0, 1). Exactly one of the 32 global sections
+was consistent with all three simultaneously, and it equaled the ground truth exactly: unique
+reconstruction succeeded, as Section 6.2 and Section 6.6 predict.
+Fallacy of Super Identity. For the conflicting tuple of §7.3 (s1 = (1, 0), s2 = (1, 0, 1),
+s3 = (0, 1)), the script confirmed:
+• Compatible on U1 ∩ U2 : False
+• Compatible on U2 ∩ U3 : False
+• Exists a global section restricting to this tuple: False
+The tuple is a genuine element of P = F(U1 ) × F(U2 ) × F(U3 ) that lies strictly outside the image
+of Γ(F), exactly as Section 5 predicts.
+Large-Scale Validation on a Real Structural Health Monitoring Dataset
+Beyond the synthetic five-sensor example of Section 7, we evaluated the simulator using a real
+structural-health-monitoring (SHM) dataset containing 695 sensors observed across 53 monitoring
+periods (48 daily observations and 9 monthly observations). Assuming a Boolean manifestation
+model, the corresponding state space contains
+
+
+                                    |Γ(F)| = 2695 ≈ 1.6 × 10209
+
+possible global configurations. Exhaustive enumeration of this state space proved computationally
+infeasible and caused the simulator to terminate before completion. This experiment empirically
+demonstrates the combinatorial state-space explosion predicted by the theory and motivates
+the use of observability-cover optimization and approximation algorithms instead of brute-force
+reconstruction for large manifestation sheaves.
+The complete implementation of the simulator, together with all scripts used to reproduce the
+computational verification reported in this section, is available in a public GitHub repository
+archived through Zenodo [16]. The archived release constitutes the reference implementation cor-
+responding to this article and allows independent reproduction of every computational experiment
+presented here.
+
+
+    This experiment is deliberately small enough to be checked by hand as a cross-validation
+    of the code itself; its purpose is to confirm that the abstract theorems’ predictions and the
+    concrete enumerated results agree exactly, not to demonstrate scalability. Section 6.6’s
+    greedy heuristic is the appropriate tool once |X| and |U| grow beyond brute-force range.
+
+
+9     Integration with Established Systems-Viability and Hazard-Propagation
+      Literature
+Rather than resting FTM’s application layer on unpublished companion work, we ground it here
+in existing, peer-reviewed literature on system viability and hazard propagation, and indicate
+FTM – Revised Edition                                                                              14
+
+
+
+where FTM’s sheaf-theoretic vocabulary offers a translation of established ideas rather than a
+replacement for them. Where we draw an analogy rather than a proof, we say so explicitly.
+9.1   System Viability: Cybernetic and Ecological Foundations
+• Ashby’s Law of Requisite Variety (Ashby, 1956) states that a regulator can counter the
+  variety of a system only if the regulator has at least as much variety available. Read against
+  FTM, the policy lattice ΠU bounds the disturbance variety the system can absorb at U ;
+  Section 6.4 is a sheaf-local restatement of the requisite-variety intuition. This is an interpretive
+  analogy, not a new derivation of Ashby’s law.
+• Beer’s Viable System Model (VSM) (Beer, 1972, 1979) decomposes an organization into
+  recursively nested viable subsystems, structurally close to FTM’s context/observer hierarchy
+  (§3), and gives an independently studied account of “recursive viability” against which FTM’s
+  hierarchy can be checked.
+• Holling’s ecological resilience (Holling, 1973) distinguishes engineering resilience (return to
+  a single equilibrium) from ecological resilience (persistence of identity across regimes) — the
+  distinction FTM’s identity/manifestation split is designed to formalize.
+9.2   Hazard Propagation as Network Topology
+• Fault tree and bow-tie analysis (Ericson, 1999) is the standard formalism for cataloguing
+  minimal cut-sets of hazard-propagation paths — the role played by Σ(c) below.
+• Cascading failure in networked infrastructure (Albert, Jeong, & Barabási, 2000; Motter
+  & Lai, 2002) formalizes how local failure propagates through network topology; the cut-set
+  equivalence classes below are a sheaf-theoretic redescription of the grouping this literature
+  already uses.
+9.3   A Sheaf-Theoretic Reading of Hazard Contexts
+Let Chaz be a context universe whose opens correspond to operating regimes of a networked
+system, and Fhaz a manifestation sheaf whose local sections are fault-tree/bow-tie minimal
+cut-sets (Ericson, 1999). Then Σ(c) = Fhaz (U ), and Σ(c) / ∼risk (paths sharing a cut-set) is
+an instance of the identity quotient Ω/G applied to hazard trajectories. This is a translation
+exercise, not a claim that FTM improves on the underlying engineering analysis. We note in
+passing that this construction is also, formally, a function sheaf in the sense of Section 4 when
+cut-sets are represented as Boolean vectors over component failure states, so Section 6.6 applies
+directly: determining the minimum instrumentation needed to observe all distinguishable hazard
+scenarios in such a system is itself an NP-hard set-cover problem, for which the greedy heuristic
+of Section 6.6 gives a practical logarithmic approximation guarantee.
+9.4   Capacity and Survival
+The policy lattice ΠU models regulatory capacity in Ashby’s sense; the survival measure S(t) of
+Section 6.4 tracks admissible reachable states under that capacity — resilience in Holling’s sense,
+not stability around a single equilibrium.
+FTM – Revised Edition                                                                                15
+
+
+
+10     Application: Digital Twins as Local Sections
+
+
+    A digital twin Tk is a local section sk ∈ F(Uk ).
+
+
+
+    A single digital twin cannot capture the full identity whenever Observational Non-
+    degeneracy holds for its context. Synchronizing multiple twins requires verifying pairwise
+    compatibility on overlapping contexts; twins on disjoint contexts are parallel manifestations,
+    not replicas, and cannot be checked against one another at all. Determining the minimum
+    set of twin contexts needed for full observability is, by Section 6.6, generally NP-hard, and
+    the greedy heuristic of Section 6.6 is the recommended practical approach for large twin
+    networks.
+
+
+11     Scope and Limitations
+We distinguish four kinds of claim in this paper:
+• A genuinely new theorem, tested computationally: Section 6.6 (Observability as Set
+  Cover) and its corollaries (Section 6.6) connect an invariant introduced in this line of work (Nobs )
+  to an independently studied NP-hard problem, with consequences not visible from standard
+  sheaf theory. Section 8 confirms the theorem’s prediction against brute-force computation on a
+  concrete instance, rather than only presenting the proof. This result is deliberately narrow in
+  scope (the function-sheaf class); extending it to sheaves with non-discrete context universes or
+  non-trivial policy lattices is open.
+• Other genuine derivations specific to this framework: the Fallacy of Super Identity
+  (Section 5) and the Identity Separation Criterion (Section 6.3) and State-Space Monotonicity
+  Lemma (Section 6.4) connect FTM-specific structure to conclusions via arguments that could,
+  in principle, fail.
+• Standard mathematical facts instantiated in this setting: Manifestation Stability
+  (universal property of the product topology), Viability Monotonicity (monotonicity of measure
+  under inclusion), and the adjunction remark in §2.2 are correct and useful confirmations that
+  the framework behaves sensibly, but are not new mathematics.
+• Definitional restatements: Section 6.3 follows immediately from its hypothesis and is
+  retained only as motivation for Section 6.3.
+Section 9 draws analogies to established literature (Ashby, Beer, Holling, Ericson, cascading-
+failure network theory); these are interpretive correspondences, not proofs that FTM derives
+or improves upon those results. An earlier version of this paper grounded that section in
+unpublished companion preprints by the same author; that dependency has been removed in
+favor of peer-reviewed sources.
+The worked example of Section 7 is a fully specified, numerically explicit synthetic instantiation —
+constructed to be small enough to verify by hand and by brute-force computation (Section 8)
+— not measured data from a deployed sensor network. It demonstrates that the axioms and
+FTM – Revised Edition                                                                            16
+
+
+
+theorems are mutually consistent and computable on a concrete case, not that FTM has been
+empirically validated against real infrastructure data. Building and verifying a manifestation
+sheaf from an actual measured dataset (e.g. a public structural-health-monitoring or SCADA
+dataset), and checking whether the sheaf axioms hold against real sensor noise and missing data,
+remains the most valuable next empirical step. Likewise, Section 6.6’s greedy heuristic has not
+yet been benchmarked against real large-scale instrumentation-placement problems; doing so is a
+natural extension of the computational work reported here.
+
+12     Conclusion
+By separating identity (I ∈ Ω/G) from manifestation (local sections of a sheaf F over a context
+site), FTM gives a framework in which claims like “a single observer is insufficient” or “the union
+of all observations over-generates” can be stated and proved precisely. This edition addresses the
+three most consequential gaps in the earlier presentation: it gives one fully worked, numerically
+explicit example against which every axiom and theorem can be checked (Section 7); it reports
+an actual computational experiment, with real output, that verifies locality, gluing, minimal
+observability, and the failure of the Cartesian-product reconstruction on that example (Section 8);
+and it proves one theorem with genuine, non-instantiated mathematical content — that Minimum
+Observability Cover for function sheaves is exactly Minimum Set Cover, hence NP-hard and
+logarithmically hard to approximate (Section 6.6) — which could not have been anticipated from
+general sheaf theory, since the underlying invariant is specific to this framework. Section 11 makes
+explicit which of the paper’s remaining results are standard facts instantiated in a new setting
+versus framework-specific derivations, so that the paper’s actual mathematical contribution is not
+overstated.
+
+Declarations
+Funding
+This research did not receive any specific grant from funding agencies in the public, commercial,
+or not-for-profit sectors.
+Competing interests
+The author declares no competing interests, financial or non-financial, related to this manuscript.
+Data availability
+The manuscript is a purely theoretical work and does not involve the collection or analysis of
+empirical datasets. The computational verification reported in Section 8 was performed using a
+Python implementation that is archived and publicly available in the FTM Simulator repository
+(Version 1.0) at https://github.com/sys-physics/FTM.git, referenced in the manuscript as
+[16]. No other datasets were generated or analysed during the current study.
+
+References
+[1] Karp, R. M. (1972). Reducibility Among Combinatorial Problems. In Complexity of Computer
+    Computations, 85–103. Plenum Press.
+[2] Feige, U. (1998). A Threshold of ln n for Approximating Set Cover. Journal of the ACM, 45(4),
+FTM – Revised Edition                                                                             17
+
+
+
+   634–652.
+[3] Johnson, D. S. (1974). Approximation Algorithms for Combinatorial Problems. Journal of
+    Computer and System Sciences, 9(3), 256–278.
+[4] Chvátal, V. (1979). A Greedy Heuristic for the Set-Covering Problem. Mathematics of Opera-
+    tions Research, 4(3), 233–235.
+[5] Ashby, W. R. (1956). An Introduction to Cybernetics. Chapman & Hall.
+[6] Beer, S. (1972). Brain of the Firm. Allen Lane.
+[7] Beer, S. (1979). The Heart of Enterprise. John Wiley & Sons.
+[8] Holling, C. S. (1973). Resilience and Stability of Ecological Systems. Annual Review of Ecology
+    and Systematics, 4, 1–23.
+[9] Ericson, C. A. (1999). Fault Tree Analysis — A History. Proceedings of the 17th International
+    System Safety Conference.
+[10] Albert, R., Jeong, H., & Barabási, A.-L. (2000). Error and Attack Tolerance of Complex
+    Networks. Nature, 406, 378–382.
+[11] Motter, A. E., & Lai, Y.-C. (2002). Cascade-Based Attacks on Complex Networks. Physical
+    Review E, 66, 065102.
+[12] Mac Lane, S. (1998). Categories for the Working Mathematician. Springer-Verlag.
+[13] Mac Lane, S., & Moerdijk, I. (1994). Sheaves in Geometry and Logic: A First Introduction
+    to Topos Theory. Springer-Verlag.
+[14] Grothendieck, A. (1957). Sur quelques points d’algèbre homologique. Tohoku Mathematical
+    Journal, 9(2), 119–221.
+[15] Tao, F., Zhang, H., Liu, A., & Nee, A. Y. C. (2018). Digital Twin in Industry: State-of-the-Art.
+    IEEE Transactions on Industrial Informatics, 15(4), 2409–2415.
+[16] Hasibi, S. (2026). FTM Simulator – Function Sheaf Edition (Version                         1.0)
+    [Computer software]. Zenodo. https://github.com/sys-physics/FTM.git
+
+Funding
+This research did not receive any specific grant from funding agencies in the public, commercial,
+or not-for-profit sectors.
+

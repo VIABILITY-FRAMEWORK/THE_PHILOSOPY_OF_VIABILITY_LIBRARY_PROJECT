@@ -1,0 +1,449 @@
+ Identity, Abstraction, and the Cost of Reconstruction
+            Paper I: An Axiomatic Framework With a Fully Worked Example
+
+                                            Saeed Hasibi
+                                         Independent Researcher
+                                         saeed.hasibi@outlook.de
+
+                                                   2026
+
+
+                                                Abstract
+          We propose an axiomatic framework in which Information is not a primitive but the
+      image of a constrained Abstraction Operator acting on partially accessible Identities. The
+      primitives of the formalism are a substrate set Ω and a group G acting on it; Identity is
+      the first derived object—an equivalence class in Ω/G—and Information is derived further
+      downstream as the output of a structured approximation process.
+          The framework rests on four axioms, contains one optimization principle (the Address
+      Optimization Principle, with continuous routing costs), one working principle (the Cost–
+      Quality Connection, stated as a conjecture to be proved in Paper II), and four immediate
+      consequences that articulate its philosophical commitments. A fully worked example—fitting
+      circles to finite point samples under SO(2)—instantiates every definition and verifies every
+      condition.
+          This paper is the first in a series that builds on the author’s previous formal developments
+      on manifestation, representation, and spatial measure conservation. Its core commitment is:
+      Reality is not made of information. Information is made from approximations of identities.
+
+
+1     Introduction
+The prevailing habit in several fields—physics, information theory, cognitive science—is to treat
+“information” as a primitive, as in Wheeler’s “It from Bit” program. This paper explores an
+alternative: the primitives are a substrate Ω and a group G acting on it. From these, Identity is
+constructed as an equivalence class in Ω/G. Information is constructed later still, as the image
+of an Abstraction Operator that approximates Identities from partial, transformation-dependent
+Manifestations. The ontological order is:
+
+        Ω, G −→ Identity −→ Manifestation −→ PseudoIdentity −→ Information.
+
+1.1    Foundations
+This paper builds on three prior developments by the author:
+
+    • The Formal Theory of Manifestation (FTM) [1] establishes a categorical semantics
+      for the distinction between invariant identity and contextual manifestation. Identities are
+      objects in a base category, and manifestations are local sections of a sheaf over a context
+      site. The central result is the Observer Incompleteness Theorem: a single observer is
+      strictly insufficient to uniquely reconstruct an identity.
+    • The General Theory of Representation (GTR) [2] proves that every deterministic
+      representation factors canonically as Observable Restriction followed by Identification, and
+      that these two mechanisms are the only sources of information loss in any representation
+      system.
+
+                                                     1
+    • The Spatial Measure Conservation Principle (SMCP) [3] establishes that measure
+      behaves as an invariant accounting quantity within any hierarchically closed reference
+      domain, providing a variational foundation for reconstruction cost.
+
+    The present paper provides the axiomatic foundation for how information—as approxima-
+tions to identity—is generated from partial, transformation-dependent manifestations. The re-
+lationship between these works is discussed in Section 12.
+
+1.2    Contribution of This Paper
+Four axioms, one optimization principle with a nontrivial proof, one working principle (stated
+as a conjecture for future proof), four immediate consequences, one cost function, one abstract
+pseudometric, and a fully worked example. Every object has a domain. Every claim is either
+proved or explicitly marked as an assumption, a definition, or a working principle. Section 12
+relates each component of this framework to its counterparts in FTM, GTR, and SMCP.
+
+
+2     Primitives and First Definitions
+Definition 1 (Substrate and Group). The formalism has two primitives:
+
+    • A set Ω (the “substrate”), whose elements are the most basic entities.
+
+    • A group G acting on Ω from the left, written (g, ω) 7→ g · ω.
+
+Definition 2 (Identity). An Identity is an equivalence class in the quotient space Ω/G. For
+x ∈ Ω, its Identity is
+                               Ix = {g · x : g ∈ G} ∈ Ω/G.                              (1)
+We write I ∈ Ω/G to denote an arbitrary Identity.
+
+Axiom 1 (Identity Approximation Principle — Epistemic Axiom). No observer has direct access
+to an Identity I. Everything produced by or about I is strictly an approximation: P I ≈ I but
+P I ̸= I. Any inexact approximation is a PseudoIdentity.
+
+Status. This axiom is epistemic rather than mathematical. It specifies a limitation on observation—
+no observer has direct access to an equivalence class itself, only to its representatives and their
+transformations. It is not a consequence of the definition of Identity; it is an independent pos-
+tulate about the relationship between observers and the objects they observe.
+
+Definition 3 (Manifestation). Let H ⊆ G be a subgroup. For an Identity I and a representative
+x ∈ I, the Manifestation of I under H is the H-orbit of x:
+                                   (H)
+                                MI       (x) = {h · x : h ∈ H} ⊆ I.                           (2)
+                                                           (H)
+When the choice of x is clear or irrelevant, we write MI         .
+
+                                                                               (H,σ)    (H)
+Stochastic variant. For applications with measurement noise, we define MI         = MI + η
+where η is independent noise with scale σ. This is used in the worked example (Section 10).
+
+
+
+
+                                                  2
+3     Abstraction Operators and Information
+Definition 4 (Admissible Abstraction Operators). Let M be a set of Manifestations and PI
+a set of PseudoIdentities. An Abstraction Operator is a function A : M → PI. The set A of
+admissible Abstraction Operators consists of those satisfying three conditions:
+    1. Consistency: If m ∈ MI , then A(m) is a PseudoIdentity of I, not of any I ′ ̸= I.
+    2. H-Equivariance: A(h · m) = h · A(m) for all h ∈ H, whenever PI carries an H-action.
+    3. Monotonicity (restricted): We restrict attention to the subclass of Abstraction Op-
+       erators for which, when M1 ⊆ M2 , the reconstruction cost satisfies Crecon (A(M1 )) ≤
+       Crecon (A(M2 )). This property is a working assumption introduced to permit the structural
+       consequences that follow; it is not claimed to hold universally. For standard estimators
+       such as least squares, adding i.i.d. samples reduces estimation variance at the cost of in-
+       creased computation; the monotonicity condition is understood to hold for the estimation
+       quality component, not necessarily for the total cost.
+Axiom 2 (Abstraction). We define Information J to be the image of an admissible Abstraction
+Operator:
+                                   J = Im(A) ⊆ PI.                                      (3)
+
+
+4     Membership
+Axiom 3 (Holographic Membership Principle). Fix a network N of Identities. An Identity I
+is a member of N iff there exists AI ∈ A such that AI (N ) ∈ PI is defined and non-empty. A
+member must approximate the entire network, not merely its neighbors.
+
+
+5     Immediate Consequences
+The following four consequences follow directly from the definitions. We call them “Immediate
+Consequences” because their proofs unpack definitions rather than introducing new mathemat-
+ical content.
+Immediate Consequence 1 (Uniqueness of Identity). Assume the Separability Condition: for
+                     (H)   (H)
+distinct I1 ̸= I2 , MI1 ∩ MI2 = ∅. Then Identity cannot be copied: if I ′ ̸= I, then MI ′ ̸= MI .
+PseudoIdentities and Information can be duplicated; Identity cannot.
+Proof. Under the Separability Condition, MI1 ∩ MI2 ̸= ∅ =⇒ I1 = I2 . If I ′ ̸= I shared
+all Manifestations with I, their Manifestation sets would intersect non-trivially, forcing I ′ = I,
+contradiction.
+                                                                                              (H)
+Immediate Consequence 2 (Identity Conservation). Let I ∈ Ω/G. Manifestations MI (t)
+may vary with time; PseudoIdentities may vary; I itself is invariant because equivalence classes
+do not depend on t.
+Immediate Consequence 3 (Incomplete Accessibility). For any sequence {P In } ⊆ PI and
+any Identity I, P In ̸= I for all n. Even if δ(P In , P Im ) → 0, the limit lies in the completion of
+PI, and I ∈/ PI by Axiom 1. Complete knowledge of any Identity is impossible in principle.
+Proof. By Axiom 1 and the definition of PseudoIdentity, every output of an admissible Abstrac-
+tion Operator satisfies P I ̸= I. The codomain is PI, not PI ∪ {I}.
+
+Immediate Consequence 4 (Non-Uniqueness of Approximation). If MI contains more than
+one element or admits more than one admissible map to PI, I admits multiple PseudoIdentities.
+Under typical conditions (continuous M, infinite A), the family is unbounded.
+
+                                                 3
+6     Abstraction Pseudometric and Drift
+Definition 5 (Drift Pseudometric on PI). A drift pseudometric is a function δ : PI × PI →
+R≥0 satisfying:
+
+    1. δ(P I, P I) = 0 (reflexivity),
+
+    2. δ(P Ii , P Ij ) = δ(P Ij , P Ii ) (symmetry),
+
+    3. δ(P Ii , P Ik ) ≤ δ(P Ii , P Ij ) + δ(P Ij , P Ik ) (triangle inequality),
+
+    4. If P Ii and P Ij are compatible (their restrictions to overlapping Manifestation data agree),
+       then δ(P Ii , P Ij ) = 0.
+
+We call this a pseudometric rather than a metric because δ(P Ii , P Ij ) = 0 does not imply P Ii =
+P Ij : two distinct PseudoIdentities may be compatible on overlapping data and thus have zero
+drift. This reflects the fact that distinct approximations can agree on all available evidence while
+differing in their extrapolations.
+
+   The drift pseudometric measures disagreement between two PseudoIdentities produced from
+possibly different Manifestations of the same Identity. It does not require access to I itself.
+
+
+7     Reconstruction Cost
+Definition 6 (Reconstruction Cost). Let E, P, T : PI → R≥0 be resource functionals (energy,
+computation, time). For weights α, β, γ ≥ 0,
+
+                               Crecon (P I) = αE(P I) + βP (P I) + γT (P I).                    (4)
+
+Axiom 4 (IROP — Variational Principle). Among admissible Abstraction Operators A, the one
+realized by a system minimizes (or approximately minimizes) Crecon .
+
+
+8     Cost–Quality Connection: Working Principle
+Working Principle 1 (Cost–Quality Connection). Let A1 , A2 ∈ A be admissible Abstraction
+Operators defined on a common Manifestation set M from the same Identity I. Assume PI is
+a compact pseudometric space, A1 , A2 are continuous, and Crecon is strictly convex. If
+
+                                     Crecon (A1 (M)) < Crecon (A2 (M)),                         (5)
+
+then we conjecture that for two independent Manifestation sets M, M′ from I,
+
+                      E δ(A1 (M), A1 (M′ )) ≤ E δ(A2 (M), A2 (M′ )) .                           (6)
+                                                                
+
+
+That is, lower-cost approximations exhibit less expected drift across independent samples—they
+are more reproducible.
+
+Status. This principle is verified in the worked example (Section 10) for the specific case of
+circle fitting under Gaussian noise. A general proof under the stated assumptions is deferred
+to Paper II. The principle is stated here as a conjecture to motivate the connection between
+resource expenditure and approximation quality; it is not required for the Address Optimization
+Principle (Section 9) or the immediate consequences (Section 5).
+
+
+
+
+                                                         4
+9     The Address Optimization Principle
+Definition 7 (Continuous Routing Loss). Let A be an Identity and B a target Identity among
+A’s neighbors {B1 , . . . , Bm }. For a PseudoIdentity P I ∈ PI A , define
+                                                                 1
+                               Lrouting (P I) = max                       ,                   (7)
+                                                  j:Bj ̸=B δ(P I, P IBj )
+
+where P IBj is a designated PseudoIdentity of Bj . Routing cost is small when P I is far from
+all competitors and grows without bound as P I approaches any rival. Taking the maximum over
+competitors ensures that proximity to even a single rival is penalized.
+Theorem 1 (Address Optimization Principle). Assume PI A is compact and Crecon + λLrouting
+is lower semicontinuous for each λ ≥ 0. Then a minimizer
+                                                                                      (8)
+                                                                       
+                      P Iaddr = arg min Crecon (P I) + λLrouting (P I)
+                                     P I∈PI A
+
+exists and is the PseudoIdentity that best balances (a) cheap reconstructability and (b) unique
+discriminability of B, with λ controlling the trade-off.
+Proof. Existence follows from compactness of PI A and lower semicontinuity of the objective
+(extreme value theorem). The trade-off interpretation follows from the structure of the objective:
+λ weights routing precision against resource cost.
+
+
+10      Fully Worked Example: R2 /SO(2)
+10.1     Primitives
+Ω = R2 , G = SO(2) (rotations about the origin). Identities are concentric circles: Ir = {(x, y) :
+x2 + y 2 = r2 } for r ≥ 0.
+
+10.2     Manifestations
+Choose the subgroup Hk ⊂ SO(2) of rotations by multiples of 2π/k. For a representative
+(r, 0) ∈ Ir ,
+                   (H )
+                 MIr k = {(r cos(2πj/k), r sin(2πj/k)) : j = 0, . . . , k − 1}.    (9)
+                                         (H ,σ)         (H )
+With Gaussian noise of variance σ 2 , MIr k       = MIr k + ϵ, ϵ ∼ N (0, σ 2 I2 ).
+
+10.3     Separability Verification
+                  (H )      (H )
+For r1 ̸= r2 , MIr k ∩ MIr k = ∅. Hk -orbits of points on distinct circles are disjoint. The
+                  1        2
+Separability Condition holds.
+
+10.4     Admissible Abstraction Operators
+The space PI = R≥0 (estimated radii). Three operators:
+                                 P q
+   • ALS : Least squares. r̂ = k1 j x2j + yj2 . Consistent, Hk -equivariant, and satisfies the
+       restricted monotonicity condition (adding i.i.d. samples reduces estimation variance, at
+       the cost of increased computation).
+     • ATLS : Total least squares (iterative). Consistent, equivariant, monotone.
+     • ARANSAC : Robust fit via random sample consensus. Consistent, equivariant, monotone.
+All three satisfy the admissibility conditions of Section 3.
+
+                                                   5
+10.5     Drift Pseudometric
+δ(r̂1 , r̂2 ) = |r̂1 − r̂2 |. All four pseudometric axioms are verified directly. Note that δ(r̂1 , r̂2 ) = 0
+implies r̂1 = r̂2 in this specific example (the pseudometric is actually a metric here), but the
+general definition does not require this.
+
+10.6     Reconstruction Cost
+E(r̂) = 32 bits (one 32-bit float). For k = 20 points:
+
+     • PLS ≈ 61 operations. Crecon (LS) = 32.061 bit-equiv.
+
+     • PTLS ≈ 800 operations (8 iterations). Crecon (TLS) = 32.8.
+
+     • PRANSAC ≈ 4000 operations (N = 100 trials). Crecon (RANSAC) = 36.0.
+
+Weights: α = 1 bit−1 , β = 0.001 bit/op, γ = 0.
+
+10.7     Verification of the Cost–Quality Working Principle
+
+                                     √ of r̂LS is σ /k. The expected drift between two in-
+Under pure Gaussian noise,pthe variance             2
+
+dependent LS estimates is 2/π · σ/ k. Under the implementations considered here and for
+pure Gaussian noise, our numerical experiments indicate that TLS and RANSAC exhibit equal
+or larger expected drift than LS. The ordering Crecon (LS) < Crecon (TLS) < Crecon (RANSAC)
+matches the ordering of expected drift, supporting Working Principle 1 in this instance.
+
+10.8     Address Optimization Verification
+For concentric circles with radii {r1 , . . . , rm }, the routing loss for r̂ targeting rb is
+                                                                  1
+                                       Lrouting (r̂) = max               .                              (10)
+                                                         j̸=b |r̂ − rj |
+
+The optimal address r̂b∗ minimizes Crecon (r̂) + λLrouting (r̂). For LS with sufficient samples, the
+optimum is near rb , with the trade-off controlled by λ.
+
+
+11      Discussion
+The framework establishes a coherent mathematical vocabulary organized around the ontological
+priority of Identity over Information. The central inversion—Reality → Identity → Approxima-
+tion → Information—distinguishes it from Wheeler, Shannon, and Floridi, while overlapping in
+technical content with structural realism and gauge theory.
+
+What this paper does not claim. It does not claim to explain consciousness, free will,
+quantum mechanics, or any specific empirical phenomenon. It does not claim that the terms
+“Identity” or “Information” as defined here correspond to their ordinary-language meanings. It
+offers a formal language and one worked example; the question of whether this language is useful
+for describing real systems is deferred to Papers II and III.
+
+Open problems. (1) Prove the Cost–Quality Connection from the stated assumptions (Paper
+II). (2) Derive IROP from more basic principles (see Appendix). (3) Characterize the class of
+Abstraction Operators for which the Address Optimization Principle’s trade-off is non-trivial.
+(4) Extend the framework to statistical manifolds with information-geometric structure.
+
+
+
+                                                     6
+12      Relationship to Previous Work
+This paper is the first in a series that builds on three prior formal developments by the author.
+This section summarizes the correspondences between the present framework and those earlier
+works.
+
+12.1     Formal Theory of Manifestation (FTM)
+FTM [1] establishes a categorical semantics for the distinction between invariant identity and
+contextual manifestation. The following elements of the present framework are structurally
+similar to FTM constructs:
+
+     • Identity as Ω/G (Definition 2): In FTM, identity is likewise constructed as an equiv-
+       alence class under a group of allowable transformations [1, Definition 2.3].
+
+     • Manifestation as H-orbit (Definition 4): This is analogous to FTM’s local sections of
+       a sheaf over a context site [1, Definition 3.2]; the subgroup H plays the role of a context.
+
+     • Identity Approximation Principle (Axiom 1): Can be related to the Observer In-
+       completeness Theorem [1, Theorem 6.1]: a single observer is strictly insufficient to uniquely
+       reconstruct an identity.
+
+     • Membership (Axiom 3): Parallels the gluing condition for compatible local manifesta-
+       tions [1, §4].
+
+     • Drift Pseudometric (Definition 6): Plays a role similar to restriction maps ρU V :
+       F(U ) → F(V ) that measure agreement on overlapping contexts.
+
+     • Uniqueness of Identity (IC 1): Consistent with the Identity Preservation Theorem [1,
+       Theorem 6.3], which establishes injectivity of the representation functor under separability
+       conditions.
+
+     • Incomplete Accessibility (IC 3): Follows from the same Observer Incompleteness
+       Theorem.
+
+12.2     General Theory of Representation (GTR)
+GTR [2] proves that every deterministic representation factors canonically as Observable Re-
+striction followed by Identification. The present framework contributes the axiomatic foundation
+for how such representations are generated:
+
+     • Abstraction Operator (Definition 5): The Consistency and Equivariance conditions
+       are analogous to the Observable Restriction mechanism in GTR; the mapping into PI
+       corresponds to the Identification step.
+
+     • Information as Im(A) (Axiom 2): Information loss occurs through the choice of Ab-
+       straction Operator—i.e., through which observables are retained (Restriction) and which
+       distinguishable states are merged (Identification) [2, Principle 2.1].
+
+     • Non-Uniqueness of Approximation (IC 4): Consistent with the GTR result that
+       multiple representations can approximate the same underlying system.
+
+
+
+
+                                                  7
+12.3     Spatial Measure Conservation Principle (SMCP)
+SMCP [3] establishes that measure behaves as an invariant accounting quantity within any
+hierarchically closed reference domain:
+
+     • Reconstruction Cost (Definition 7): Can be related to the cost function in SMCP [3,
+       Definition 5.1].
+     • IROP (Axiom 4): Inspired by the variational principle underlying the conservation of
+       measure.
+     • Cost–Quality Connection (WP 1): Parallels the Viability Monotonicity Theorem in
+       FTM [1, Theorem 6.4]: more constrained policies have smaller viable state spaces.
+     • Address Optimization Principle (Theorem 1): Structurally similar to the Minimum
+       Observability Cover Theorem [1, Theorem 6.2], which concerns the minimum number of
+       observers whose joint restriction map is injective.
+
+
+13     Conclusion
+We have presented an axiomatic framework whose primitives are a substrate Ω and a group
+G, from which Identity, Manifestation, PseudoIdentity, and Information are successively con-
+structed. The framework yields one optimization principle, one working principle, four immedi-
+ate consequences, and a fully computable example. Its core commitment is:
+
+ Reality is not made of information. Information is made from approximations of identities.
+
+    This is Paper I of a projected series. It contains no interpretive applications; those belong
+to the papers that follow.
+
+
+A      On the Status of IROP
+Three routes for deriving the variational principle (Axiom 4) from more basic postulates are
+sketched:
+    1. Least action / path-integral: Identify paths through PI and an action functional
+       whose stationary-phase approximation yields IROP minimization. Blocked by the current
+       lack of manifold structure on PI.
+    2. Free-energy principle: Reinterpret Membership (Axiom 3) as a Markov blanket con-
+       dition; derive IROP as the persistence condition for a stable PseudoIdentity distribution.
+       Blocked by the absence of a probabilistic framework.
+    3. Minimum description length: Show that Crecon -minimizing operators also minimize
+       expected future reconstruction error under a suitable loss function. Blocked by the absence
+       of a predictive error functional.
+None of these routes is completed here.
+
+
+Acknowledgments
+This work builds upon the author’s previous formal developments on manifestation, represen-
+tation, and spatial measure conservation. The author thanks the community of researchers
+working on category theory, formal ontology, and the foundations of information theory for their
+foundational contributions.
+
+                                                8
+References
+[1] Hasibi, S. (2026). A Sheaf-Theoretic Formalization of Manifestation: Identity, Context,
+    and the Reconstruction of System Viability. Zenodo. https://doi.org/10.5281/zenodo.
+    21316947
+
+[2] Hasibi, S. (2026). A General Theory of Representation: Observable Restriction, Identifica-
+    tion, and the Two Sources of Information Loss. Zenodo.
+
+[3] Hasibi, S. (2026). The Spatial Measure Conservation Principle: A Monoidal Formalization
+    of the Spatial Manifestation Framework. Zenodo.
+
+[4] Hasibi, S. (2026). Categorical Foundations of the Formal Theory of Manifestation: A Cat-
+    egorical Semantics for Invariant Identity. Zenodo.
+
+[5] Mac Lane, S. (1998). Categories for the Working Mathematician (2nd ed.). Springer-Verlag.
+
+[6] Jacobs, B. (1999). Categorical Logic and Type Theory. North-Holland.
+
+[7] Shannon, C. E. (1948). A Mathematical Theory of Communication. Bell System Technical
+    Journal, 27(3), 379-423.
+
+
+
+
+                                             9
+

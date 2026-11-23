@@ -1,0 +1,1116 @@
+             Part IV: Fluid Elements — Light
+A Complete Module for the Fifth Edition of The Philosophy of Viability
+2
+Methodological Note
+
+The Status of This Module
+This module is Part IV of the fifth edition of The Philosophy of Viability. Its purpose is
+to develop, organize, and formally articulate the topic of light—not as a scientific topic,
+but as the second column of the four-column framework of cognition. A reader already
+familiar with Parts I–III can read this module independently.
+
+
+The Independence of Philosophy from Science
+This module is written under the following principle:
+
+Principle 0.1 (Autonomy of Philosophical Justification). (A)The validity of no
+philosophical principle in this module depends on confirmation from outside philosophy—
+including from science. Every principle is derived from within the four-column framework
+and from philosophical arguments.
+
+Methodological consequence. References to science in this module can serve only
+three roles:
+
+ (a) Coherence test: showing that science can develop itself within the philosophical
+     framework without contradiction. This role is permitted—provided it is explicitly
+     marked as “test” and not “evidence.”
+
+ (b) Historical motivation: showing that the problem is a real problem, arising from
+     the history of thought. This role is permitted—provided it is treated as “motivation”
+     and not “reason.”
+
+ (c) Legitimation: deriving the authority of philosophy from the confirmation of sci-
+     ence. This role is forbidden.
+
+Throughout this module, every reference to science appears inside a “Coherence Test”
+box, with its role explicitly stated.
+
+
+On Formalization
+Formalization in this module is balanced and philosophical : brief notation, formulation of
+principles, dependency tables, and epistemic labels. Not full formal proof, not mathemat-
+ical formulation. The aim is precision of presentation, not justification. Every principle
+appears first in full philosophical prose, and only then in symbolic form.
+
+                                            3
+4
+
+Epistemic Labels
+             Label   Meaning
+             (A)     Axiom or foundational commitment
+             (T)     Argued
+             (E)     Structural estimate, revisable
+             (Q)     Open philosophical question
+             (S)     Speculation
+Contents
+
+Methodological Note                                                                        3
+
+1 Why Light? Problem and Method                                                        9
+  1.1 The Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+  1.2 The Method . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+  1.3 Why Is Light a Philosophical Problem? . . . . . . . . . . . . . . . . . . . . 9
+  1.4 The Four-Column Framework as Organizing Principle . . . . . . . . . . . . 10
+  1.5 Map of the Module . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+2 Light in Experience and Tradition                                                        11
+  2.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        11
+  2.2 Beginning: An Experience . . . . . . . . . . . . . . . . . . . . . . . . . . .       11
+  2.3 Four Structural Patterns . . . . . . . . . . . . . . . . . . . . . . . . . . . .     11
+  2.4 Structural Table . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   11
+  2.5 Four Structural Observations . . . . . . . . . . . . . . . . . . . . . . . . .       12
+  2.6 The Common Presupposition . . . . . . . . . . . . . . . . . . . . . . . . .          12
+  2.7 A Question for Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . .      13
+
+3 Light as Trans-Categorical Substance                                                     15
+  3.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        15
+  3.2 Deadlock . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+  3.3 The Need for a New Category . . . . . . . . . . . . . . . . . . . . . . . . .        15
+  3.4 The Definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+  3.5 Light as Condition of Possibility of Relation . . . . . . . . . . . . . . . . .      16
+  3.6 Objections and Replies . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     16
+  3.7 Relation to Traditions . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     16
+  3.8 Formal Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    17
+  3.9 A Question for Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . .      17
+
+4 Light: Active Structure, Not Traveler                                                    19
+  4.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        19
+  4.2 The Problem: Fluidity vs. Motion . . . . . . . . . . . . . . . . . . . . . . .       19
+  4.3 The Solution: Active Connection Structure . . . . . . . . . . . . . . . . . .        19
+  4.4 The Three Properties of Light, Re-Read . . . . . . . . . . . . . . . . . . .         20
+  4.5 Why Does Light Not Travel? . . . . . . . . . . . . . . . . . . . . . . . . . .       20
+  4.6 Two Senses of “Fluidity” . . . . . . . . . . . . . . . . . . . . . . . . . . . .     20
+  4.7 Fluidity as Role, Not Essence . . . . . . . . . . . . . . . . . . . . . . . . .      21
+  4.8 Descent vs. Travel . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   21
+  4.9 Formal Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    21
+
+                                             5
+6                                                                               CONTENTS
+
+    4.10 A Question for Reflection    . . . . . . . . . . . . . . . . . . . . . . . . . . . 21
+
+5 Encompassment in Light                                                                   23
+  5.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        23
+  5.2 The Distinction: Floating vs. Encompassed . . . . . . . . . . . . . . . . . .        23
+  5.3 Why Encompassed? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       23
+  5.4 Epistemological Consequence: The Impossibility of Complete Knowledge
+      of Light . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   23
+  5.5 Second Consequence: Light as the Only Window to Higher Levels . . . . .              24
+  5.6 Third Consequence: Estimate, Not Knowledge . . . . . . . . . . . . . . . .           24
+  5.7 Formal Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    24
+  5.8 A Question for Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . .      24
+
+6 The Pairs of the Four Columns                                                            25
+  6.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        25
+  6.2 The Two Pairs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      25
+  6.3 Pair 1: Fixed Elements and Context . . . . . . . . . . . . . . . . . . . . .         25
+  6.4 Pair 2: Dynamics and Fluid Element . . . . . . . . . . . . . . . . . . . . .         25
+  6.5 Why This Pairing? . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      25
+  6.6 Implications for Light . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   26
+
+7 The Hierarchy of Cognitive Apparatuses                                                   27
+  7.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        27
+  7.2 Primary and Secondary Cognitive Apparatuses . . . . . . . . . . . . . . . .          27
+  7.3 The Hierarchy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    27
+  7.4 Light as the Foundational Fluid Element . . . . . . . . . . . . . . . . . . .        28
+  7.5 Appearance in the Mode of the Apparatus . . . . . . . . . . . . . . . . . .          28
+  7.6 Light as Condition of Every Apparatus . . . . . . . . . . . . . . . . . . . .        28
+  7.7 Formal Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    28
+  7.8 A Question for Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . .      28
+
+8 Energy: A Relational Feature, Not a Column                                               29
+  8.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        29
+  8.2 The Problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      29
+  8.3 Three Candidate Readings . . . . . . . . . . . . . . . . . . . . . . . . . . .       29
+  8.4 The Proposed Reading . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       29
+  8.5 Energy in the Three Columns . . . . . . . . . . . . . . . . . . . . . . . . .        30
+  8.6 Light Primary, Energy Secondary . . . . . . . . . . . . . . . . . . . . . . .        30
+  8.7 Formal Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    30
+  8.8 A Question for Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . .      30
+
+9 Light as the Condition of Possibility of Any Explanation                                 31
+  9.1 The Aim of This Chapter . . . . . . . . . . . . . . . . . . . . . . . . . . .        31
+  9.2 Every Explanation Requires a Conveyor . . . . . . . . . . . . . . . . . . .          31
+  9.3 Without Light, No Explanation . . . . . . . . . . . . . . . . . . . . . . . .        31
+  9.4 Coherence Test: The General Form . . . . . . . . . . . . . . . . . . . . . .         31
+  9.5 Light as Condition of Every Fluid Element . . . . . . . . . . . . . . . . . .        32
+  9.6 Formal Skeleton . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    32
+  9.7 A Question for Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . .      32
+CONTENTS                                                                                    7
+
+10 Formal Skeleton, Dependency Map, and Open Questions                                     33
+   10.1 The Formal Skeleton of the Module . . . . . . . . . . . . . . . . . . . . . .      33
+   10.2 Dependency Map . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     34
+   10.3 Open Questions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   34
+   10.4 A Closing Remark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     35
+8   CONTENTS
+Chapter 1
+
+Why Light? Problem and Method
+
+1.1       The Problem
+In the four-column framework (Part I), every explanatory cognition requires four roles:
+fixed elements, fluid elements, governing dynamics, and context.1 The question is: what
+is the fluid element? What is it that conveys effect between identities and manifestations,
+and makes connection possible?
+    The answer of this module: light. But “light” here means neither electromagnetic
+waves nor a mystical metaphor. “Light” is a structural concept that must be defined with
+philosophical precision.
+
+
+1.2       The Method
+The method is threefold:
+
+   1. Description: gathering and classifying the multiple human answers to the question
+      “What is light?”—not as historiography, but as a structural map.
+
+   2. Proposal: offering a philosophical definition of light as a trans-categorical sub-
+      stance.
+
+   3. Establishment: developing this definition within the four-column framework, and
+      drawing its consequences for cognition, experience, and explanation.
+
+
+1.3       Why Is Light a Philosophical Problem?
+Light was a topic of philosophy before it was a topic of science. Plato called it the image
+of the Good;2 Plotinus, emanation from the One;3 Suhrawardi, the very substance of
+reality;4 Ibn Arabi, self-disclosure of the Real;5 Mulla Sadra, a mode of existence.6 This
+   1
+     See Part I, Chapter 6, Principle of the Four Columns. The four roles are analytical, not ontological:
+they do not divide reality into four kinds of entity.
+   2
+     Plato, Republic, Book VI, 507a–509c.
+   3
+     Plotinus, Enneads, V.1 and V.3.
+   4
+     Suhrawardi, Hikmat al-Ishraq, Part II.
+   5
+     Ibn Arabi, Futuhat al-Makkiyya, Chapter 2.
+   6
+     Mulla Sadra, Al-Asfar al-Arba’a, Vol. 1.
+
+
+                                                    9
+10                           CHAPTER 1. WHY LIGHT? PROBLEM AND METHOD
+
+diversity is not accidental—it is a sign that light is, before being a “thing” in the world,
+a structural condition for understanding the world.
+
+Principle 1.1 (Light Is a Philosophical Problem). (T)The question “What is light?”
+cannot be answered by empirical methods alone, because light is the condition of possibility
+of experience—and a condition is not itself an object of experience.
+
+
+1.4     The Four-Column Framework as Organizing
+        Principle
+The four columns are not the content of a single chapter. They are the organizing principle
+of the entire module. Every chapter develops one of the columns, or one of the pairs, or
+one of the consequences:
+
+Chapter    Develops
+1–2        The problem, the method, the descriptive map
+3–4        Light as trans-categorical substance and as active structure (Column 2, refined)
+5          Encompassment (epistemological consequence)
+6          The pairs of columns (structural analysis of Column 1+4 and 2+3)
+7          The hierarchy of cognitive apparatuses (Column 2 in context)
+8          Energy as relational feature (Column 2 refined)
+9          Light as condition of possibility of any explanation
+10         Formal skeleton and open questions
+
+
+1.5     Map of the Module
+Chapter 2 is descriptive: a map of human answers. Chapter 3 is a proposal: light as trans-
+categorical substance. Chapter 4 sharpens the definition: light is an active structure, not
+a traveler. Chapter 5 draws the epistemological consequence: encompassment in light.
+Chapter 6 analyzes the two structural pairs of the four columns. Chapter 7 presents
+the hierarchy of cognitive apparatuses. Chapter 8 defines energy as a relational feature.
+Chapter 9 establishes light as the condition of possibility of any explanation. Chapter 10
+gives the formal skeleton and open questions.
+Chapter 2
+
+Light in Experience and Tradition
+
+2.1       The Aim of This Chapter
+This chapter is descriptive. Its aim is not to collect but to map. It shows that human
+answers to “What is light?” are patterned —and that these very patterns prepare the
+ground for the proposal of the next chapter.
+
+
+2.2       Beginning: An Experience
+Close your eyes. In the dark, objects are—you reach out, you touch a table. But they are
+not seen. Then you open your eyes. The same table, the same distance, the same hand.
+But something has been added : the table is seen. What is that added thing?
+    The question seems simple. But across history it has received multiple answers—and
+this multiplicity is not accidental.
+
+
+2.3       Four Structural Patterns
+Human answers to “What is light?” can be classified into four structural patterns. These
+four are not historical —they are structural : in every period, all four are present.
+
+Pattern               Question                         Examples
+Light as experience   How is seeing possible?          Phenomenology, psychology of
+                                                       perception
+Light as metaphor     What does it illuminate?         Mysticism, poetry, theology
+Light as substance    What is it made of?              Suhrawardi, Plotinus, Newton
+                                                       (particle)
+Light as relation     What does it mediate?            Maxwell (wave), Einstein (photon),
+                                                       QFT (field)
+
+
+2.4       Structural Table
+The following table shows the four patterns with prominent examples. This table is not
+historical —it is structural.
+
+
+
+                                                11
+12                         CHAPTER 2. LIGHT IN EXPERIENCE AND TRADITION
+
+
+         Tradition      Light as           Ontological claim        Epistemological
+                                                                    claim
+         Plato          Metaphor + re-     Image of the Good        Possibility of knowl-
+                        lation                                      edge
+         Plotinus       Emanating          Emanation from the       Possibility of return
+                        substance          One
+         Suhrawardi     Substance          Light of Lights          Illuminative   knowl-
+                                                                    edge
+         Ibn Arabi      Manifestation      Self-disclosure of the   Mystical knowledge
+                                           Real
+         Mulla Sadra    Mode of exis-      Gradation of being       Presence-knowledge
+                        tence
+         Maxwell        Relation           Electromagnetic          Measurement
+                        (wave)             field
+         Einstein       Relation (parti-   Photon                   Measurement
+                        cle)
+         Quantum        Relation (field)   Field excitation         Computation
+         Field Theory
+
+
+
+
+2.5       Four Structural Observations
+From this table, four observations follow:
+
+     1. Multiplicity is patterned. The four patterns recur across history—not randomly,
+        but structurally.
+
+     2. No pattern eliminates another. Each pattern captures an aspect of light—and
+        leaves another aside.
+
+     3. No pattern is complete. All four are incomplete—and this very incompleteness
+        motivates the proposal of the next chapter.
+
+     4. All patterns share a common presupposition. All take light to be something
+        that is in space-time—a wave that propagates, a particle that moves, a field that
+        oscillates. And this common presupposition is challenged in Chapter 4.
+
+
+2.6       The Common Presupposition
+The common presupposition is this: light is a thing in space-time, whether wave, particle,
+or field. This presupposition is so deeply embedded that it is rarely noticed. Yet it is the
+source of the tension among the patterns. If light is a thing, it must be either substance
+or accident, either process or relation. And each of these categories fails to capture the
+whole.
+2.7. A QUESTION FOR REFLECTION                                                               13
+
+Coherence Test (not evidence, not justification). The scientific references in this chap-
+ter (Maxwell,a Einstein,b QFTc ) are not offered as evidence for philosophy but as structural
+examples—showing that the “relation” pattern is also present in modern science. These refer-
+ences play no role in justifying the proposal of the next chapter.
+   a
+     J. C. Maxwell, A Treatise on Electricity and Magnetism, 1873.
+   b
+     A. Einstein, “On a Heuristic Point of View Concerning the Production and Transformation of
+Light,” Annalen der Physik 17 (1905): 132–148.
+   c
+     S. Weinberg, The Quantum Theory of Fields, 3 vols., Cambridge University Press, 1995–2000.
+
+
+
+2.7     A Question for Reflection
+Can you name a situation in which light as substance explains better than light as rela-
+tion—or vice versa?
+14   CHAPTER 2. LIGHT IN EXPERIENCE AND TRADITION
+Chapter 3
+
+Light as Trans-Categorical Substance
+
+3.1      The Aim of This Chapter
+This chapter is a proposal. After describing the four patterns in the previous chapter, it
+now offers a philosophical definition that goes beyond the tension among the patterns—not
+by eliminating one, but by changing the level.
+
+
+3.2      Deadlock
+The previous chapter showed that four structural patterns exist for understanding light—
+and that none is complete. If light is substance, its being a relation is unexplained. If
+it is accident, its independent existence is unexplained. If it is process, its stability is
+unexplained. If it is relation, its physical reality is unexplained.
+    Deadlock: every existing category takes something away from light.
+
+
+3.3      The Need for a New Category
+Principle 3.1 (The Trans-Categorical Character of Light). (A)Light goes beyond the
+existing philosophical categories—substance, accident, process, relation. A new category
+is needed: the trans-categorical substance.
+
+
+3.4      The Definition
+Definition 3.1 (Trans-Categorical Substance). (A)A trans-categorical substance is a
+substance that comes before the distinction substance/accident/process/relation—not af-
+ter it. That is, it is the condition of possibility of that distinction, not its result.
+
+Remark 3.1 (How to Speak of the Trans-Categorical). This definition appears paradox-
+ical. How can something come before the categories while itself being understood through
+categories? The answer requires a shift in how we use language. The trans-categorical
+substance is not understood through a categorical definition (which would place it within a
+category); it is understood through analogical indication and ostension. Just as one can-
+not define the nature of sight by a proposition, but only by pointing to the act of seeing, so
+too light can only be indicated by the structural role it plays in making relation possible.
+
+                                             15
+16                        CHAPTER 3. LIGHT AS TRANS-CATEGORICAL SUBSTANCE
+
+When we call light a “substance,” we use the term analogically: it is not a substance
+among other substances, but the precondition for any substance to be related to another.
+
+
+3.5         Light as Condition of Possibility of Relation
+Principle 3.2 (Light as Condition of Possibility of Relation). (T)Light is not a relation—
+it is the condition of possibility of relation. Without light, no relation is legible. But light
+itself is not legible—it is legible-making.
+Argument.
+     1. Every relation is between two terms.
+     2. For a relation to be legible, there must be something that connects the two terms.
+     3. This “something” cannot itself be a relation—for then it would need another relation
+        (regress).
+     4. So there must be something that comes before relation—its condition of possibility.
+     5. This “something” is what we call “light.”
+
+
+3.6         Objections and Replies
+Objection                                                Reply
+“This definition is not scientific.”                     Correct. It is philosophical. Science says
+                                                         “how”; philosophy says “whatness.”
+“This definition is vague.”                              Vagueness is a feature of the
+                                                         trans-categorical—not a defect. Just as seeing
+                                                         is not definable by a category.
+“This definition is not testable.”                       Testability is the criterion of science—not of
+                                                         philosophy. Philosophy is assessed by
+                                                         coherence and fruitfulness.
+“What does this definition add to science?”              Nothing. It adds nothing to science—because
+                                                         science is an instrument. It adds to
+                                                         understanding—not to computation.
+
+
+3.7         Relation to Traditions
+Suhrawardi’s light is substance—but not trans-categorical. He places light within the cate-
+gory of substance.1 Ibn Arabi’s light is manifestation—but not substance.2 Mulla Sadra’s
+light is mode of existence—but not trans-categorical.3 What is new in this definition:
+light comes before the categories—not within one of them.
+Coherence Test (not evidence, not justification). The references to Suhrawardi, Ibn
+Arabi, and Mulla Sadra are structural comparisons, not justifications. No principle of this
+module is justified by reference to them.
+
+     1
+       Suhrawardi, Hikmat al-Ishraq, Part II, where light is identified with the very stuff of reality.
+     2
+       Ibn Arabi, Futuhat, Chapter 2, where tajalli is the self-disclosure of the Real.
+     3
+       Mulla Sadra, Asfar, Vol. 1, where light is a mode of existence within the gradation of being.
+3.8. FORMAL SKELETON                                                                           17
+
+3.8      Formal Skeleton
+                             Symbol         Meaning
+                             L              light
+                             R              realm
+                             Rel(a, b)      relation between a and b
+                             Readable(x)    being legible of x
+
+
+Claim           Form                                                                                         Stat
+Def. 3.1        L is trans-categorical iff it precedes the distinction substance/accident/process/relation   (A)
+Principle 3.1   ∀a, b : Rel(a, b) → (Readable(Rel(a, b)) ↔ L(a, b))                                          (T)
+
+
+3.9      A Question for Reflection
+If light is the condition of possibility of relation, can we speak of a “relation to light”—or
+is that a category mistake?
+18   CHAPTER 3. LIGHT AS TRANS-CATEGORICAL SUBSTANCE
+Chapter 4
+
+Light: Active Structure, Not
+Traveler
+
+4.1        The Aim of This Chapter
+This chapter sharpens the definition of the previous chapter. If light is a trans-categorical
+substance, it cannot “move”—because motion requires time, and time is a category of
+material manifestation.1 So light does not travel —it is an active connection structure.
+
+
+4.2        The Problem: Fluidity vs. Motion
+In the four-column framework, light is the fluid element. But “fluid” is usually understood
+as “flowing” and “in motion.” If light moves, it travels—and “travel” contains time within
+itself. And this is incompatible with the stability of light.
+
+
+4.3        The Solution: Active Connection Structure
+Definition 4.1 (Active Connection Structure (Scaffold)). (A)An active connection struc-
+ture (metaphorically, a “scaffold”) is a structure that:
+ (a) always is—not that it is built and then moves;
+ (b) is a structure of connection—not a path of connection;
+ (c) has edges that are activated or deactivated—according to rules;
+ (d) itself does not move—its connections change.
+Principle 4.1 (Light Is an Active Structure). (A)Light is an active structure—not a
+traveler. Light does not move; the edges of the structure, according to the rules of the
+realms, connect different nodes to one another.
+Remark 4.1 (The Metaphor of the Scaffold). The term “scaffold” is used here as a
+structural metaphor, not a spatial diagram. It is meant to evoke the idea of a pre-existing
+framework of connection, not a physical object located in space. To avoid spatial baggage,
+the formal term adopted in this module is “Active Connection Structure.” The metaphor
+of the scaffold is retained only for illustrative purposes.
+  1
+      See Part VIII on time.
+
+
+                                             19
+20                    CHAPTER 4. LIGHT: ACTIVE STRUCTURE, NOT TRAVELER
+
+Remark 4.2 (Activation vs. Temporal Change). One might object: if an edge is “acti-
+vated,” does this not imply a temporal event? The answer is no. Activation is a structural
+determinacy, not a temporal event. At any given stage of the material realm (which is
+temporal), an edge is either structurally active or inactive. The transition between states
+is temporal, but the state itself (the active edge) is a structural fact. The activation is
+not a change in light; it is a change in the configuration of the nodes that the structure
+connects.
+
+
+4.4        The Three Properties of Light, Re-Read
+If light is an active structure, its three properties are re-read:
+
+
+Property       Old reading                             New reading
+Descending     Light goes from identity to             The structure-edge from identity to
+               manifestation                           manifestation is activated
+Ascending      Light returns from manifestation to     The structure-edge from manifestation
+               identity                                to identity is activated
+Reflective     Light flows among manifestations        The structure-edge between two
+                                                       manifestations is activated
+
+
+Remark 4.3. Motion is our language—not the reality of light. We say “light goes”—
+because time and motion are categories of material manifestation, and we can speak only
+within material manifestation. But light itself is beyond these categories.
+
+
+4.5        Why Does Light Not Travel?
+Principle 4.2 (Non-Travel of Light). (T)Light does not travel, because:
+
+     1. Travel requires time.
+
+     2. Time is the order of succession of the stages by which changes are realized in a
+        realm.
+
+     3. Light is beyond time—because it is the condition of possibility of any relation.
+
+     4. Therefore light does not travel.
+
+
+4.6        Two Senses of “Fluidity”
+Kinetic fluidity                                 Structural fluidity
+Having flow                                      Having the capacity to convey
+Moving                                           Being a medium
+Traveling                                        Establishing connection
+Requires time                                    Independent of time
+4.7. FLUIDITY AS ROLE, NOT ESSENCE                                                     21
+
+4.7       Fluidity as Role, Not Essence
+Principle 4.3 (Structural Fluidity). (T)“Fluid element” is an analytical role—not an
+ontological essence. Light, in the four-column framework, plays the role of conveyor—so
+it is the fluid element. This role is independent of whether light moves or not.
+
+
+4.8       Descent vs. Travel
+Descent                                          Travel
+Structural                                       Kinetic
+In the levels of being                           In space
+Simultaneous                                     Gradual
+Does not require time                            Requires time
+Light descends                                   Light travels
+
+Principle 4.4 (Descent Is Structural). (A)The descent of light is not its motion from
+a higher level to a lower one, but its appearance in the mode of the lower level. Light in
+each realm appears in the mode of that realm—without going from one realm to another.
+
+
+4.9       Formal Skeleton
+          Claim           Form                                                Status
+          Def. 4.1        L is an active connection structure                 (A)
+          Principle 4.1   L does not move                                     (A)
+          Principle 4.2   L↓ (a, b) ↔ EdgeActive(a, b)                        (T)
+          Principle 4.3   L in each realm appears in the mode of that realm   (A)
+
+
+4.10       A Question for Reflection
+If light does not travel, how can we speak of “the light of the sun reaching us”—is this a
+category mistake?
+22   CHAPTER 4. LIGHT: ACTIVE STRUCTURE, NOT TRAVELER
+Chapter 5
+
+Encompassment in Light
+
+5.1     The Aim of This Chapter
+This chapter draws the epistemological consequence of the new definition: if light is an
+active structure, then we are encompassed in light—not floating in it. And this has
+fundamental consequences for cognition.
+
+
+5.2     The Distinction: Floating vs. Encompassed
+Floating                                         Encompassed
+Being in an external environment                 Being taken up into
+Preserving full independence                     Without full independence
+A fish in water                                  Air in the lungs
+The environment is external                      The environment is pervading
+
+Principle 5.1 (Encompassment in Light). (A)We are not floating in light—we are en-
+compassed in light. Light has taken us up—not that we have taken up light.
+
+
+5.3     Why Encompassed?
+  1. Light is the condition of possibility of relation (Chapter 3).
+  2. We, in every act of cognition, are in relation.
+  3. Therefore we, in every act of cognition, are in light.
+  4. But this “being in light” is not “being in an external environment”—it is “being
+     taken up by the condition of possibility.”
+  5. Therefore we are encompassed in light—not floating in it.
+
+
+5.4     Epistemological Consequence: The Impossibility
+        of Complete Knowledge of Light
+Principle 5.2 (Impossibility of Complete Knowledge of Light). (T)We cannot know
+light completely—because we are encompassed in it. Complete knowledge requires standing
+
+                                            23
+24                                        CHAPTER 5. ENCOMPASSMENT IN LIGHT
+
+outside the object of knowledge—and we cannot stand outside light.
+
+Remark 5.1. This is the same structure as the “Impossibility of Super-Identity” (Part
+VI)—but at the level of light. Just as we cannot know all manifestations of an identity, we
+cannot know light completely. And in both, the reason is the same: we are encompassed
+in it.
+
+
+5.5     Second Consequence: Light as the Only Window
+        to Higher Levels
+Principle 5.3 (Light as the Only Window). (A)We have no direct access to higher levels.
+The only thing that reaches us from higher levels is light—and that too in its descended
+version in material manifestation.
+
+
+5.6     Third Consequence: Estimate, Not Knowledge
+Principle 5.4 (Estimate, Not Knowledge). (T)We can estimate, from the properties
+of light in material manifestation, something about higher levels—but we cannot know.
+Estimate, not knowledge. Analogy, not argument. Indication, not definition.
+
+
+5.7     Formal Skeleton
+              Claim           Form                                        Status
+              Principle 5.1   ∀x : Knows(x, L) → Encompassed(x, L)        (A)
+              Principle 5.2   ¬∃x : KnowsCompletely(x, L)                 (T)
+              Principle 5.3   ∀x : Accessible(x, Rhigher ) → Ldescended   (A)
+
+
+5.8     A Question for Reflection
+If we are encompassed in light, can we speak of an “experience of light”—or is experience
+always experience of something other than light?
+Chapter 6
+
+The Pairs of the Four Columns
+
+6.1      The Aim of This Chapter
+This chapter presents a structural insight that organizes the four columns into two pairs.
+This insight is directly relevant to light, because light belongs to the second pair.
+
+
+6.2      The Two Pairs
+The four columns are not four isolated roles. They form two structural pairs:
+
+Pair     Columns                                  Role
+Pair 1   Fixed elements + Context                 The terms of the relation
+Pair 2   Dynamics + Fluid element                 The medium of the relation
+
+
+6.3      Pair 1: Fixed Elements and Context
+Pair 1 determines the terms of the relation: what is related and where it is related.
+Without fixed elements, there is nothing to relate. Without context, the fixed elements
+have no frame of reference. The two are mutually dependent: fixed elements without
+context are undefined; context without fixed elements is empty.
+
+
+6.4      Pair 2: Dynamics and Fluid Element
+Pair 2 determines the medium of the relation: how the relation works and by what it
+is conveyed. Without dynamics, the fluid element is unordered. Without fluid element,
+dynamics is meaningless—because there is nothing for the rule to govern.
+
+Principle 6.1 (Pair 2 as the Medium of Relation). (A)Dynamics and fluid element form
+the medium of the relation. Without fluid element, dynamics is meaningless. Without
+dynamics, fluid element is unordered. The two are mutually dependent.
+
+
+6.5      Why This Pairing?
+The pairing follows from the structure of relation itself. Every relation has two aspects:
+
+                                            25
+26                               CHAPTER 6. THE PAIRS OF THE FOUR COLUMNS
+
+     1. Terms: what is related. These are the fixed elements, situated in a context.
+
+     2. Medium: how the relation is established and governed. This is the fluid element,
+        governed by dynamics.
+
+     The four columns are the analytical decomposition of these two aspects.
+
+
+6.6       Implications for Light
+Light belongs to Pair 2. This has three implications:
+
+     1. Light is not a term of the relation—it is the medium. It is not what is related, but
+        what conveys the relation.
+
+     2. Light is inseparable from dynamics. Without the rules of the realms, light is un-
+        ordered. The two must be understood together.
+
+     3. Light is the condition of possibility of the relation between fixed elements and con-
+        text. Without light, the two terms are disconnected islands—without any relation.
+Chapter 7
+
+The Hierarchy of Cognitive
+Apparatuses
+
+7.1      The Aim of This Chapter
+This chapter introduces a structural distinction: primary and secondary cognitive appa-
+ratuses. Primary apparatuses are general; secondary apparatuses are specific. And light
+is the fluid element that makes both possible.
+
+
+7.2      Primary and Secondary Cognitive Apparatuses
+Definition 7.1 (Primary Cognitive Apparatus). (A)A primary cognitive apparatus is one
+whose fixed elements are general and whose fluid element is foundational. Its dynamics
+has a general formalization, and its context is foundational.
+
+Definition 7.2 (Secondary Cognitive Apparatus). (A)A secondary cognitive apparatus
+is one whose fixed elements are specific and whose fluid element is derived. Its dynamics
+has specific rules, and its context is composite.
+
+
+7.3      The Hierarchy
+
+      Level          Apparatus      Fixed        ele-   Fluid     ele-   Dynamics
+                                    ments               ment
+      Ontological    Seven realms   Identities and      Light (founda-   Rules of realms
+                                    manifestations      tional)
+      Primary cog-   Physics        Matter              Energy           Mathematics
+      nitive
+      Secondary      Chemistry      Atoms     and       Chemical bond    Rules of reac-
+      cognitive                     molecules           (specific con-   tion
+                                                        veyor)
+      Secondary      Biology        Cells and or-       Metabolism       Biological rules
+      cognitive                     ganisms             (specific con-
+                                                        veyor)
+
+
+
+
+                                            27
+28                               CHAPTER 6. THE PAIRS OF THE FOUR COLUMNS
+
+      Secondary        Ecology        Species           Flow of water,   Ecological rules
+      cognitive                                         air, energy
+
+
+
+
+Remark 7.1. “Primary” does not mean “more fundamental.” Physics is the most general
+cognitive apparatus—but not the most fundamental ontologically. The seven realms are
+more fundamental. Physics is one of the cognitive apparatuses that works within the realm
+of material manifestation.
+
+
+7.4      Light as the Foundational Fluid Element
+Principle 7.1 (Light as Foundational Fluid Element). (A)Light (with a capital L) is not
+one of the fluid elements—it is the foundational fluid element that appears in the mode of
+each apparatus. What appears as a chemical bond, metabolism, or water-flow in secondary
+apparatuses are specific conveyors—structural analogues of foundational light, manifested
+in their respective apparatuses.
+
+
+7.5      Appearance in the Mode of the Apparatus
+Principle 7.2 (Appearance in the Mode of the Apparatus). (T)Light in each cognitive
+apparatus appears in the mode of that apparatus—without becoming many lights. Just as
+light in each realm takes the color of that realm, light in each apparatus takes the color of
+that apparatus.
+
+
+7.6      Light as Condition of Every Apparatus
+Principle 7.3 (Light as Condition of Possibility of Every Apparatus). (T)Without light,
+no cognitive apparatus is possible—neither physics, nor chemistry, nor biology, nor ecol-
+ogy. Light is the condition of possibility of every cognitive apparatus—not just one of its
+elements.
+
+
+7.7      Formal Skeleton
+Claim           Form                                                                    Status
+Def. 7.1        Primary apparatus: general fixed elements, foundational fluid element   (A)
+Def. 7.2        Secondary apparatus: specific fixed elements, derived fluid element     (A)
+Principle 7.1   L is the foundational fluid element                                     (A)
+Principle 7.2   L in each apparatus appears in the mode of that apparatus               (T)
+Principle 7.3   ¬∃App : Possible(App) ∧ ¬L                                              (T)
+
+
+7.8      A Question for Reflection
+If light is the condition of possibility of every apparatus, can any apparatus describe light
+without circularity?
+Chapter 8
+
+Energy: A Relational Feature, Not a
+Column
+
+8.1      The Aim of This Chapter
+This chapter refines the status of energy. Energy is neither a fluid element nor a feature
+of context—it is a relational feature that appears in three columns.
+
+
+
+8.2      The Problem
+In the primary cognitive apparatus (physics), the fixed element is matter and the fluid
+element is energy. But if light is the foundational fluid element, what is energy? Is it
+light? Is it context? Or is it something else?
+
+
+
+8.3      Three Candidate Readings
+
+Reading                          Claim                            Problem
+Energy = light (general sense)   Energy is the conveyor            Category mistake: quantity
+                                                                  ̸= carrier
+Energy = capacity of context     Energy is the potential of the    Category mistake:
+                                 realm                             actualization ̸= capacity
+Energy = relational feature      Energy is the quantity of         (see below)
+                                 relation between identity,
+                                 manifestation, and realm
+
+
+
+8.4      The Proposed Reading
+Definition 8.1 (Energy). (A)Energy is the quantity of the relation between identity,
+manifestation, and realm—in the dimension of actualization. It is neither the carrier
+(light) nor the capacity (context), but the quantity of the actualized relation.
+
+                                              29
+30          CHAPTER 8. ENERGY: A RELATIONAL FEATURE, NOT A COLUMN
+
+8.5       Energy in the Three Columns
+Column             Appearance of energy                    Explanation
+Fixed elements     Property of material manifestations     The quantity of realized capacity in a
+                                                           manifestation
+Fluid element      Content conveyed by light               The quantity of effect that light
+                                                           conveys
+Context            Quantity of capacity consumed from      The quantity of cost that
+                   the realm                               actualization pays
+
+Principle 8.1 (Energy as Relational Feature). (A)Energy is not a column. It is a
+relational feature that appears in three columns. It is the quantity of the relation between
+identity, manifestation, and realm—in the dimension of actualization.
+
+
+8.6       Light Primary, Energy Secondary
+Principle 8.2 (Light Primary, Energy Secondary). (T)Light is primary (foundational
+fluid element); energy is secondary (relational feature of the actualization of light). Light
+is the carrier; energy is the quantity carried.
+
+
+8.7       Formal Skeleton
+
+Claim            Form
+Def. 8.1         Energy is the quantity of the relation identity–manifestation–realm in the dimension of actualiz
+Principle 8.1    Energy is not a column
+Principle 8.2    Light is primary; energy is secondary
+
+
+8.8       A Question for Reflection
+If energy is a relational feature, can there be energy without a relation—or is “isolated
+energy” a contradiction in terms?
+Chapter 9
+
+Light as the Condition of Possibility
+of Any Explanation
+
+9.1      The Aim of This Chapter
+This chapter establishes the most radical consequence: light is the condition of possibility
+of any explanation—not just one of its elements.
+
+
+
+9.2      Every Explanation Requires a Conveyor
+Principle 9.1 (Every Explanation Requires a Conveyor). (T)Every explanation, in ev-
+ery realm, requires a fluid element—and without it, no explanation is possible. In material
+manifestation, this fluid element is light in the general sense—including water, air, elec-
+tromagnetic waves, and any other conveyor of effect.
+
+
+
+9.3      Without Light, No Explanation
+Principle 9.2 (Without Light, No Explanation). (T)Without light, the fixed elements are
+not connected to one another—and without connection, neither dynamics has meaning nor
+explanation. Every explanatory discourse in material manifestation is impossible without
+a conveyor of effect.
+
+
+
+9.4      Coherence Test: The General Form
+
+Coherence Test (not evidence, not justification). Consider any explanatory discourse
+in material manifestation—say, ecology. Without water, air, and the flows of energy, there
+is no current—and without current, no ecosystem. Only a list of species remains—without
+connection, without dynamics, without explanation. This is offered as a coherence test, not as
+evidence: it shows that the principle “light is the condition of possibility of any explanation” is
+coherent with the way explanatory discourses actually work.
+
+
+
+                                                31
+32CHAPTER 9. LIGHT AS THE CONDITION OF POSSIBILITY OF ANY EXPLANATION
+
+9.5     Light as Condition of Every Fluid Element
+Principle 9.3 (Light as Condition of Possibility of Every Fluid Element). (A)Light is
+not only one of the fluid elements—it is the condition of possibility of every fluid ele-
+ment. Without light, the concept of “conveyor of effect” is empty—because conveying
+effect requires a gradient of energy—and without light, there is no gradient.
+
+
+9.6     Formal Skeleton
+       Claim           Form                                                       Status
+       Principle 9.1   ∀Expl : Possible(Expl) → ∃Ψ                                (T)
+       Principle 9.2   ¬L → ¬∃Expl                                                (T)
+       Principle 9.3   L is the condition of possibility of every fluid element   (A)
+
+
+9.7     A Question for Reflection
+If light is the condition of possibility of any explanation, can any explanation explain
+light—or is every explanation of light circular?
+Chapter 10
+
+Formal Skeleton, Dependency Map,
+and Open Questions
+
+10.1   The Formal Skeleton of the Module
+
+       Claim           Form                                               Status
+       Def. 3.1        L is trans-categorical iff it precedes the dis-    (A)
+                       tinction substance/accident/process/relation
+       Principle 3.1   ∀a, b : Rel(a, b) → (Readable(Rel(a, b)) ↔         (T)
+                       L(a, b))
+       Def. 4.1        L is an active connection structure                (A)
+       Principle 4.1   L does not move                                    (A)
+       Principle 4.2   L↓ (a, b) ↔ EdgeActive(a, b)                       (T)
+       Principle 4.3   L in each realm appears in the mode of that        (A)
+                       realm
+       Principle 5.1   ∀x : Knows(x, L) → Encompassed(x, L)               (A)
+       Principle 5.2   ¬∃x : KnowsCompletely(x, L)                        (T)
+       Principle 5.3   ∀x : Accessible(x, Rhigher ) → Ldescended          (A)
+       Principle 6.1   L is the medium of relation (Pair 2)               (A)
+       Def. 7.1        Primary apparatus: general fixed elements,         (A)
+                       foundational fluid element
+       Def. 7.2        Secondary apparatus: specific fixed elements,      (A)
+                       derived fluid element
+       Principle 7.1   L is the foundational fluid element                (A)
+       Principle 7.2   L in each apparatus appears in the mode of         (T)
+                       that apparatus
+       Principle 7.3   ¬∃App : Possible(App) ∧ ¬L                         (T)
+       Def. 8.1        Energy is the quantity of the relation             (A)
+                       identity–manifestation–realm in the dimen-
+                       sion of actualization
+       Principle 8.1   Energy is not a column                             (A)
+       Principle 8.2   Light is primary; energy is secondary              (T)
+       Principle 9.1   ∀Expl : Possible(Expl) → ∃Ψ                        (T)
+       Principle 9.2   ¬L → ¬∃Expl                                        (T)
+       Principle 9.3   L is the condition of possibility of every fluid   (A)
+                       element
+
+
+                                          33
+34CHAPTER 10. FORMAL SKELETON, DEPENDENCY MAP, AND OPEN QUESTIONS
+
+
+
+
+10.2       Dependency Map
+Claim           Depends on                              What is lost if rejected
+Def. 3.1        Nothing (primitive)                     The whole proposal collapses
+Principle 3.1   Def. 3.1, principle of non-sequential   The argument from relation
+                connectivity
+Def. 4.1        Def. 3.1                                The active structure proposal collapses
+Principle 4.1   Def. 4.1                                Light becomes a traveler; the tension
+                                                        with stability returns
+Principle 4.2   Def. 4.1, principle of non-sequential   Three properties lose their structural
+                connectivity                            reading
+Principle 4.3   Def. 4.1                                Descent becomes travel again
+Principle 5.1   Principle 3.1                           Encompassment becomes a metaphor
+Principle 5.2   Principle 5.1                           Complete knowledge of light becomes
+                                                        possible
+Principle 5.3   Principle 5.1                           Higher levels become directly
+                                                        accessible
+Principle 6.1   Principle 4.1                           The pairing of columns collapses
+Principle 7.1   Principle 4.1, principle of             Hierarchy of apparatuses collapses
+                non-sequential connectivity
+Principle 7.2   Principle 7.1                           Light becomes many lights
+Principle 7.3   Principle 7.1                           Apparatuses become independent of
+                                                        light
+Def. 8.1        Nothing (definitional)                  Energy remains unclassified
+Principle 8.1   Def. 8.1                                Energy becomes a column
+Principle 8.2   Def. 8.1, Principle 7.1                 Light and energy collapse into one
+Principle 9.1   Principle 1.5 (conveyor)                Every explanation becomes incomplete
+Principle 9.2   Principle 9.1, Principle 7.3            Explanations become possible without
+                                                        light
+Principle 9.3   Principle 7.1, Principle 9.1            Light becomes one fluid element
+                                                        among others
+
+
+10.3       Open Questions
+Q1. Descent without travel. If light does not travel, what exactly is “descent”? First
+    answer: appearance of light in a lower realm in the mode of that realm—not motion
+    toward it. (Q)
+
+Q2. Succession in higher realms. If time is phenomenal, what is “succession” in
+    higher realms? First answer: structural succession—not temporal. Like logical
+    succession (premise before conclusion)—not temporal succession. (Q)
+
+Q3. Estimate from structure. If light is the only accessible source, how do we esti-
+    mate from it? First answer: through structure—not content. (Q)
+
+Q4. Sediment as active edge. If light is an active structure, what is “sediment”?
+    First answer: an active structural edge that has remained active—and has not been
+10.4. A CLOSING REMARK                                                                35
+
+     integrated. Not light that has “settled”—but a structural edge that has remained
+     in an active state. (Q)
+
+Q5. Relation to light. If light is the condition of possibility of relation, can we speak
+    of a “relation to light”—or is that a category mistake? (Q)
+
+Q6. Experience of light. If we are encompassed in light, can we speak of an “expe-
+    rience of light”—or is experience always experience of something other than light?
+    (Q)
+
+Q7. Circularity of explanation. If light is the condition of possibility of any expla-
+    nation, can any explanation explain light—or is every explanation of light circular?
+    (Q)
+
+Q8. Energy and light in higher realms. If energy is a relational feature in material
+    manifestation, what is its counterpart in higher realms? First answer: a structural
+    analogue, not energy as quantity of matter. (Q)
+
+
+10.4      A Closing Remark
+This module has developed, organized, and formally articulated the topic of light within
+the four-column framework. It has proposed that light is a trans-categorical substance,
+an active structure rather than a traveler, the medium of relation, the condition of pos-
+sibility of relation and of any explanation, and the foundational fluid element of every
+cognitive apparatus. It has done so without deriving its authority from science, and
+without reducing itself to science. The horizon is open. The inquiry continues.
+36CHAPTER 10. FORMAL SKELETON, DEPENDENCY MAP, AND OPEN QUESTIONS
+Bibliography
+
+[Adams(1979)] dams, Robert Merrihew. “Primitive Thisness and Primitive Identity.”
+    Journal of Philosophy 76, no. 1 (1979): 5–26.
+
+[Black(1952)] lack, Max. “The Identity of Indiscernibles.” Mind 61, no. 242 (1952): 153–
+     164.
+
+[Bohr(1958)] ohr, Niels. Atomic Physics and Human Knowledge. New York: Wiley, 1958.
+
+[Boyer(1987)] oyer, Carl B. The Rainbow: From Myth to Mathematics. Princeton: Prince-
+    ton University Press, 1987.
+
+[Corbin(1993)] orbin, Henry. History of Islamic Philosophy. Translated by Liadain Sher-
+    rard. London: Kegan Paul, 1993.
+
+[Einstein(1905)] instein, Albert. “On a Heuristic Point of View Concerning the Produc-
+     tion and Transformation of Light.” Annalen der Physik 17 (1905): 132–148.
+
+[Feyerabend(1975)] eyerabend, Paul. Against Method. London: New Left Books, 1975.
+
+[Feynman(1985)] eynman, Richard P. QED: The Strange Theory of Light and Matter.
+    Princeton: Princeton University Press, 1985.
+
+[Heisenberg(1958)] eisenberg, Werner. Physics and Philosophy: The Revolution in Mod-
+     ern Science. New York: Harper, 1958.
+
+[Ibn Arabi(1980)] bn Arabi. Fusus al-Hikam (The Bezels of Wisdom). Translated by R.
+     W. J. Austin. Mahwah: Paulist Press, 1980.
+
+[Ibn Arabi(2002)] bn Arabi. Al-Futuhat al-Makkiyya. 4 vols. Beirut: Dar al-Sadir, 2002.
+
+[Ibn Sina(1027)] bn Sina. Al-Shifa: Al-Ilahiyyat (The Metaphysics of the Healing). Trans-
+     lated by M. E. Marmura. Provo: Brigham Young University Press, 2005. Originally
+     composed c. 1027.
+
+[Kant(1781)] ant, Immanuel. Critique of Pure Reason. Translated by P. Guyer and A. W.
+    Wood. Cambridge: Cambridge University Press, 1998. Originally published 1781.
+
+[Kuhn(1962)] uhn, Thomas S. The Structure of Scientific Revolutions. Chicago: Univer-
+    sity of Chicago Press, 1962.
+
+[Lindberg(1976)] indberg, David C. Theories of Vision from Al-Kindi to Kepler. Chicago:
+     University of Chicago Press, 1976.
+
+                                           37
+38                                                                   BIBLIOGRAPHY
+
+[Maxwell(1873)] axwell, James Clerk. A Treatise on Electricity and Magnetism. 2 vols.
+    Oxford: Clarendon Press, 1873.
+
+[Mulla Sadra(1981)] ulla Sadra. Al-Hikmah al-Muta’aliyah fi al-Asfar al-Aqliyyah al-
+    Arba’ah. Edited by M. Khajavi. Tehran: Iranian Institute of Philosophy, 1981.
+
+[Nasr(1968)] asr, Seyyed Hossein. Science and Civilization in Islam. Cambridge: Harvard
+    University Press, 1968.
+
+[Plato(1992)] lato. Republic. Translated by G. M. A. Grube, revised by C. D. C. Reeve.
+     Indianapolis: Hackett, 1992.
+
+[Plotinus(1991)] lotinus. The Enneads. Translated by Stephen MacKenna. London: Pen-
+     guin Classics, 1991.
+
+[Popper(1963)] opper, Karl. Conjectures and Refutations: The Growth of Scientific
+    Knowledge. London: Routledge, 1963.
+
+[Schrödinger(1958)] chrödinger, Erwin. Mind and Matter. Cambridge: Cambridge Uni-
+     versity Press, 1958.
+
+[Suhrawardi(1999)] uhrawardi, Shihab al-Din. Hikmat al-Ishraq (The Philosophy of Illu-
+    mination). Translated by J. Walbridge and H. Ziai. Provo: Brigham Young University
+    Press, 1999.
+
+[Weinberg(1995)] einberg, Steven. The Quantum Theory of Fields. 3 vols. Cambridge:
+    Cambridge University Press, 1995–2000.
+
+[Wisnovsky(2003)] isnovsky, Robert. Avicenna’s Metaphysics in Context. Ithaca: Cornell
+    University Press, 2003.
+
+[Zajonc(1993)] ajonc, Arthur. Catching the Light: The Entwined History of Light and
+     Mind. Oxford: Oxford University Press, 1993.
+

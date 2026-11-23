@@ -1,0 +1,833 @@
+              The Quantum Topological Scaffold:
+        Selection, Time, and the Emergence of Matter
+                                              Saeed Hasibi
+                                  Independent Researcher, Tehran, Iran
+                                      ORCID: 0009-0001-1980-2690
+
+                                           October 25, 2026
+
+
+                                                 Abstract
+         We develop a quantum framework in which the topology of space is ontologically prior to
+     matter. Space is modeled as a growing directed acyclic graph (DAG), the scaffold, whose nodes
+     are possible configurations and whose directed edges are possible transitions. Actualizing a
+     transition consumes the corresponding edge and creates a permanent record. The record is the
+     environment that makes alternative histories orthogonal in a consistent-histories formulation,
+     and the resulting structure is intrinsically irreversible. Time is not a global parameter but
+     the causal order of the actualized DAG. A Z2 -symmetric mirror scaffold supplies the dark
+     sector; the ratio of mirror to baryonic mass is described by an effective power law whose
+     slope β ≈ 0.785 is close to the value 3/4 implied by the baryonic Tully–Fisher relation for
+     halos of constant mean overdensity. We test the framework on the SPARC catalogue of
+     rotationally supported galaxies and on galaxy-cluster baryon fractions. The density-dependent
+     pairing mechanism proposed in an earlier stage is excluded by SPARC at high significance:
+     the measured residual slope of the radial acceleration relation against baryonic surface density
+     is κ = +0.054 ± 0.023, whereas the mechanism predicts −0.3 to −0.4. The global mass law
+     fits galactic rotation curves at the level of MOND with three global parameters, but a blind
+     half-sample test shows the two models are statistically indistinguishable, and per-galaxy halo
+     fits are vastly better in raw χ2 (with correspondingly more parameters). The mass law also
+     over-predicts the dark-to-baryon ratio in clusters by a factor 1.2–4 and is therefore rejected as a
+     universal law; it must be treated as a galaxy-scale phenomenological relation. The framework’s
+     testable content reduces to the intrinsic-scatter bound, which we show is computable from the
+     graph itself: the effective number of independent scaffold components inside a galactic radius
+     equals the observability-cover number of the out-degree landscape of the actualized DAG,
+     which is canonical and parameter-free. Preliminary simulation gives Neff ∼ 260 for multiplicity
+     m = 1 and Neff ∼ 145 for m = 3 at N = 5000 nodes, both above the SPARC bound Neff ≥ 52
+     that corresponds to a true intrinsic scatter of 0.06 dex. The framework therefore survives
+     P4 on the graph side but loses P1 (cluster extrapolation) and P3 (density-dependence) as
+     discriminators. We state six falsifiable predictions, report every test we have executed with its
+     outcome, and list explicitly what is assumed rather than derived.
+
+
+Contents
+1 Introduction                                                                                             3
+  1.1 The ontological inversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .          3
+  1.2 Core hypotheses . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            3
+  1.3 Epistemic status . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           3
+
+2 The Growing Scaffold                                                                                     3
+  2.1 Definition and axioms . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .            3
+  2.2 Growth . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .           4
+
+
+
+                                                     1
+3 Quantum Selection                                                                                   4
+  3.1 Hilbert space . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     4
+  3.2 The one-step selection operator . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
+  3.3 Decoherence functional and probabilities . . . . . . . . . . . . . . . . . . . . . . . .        5
+  3.4 Consumed edges as environment . . . . . . . . . . . . . . . . . . . . . . . . . . . .           5
+
+4 Time and Irreversibility                                                                             5
+  4.1 Causal order . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     5
+  4.2 Structural irreversibility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+  4.3 Relation to causal sets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      6
+  4.4 Initial condition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    6
+
+5 The Mirror Sector                                                                                    6
+  5.1 Exact Z2 at the scaffold level . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       6
+  5.2 The symmetric limit . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        6
+  5.3 Effective global mass law . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      7
+  5.4 BTFR consistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         7
+  5.5 Why the mirror sector is dark . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        7
+  5.6 Halo structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     7
+  5.7 Cosmological consistency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       7
+
+6 The Classical Limit and the Effective Number of Components                                      8
+  6.1 Decoherence and the classical limit . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+  6.2 Network conservation law . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+  6.3 Steady state with regeneration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+  6.4 The out-degree landscape . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+  6.5 Resolution of the underdetermination . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+  6.6 Preliminary simulation of Neff . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+
+7 Galactic Dynamics                                                                                   10
+  7.1 Mass model . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      10
+  7.2 Radial acceleration relation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      10
+  7.3 Intrinsic scatter . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   10
+  7.4 SPARC results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       11
+  7.5 Status of the mass law . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      11
+
+8 Cluster extrapolation: a failed prediction                                                          12
+  8.1 Prediction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    12
+  8.2 Observation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     12
+  8.3 Consequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       12
+
+9 Falsifiable Predictions                                                                             12
+
+10 Discussion                                                                                         13
+   10.1 What has been achieved . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      13
+   10.2 Limitations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+   10.3 Open problems . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     14
+
+11 Conclusion                                                                                         14
+
+A Sketch of the classical limit                                                                       14
+
+B Out-degree landscape: additional detail                                                             15
+
+
+
+                                                   2
+    1     Introduction
+    1.1    The ontological inversion
+    Contemporary physics treats spacetime as a continuous manifold on which quantum fields propagate,
+    and in which matter curves geometry. This paper develops the opposite ordering. The fundamental
+    object is the structure of connectivity among possible configurations; space, matter, and time are
+    emergent. The position is closest in spirit to causal-set theory [1, 2], loop quantum gravity [3], and
+    the Wolfram physics program [4], but the specific realization developed here uses consistent histories
+    [5–7] combined with an explicit edge-consumption mechanism that supplies both irreversibility
+    and decoherence.
+
+    1.2    Core hypotheses
+H1 [A] Scaffold. The universe is a growing DAG. Nodes are configurations; directed edges are possible
+       transitions.
+
+H2 [A] Selection with consumption. Selecting a transition consumes its edge and creates a
+       permanent record. There is a single fundamental configuration; the language of “fronts” refers
+       to epistemic decompositions of this configuration into locally connected parts (Remark 2.5).
+
+H3 [A] Mirror duality. The scaffold has an exact Z2 partner. The realized mirror mass is related to
+       the baryonic mass by the effective law of Section 5.3.
+
+        Consequences. (i) The ordering of events is structural, in the sense that it is a consequence
+    of H1–H2 rather than of entropy; the only temporal structure is the causal order on the actualized
+    DAG (Section 4.1). (ii) Novelty is unbounded because the scaffold must grow. (iii) Selection among
+    available transitions is probabilistic, with probabilities computed from the decoherence functional.
+
+    1.3    Epistemic status
+    Throughout the paper every statement carries a tag:
+   [D] derived from the axioms;
+
+    [A] axiom or definition;
+
+    [P] phenomenological (physically motivated, derivation open);
+
+    [F] fitted to data.
+    Not claimed: a derivation of the Standard Model; a solution of the cosmological-constant problem;
+    a derivation of the Einstein equations (open problem, Section 10.3); superiority over NFW or
+    MOND in raw accuracy; and a universal mass law (this is rejected by the cluster test of Section 8).
+
+
+    2     The Growing Scaffold
+    2.1    Definition and axioms
+    Definition 2.1 (Scaffold). A scaffold is a tuple S = (V, E, v0 , m, C) with: V a countable set of
+    nodes (configurations); E ⊆ V × V a set of directed edges (possible transitions) with no directed
+    cycle; v0 ∈ V an initial node; m : V → R≥0 a mass assignment; and C : V → R>0 a capacity
+    assignment.
+    Axiom 2.2 (Actualization). At step t the excitation sits at node vt . One edge (vt , u) ∈ E is
+    selected from the currently available out-set of vt , actualized and consumed. The excitation moves
+    to u, or terminates if no out-edge is available (the absorbing case of Section 3.2).
+
+                                                      3
+Axiom 2.3 (Consumption). A consumed edge is never reactivated, and it leaves a permanent
+record in the edge-availability data of the scaffold.
+
+Axiom 2.4 (Locality). Actualization follows only edges whose tail is the current node.
+
+ Remark 2.5 (Epistemic fronts). There is one fundamental configuration. The word “fronts” refers
+ to epistemic decompositions of the actualized structure into locally connected parts; fronts are
+ not ontic entities that compete for edges. The single-configuration picture is the ontology of the
+ framework.
+
+ Remark 2.6 (Content of consumption). Because there is one excitation and the graph is acyclic,
+ the excitation never revisits a node; consumption would be vacuous if the graph did not grow and
+ no record were kept. The content of Axiom 2.3 is twofold.
+
+(i) Record creation. Each consumed edge is a permanent record (Axiom 3.4), and this record is
+    the environment that makes alternative histories orthogonal in Section 3. This is the primary
+    content.
+
+(ii) Growth constraint. The scaffold’s out-degrees that enter the attachment rule (Definition 2.8)
+     are a function of the full history of actualized edges. The out-degree of a tail cannot decrease
+     once an edge is consumed, so growth capacity is a real, history-dependent constraint, not a
+     bookkeeping convention.
+
+There is no competition between distinct consumers; the resource is the scaffold’s own growth
+capacity.
+
+ 2.2   Growth
+Axiom 2.7 (Growth). Each actualization adds at least one new node together with m incoming
+edges, so the scaffold never exhausts its available transitions.
+
+ Definition 2.8 (Spatial preferential growth). New nodes carry positions xi ∈ Rd . A new node i
+ is added with m incoming edges from existing nodes j1 , . . . , jm chosen without replacement with
+ probability
+                                            (kjout + 1) ∥xi − xj ∥−γ
+                            P (j → i) = P          out + 1) ∥x − x ∥−γ ,                        (1)
+                                           l∈Vt (kl           i     l
+
+where kjout is the out-degree of j (the number of direct children it already has) and γ > 0 (default
+γ = 2). For γ = 2 in two dimensions the kernel integral diverges logarithmically at short distance;
+a cutoff at the inter-node spacing ℓ0 is part of the definition. The default is m = 1, giving a tree;
+m > 1 gives a DAG whose in-degree is m for every non-root node.
+
+ Remark 2.9. Preferential attachment in out-degree yields heavy-tailed degree distributions [8];
+ the exponent is near 3 for the linear kernel and shifts with the spatial weighting. The spatial factor
+ adds clustering. Whether such graphs describe real galaxies is not claimed here; it is a modeling
+ choice whose consequences enter through the flow steady state of Section 6.
+
+
+ 3     Quantum Selection
+ 3.1   Hilbert space
+ For a scaffold with N nodes, HN = ℓ2 (VN ) with orthonormal basis {|v⟩}v∈VN and projectors
+ Pv = |v⟩⟨v|. Growth is an isometric embedding of HN into HN +1 ; the full space is the inductive
+ limit.
+
+
+
+
+                                                   4
+3.2    The one-step selection operator
+A pure-projector class operator vanishes on every non-constant path, because Pu Pv = δuv Pv . The
+class operator must therefore contain a genuine one-step operator.
+Definition 3.1 (Selection operator). At step t, with available edge set Et and dead-node set
+                           / Et }, the one-step operator is
+Vdead,t = {v ∈ Vt : (v, ·) ∈
+                                        X                   X
+                                Kt =          a(t)
+                                               vu |u⟩⟨v| +    |ω⟩⟨v|,                    (2)
+                                     (v,u)∈Et                v∈Vdead,t
+                                                                                      P (t)
+where |ω⟩ is an absorbing “dead” state outside the scaffold and the amplitudes satisfy u |avu |2 = 1
+for each v ∈/ Vdead,t .PThe default amplitudes are avu = dout (v)−1/2 (uniform selection), or the
+square root of wvu / u′ wvu′ with conductance weights. Phases are set to zero in the minimal
+model. The absorbing term ensures that Kt is an isometry on the whole node space, so the history
+sum is normalized.
+Definition 3.2 (History and class operator). A history of length T is a directed path γ =
+(v0 , . . . , vT ) ending either at a node with an available out-edge or at the absorbing state |ω⟩. The
+class operator of γ is
+                                       Cγ = PvT KT −1 PvT −1 · · · Pv1 K0 Pv0 .                       (3)
+
+3.3    Decoherence functional and probabilities
+Definition 3.3 (Decoherence functional).
+                                                               
+                                      D(γ, γ ′ ) = Tr Cγ ρ0 Cγ†′ .                                   (4)
+
+A set of histories is consistent if Re D(γi , γj ) = 0 for i ̸= j; in that case p(γ) = D(γ, γ). For
+the minimal model with initial state |v0 ⟩⟨vP 0 | the probability p(γ) is the product of the per-step
+probabilities. The absorbing state ensures γ p(γ) = 1.
+
+3.4    Consumed edges as environment
+Axiom 3.4 (Record). Every consumed edge leaves a permanent record in the edge-availability
+data. Let R(γ) denote the full set of edges consumed along γ (together with the ordered set of
+visited nodes). Then
+                                D(γ, γ ′ ) = δR(γ),R(γ ′ ) Dt (γ, γ ′ ).                   (5)
+Histories that differ in their consumed-edge record are orthogonal; histories with the same record
+can interfere. This is a structural analogue of environmental decoherence, with the edge-availability
+record as the environment. The record is exact in the minimal model.
+Remark 3.5 (Decoherence rate). The rate Γ at which the overlap ⟨γ|γ ′ ⟩ decays for histories that
+diverge at some step is, in the minimal model, a graph-combinatorial quantity. When the model is
+pushed to physical regimes with electromagnetic interactions, a phenomenological scaling
+                                     Γ = Γ0 (ρbar /ρ0 )δ ,       δ>0                                 (6)
+is the natural effective form. The exponent δ is fixed by data; it is [P].
+
+
+4     Time and Irreversibility
+4.1    Causal order
+Definition 4.1 (Causal order). The actualized structure is a partially ordered set (Vact , ≺), where
+u ≺ v iff there is a directed path in the actualized DAG from u to v. There is no global time
+parameter. Two events are simultaneous iff they are incomparable in ≺. This is the only temporal
+structure compatible with the single-configuration ontology (Remark 2.5).
+
+                                                    5
+4.2    Structural irreversibility
+Proposition 4.2 (Irreversibility from record). Given Axioms 2.3 and 3.4, the reverse of any
+non-trivial realized history γ has a consumed-edge record different from R(γ), so its class operator is
+orthogonal to that of γ in D. The reverse history is therefore not a consistent alternative; structural
+irreversibility follows.
+
+Proof. The record R(γ) is a directed path; its reverse is a path in the reversed DAG with the
+                 ←−−−                ←−−−
+reversed record R(γ). Since R(γ) ̸= R(γ) for non-trivial γ, the L2 inner product vanishes in the
+projective class-operator algebra and D(γ, γ rev ) = 0.
+
+Remark 4.3 (Honest scope). The asymmetry follows from the axioms; it is not derived from more
+primitive dynamics. The claim is that irreversibility is built into the scaffold’s definition, so no
+low-entropy initial condition is needed to define a direction of time. We do not claim this resolves
+the thermodynamic arrow, which must still emerge in the classical limit from coarse-graining.
+
+4.3    Relation to causal sets
+Proposition 4.4. Every realized history defines a causal set: the set Vact ordered by ≺. Conversely,
+every causal set whose Hasse diagram is a directed tree arises from some history of the scaffold
+with m = 1. With m > 1 the actualized structure is a DAG whose Hasse diagram is not a tree; the
+resulting causal set is a general poset. The scaffold is thus a stochastic growth process on the space
+of causal sets, related to the sequential-growth dynamics of Rideout and Sorkin [9, 10].
+
+Conjecture 4.5. Does the process induced on the actualized causal set, after marginalizing over
+the scaffold topology, belong to the covariant sequential-growth family of [9]? The edge-consumption
+record is the most likely obstruction: birth probabilities depend on the full history of actualized
+edges, and this history dependence may violate discrete general covariance. Checking this — (a)
+constructively, by comparing the induced measure on causal sets to the Rideout–Sorkin family, and
+(b) via the Bell-causality constraints of [9] — is the first technical task.
+
+4.4    Initial condition
+The initial state ρ0 is a boundary condition. A pure node state, a maximally mixed state, and a
+thermal state are all admissible, and the framework does not select among them.
+
+
+5     The Mirror Sector
+5.1    Exact Z2 at the scaffold level
+Definition 5.1 (Mirror scaffold). For every node v introduce a mirror node v̄, and for every edge
+(u, v) a mirror edge (ū, v̄). The exchange v ↔ v̄ is an exact symmetry of the topology.
+
+Remark 5.2. Symmetry of the topology does not imply symmetry of the realized matter state.
+The two sectors may differ in initial conditions, reheating, and local pairing efficiency. This is
+the standard route in mirror-matter cosmology and is what allows an exact Z2 to coexist with
+cosmological constraints (Section 5.7).
+
+5.2    The symmetric limit
+Proposition 5.3. If every actualization in the main sector had a conjugate actualization in the
+mirror sector with unit efficiency, the accumulated masses of the two sectors would be equal. The
+observed cosmic ratio is not 1:1, so the realized pairing carries an overall sector-asymmetry factor.
+
+
+
+
+                                                  6
+5.3   Effective global mass law
+The mirror mass is related to the baryonic mass by the effective power law
+                                                               β−1
+                                   Mmirror             Mbar
+                                           =Λ                          .                          (7)
+                                    Mbar              1010 M⊙
+
+The global fit of Section 7.4 gives Λ ≈ 84 and β ≈ 0.785. The formal errors are far below the
+systematic ones, since stellar mass-to-light ratios and the error floor were not marginalized in the
+exploratory run.
+
+Remark 5.4 (Status of the mass law). The law is equivalent in content to a stellar-to-halo mass
+relation. It has no density dependence and the framework does not derive it or the amplitude Λ.
+Its amplitude (84) is far above the cosmic ratio (5.4, [14]), so galaxies retain only a small fraction
+of their cosmic baryons; the law does not explain why. The law fits galactic rotation curves at
+the level of MOND, but it fails at cluster scales (Section 8). It must therefore be treated as a
+galaxy-scale phenomenological description, not a universal law.
+
+5.4   BTFR consistency
+                                                1/3                2/3            4β/3
+For halos of fixed mean overdensity, Rh ∝ Mmirror , so v 2 ∝ Mmirror and v 4 ∝ Mbar . The baryonic
+Tully–Fisher relation v 4 ∝ Mbar [15] then requires
+
+                                      1   d ln Rh
+                                 β=     +         =⇒ β = 3/4.                                     (8)
+                                      2 d ln Mbar
+The fitted β = 0.785 is close. This relation is shared with standard halo models and does not
+discriminate.
+
+5.5   Why the mirror sector is dark
+The mirror sector is neutral under the Standard Model gauge group and does not couple to ordinary
+photons. Kinetic mixing ε between the two U (1) factors [11] permits weak interactions, with values
+near ε ∼ 10−9 discussed in the mirror-matter literature [12].
+
+5.6   Halo structure
+Mirror matter is dissipative: mirror baryons can cool and collapse. The standard mirror-matter
+picture [12] maintains a hot, extended plasma halo supported by heating from ordinary supernova
+energy transferred through kinetic mixing. We adopt this as an assumption and parametrize the
+halo with a cored, truncated profile
+                                                 ρc           1
+                                 ρh (r) =               ·             .                           (9)
+                                            1 + (r/rc )2 1 + (r/rt )2
+
+This gives an enclosed mass growing linearly in r for rc ≪ r ≪ rt (flat rotation curve), has finite
+total mass, and has an explicit parameter count: core radius rc , truncation radius rt tied to the
+virial radius, and normalization fixed by the coupling law.
+
+5.7   Cosmological consistency
+A thermally equal mirror sector would add roughly 6 to the effective number of relativistic species,
+far above the CMB/BBN limit. Viability requires a lower mirror temperature ratio x = T ′ /T after
+reheating, with ∆Neff ∼ 6x4 and x ≲ 0.5 (asymmetric reheating; [13]).
+
+
+
+
+                                                      7
+6     The Classical Limit and the Effective Number of Components
+6.1    Decoherence and the classical limit
+Proposition 6.1 (Classical limit). Suppose histories that diverge at step k satisfy |D(γ, γ ′ )| ≲
+exp[−Γ(T − k)] with Γ > 0 per step. Then as T → ∞ the decoherence functional becomes diagonal
+and the dynamics reduces to a classical autoregressive process on the scaffold.
+Proof sketch. For any two distinct histories γ ̸= γ ′ , let k be the first step at which they diverge. By
+Axiom 3.4, the record sets R(γ) and R(γ ′ ) differ at step k, so the δ-factor in (5) forces D(γ, γ ′ ) = 0
+up to a residual overlap of the pre-divergence parts. The residual is bounded by exp[−Γ(T − k)],
+which vanishes as T → ∞. Hence D is diagonal in the long-time limit and the history sum reduces
+to a classical probability distribution.
+
+6.2    Network conservation law
+Let sv (t) be the accumulated sediment at node v and fuv the flow along (u, v). The node equation
+is
+                                dsv      X             X
+                                    =          fuv −          fvw .                          (10)
+                                 dt
+                                             u:(u,v)∈E       w:(v,w)∈E
+
+Theorem 6.2 (Network conservation law). For any finite subgraph N of the scaffold,
+                                  X                      X            d X
+                                             f=                  f+       sw .                       (11)
+                                                                      dt
+                               in-boundary        out-boundary          w∈N
+
+Proof. Sum (10) over N ; internal flows cancel pairwise.
+
+6.3    Steady state with regeneration
+A DAG is never strongly connected, and a pure outflow process drains mass into sinks, so a
+Perron–Frobenius steady state at eigenvalue 1 does not exist on the bare DAG. We close the flow
+by regeneration.
+                                                                −1
+Definition 6.3 (Regenerated transition matrix). Let W = Dout       A (rows of dangling nodes replaced
+by a restart distribution r), let λ ∈ (0, 1] be a regeneration rate, and set
+
+                                        P = (1 − λ)W + λ 1 r⊤ .                                      (12)
+
+Theorem 6.4 (Existence and uniqueness of s⋆ ). P is row-stochastic and has a strictly positive
+restart component, hence irreducible and aperiodic. By Perron–Frobenius [19], there is a unique
+stationary distribution s⋆ with s⊤       ⊤
+                                 ⋆ P = s⋆ , all entries positive and unit 1-norm. It is the left
+eigenvector of P , a PageRank-type vector [20, 21].
+Remark 6.5 (Free parameters of the classical limit). The steady state depends on the restart
+distribution r and the rate λ in addition to the topology. This is not a defect of Theorem 6.4; it is
+a statement that the classical limit inherits these parameters from the closure. The next subsection
+fixes r by a graph-canonical choice.
+
+6.4    The out-degree landscape
+To eliminate the free parameter r, we use the scaffold’s own connectivity.
+Definition 6.6 (Out-degree landscape and attraction basins). Let L(v) = kvout + 1 be the elevation
+of node v. Define a discrete flow step on Vact by
+
+                                        F (v) = arg max L(w),                                        (13)
+                                                         w: v→w
+
+
+                                                         8
+with the convention that a node with out-degree zero is its own image. A hub is a local maximum
+of L under F . The basin B(h) of a hub h is the set of nodes from which iterated F reaches h. The
+family {B(h)}h∈H is a partition of Vact (every node flows to exactly one local maximum).
+
+Proposition 6.7. The basins {B(h)}h∈H form a cover of Vact . Each basin is necessary: for
+any two distinct local maxima h1 , h2 , there exist v ∈ B(h1 ) that cannot be reached from B(h2 ) by
+flow, so no proper subfamily separates all configurations. Therefore the observability-cover number
+(Definition 6.8) of the landscape equals the number of hubs:
+
+                                           Nobs (F) = |H|.                                       (14)
+
+Proof. The partition into basins implies coverage. If a basin is removed, the hub it contains
+becomes unreachable; a global section of the configuration sheaf that assigns a distinct value at
+that hub is then indistinguishable from one that assigns the same value everywhere else. Hence no
+proper subfamily is separating.
+
+6.5    Resolution of the underdetermination
+Definition 6.8 (Observability cover number). Let F be the configuration sheaf of Section 3 with
+cover U = {Ui }. A subcover V ⊆ U is an observability cover if the joint restriction map
+                                     Y
+                       ρV : Γ(F) →      F(U ),      ρV (s) = (ρU (s))U ∈V                  (15)
+                                       U ∈V
+
+is injective, i.e. separates every pair of distinct global sections. The observability cover number
+Nobs (F) is the minimum cardinality of an observability cover.
+
+Theorem 6.9 (Neff as observability cover number). Let the scaffold be grown by rule (1) with
+m = 1 (so that the actualized structure is a tree) and let the basins {B(h)}h∈H of Definition 6.6 be
+the cover. Then the number of independent components contributing to the sediment inside any
+radius r equals the number of hubs inside r:
+
+                                      Neff (r) = H ∩ Vact (r) .                                  (16)
+
+Consequently the intrinsic scatter satisfies
+                                          σv     1
+                                             ≃ p         .                                       (17)
+                                          v   2 Neff (r)
+
+Proof. By Proposition 6.7, the basins are a partition of Vact . Restricting to Vact (r) and using
+Definition 6.8 for the sheaf of configurations, the minimum separating subcover has cardinality
+equal to the number of distinct basins inside r. This is Neff (r). The scatter formula is the standard
+shot-noise scaling under the Ornstein–Uhlenbeck stationary variance, as in Section 7.3.
+
+Remark 6.10 (Is r now fixed?). Yes, in the following precise sense: the free parameter r of
+Theorem 6.4 appears only in the regenerated transition matrix. When we work with the out-degree
+landscape, the “restart distribution” is not free: every node inherits the hub of its basin, so the
+restart distribution that reproduces the landscape is r(h) = |B(h)|/|Vact |, which is determined by
+the graph. The parameter λ remains free; it controls the mixing time of the classical dynamics but
+not the identity of the basins and hence not Neff .
+
+Remark 6.11 (Scope). Theorem 6.9 is stated for m = 1 (tree case) where the basins partition
+the actualized structure. For m > 1 the partition property is weakened: basins overlap, and the
+minimum separating subcover is a Set Cover problem rather than a counting problem. The number
+of hubs is an upper bound on Neff . A full treatment of m > 1 is an open problem.
+
+
+                                                  9
+6.6    Preliminary simulation of Neff
+To connect Theorem 6.9 to the SPARC bound (Section 7.3), we simulated the growth rule (1) at
+N = 5000 nodes with λ = 0.15, for multiplicities m = 1 and m = 3, and computed Neff inside a
+sphere of radius 0.3 (in units of the mean inter-node spacing) centered on the scaffold. Results are
+reported in Table 1.
+
+Table 1: Preliminary values of Neff for N = 5000, λ = 0.15, radius 0.3. “Uniform” refers to a
+uniform restart distribution; “hub” to the out-degree landscape of Definition 6.6; “root” to a point
+restart at v0 . The hub case is the one identified by Theorem 6.9 as the correct choice.
+                         Restart distribution    Neff (m = 1)    Neff (m = 3)
+                         Uniform                     ∼ 420           ∼ 410
+                         Hub (landscape)             ∼ 260           ∼ 145
+                         Root                        8–31            8–31
+
+    The hub (landscape) values are the ones selected by Theorem 6.9. Both 260 (m = 1) and 145
+(m = 3) exceed the SPARC bound of 52 that corresponds to a true intrinsic scatter of 0.06 dex
+(Section 7.3). The uniform and hub cases are both compatible with the SPARC bound; the root
+case is not, and is therefore excluded by Theorem 6.9 together with the SPARC data. This is
+the first genuinely positive content of the framework: a graph-determined quantity is compatible
+with the observed scatter, whereas a physically unmotivated choice of r (a single root) would have
+falsified it.
+
+
+7     Galactic Dynamics
+7.1    Mass model
+The total mass is
+                                                                         r
+                                                                 GMtot (r)
+                  Mtot (r) = Mvis (r) + Mgas (r) + Mh (r),      v(r) =     ,             (18)
+                                                                     r
+where Mvis and Mgas come from photometry and HI data and Mh is the mirror halo of Section 5.6,
+normalized by (7) at the baryonic mass of the galaxy.
+
+7.2    Radial acceleration relation
+The empirical relation is gobs = ν(gbar /a0 ) gbar with a0 ≈ 1.2×10−10 m/s2 , ν → 1 for gbar ≫ a0 and
+ν → (gbar /a0 )−1/2 for gbar ≪ a0 [16]. The coupling law links total masses, whereas the RAR links
+                                                                                           2β
+local accelerations. For a flat curve with halo radius Rh , v 2 ≈ GMmirror /Rh , so v 4 ∝ Mbar /Rh2 , and
+the observed BTFR v ∝ Mbar [15] holds only if β = 1/2 + d ln Rh /d ln Mbar . This is a consistency
+                       4
+                                                                                            1/3
+condition, not an identification β = 1/2. For halos of fixed mean overdensity, Rh ∝ Mmirror gives
+β = 3/4 (Section 5.3). The relation is shared with standard halo models and does not discriminate.
+
+7.3    Intrinsic scatter
+The observed RAR has total scatter of about 0.13 dex, and its intrinsic part is of order 0.06 dex [17].
+The framework adds one source of scatter, the stochastic sediment.
+                                            σv    1
+                                               ≃ √     ,                                            (19)
+                                            v   2 Neff
+which follows from Ornstein–Uhlenbeck relaxation with stationary variance σ 2 /(2θ) and shot-noise
+scaling of the number of effectively independent contributions. Combining with Theorem 6.9,
+Neff = |H ∩ Vact (r)|.
+
+                                                   10
+    An intrinsic scatter of 0.06 dex corresponds to about 7% in v, so the framework requires
+Neff ≳ 52 at the radii probed. If the true intrinsic scatter is the observed upper bound of 0.115 dex,
+the requirement relaxes to Neff ≳ 14. Both bounds are computed values, not free parameters, by
+Theorem 6.9.
+
+7.4   SPARC results
+Sample. The SPARC catalogue [18] with quality cuts (inclination > 30◦ , quality flags 1–2): 149
+galaxies and 3137 rotation-curve points. The RAR analysis uses 2681 points from 144 galaxies
+with velocity errors below 10%.
+
+Implementation. Velocity error floor 5% of V ; stellar mass-to-light ratios fixed at 0.5 (disks)
+and 0.7 (bulges) at 3.6 µm; Mbar computed from L3.6 with the disk ratio and 1.33 MHI ; distance,
+inclination, and mass-to-light uncertainties not marginalized. This is an exploratory run; a
+pre-registered re-run with full marginalization is an open problem.
+
+Table 2: SPARC results. The framework and MOND are statistically indistinguishable out of
+sample, and the per-galaxy pseudo-isothermal halo fits far better in raw χ2 at the cost of two
+parameters per galaxy.
+         Model                             Free params      χ2 /N    RMSE (km/s)        BIC
+         Framework (global mass law)            3             7.5         22.8        23650
+         MOND                                   1            7.6          23.8        23864
+         Pseudo-isothermal halo           2/galaxy (298)     1.39         10.6        6774
+
+
+
+Table 3: Further SPARC diagnostics. The κ measurement excludes a density-dependent pairing
+mechanism.
+             Diagnostic                                      Value
+              a0 (RAR fit)                                     1.17 × 10−10 m/s2
+              Total RAR scatter                                     0.132 dex
+              α ≡ d log Σbar /d log Mbar                         0.352 ± 0.038
+              κ (residual vs Σbar , clustered bootstrap)        +0.054 ± 0.023
+              Intrinsic scatter (upper bound)                       0.115 dex
+              Implied Neff from scatter                    ≥ 14 (or ≥ 52 at 0.06 dex)
+
+
+Blind half-sample test. Fit on a random half, evaluate on the other half, repeated over ten
+splits: framework 23.9 ± 2.8 km/s, MOND 24.4 ± 2.7 km/s. The two are indistinguishable.
+
+Fitted parameters. β = 0.785, Λ ≈ 84, rc /Rd ≈ 0.88. Fixing β changes χ2 by +855 (β = 0.7),
++4025 (0.6), +9340 (0.5), +16979 (0.9). The range 0.5–0.7 is disfavored.
+
+Excluded mechanism. A density-dependent pairing mechanism would produce a residual
+slope κ = −((1 − β)/α) fex R/(1 + R), of order −0.3 to −0.4 for the measured α. The measured
+κ = +0.054 ± 0.023 excludes it. The framework’s global mass law predicts κ = 0, as does MOND.
+
+7.5   Status of the mass law
+The framework and MOND fit at the same level; per-galaxy halos fit far better with two parameters
+per galaxy. The framework’s statistical advantage over halos is parameter economy, not raw
+accuracy. Galactic data alone do not distinguish the framework from MOND.
+
+                                                 11
+8     Cluster extrapolation: a failed prediction
+8.1    Prediction
+The mass law (7), applied to a cluster with baryonic mass Mbar ∼ 1014 M⊙ , predicts
+
+            Mmirror /Mbar = Λ (1014 /1010 )β−1 ≈ 84 · 104·(−0.215) ≈ 84 · 10−0.86 ≈ 11.6        (20)
+
+with an uncertainty from β in the range 0.75–0.80 that places the prediction between 15.5 and
+21.9. Pure power laws with β = 0.785 give 10.7–17.6; the BTFR-implied β = 3/4 gives 7.7–13.6.
+
+8.2    Observation
+Published X-ray and lensing baryon fractions (X-COP [24, 25], XXL [23], Gonzalez et al. [22]) give
+dark-to-baryon ratios in the range 5.4–6.5 inside R500 , up to 12 only if lensing masses are biased
+high by a factor of two. The prediction over-predicts by a factor of 1.2–4.
+
+8.3    Consequence
+The mass law is not a universal relation. A fit that forces saturation to the cosmic ratio requires
+log M⋆ ∈ [10.5, 12.5] in the SPARC fit and worsens χ2 by ∆χ2 ≈ 5 × 103 . We therefore record the
+following.
+
+Remark 8.1 (P1 fails). The cluster extrapolation of the mass law is rejected at high significance.
+The mass law (7) must be treated as a galaxy-scale phenomenological description, not a universal
+one. It shares this status with the stellar-to-halo mass relations of standard galaxy formation,
+which are also not extrapolable to clusters without additional physics.
+
+    This is the framework’s most consequential negative result. It removes the cluster-scale
+discriminative content of the model and confines the mass law to the galactic regime where it
+cannot be distinguished from MOND or from standard halos.
+
+
+9     Falsifiable Predictions
+We list every prediction with its current status. Tested predictions have been evaluated against
+published data; pending predictions require further work.
+
+1. P1 (cluster extrapolation). Status: rejected. The predicted ratio 15.5–21.9 at Mbar ∼
+   1014 M⊙ disagrees with the observed 5.4–6.5 (Section 8). The mass law is confined to galactic
+   scales.
+
+2. P2 (BTFR consistency). Status: consistent, non-discriminating. β = 1/2+d ln Rh /d ln Mbar
+   must hold; with fixed-overdensity halos this gives β = 3/4. The fitted β = 0.785 satisfies it to
+   within the systematic uncertainties. The condition is shared with standard halo models.
+
+3. P3 (no surface-density dependence). Status: consistent, non-discriminating. κ = 0 is
+   predicted by both the framework and MOND. The measured κ = +0.054 ± 0.023 is consistent
+   with zero at ∼ 2σ.
+
+4. P4 √ (intrinsic scatter). Status: pending, with resolution. The intrinsic scatter σv /v ≈
+   1/(2 Neff ) is predicted, with Neff given by Theorem 6.9 as the number of out-degree landscape
+   hubs inside the probed radius. Falsification: if a careful simulation of the growth rule for m = 1
+   and m = 3 at N ∼ 5000 gives Neff < 14, the framework is falsified. Preliminary simulation
+   gives Neff ∼ 260 (m = 1) and ∼ 145 (m = 3), both above the bound. A more careful simulation
+   with full treatment of m > 1 is the immediate next step.
+
+
+                                                12
+5. P5 (mirror cosmology). Status: pending. ∆Neff ∼ 6x4 with x ≲ 0.5. Measurements
+   consistent with zero force x → 0 and remove the mirror sector’s cosmological footprint.
+   Falsification: a ∆Neff incompatible with any x allowed by the dark-matter abundance.
+6. P6 (dissipative dark sector). Status: pending. Mirror matter can form compact objects
+   and dark atoms, giving microlensing and structure signatures that collisionless halos do not.
+   Falsification: if bounds on dissipative dark matter in galaxies exclude the required mirror
+   fractions.
+
+
+10     Discussion
+10.1   What has been achieved
+1. A mathematically consistent selection formalism with non-vanishing class operators, an absorbing
+   state that normalizes the history sum, and an explicit record-based decoherence structure
+   (Section 3).
+2. A single-configuration ontology in which the content of consumption is record creation and
+   growth constraint, not competition between ontic fronts (Remarks 2.5–2.6).
+3. A scaffold whose irreversibility is structural, with an honest account of its axiomatic origin
+   (Proposition 4.2).
+4. A well-posed steady state (Theorem 6.4) and a graph-canonical choice of restart distribution
+   (Definition 6.6, Theorem 6.9).
+5. A resolution of the earlier underdetermination of Neff : the effective number of components is
+   the number of out-degree hubs, a graph-canonical quantity, and preliminary simulation gives
+   Neff ∼ 145–260, above the SPARC bound (Section 6.6).
+6. A test protocol that has been executed once on SPARC and on clusters, with the following
+   outcomes: the density-dependent pairing mechanism is excluded; the mass law fits galactic
+   rotation curves at MOND level with three global parameters; the cluster extrapolation of the
+   mass law is rejected (Sections 7.4–8).
+
+10.2   Limitations
+1. Galactic data do not discriminate. The framework fits at the level of MOND and is
+   indistinguishable from it out of sample.
+2. Raw fit quality is poor. χ2 /N ≈ 7.5 under the stated error model; the framework’s statistical
+   advantage over halo models is parameter economy, not accuracy.
+3. The mass law is descriptive, not derivable. Its amplitude (∼ 84) is unexplained and its
+   cluster extrapolation fails.
+4. Neff resolution is partial. Theorem 6.9 fixes r via the out-degree landscape for m = 1; the
+   m > 1 case requires a Set Cover computation and is an upper bound.
+5. Dissipative halos. A stable extended mirror halo requires continued heating through kinetic
+   mixing; its dynamics, including the Bullet Cluster and cluster lensing, must be examined
+   quantitatively.
+6. Foundations. The reduction to sequential growth (Conjecture 4.5), the continuum limit, the
+   Einstein equations, and the thermodynamic arrow are not established.
+7. Systematics. Stellar mass-to-light ratios, distances, inclinations, the error floor, and the
+   aperture definition were not marginalized in the exploratory SPARC run.
+
+                                                13
+10.3     Open problems
+1. Explain the mass law and its amplitude from the scaffold. Any pairing mechanism must be
+   density-independent.
+2. Extend Theorem 6.9 to m > 1 via the Set Cover formulation; compute Neff for multiple
+   realizations and check the Neff ≥ 52 bound robustly.
+3. Settle Conjecture 4.5: does the induced process on the actualized causal set belong to the
+   covariant sequential-growth family?
+4. Connect the growing scaffold to FRW expansion and recover the Einstein equations in the
+   continuum limit.
+5. Pre-register the SPARC protocol and re-run with mass-to-light ratios, distances, and inclinations
+   marginalized.
+
+
+11      Conclusion
+We have developed a framework in which the topology of space is prior to matter, formalized as a
+growing DAG with an edge-consumption mechanism. The framework’s formal content is:
+ • a consistent-histories formulation with non-vanishing class operators, a normalized history sum,
+   and a record-based decoherence structure (Sections 3–4);
+ • structural irreversibility from record orthogonality (Proposition 4.2);
+ • a PageRank-type steady state with a canonical, graph-determined restart distribution via the
+   out-degree landscape (Theorem 6.4, Definition 6.6, Theorem 6.9).
+     The framework’s empirical content, after the SPARC and cluster tests reported here, is:
+ • a density-dependent pairing mechanism excluded at high significance (κ = +0.054 ± 0.023);
+ • a global mass law that fits galactic rotation curves at MOND level with three global parameters
+   and is statistically indistinguishable from MOND out of sample;
+ • a mass law that over-predicts cluster dark-to-baryon ratios by a factor of 1.2–4 and is therefore
+   rejected as a universal law;
+ • a graph-canonical Neff whose preliminary value (∼ 145–260) satisfies the SPARC bound
+   Neff ≥ 52 and therefore keeps P4 as a live falsifiable prediction.
+    On galactic scales the framework is not distinguished from MOND or from standard halo
+models with a stellar-to-halo relation. Its testable content is now the Neff prediction (P4), the
+mirror-sector cosmology (P5–P6), and the mathematical open problems of Conjecture 4.5 and
+the m > 1 extension of Theorem 6.9. If P4 fails on a more careful simulation, the framework’s
+empirical content reduces to the excluded mechanism of Section 7.4 and the negative cluster result
+of Section 8; if P5–P6 are confirmed, the mirror sector retains a cosmological foothold. We have
+made every step of this assessment explicit and have not claimed more than the data support.
+
+
+A      Sketch of the classical limit
+For histories γ, γ ′ that first diverge at step k, Axiom 3.4 makes the interference term proportional
+to the overlap of their edge-availability records. If each further step suppresses that overlap by a
+factor exp(−Γ) with Γ > 0, then |D(γ, γ ′ )| is bounded by exp[−Γ(T − k)], which vanishes as T
+grows, so D becomes diagonal. The rate Γ is the phenomenological input of Remark 3.5; deriving
+it from the scaffold’s structure is an open problem.
+
+                                                 14
+B     Out-degree landscape: additional detail
+The discrete flow step (13) has a unique image for each node except when there are ties. In the
+tie case, choose the child with smaller index (or smaller position) as tiebreaker; the resulting
+partition is independent of the tiebreaker up to a measure-zero set of configurations. With the
+tiebreaker, iteration of F reaches a local maximum in finitely many steps (since L is integer-valued
+and strictly increases at each step, and Vact is finite). This proves existence and uniqueness of the
+basin decomposition.
+
+
+References
+ [1] L. Bombelli, J. Lee, D. Meyer, R. D. Sorkin, Space-time as a causal set, Phys. Rev. Lett. 59,
+     521 (1987).
+
+ [2] R. D. Sorkin, Causal sets: discrete gravity, in Lectures on Quantum Gravity, Springer (2005).
+
+ [3] C. Rovelli, F. Vidotto, Covariant Loop Quantum Gravity, Cambridge University Press (2014).
+
+ [4] S. Wolfram, A Project to Find the Fundamental Theory of Physics, Wolfram Media (2020).
+
+ [5] M. Gell-Mann, J. B. Hartle, Classical equations for quantum systems, Phys. Rev. D 47, 3345
+     (1993).
+
+ [6] R. B. Griffiths, Consistent Quantum Theory, Cambridge University Press (2002).
+
+ [7] R. Omnès, Consistent interpretations of quantum mechanics, Rev. Mod. Phys. 64, 339 (1992).
+
+ [8] A.-L. Barabási, R. Albert, Emergence of scaling in random networks, Science 286, 509 (1999).
+
+ [9] D. P. Rideout, R. D. Sorkin, Classical sequential growth dynamics for causal sets, Phys. Rev.
+     D 61, 024002 (2000).
+
+[10] D. P. Rideout, R. D. Sorkin, Evidence for a continuum limit in causal set dynamics, Phys.
+     Rev. D 63, 104011 (2001).
+
+[11] B. Holdom, Two U(1)’s and epsilon charge shifts, Phys. Lett. B 166, 196 (1986).
+
+[12] R. Foot, Mirror dark matter: cosmology, galaxy structure and direct detection, Int. J. Mod.
+     Phys. A 29, 1430013 (2014).
+
+[13] Z. Berezhiani, A. Dolgov, R. N. Mohapatra, Asymmetric inflationary reheating and the nature
+     of mirror universe, Phys. Lett. B 375, 26 (1996).
+
+[14] Planck Collaboration, Planck 2018 results. VI. Cosmological parameters, Astron. Astrophys.
+     641, A6 (2020).
+
+[15] S. S. McGaugh, The baryonic Tully–Fisher relation of galaxies with extended rotation curves,
+     Astrophys. J. 533, L99 (2000).
+
+[16] S. S. McGaugh, F. Lelli, J. M. Schombert, Radial acceleration relation in rotationally supported
+     galaxies, Phys. Rev. Lett. 117, 201101 (2016).
+
+[17] P. Li, F. Lelli, S. McGaugh, J. Schombert, Fitting the radial acceleration relation to individual
+     SPARC galaxies, Astron. Astrophys. 615, A3 (2018).
+
+[18] F. Lelli, S. S. McGaugh, J. M. Schombert, SPARC: Mass models for 175 disk galaxies, Astron.
+     J. 152, 157 (2016).
+
+
+                                                 15
+[19] E. Seneta, Non-negative Matrices and Markov Chains, Springer (2006).
+
+[20] S. Brin, L. Page, The anatomy of a large-scale hypertextual Web search engine, Computer
+     Networks and ISDN Systems 30, 107 (1998).
+
+[21] A. N. Langville, C. D. Meyer, Google’s PageRank and Beyond, Princeton University Press
+     (2006).
+
+[22] A. H. Gonzalez, S. Sivanandam, A. I. Zabludoff, D. Zaritsky, Galaxy cluster baryon fractions
+     and the missing baryon problem, Astrophys. J. 778, 14 (2013).
+
+[23] D. Eckert et al., The XXL Survey. XIII. Baryon content of the bright cluster sample, Astron.
+     Astrophys. 592, A12 (2016).
+
+[24] D. Eckert et al., Non-thermal pressure support in X-COP galaxy clusters, Astron. Astrophys.
+     621, A40 (2019).
+
+[25] S. Ettori et al., Hydrostatic mass profiles of X-COP galaxy clusters, Astron. Astrophys. 621,
+     A39 (2019).
+
+
+
+
+                                               16
+

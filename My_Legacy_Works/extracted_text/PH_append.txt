@@ -1,0 +1,1266 @@
+           Topology, Category, and Action:
+A Structural Extension to The Philosophy of Viability
+
+                       Saeed Hasibi
+                    Independent Researcher
+                  saeed.hasibi@outlook.de
+
+                           2026
+2
+Contents
+
+Preface to the Extension                                                                                5
+
+
+I    Containment Topology                                                                               7
+
+E1 The Topology of Containment                                                                       9
+   E1.1 The Question . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+   E1.2 Containment as Topological Subspace . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+   E1.3 Descent as Dimensional Restriction . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+   E1.4 Compatibility with Independence and Non-Passage . . . . . . . . . . . . . . . . . . . 10
+   E1.5 The Self as Contained in All Realms . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+E2 Hubs as Categories of Transition                                                                    13
+   E2.1 The Question . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+   E2.2 Hubs as Categories . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+   E2.3 Hubs as Cognitive Operators . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      14
+
+
+II   The Trans-Categorical Triad                                                                       15
+
+E3 Light, Identity, and Self-Awareness                                                                 17
+   E3.1 The Question . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   17
+   E3.2 The Principle of Totality of Possibility . . . . . . . . . . . . . . . . . . . . . . . . . .   17
+   E3.3 The Argument Against Self-Awareness as a Category . . . . . . . . . . . . . . . . . .          17
+   E3.4 The Trans-Categorical Triad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    18
+   E3.5 The Ontological Status of the Modal Space . . . . . . . . . . . . . . . . . . . . . . .        18
+        E3.5.1 The Three Ontological Layers . . . . . . . . . . . . . . . . . . . . . . . . . . .      18
+        E3.5.2 The Ontological Principle Restated . . . . . . . . . . . . . . . . . . . . . . . .      19
+        E3.5.3 The Theological Resolution . . . . . . . . . . . . . . . . . . . . . . . . . . . .      19
+        E3.5.4 Middle Knowledge and the Molinist Refinement . . . . . . . . . . . . . . . . .          20
+        E3.5.5 Coherence with Quantum Mechanics . . . . . . . . . . . . . . . . . . . . . . .          21
+        E3.5.6 The Structural Order Is Posterior to the Modal Space . . . . . . . . . . . . .          21
+   E3.6 The Thread and the Beads . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       22
+   E3.7 Reduction of Members and Conservation of Identity . . . . . . . . . . . . . . . . . .          22
+
+                                                   3
+4                                                                                         CONTENTS
+
+III   Action and Metaethics                                                                            23
+
+E4 Action as Change of Possibility Space                                                               25
+   E4.1 The Question . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   25
+   E4.2 Action Defined . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   25
+   E4.3 Action, Contextual Act, and Ethical Action . . . . . . . . . . . . . . . . . . . . . . .       25
+   E4.4 The Expansion Criterion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    26
+   E4.5 The Bridge Principle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   26
+   E4.6 Contextual Evil and Ethical Evil . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     27
+   E4.7 The Threefold Ethical Taxonomy . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       27
+   E4.8 Integration with the Trans-Categorical Triad . . . . . . . . . . . . . . . . . . . . . .       28
+   E4.9 Formalization of Harmony and the Threefold Taxonomy . . . . . . . . . . . . . . . .            28
+   E4.10The Three Levels and the Threefold Taxonomy . . . . . . . . . . . . . . . . . . . . .          29
+   E4.11Soft Manifestation and the Action Chain . . . . . . . . . . . . . . . . . . . . . . . . .      29
+        E4.11.1Hard and Soft Manifestation . . . . . . . . . . . . . . . . . . . . . . . . . . .       29
+        E4.11.2The Action Chain . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      30
+        E4.11.3Crystallization of Effect . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   30
+        E4.11.4The Two-Direction Relation . . . . . . . . . . . . . . . . . . . . . . . . . . . .      31
+        E4.11.5The Ethical Consequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       31
+
+
+IV    Time and Self-Awareness                                                                          33
+
+E5 Time and the Fundamental Self-Awareness                                                             35
+   E5.1 The Question . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   35
+   E5.2 The Argument from Causation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        35
+   E5.3 Fundamental and Human Self-Awareness . . . . . . . . . . . . . . . . . . . . . . . .           35
+   E5.4 The Unconscious as Weak Self-Awareness . . . . . . . . . . . . . . . . . . . . . . . .         36
+   E5.5 Phenomenal and Structural Time . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       36
+
+
+V     Arguments                                                                                        37
+
+E6 Arguments for the New Axioms                                                                        39
+   E6.1 The Question . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   39
+   E6.2 The Argument for the Totality of Possibility . . . . . . . . . . . . . . . . . . . . . . .     39
+   E6.3 The Argument for the Scaffold . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      39
+   E6.4 The Argument for the Expansion Criterion . . . . . . . . . . . . . . . . . . . . . . .         40
+
+Conclusion                                                                                             41
+
+A Formalizations                                                                                    43
+  A.1 Symbols . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+  A.2 Key Formal Expressions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 43
+
+B Dependency Map                                                                                       45
+
+C Open Questions                                                                                       47
+Preface to the Extension
+
+This document is an extension of The Philosophy of Viability (Hasibi, 2026). It develops, in a
+systematic and formal form, seven structural claims that were either absent from the main volume
+or present only implicitly. The claims are the following:
+
+  (I) Containment Topology. The seven realms are not merely ordered; each is a topological
+      subspace of the next, and the whole chain is contained in the Ground.
+
+ (II) Hubs as Categories. The three barzakhic realms are not functions but categories of
+      transition—modes of existence whose internal structure is passage.
+
+(III) The Trans-Categorical Triad. Light, identity, and self-awareness are the three trans-
+      categorical conditions of possibility: of relation, of succession, and of choice respectively.
+
+(IV) The Ontological Status of the Modal Space. The modal space of possibilities is onto-
+     logically real. It is posterior to the Ground, prior to actualization, and prior to the structural
+     order of the realms. This yields a structural resolution of the classical tension between divine
+     omniscience and creaturely freedom.
+
+ (V) The Thread and the Beads. Identity is the invisible thread that holds a sequence of
+     manifestations together; it is not the sequence, and it is not reducible to it.
+
+(VI) Action as Change of Possibility Space. An action is any effect that expands or contracts
+     the space of possible realization of an identity. The ethical evaluation distinguishes three
+     categories of ethical action—blameworthy (contraction), duty (preservation of harmony), and
+     virtue (expansion)—and is grounded in the structural parallel with the trans-categorical triad.
+
+(VII) Time and Fundamental Self-Awareness. Time is not a non-phenomenal feature of real-
+      ity; it is the structure of succession, and it presupposes a fundamental self-awareness as its
+      scaffold.
+
+   The document is written under the same methodological commitment as the main volume:
+no principle is justified by appeal to any outside domain; every principle is formalized where
+formalization aids precision, and the prose carries the principle. Epistemic status labels (A) (axiom),
+(T) (argued), (E) (estimate), (Q) (open question), and (S) (speculation) follow the conventions of
+the main volume.
+   The chapters of this extension are numbered E1–E6 to distinguish them from the chapters of
+the main volume. Cross-references to the main volume appear in the form Philosophy, Ch. N.
+
+
+
+
+                                                  5
+6   CONTENTS
+       Part I
+
+Containment Topology
+
+
+
+
+         7
+Chapter E1
+
+The Topology of Containment
+
+E1.1      The Question
+The main volume defines seven realms (Philosophy, Chs. 7–8) and states that they are indepen-
+dently real (Philosophy, Principle 7.1). It also states that the ordinal relation among realms does
+not impose a route (Philosophy, Principle 7.3), and that descent is structural rather than kinetic
+(Philosophy, Principle 13.4). These three claims, taken together, leave a question unanswered: in
+what precise sense are the realms related?
+   The present chapter answers this question by introducing a single structural notion—containment—
+and by showing that the three claims of the main volume are consequences of it.
+
+
+E1.2      Containment as Topological Subspace
+Definition E1.1 (Containment). (A) A realm Ri is contained in a realm Ri+1 , written Ri ⊏ Ri+1 ,
+if and only if there is a topological embedding ιi : Ri ,→ Ri+1 such that the topology of Ri is the
+subspace topology induced by ιi .
+
+Remark E1.1. The embedding ιi is not merely a set-theoretic injection. It preserves the structural
+relations internal to Ri : every relation that holds among manifestations of Ri is the restriction of
+a relation of Ri+1 . In this sense, the higher realm contains the lower without thereby exhausting
+it—the higher realm has structural possibilities that the lower realm cannot express.
+
+Principle E1.1 (The Containment Chain). (A) The seven realms form a containment chain
+
+                              R1 ⊏ R2 ⊏ R3 ⊏ R4 ⊏ R5 ⊏ R6 ⊏ R7 ,
+
+where
+
+                                  R1 = First Determination,
+                                  R2 = Hub of Decree,
+                                  R3 = Structural Determination,
+                                  R4 = Hub of Signification,
+                                  R5 = Relational Manifestation,
+                                  R6 = Hub of Realization,
+                                  R7 = Material Manifestation.
+
+                                                 9
+10                                      CHAPTER E1. THE TOPOLOGY OF CONTAINMENT
+
+Principle E1.2 (The Ground as Environment). (A) The Ground (the structural name for what
+the traditions call al-‘Arsh) is not a realm within the chain. It is the environment of the chain:
+R1 ⊏ R2 ⊏ · · · ⊏ R7 ⊏ Ground, where the final containment is not a containment in a realm but
+a containment in the condition of possibility of the chain.
+Remark E1.2 (Why the Ground Is Not an Eighth Realm). If the Ground were an eighth realm, the
+argument for the number of realms (Philosophy, Chs. 19–20) would be called into question, and the
+distinction between the created order and its uncreated ground (Philosophy, Remark 7.7) would
+collapse. The Ground is therefore not a realm; it is the environment in which the chain of realms
+is contained.
+
+
+E1.3      Descent as Dimensional Restriction
+Principle E1.3 (Descent as Restriction). (T) Descent from Ri+1 to Ri is not a motion. It is the
+restriction of the structure of Ri+1 to the subspace Ri . What appears in Ri is the maximum that
+Ri can bear of the structure of Ri+1 .
+Proof. By Definition E1.1, Ri is a topological subspace of Ri+1 . A structure on Ri+1 (a function, a
+relation, a rule) restricts to a structure on Ri by composition with the embedding ιi . The restricted
+structure is the maximum that Ri can express of the structure of Ri+1 , because any structure on
+Ri that is compatible with the embedding is a restriction. If a richer structure were expressed in
+Ri , the embedding would not be an embedding—it would be an isomorphism, contradicting the
+strictness of the containment.
+
+Example E1.1 (Sphere and Circle). Consider a sphere S 2 contained in R3 , and a plane P ⊂ R3 .
+The intersection S 2 ∩ P is a circle (or empty, or a point). The circle is not the sphere; it is the
+maximum of the sphere that the plane can bear. The sphere does not “travel” to the plane; it
+appears in the plane as a circle, because the plane’s two-dimensional capacity cannot express the
+sphere’s three-dimensional structure. The circle is a faithful—but partial—manifestation of the
+sphere in the plane.
+Remark E1.3. The sphere–circle image is an illustration, not an argument. It illustrates the struc-
+ture of restriction, but it must not be taken literally: the realms are not spatial dimensions, and the
+containment is not spatial containment. The image is useful because it makes visible the structure
+of maximum expressible in a subspace, which is the structure of descent.
+
+
+E1.4      Compatibility with Independence and Non-Passage
+Proposition E1.1 (Containment Entails Independence of Mode). (T) If Ri ⊏ Ri+1 , then Ri has
+a mode of existence that is not reducible to the mode of existence of Ri+1 .
+Proof. Suppose, for contradiction, that the mode of existence of Ri is reducible to that of Ri+1 .
+Then every structural possibility of Ri is a structural possibility of Ri+1 restricted. But by Def-
+inition E1.1, the embedding ιi is strict: Ri+1 has structural possibilities that Ri cannot express
+(otherwise the containment would be an isomorphism). Hence the mode of existence of Ri has
+features—namely, the structural possibilities it excludes—that are not features of Ri+1 ’s mode as
+restricted to Ri . Therefore the modes are distinct.
+
+Remark E1.4. This proposition shows that containment strengthens the independence principle of
+the main volume (Philosophy, Principle 7.1). Independence is not separability; it is independence
+E1.5. THE SELF AS CONTAINED IN ALL REALMS                                                         11
+
+of mode. The realms are contained, one in the next, but each has a mode that the others cannot
+exhaust.
+
+Proposition E1.2 (Containment Entails Non-Passage). (T) If Ri ⊏ Ri+1 , then an identity man-
+ifested in Ri need not be manifested in any intermediate realm Rj with i < j < k for any k > i.
+
+Proof. By Definition E1.1, Ri is already a subspace of Ri+1 , hence of every Rk with k > i. The
+identity, being manifested in Ri , is therefore present in every higher realm as an element of the
+subspace, without needing to appear in any intermediate realm as such. Passage would require the
+identity to be manifested in each intermediate realm, which is a strictly stronger condition than
+containment. Containment does not require passage.
+
+Remark E1.5 (Containment Is Not Pantheism). Containment must not be confused with identity.
+That Ri ⊏ Ri+1 does not entail that Ri = Ri+1 , nor that the Ground is identical with the chain.
+The subspace is a proper part of the space, not the whole of it. The principle containment is
+not identity is stated explicitly in Philosophy, Remark 14.6, and is here extended to the relation
+between realms.
+
+
+E1.5      The Self as Contained in All Realms
+Principle E1.4 (The Self as Contained). (A) The self is not located in a single realm. It is a
+subspace of every realm in the chain, from R1 to R7 . In each realm, the self appears according to
+that realm’s capacity, but the self is not exhausted by any of its appearances.
+
+Remark E1.6. This principle is the structural foundation of the anthropology developed in Ap-
+pendix B of the main volume. There, the self is defined as the meeting-point of nafs (the exigency
+of the material category) and ruh (the light of the higher category). With the containment prin-
+ciple, the meeting-point is not a point in a single realm; it is a subspace of the whole chain. The
+nafs is the aspect of the self that is expressed in R6 and R7 ; the ruh is the aspect expressed in R1
+through R4 ; the self is the whole of the subspace.
+12   CHAPTER E1. THE TOPOLOGY OF CONTAINMENT
+Chapter E2
+
+Hubs as Categories of Transition
+
+E2.1      The Question
+The main volume defines the three barzakhic realms by their function: the Hub of Decree appor-
+tions measure, the Hub of Signification carries structure into meaning, and the Hub of Realization
+actualizes what is possible (Philosophy, Definitions 8.4–8.6). It argues for their independence (Phi-
+losophy, Principle 8.1) and for their irreducibility (Philosophy, Principle 20.1).
+     But the main volume does not say what kind of thing a hub is. If a hub is defined by its function,
+it risks collapsing into a mere operator—something that does something but is not anything in itself.
+The present chapter argues that a hub is a category of transition: a mode of existence whose internal
+structure is passage.
+
+
+E2.2      Hubs as Categories
+Principle E2.1 (Hubs as Categories). (A) Each hub is a category of transition: an independently
+real mode of existence whose internal structure is passage from one kind of multiplicity to another.
+The hub is not a function that could be performed by another realm; it is a category whose being
+is the passage.
+
+Definition E2.1 (Category of Transition). A category of transition from Ri to Ri+1 is a realm
+R such that:
+
+ (a) R is a topological subspace of the environment that contains both Ri and Ri+1 ;
+
+ (b) the internal structure of R is a passage: every element of R is a passage from an element of
+     Ri to an element of Ri+1 ;
+
+ (c) the passage is regulated by structural constraints (the rules of the hub, Philosophy, Ch. 17).
+
+Remark E2.1. The definition locates the hub by its mode of existence, not by its effects. A hub
+does not first exist and then mediate; it exists as mediation. This is the structural meaning of the
+claim that the hubs are not reducible to functions (Philosophy, Principle 8.1).
+
+Proposition E2.1 (The Three Hubs Are Categories of Transition). (T) The Hub of Decree is the
+category of transition from R1 (pure unity) to R3 (multiplicity of form); the Hub of Signification
+is the category of transition from R3 to R5 (multiplicity of relation); the Hub of Realization is the
+category of transition from R5 to R7 (multiplicity of matter).
+
+                                                  13
+14                                   CHAPTER E2. HUBS AS CATEGORIES OF TRANSITION
+
+Proof. By Definition E2.1, each hub must satisfy conditions (a)–(c). The Hub of Decree satisfies
+them because (a) it is contained in the environment, (b) its internal structure is the apportioning
+of unity into forms, and (c) its rules are proportion, order, and harmony (Philosophy, Principles
+17.2–17.4). The same argument applies, mutatis mutandis, to the Hub of Signification and the Hub
+of Realization.
+
+
+E2.3       Hubs as Cognitive Operators
+Principle E2.2 (Hubs as Conditions of Cognition). (T) The hubs are the conditions of possibility
+of cognition of identities. An identity is veiled ( Philosophy, Ch. 25); what makes it legible is the
+passage through the hubs. Each hub makes legible a different aspect of the identity.
+
+Proof. By Philosophy, Ch. 25, an identity is intrinsically unknown to a finite subject. Cognition of
+the identity requires manifestation. By Definition E2.1, manifestation is the passage through the
+hubs. Each hub makes legible a specific aspect of the passage:
+
+     • The Hub of Decree makes legible the measure of the identity (how much of it can appear);
+
+     • The Hub of Signification makes legible the meaning of the identity (what it signifies in con-
+       text);
+
+     • The Hub of Realization makes legible the actuality of the identity (that it is realized here and
+       now).
+
+Without the hubs, the identity would remain veiled—not because the subject lacks information,
+but because the structure of manifestation would not be in place.
+
+Remark E2.2 (The Three Operators of Cognition). The three hubs correspond to three operators
+on the veiled identity:
+
+                   Measure : I → P1 ,       Signify : I → P2 ,    Realize : I → P3 ,
+
+where P1 , P2 , P3 are the possibility spaces of the identity at the levels of measure, meaning, and
+actuality. Cognition is the composition of these operators.
+          Part II
+
+The Trans-Categorical Triad
+
+
+
+
+             15
+Chapter E3
+
+Light, Identity, and Self-Awareness
+
+E3.1      The Question
+The main volume introduces light as a trans-categorical substance (Philosophy, Ch. 12). The
+present chapter argues that light is not the only trans-categorical: there are three, and they are
+structurally parallel.
+
+
+E3.2      The Principle of Totality of Possibility
+Before the argument against self-awareness as a category can be stated, a principle on which it
+depends must be introduced.
+
+Principle E3.1 (Totality of Possibility). (A) Every possible is already in existence. What an
+action does is not to create a possibility but to select a branch of the possible. Existence contains
+all possibilities; actuality is the selection among them.
+
+Remark E3.1. The principle is modal, not temporal. It does not say that all possibilities are
+realized; it says that all possibilities are available for realization. Realization is the act of selection,
+not the act of creation. The distinction between existence and actuality is the structural foundation
+of the account of action in Chapter E4.
+
+
+E3.3      The Argument Against Self-Awareness as a Category
+Theorem E3.1 (Self-Awareness Is Not a Category). (T) Self-awareness cannot be a manifestation
+in any realm. If it were, a regress would follow.
+
+Proof. Suppose, for contradiction, that self-awareness is a manifestation in some realm Ri . By the
+Principle of Totality of Possibility (Principle E3.1), every manifestation is the product of a choice.
+Hence self-awareness is the product of a choice. But a choice requires a chooser, and the chooser
+must be self-aware (otherwise it could not choose). Hence a further self-awareness is required, and
+this regress is vicious. Therefore self-awareness is not a manifestation.
+
+Remark E3.2. The theorem does not deny that self-awareness appears in a realm; it denies that
+self-awareness is a manifestation. Self-awareness appears as a structural feature of the passage, not
+as a term in the passage.
+
+                                                    17
+18                                 CHAPTER E3. LIGHT, IDENTITY, AND SELF-AWARENESS
+
+E3.4       The Trans-Categorical Triad
+Principle E3.2 (The Trans-Categorical Triad). (A) Light, identity, and self-awareness are the
+three trans-categorical conditions of possibility:
+
+     • Light is the condition of possibility of relation;
+
+     • Identity is the condition of possibility of succession;
+
+     • Self-awareness is the condition of possibility of choice.
+
+Each is trans-categorical: it comes before the distinction among substance, accident, process, and
+relation, not after it.
+
+Remark E3.3 (Parallelism). The triad is structurally parallel: each trans-categorical is the condition
+of a specific structural feature of the realms. Relation (light) makes the network of manifestations
+possible; succession (identity) makes the persistence of an identity through its manifestations pos-
+sible; choice (self-awareness) makes the actualization of one possible manifestation over another
+possible.
+
+Proposition E3.2 (Irreducibility of the Triad). (T) None of the three trans-categoricals is reducible
+to another.
+
+Proof. Suppose light were reducible to identity. Then relation would be reducible to succession. But
+relation and succession are distinct structural features: a network can be simultaneous (relation
+without succession) or sequential (succession without relation). Hence the reduction fails. The
+same argument applies, mutatis mutandis, to the other pairs.
+
+
+E3.5       The Ontological Status of the Modal Space
+The Principle of Totality of Possibility (Principle E3.1) states that every possible is already in
+existence. The present section clarifies the ontological status of this principle, and draws four
+consequences that bear on the rest of the framework.
+
+E3.5.1      The Three Ontological Layers
+Definition E3.1 (The Three Ontological Layers). (A) The ontological architecture has three layers,
+in order of fundamentality:
+
+  (i) The Modal Space Ω: the totality of all possibilities. These are grounded in the Ground and
+      known by the Ground. They are ontologically real, not merely logical abstractions.
+
+ (ii) The Actualization Chain X ⊂ Ω: the subset of possibilities that are actualized, in succes-
+      sion. The chain is selected by self-awareness S.
+
+(iii) The Structural Order R: the seven realms, the categories, and the four columns. These are
+      posterior to both Ω and X : they describe the form that actualization takes, not its condition.
+
+     The relation among the three layers is:
+                                      S                           form
+                            Ω
+                           |{z}       −−→          X
+                                                  |{z}            −−−→         R
+                                                                              |{z}          .
+                        Modal Space         Actualization Chain          Structural Order
+E3.5. THE ONTOLOGICAL STATUS OF THE MODAL SPACE                                                     19
+
+Remark E3.4 (The Ground and the Theological Vocabulary). The structural term Ground is used
+throughout this extension in preference to the theological term God. The Ground is the structural
+condition of possibility of the chain of realms; it is not a being within the chain, and it is not
+described by the framework. The choice of the structural term is not a denial of the theological
+term: the traditions speak of God as the creator of all possibilities, and the structural Ground is
+what the framework can say about that creator without exceeding its method. The relation between
+the structural Ground and the theological God is a question for another inquiry—the inquiry that
+revelation authorizes—and the framework neither undertakes it nor forecloses it. The pattern is
+the same as the pattern of light in the main volume (Philosophy, Ch. 12): a structural term that
+points beyond itself to what the traditions call divine.
+
+E3.5.2    The Ontological Principle Restated
+Principle E3.3 (Totality of Possibility (Ontological)). (A) The modal space Ω is ontologically real.
+Every possibility is grounded in the Ground and known by the Ground. What an action does is not
+to create a possibility but to select one for actualization. The actualization chain X is the selection
+of self-awareness from Ω.
+
+Remark E3.5 (Epistemic Inaccessibility). (A) We have no direct epistemic access to Ω. We access
+only X (the actualized). Every formalization of possibility is therefore formalized from the stand-
+point of actualization, not from the standpoint of Ω. The space Ω is posited as the ontological
+ground of selection, not as an object of knowledge.
+
+Principle E3.4 (The Modal Space Is Contained in the Ground). (A) The modal space Ω is con-
+tained in the Ground: Ω ⊏ Ground. The containment is not spatial or temporal; it is the contain-
+ment of a condition in its condition of possibility. The Ground is not a realm within Ω, and Ω is
+not identical with the Ground. The relation is one of grounding, not of identity.
+
+Remark E3.6 (Creation ex Nihilo, Structural Priority). The containment of Ω in the Ground is the
+structural expression of the traditional doctrine of creation ex nihilo. The Ground creates Ω; Ω is
+not made from anything prior. But the creation is not a temporal event: time is posterior to Ω
+(Chapter E5). The creation is a relation of structural priority, not of temporal succession. The
+Ground is prior to Ω in the order of grounding, not in the order of time.
+
+E3.5.3    The Theological Resolution
+Theorem E3.3 (Omniscience and Freedom Are Compatible). (T) Given the modal ontology of
+Principle E3.3, divine omniscience and creaturely freedom are compatible. The Ground knows all
+possibilities (Ω); the self selects among them (S). The Ground’s knowledge of Ω does not constrain
+S, because the selection is constituted by the act of self-awareness, not determined by the Ground’s
+knowledge.
+
+Proof. By Principle E3.3, Ω is ontologically real and known by the Ground. By Definition E3.1, X
+is the selection of S from Ω. Suppose the Ground’s knowledge of Ω determined X . Then S would
+be redundant: the selection would be fixed by the Ground’s knowledge alone. But S is the trans-
+categorical condition of choice (Principle E3.2); it cannot be redundant without contradicting the
+triad. Hence the Ground’s knowledge of Ω does not determine X . The selection is the creature’s
+act, and the creature is therefore free and responsible.
+
+Remark E3.7 (What This Resolves). The resolution has three consequences:
+20                               CHAPTER E3. LIGHT, IDENTITY, AND SELF-AWARENESS
+
+  (i) The Ground’s omniscience is knowledge of Ω (all possibilities), not of X (the actualized
+      trajectory). The Ground knows what can happen; the Ground does not determine what does
+      happen.
+ (ii) Human freedom is the selection of S from Ω. The selection is real, not illusory, because X
+      is genuinely indeterminate until S acts.
+(iii) Moral responsibility is grounded in the selection: since the selection is the creature’s act,
+      the creature is responsible for the actualized chain.
+Remark E3.8 (Why This Is Not Open Theism). Open theism says that the Ground does not
+know the future because the future is not yet determinate. The present view is different: the
+Ground knows all possibilities (including the future possibilities), but the selection among them
+is not determined by the Ground’s knowledge. The future is not unknown to the Ground; it is
+undetermined by the Ground’s knowledge. The distinction is between ignorance (open theism’s
+problem) and non-determination (the present view’s solution).
+
+E3.5.4    Middle Knowledge and the Molinist Refinement
+The theorem of the previous subsection states that the Ground knows Ω but does not determine
+X . A reader may ask: does the Ground know what the creature will freely do, or only what the
+creature can do? The present subsection refines the theorem to answer this question, and adopts
+the Molinist position.
+Definition E3.2 (Conditional Possibilities). (A) The conditional possibilities of Ω are the coun-
+terfactuals of freedom: for each creature c, each circumstance σ, and each action a, the proposition
+“c would freely do a in σ” is either true or false, and is part of Ω.
+Principle E3.5 (Molinist Omniscience). (A) The Ground knows (i) all bare possibilities (natural
+knowledge), (ii) all conditional possibilities (middle knowledge), and (iii) the actualized chain (free
+knowledge). The three kinds of knowledge are exhaustive of what there is to know, and none of
+them determines the creature’s selection.
+Theorem E3.4 (Omniscience and Freedom Are Compatible (Molinist Version)). (T) Given the
+Molinist refinement of Principle E3.5, divine omniscience and creaturely freedom are compatible.
+The Ground knows what the creature would freely do in every circumstance, but this knowledge does
+not determine what the creature does. The determination is the creature’s act of selection (S), not
+the Ground’s knowledge.
+Proof. By Principle E3.5, the Ground knows the conditional possibilities. Suppose this knowledge
+determined the creature’s selection. Then the selection would be fixed by the Ground’s knowledge
+alone, and S would be redundant—contradicting Principle E3.2. Hence the Ground’s knowledge
+of conditional possibilities does not determine the selection. The selection remains the creature’s
+act.
+
+Remark E3.9 (Why Molinism and Not Open Theism). Open theism says that the Ground does
+not know the future because the future is not yet determinate. The present view is different: the
+Ground knows all conditional possibilities (including what the creature would freely do), and knows
+the actualized chain (because it is the selection of S). The future is not unknown to the Ground; it
+is undetermined by the Ground’s knowledge. The distinction is between ignorance (open theism’s
+problem) and non-determination (the present view’s solution). The Molinist position preserves
+both omniscience and freedom; open theism preserves freedom at the cost of omniscience.
+E3.5. THE ONTOLOGICAL STATUS OF THE MODAL SPACE                                                       21
+
+Remark E3.10 (The Problem of Evil Resolved). (T) If all possibilities, including evil possibilities,
+are grounded in the Ground, is the Ground the author of evil? The present view answers: the
+Ground grounds the possibility of evil (as part of Ω), but the actualization of evil is the creature’s
+selection. The Ground is the ground of the modal space; the creature is the selector of the actualized
+trajectory. The distinction between creating the possible and selecting the actual is the structural
+foundation of the free-will defense.
+
+
+E3.5.5    Coherence with Quantum Mechanics
+
+    Coherence Test (not evidence, not justification)
+    What this test shows. That the modal ontology of Principle E3.3 is coherent with the
+    way quantum mechanics describes measurement.
+    The Ptest. In quantum mechanics, a system in superposition is described by a wave function
+    ψ = i ci |i⟩. The superposition encodes all possible measurement outcomes. Measurement
+    (or decoherence) selects one outcome. The formalism describes the actualized outcome, not
+    the space of possibilities itself: we never have direct access to Ω, only to the actualized X .
+    This is structurally parallel to the modal ontology: Ω is the space of possibilities; X is the
+    actualized trajectory; S is the selection.
+    What this test does not show. It does not show that the modal ontology is derived from
+    quantum mechanics, or that quantum mechanics confirms the modal ontology. It shows
+    only that the modal ontology is coherent with the way at least one established inquiry
+    describes the same structure. The framework does not depend on quantum mechanics, and
+    quantum mechanics does not depend on the framework.
+
+
+E3.5.6    The Structural Order Is Posterior to the Modal Space
+
+Principle E3.6 (The Structural Order Is Posterior to the Modal Space). (A) The seven realms,
+the categories, and the four columns are posterior to the modal space Ω and the actualization chain
+X . They describe the form that actualization takes, not its condition. The order of fundamentality
+is: Ω (most fundamental), then X , then R (least fundamental).
+
+Remark E3.11 (What This Changes). This principle reverses the methodological priority of the
+main volume. In the main volume, the four-column framework is the first principle, and the realms
+are derived from it. In the present extension, the modal space is the first principle, and both the
+four-column framework and the realms are posterior to it. The reversal is not a contradiction: the
+four-column framework remains the analytical structure of explanation, and the realms remain the
+ontological structure of actualization. What changes is their ground : they are grounded in the
+modal space, not in themselves.
+
+Remark E3.12 (Posteriority in Fundamentality, Not in Reality). The posteriority of the realms to Ω
+(Principle E3.6) is a posteriority in fundamentality, not a posteriority in reality. The realms are not
+the ground of Ω; but they are not less real than Ω. The distinction is the same as the distinction
+in Philosophy, Remark 7.4: independence is not self-sufficiency. The realms are independent of
+each other in mode (Philosophy, Principle 7.1); they are not independent of Ω in grounding. The
+two claims are compatible because they concern different respects: the first concerns the mode of
+existence, the second concerns the order of grounding.
+22                                CHAPTER E3. LIGHT, IDENTITY, AND SELF-AWARENESS
+
+E3.6      The Thread and the Beads
+Definition E3.3 (Identity as Thread). (A) An identity is a thread: a structural invariant that
+holds a sequence of manifestations together. It is not the sequence, and it is not any of its members.
+
+Principle E3.7 (The Invisibility of the Thread). (T) The thread is not visible in the field of
+manifestations. What is visible are the beads (the manifestations); the thread is not visible because
+the field does not have the capacity to display it.
+
+Proof. By Definition E3.3, the thread is the invariant, not the varying. What is displayed in a
+realm is the varying (the manifestations). The invariant is the structural condition of the display,
+not an item in it. Hence the thread is not visible in the field of manifestations.
+
+Remark E3.13. The invisibility of the thread is structurally parallel to the invisibility of light
+(Philosophy, Principle 14.5). In both cases, a condition of possibility is not one of the things made
+possible.
+
+
+E3.7      Reduction of Members and Conservation of Identity
+Theorem E3.5 (Conservation Under Reduction). (T) If the number of manifestations of an iden-
+tity is reduced, the identity is not thereby destroyed. The thread is conserved; only the beads are
+lost.
+
+Proof. By Definition E3.3, the identity is the thread, not the beads. The thread is the condition
+of possibility of the sequence, not the sequence itself. Hence the loss of some beads does not entail
+the loss of the thread. The identity is conserved.
+
+Example E3.1 (Amputation and Hydrocephalus). A person who loses a limb, or whose brain is
+significantly compressed by fluid (hydrocephalus), loses some manifestations but not her identity.
+The thread is conserved; the beads are reduced. This is consistent with the empirical findings cited
+in the literature, and it illustrates the structural principle: identity is not reducible to its material
+substrate.
+Remark E3.14. The empirical examples are coherence tests, not justifications. They show that the
+structural principle is compatible with the empirical facts; they do not establish it. The structural
+argument (Theorem E3.5) is what establishes the principle.
+       Part III
+
+Action and Metaethics
+
+
+
+
+          23
+Chapter E4
+
+Action as Change of Possibility Space
+
+E4.1      The Question
+The main volume’s Appendix A states that viability metaethics describes the architecture of moral
+systems (Philosophy, Appendix A.1). But it does not say what an action is, nor what makes an
+action ethical. The present chapter proposes a structural definition of action, refines it by the
+distinction between action, contextual act, and ethical action, and derives from it a structural
+taxonomy of ethical evaluation.
+
+
+E4.2      Action Defined
+Definition E4.1 (Action). (A) An action is any effect that changes the space of possible realization
+of an identity.
+Definition E4.2 (Space of Possible Realization). (A) The space of possible realization of an
+identity I in a realm R is the set P(I, R) of manifestations of I that are structurally compatible
+with I and with R.
+Remark E4.1. The space P(I, R) has two dimensions: its cardinality (how many possible mani-
+festations it contains) and its structure (how rich the relations among them are). An action may
+change either or both.
+Proposition E4.1 (Three Types of Action). (T) Every action is of one of three types:
+  (i) Contractive: reduces P(I, R);
+ (ii) Expansive: increases P(I, R);
+(iii) Rearranging: changes the structure of P(I, R) without changing its cardinality.
+Proof. By Definition E4.1, an action changes P(I, R). The change is either a decrease (contractive),
+an increase (expansive), or a change of structure without a change of cardinality (rearranging).
+These are exhaustive.
+
+
+E4.3      Action, Contextual Act, and Ethical Action
+The definition of action in the previous section is deliberately broad. It includes every effect that
+changes a space of possible realization, whether or not the effect has an agent. The present section
+refines the definition by distinguishing three kinds of effect.
+
+                                                 25
+26                            CHAPTER E4. ACTION AS CHANGE OF POSSIBILITY SPACE
+
+Definition E4.3 (Action, Contextual Act, Ethical Action). (A) Let P(I, R) be the space of possible
+realization of identity I in realm R, and let e be an effect that changes P.
+  (i) e is an action iff e changes P(I, R).
+ (ii) e is a contextual act iff e is an action and no will or choice precedes it.
+(iii) e is an ethical action iff e is an action and a will or choice precedes it.
+Remark E4.2 (The Falling Stone). The falling of a stone is an action (it changes the space of
+possible realization of the things beneath it), but it is a contextual act (no will precedes it). It
+is therefore not subject to ethical judgment—not because it has no effect, but because it has no
+agent. This is consistent with the distinction between ethical and contextual evil developed in
+Section E4.6.
+Remark E4.3 (Why the Distinction Matters). Without the distinction, the expansion criterion
+(Principle E4.1) would have to evaluate the falling of a stone, the flow of a river, and the growth
+of a plant—which is absurd. The distinction locates the domain of ethical evaluation: only actions
+that are preceded by a will or choice. Actions that are not so preceded are contextual acts; they
+are structurally real, but they are not candidates for ethical evaluation.
+
+
+E4.4      The Expansion Criterion
+Principle E4.1 (The Expansion Criterion). (A) An ethical action is ethical if it expands (or at
+least preserves) the space of possible realization of some identity, without contracting the space of
+possible realization of any other identity.
+Remark E4.4 (The Criterion Is Structural). The expansion criterion is not a utilitarian criterion
+(which would maximize the sum of spaces) nor a deontological criterion (which would be a categor-
+ical rule). It is structural: it states a condition on the relation between an action and the space of
+possible realization. A utilitarian or deontological criterion may be derived from it, but only under
+additional premises.
+Proposition E4.2 (Non-Ethical Actions). (T) If an ethical action contracts the space of possible
+realization of an identity I2 without a structural justification, the action is non-ethical.
+Proof. By the expansion criterion, an ethical action must not contract any identity’s space without
+justification. If the contraction is unjustified, the action fails the criterion. Hence the action is
+non-ethical.
+
+
+E4.5      The Bridge Principle
+Principle E4.2 (Bridge Principle). (A) Viability (in the sense of Philosophy, Def. 6.2) is a
+structural good in the following sense: it is the condition of possibility of any good that the relation
+between an identity and its manifestations can bear. It is not itself the good, but its reduction
+reduces the condition of possibility of the good.
+Remark E4.5 (The Bridge Does Not Violate the Is/Ought Gap). The bridge principle does not
+derive an ought from an is. It derives a conditional ought from an is: if the good is to be possible,
+then viability must be maintained. The conditional is a structural claim, not a normative one. The
+normative premise (that the good is to be possible) is supplied by the inquiry into the good, not
+by the structural framework.
+E4.6. CONTEXTUAL EVIL AND ETHICAL EVIL                                                                27
+
+E4.6      Contextual Evil and Ethical Evil
+Definition E4.4 (Ethical and Contextual Evil). A contextual evil is a contraction of a space of
+possible realization that is not caused by an agent (e.g., a flood). An ethical evil is a contraction
+caused by an agent.
+Proposition E4.3 (Responses to Evil). (T) Responding to a contextual evil by expanding the space
+of possible realization is an ethical action. The response is not a response to an ethical evil (the
+flood is not an agent), but it is an ethical action, because it expands the space.
+Proof. By Definition E4.4, the flood is a contextual evil. By the expansion criterion (Principle E4.1),
+an action that expands the space is ethical. Hence the response to the flood is ethical.
+
+
+E4.7      The Threefold Ethical Taxonomy
+The expansion criterion (Principle E4.1) states a binary condition: an ethical action either satisfies
+it or does not. The present section sharpens the criterion into a threefold taxonomy, which locates
+every ethical action in exactly one of three categories.
+Definition E4.5 (Threefold Ethical Taxonomy). (A) Let A be an ethical action, and let ∆P be
+its effect on the space of possible realization. A belongs to exactly one of three categories:
+ (1) Blameworthy ( mazmūm): ∆P < 0—the action contracts the space.
+
+ (2) Duty ( wazı̄fa): ∆P = 0 and the harmony between P and the self-awareness S is preserved.
+
+ (3) Virtue ( fad.ı̄la): ∆P > 0—the action expands the space.
+Remark E4.6 (On the Traditional Labels). The Arabic-Persian labels mazmūm, wazı̄fa, and fad.ı̄la
+are the traditional names for the three categories. They are used here as structural labels, not as
+ethical prescriptions in the traditional sense. The structural sense of each is fixed by Definition E4.5,
+and no traditional use of the terms determines their sense here.
+Definition E4.6 (Harmony of Possibility Space and Self-Awareness). (T) The possibility space
+P(I, R) and the self-awareness S are in harmony iff:
+ (a) every element of P that is selected by S is compatible with the structural constraints of S;
+
+ (b) every constraint of S is reflected in P.
+Remark E4.7 (Why Duty Is Not Mere Preservation). “Duty” in this taxonomy is not mere preser-
+vation of the space. If an action preserves the space but breaks the harmony between the space and
+the self-awareness, it is blameworthy—because the self-awareness can no longer select properly from
+a disharmonious space, and the space is therefore effectively contracted. Duty is the preservation
+of harmony, not merely of cardinality.
+Theorem E4.4 (Completeness of the Threefold Taxonomy). (T) Every ethical action belongs to
+exactly one of the three categories: blameworthy, duty, or virtue.
+Proof. Let A be an ethical action. ∆P is either negative, zero, or positive. If negative, A is
+blameworthy. If positive, A is virtue. If zero, either harmony is preserved (then A is duty) or
+harmony is broken (then A is effectively contractive, and therefore blameworthy). In every case, A
+belongs to exactly one category. The taxonomy is complete.
+28                            CHAPTER E4. ACTION AS CHANGE OF POSSIBILITY SPACE
+
+E4.8      Integration with the Trans-Categorical Triad
+The threefold ethical taxonomy is structurally parallel to the trans-categorical triad (Principle E3.2):
+
+      Trans-categorical                       Ethical dimension                   Structural role
+      Light (condition of relation)           Blameworthy: severing relation      Contraction
+      Identity (condition of succession)      Duty: preserving succession         Harmony
+      Self-awareness (condition of choice)    Virtue: expanding choice            Expansion
+
+Remark E4.8 (The Structural Parallel). The ethical taxonomy is not a separate doctrine added to
+the framework. It is a structural consequence of the trans-categorical triad: each trans-categorical
+condition has an ethical dimension, and the three dimensions are the three categories of the tax-
+onomy. The parallel is not an accident; it is the structure of the framework made visible in the
+ethical domain.
+
+
+E4.9      Formalization of Harmony and the Threefold Taxonomy
+The definitions of harmony (Definition E4.6) and the threefold taxonomy (Definition E4.5) are
+stated in prose. The present section provides formal versions, and states the structural parallel
+with the trans-categorical triad as an isomorphism theorem.
+
+Definition E4.7 (Formal Harmony). (A) Let P be the space of possible realization of I in R, and
+let S be the self-awareness. Let Comp(S) ⊆ P be the set of elements of P compatible with the
+constraints of S, and let Struct(P) be the structural constraints of P. P and S are in harmony iff:
+
+             Harmony(P, S) ⇐⇒ S(P) ⊆ Comp(S) ∧ Constraints(S) ⊆ Struct(P).
+
+Theorem E4.5 (Formal Completeness of the Threefold Taxonomy). (T) The sets Blame(P, S),
+Duty(P, S), and Virtue(P, S) form a partition of the set of ethical actions:
+
+     Blame ∪ Duty ∪ Virtue = Aeth ,       Blame ∩ Duty = Duty ∩ Virtue = Virtue ∩ Blame = ∅.
+
+Proof. By Definition E4.5, every ethical action A has ∆P < 0, ∆P = 0 with harmony, or ∆P > 0.
+These three cases are exhaustive and mutually exclusive. Hence the three sets form a partition.
+
+Theorem E4.6 (Isomorphism of the Triads). (T) There is a structure-preserving bijection between
+the trans-categorical triad (Principle E3.2) and the threefold ethical taxonomy (Definition E4.5):
+
+                                     Light     ←→ Blameworthy
+                                    Identity   ←→    Duty
+                                Self-awareness ←→    Virtue
+
+The bijection preserves the structural role of each element: light (condition of relation) corresponds
+to blameworthy (severing relation); identity (condition of succession) corresponds to duty (preserv-
+ing succession); self-awareness (condition of choice) corresponds to virtue (expanding choice).
+
+Proof. By Principle E3.2, each trans-categorical has a structural role. By Definition E4.5, each
+ethical category has a structural role. The two triads have the same structure (three elements,
+three roles, three relations). The correspondence is a bijection that preserves the structure. Hence
+the two triads are isomorphic.
+E4.10. THE THREE LEVELS AND THE THREEFOLD TAXONOMY                                                  29
+
+E4.10       The Three Levels and the Threefold Taxonomy
+The threefold taxonomy refines the three levels of ethical action stated in the expansion criterion.
+Principle E4.3 (Three Levels of Ethical Action). (T) Ethical action admits three levels:
+  (i) Minimal: refrain from contracting the space of possible realization;
+ (ii) Mean: compensate for a contextual contraction;
+(iii) Maximal: actively expand the space.
+Proof. The three levels correspond to the three possible relations between an action and the space
+of possible realization: non-contraction, compensation, expansion. Each is a distinct degree of
+ethical adequacy. The proof follows from Definition E4.1 and Principle E4.1.
+Remark E4.9 (Refinement by the Threefold Taxonomy). The threefold taxonomy (Definition E4.5)
+refines the three levels. The correspondence is:
+
+ Three levels                   Threefold taxonomy
+ Minimal: non-contraction       Duty: preservation of harmony
+ Mean: compensation             Subsumed under duty (compensation is a form of harmony restoration)
+ Maximal: active expansion      Virtue: expansion of the space
+ (No equivalent)                Blameworthy: contraction of the space
+The refinement is not a replacement; it is a sharpening. The three levels remain, but they are now lo-
+cated within a more precise taxonomy. The principal sharpening is twofold: (i) the “minimal” level
+is strengthened to the “duty” level by the requirement of harmony, not merely non-contraction; (ii)
+the taxonomy names explicitly the “blameworthy” category that the three levels had left implicit.
+
+
+E4.11       Soft Manifestation and the Action Chain
+The previous sections defined action and ethical action. The present section refines the account by
+distinguishing hard from soft manifestations, and by showing that an action is not complete until
+its effect is received by a hard manifestation.
+
+E4.11.1     Hard and Soft Manifestation
+Definition E4.8 (Hard and Soft Manifestation). (A) Following the main volume ( Philosophy,
+Ch. 35), a hard manifestation of an identity I in a realm R is a manifestation with structural
+inertia: it resists change, and its persistence is a condition of unity. A soft manifestation of I in
+R is a manifestation without structural inertia: it exists only as the act by which self-awareness
+activates a hard manifestation.
+Definition E4.9 (Soft Manifestation as Product). (A) A soft manifestation of an identity I in a
+realm R is the product of a hard manifestation H(I, R) and the self-awareness S of I: it is the
+action by which S activates H to emit an effect into R.
+Remark E4.10 (Soft Manifestation Is Not Independent). The soft manifestation is not an indepen-
+dent entity that exists alongside the hard manifestation. It is the product of the hard manifestation’s
+activation by self-awareness. Without the hard manifestation, there is nothing to activate; with-
+out the self-awareness, there is no activation. The soft manifestation is the act of the pair (hard
+manifestation, self-awareness), not a third thing.
+30                            CHAPTER E4. ACTION AS CHANGE OF POSSIBILITY SPACE
+
+E4.11.2     The Action Chain
+Definition E4.10 (Action Chain). (A) An action chain is a sequence of four stages:
+
+  (i) Emission: S activates H to emit a signal σ into R;
+
+ (ii) Transmission: σ travels through R via the fluid element (light);
+
+(iii) Reception: σ meets a hard manifestation H′ in R;
+
+(iv) Effect: H′ is modified by σ.
+
+The action is actual only when all four stages occur. Before the fourth stage, the action is potential:
+an emitted signal that has not yet landed.
+
+Example E4.1 (The Radio Station). A radio employee, out of mischief, announces that extrater-
+restrials are attacking. The announcement is an emission (stage i): the employee’s voice, a hard
+manifestation, is activated by her self-awareness. The radio waves travel through the air (stage
+ii): the transmission. As long as the waves are in the air and have not been received, the action
+is potential, not actual. When a listener hears the announcement and panics, the action becomes
+actual (stages iii–iv): the listener’s body and psychology, hard manifestations, are modified by the
+signal. The panic, the rumor, and the social disruption are the effects of the action.
+Remark E4.11 (The Radio Metaphor Is Structural). The radio metaphor is not decorative. It
+makes visible the structure of the action chain: the action is not complete until the signal lands
+on a hard manifestation. The metaphor distinguishes three things that are easily run together:
+the emission (the signal), the transmission (the medium), and the effect (the modification of the
+receiver). The emission is the soft manifestation; the transmission is the fluid element (light); the
+effect is the modification of the receiving hard manifestation.
+
+
+E4.11.3     Crystallization of Effect
+Definition E4.11 (Crystallization). (A) The crystallization of an action is the process by which
+the effect of the action, initially a modification of a receiving hard manifestation, becomes itself a
+hard manifestation in the realm: a sediment, a habit, a structure, an institution.
+
+Example E4.2 (The Panic as Sediment). The panic that follows the radio announcement is initially
+a soft effect (a modification of the listeners’ bodies and psychologies). Over time, it crystallizes:
+it becomes a habit of fear (a hard manifestation in the listeners), a rumor (a hard manifestation
+in the relational realm), and a social disruption (a hard manifestation in the material realm). The
+action has become sediment (Philosophy, Definition 36.1).
+
+Principle E4.4 (The Crystallization Principle). (T) Every actual action tends toward crystalliza-
+tion: its effect, once received, becomes a hard manifestation in the realm, and the hard manifestation
+becomes the condition of further soft manifestations.
+
+Proof. By Definition E4.10, an actual action modifies a receiving hard manifestation. By Defini-
+tion E4.8, a hard manifestation exhibits structural inertia: it resists change, and its persistence is
+a condition of unity. Hence the modification, once received, tends to persist and to become itself a
+hard manifestation. The principle follows.
+E4.11. SOFT MANIFESTATION AND THE ACTION CHAIN                                                       31
+
+E4.11.4     The Two-Direction Relation
+Remark E4.12 (Hard and Soft Manifestations Are Mutually Conditioning). Hard and soft mani-
+festations are not independent. They condition each other in two directions:
+
+  (i) Soft from hard: every soft manifestation is the product of a hard manifestation and self-
+      awareness (Definition E4.9).
+
+ (ii) Hard from soft: every actual action tends toward crystallization, and its effect becomes a
+      hard manifestation (Principle E4.4).
+
+The two directions are not the same; they are the two moments of a single cycle: the hard man-
+ifestation is activated by self-awareness into a soft manifestation; the soft manifestation modifies
+another hard manifestation; the modification crystallizes into a new hard manifestation.
+
+                                            S
+                                   H              Soft  manifestation
+                                                   crystallization
+
+                                                            effect
+
+                                     activation           H′
+
+E4.11.5     The Ethical Consequence
+Principle E4.5 (The Locus of Ethical Evaluation). (T) An action is subject to ethical evaluation
+only at the stage of effect (stage iv of the action chain). A potential action (an emitted signal that
+has not yet landed) is not subject to ethical evaluation, because it has not yet modified any hard
+manifestation. The action on the emitter (the emission) may be subject to ethical evaluation as an
+action on the emitter, but this is a distinct evaluation.
+
+Proof. By the expansion criterion (Principle E4.1), an action is ethical if it expands (or at least
+preserves) the space of possible realization of some identity, without contracting the space of possible
+realization of any other identity. The space of possible realization is modified only when the action’s
+effect is received by a hard manifestation (Definition E4.10, stage iv). Before that stage, no space
+has been modified, and no ethical evaluation applies. The principle follows.
+
+Remark E4.13 (The Radio Announcer Revisited). The radio announcer who shouts into an empty
+room has emitted a signal, but the signal has not landed. The announcer’s action is potential, not
+actual. The ethical evaluation of the announcer’s action would have to wait for the reception. If
+the signal never lands, the action remains potential. If it lands on a listener and causes panic, the
+action is actual, and the ethical evaluation applies. The announcer’s intention to deceive is a soft
+manifestation of her self-awareness, and it may be evaluated as an action on herself, but it is not
+the same as the actual action on the listener.
+32   CHAPTER E4. ACTION AS CHANGE OF POSSIBILITY SPACE
+        Part IV
+
+Time and Self-Awareness
+
+
+
+
+           33
+Chapter E5
+
+Time and the Fundamental
+Self-Awareness
+
+E5.1      The Question
+The main volume defines time as realm-relative succession (Philosophy, Def. 33.1) and argues for
+the non-completion of expression (Philosophy, Principle 33.2). The present chapter refines this
+account: time is not merely a structural feature of the realms; it is the product of a fundamental
+self-awareness.
+
+
+E5.2      The Argument from Causation
+Principle E5.1 (Time Is Not Non-Phenomenal). (A) Time is not a non-phenomenal feature of
+reality. It is the structure of succession that appears in the relation between cause and effect.
+
+Proof. Causation is the relation of a cause to its effect. The cause is prior to the effect; the effect
+is posterior to the cause. The priority and posteriority are the structure of succession. If time were
+not the structure of succession, causation would have no temporal structure, and the priority of
+the cause would be unintelligible. Hence time is the structure of succession, and the structure of
+succession is a feature of the relation between cause and effect—that is, a phenomenal feature.
+
+Principle E5.2 (Self-Awareness as the Scaffold). (A) Self-awareness is the fundamental scaffold
+of existence. The chain of succession (time) presupposes a chooser (self-awareness); the chooser
+presupposes a choice; the choice presupposes a space of possibilities. Hence self-awareness is prior
+to time, and time is prior to the realized world.
+
+Remark E5.1 (The Order of Priorities). The order is not temporal priority (which would presuppose
+time). It is structural priority: self-awareness is the condition of possibility of time, and time is the
+condition of possibility of the realized world. The priority is a priority of conditions, not a priority
+in time.
+
+
+E5.3      Fundamental and Human Self-Awareness
+Principle E5.3 (Two Senses of Self-Awareness). (T) Fundamental self-awareness is the trans-
+categorical condition of possibility of choice (Principle E3.2). Human self-awareness is the appear-
+ance of the fundamental self-awareness in the Relational Manifestation.
+
+                                                   35
+36                     CHAPTER E5. TIME AND THE FUNDAMENTAL SELF-AWARENESS
+
+Proof. The fundamental self-awareness is trans-categorical (Theorem E3.1). It cannot be a man-
+ifestation. Human self-awareness is a manifestation (it appears in a realm). Hence the two are
+distinct: one is the condition, the other is the appearance.
+
+Remark E5.2 (The Distinction Resolves the Tension). Without the distinction, the claim that self-
+awareness is fundamental would collapse into the claim that human self-awareness is fundamental,
+which is clearly false (human self-awareness is a manifestation, dependent on the realm). The
+distinction preserves the fundamentality of the fundamental self-awareness while acknowledging
+the manifest character of human self-awareness.
+
+
+E5.4      The Unconscious as Weak Self-Awareness
+Principle E5.4 (The Unconscious). (T) The unconscious is not the absence of self-awareness; it
+is a weak self-awareness—a self-awareness that does not fully regulate its relation to its source.
+
+Proof. By Principle E5.2, self-awareness is the condition of possibility of choice. Every choice, even
+an unconscious one, presupposes a chooser. Hence the unconscious cannot be the total absence of
+self-awareness; it must be a mode of self-awareness in which the regulation is incomplete.
+
+
+E5.5      Phenomenal and Structural Time
+Principle E5.5 (Two Senses of Time). (A) Phenomenal time is the time we experience: the
+succession of conscious states. Structural time is the order of succession of the realms ( Philosophy,
+Def. 33.1). The two are distinct: phenomenal time is the product of fundamental self-awareness;
+structural time is a feature of the realms.
+
+Remark E5.3. The distinction is needed because the realms are not all temporal (Philosophy,
+Ch. 33). The First Determination is timeless; the Structural Determination is eternal without
+being temporal; the Material Manifestation is temporal. Phenomenal time, by contrast, is the time
+of conscious experience, which is a manifestation in the Relational Manifestation. The two must
+be kept apart.
+  Part V
+
+Arguments
+
+
+
+
+    37
+Chapter E6
+
+Arguments for the New Axioms
+
+E6.1      The Question
+The present extension introduces three new axioms: the Totality of Possibility (Principle E3.3,
+E3), the Fundamental Self-Awareness as Scaffold (Principle E5.2, E5), and the Expansion Criterion
+(Principle E4.1, E4). The main volume’s methodology requires that every axiom be accompanied
+by an argument, and that the argument state what would refute it. The present chapter supplies
+the arguments.
+
+
+E6.2      The Argument for the Totality of Possibility
+Argument E6.1 (Transcendental Argument for Totality). (T) The concept of action presupposes
+a space of possibilities from which to select. If there were no prior possibilities, action would
+be creation ex nihilo, which would make the creature a creator—contradicting the framework’s
+structural asymmetry between the Ground and the creature. Hence the space of possibilities must be
+prior to action. The space must be exhaustive, because a possibility outside it would be uncreated—
+contradicting the Ground’s exhaustive grounding of the modal space (Principle E3.4). Therefore
+the modal space is total.
+
+Remark E6.1 (What Would Refute the Argument). The argument would be refuted by showing
+that action can be creation ex nihilo without a prior space of possibilities, or that there can be
+a possibility outside the modal space. The framework does not claim that no such case can be
+described; it claims that none has been described, and that the structural asymmetry between the
+Ground and the creature rules it out.
+
+
+E6.3      The Argument for the Scaffold
+Argument E6.2 (Transcendental Argument for Scaffold). (T) Time presupposes succession; suc-
+cession presupposes a chooser; a chooser presupposes self-awareness. If the chooser were a mani-
+festation, it would be in time, and would presuppose another chooser—a regress. Hence the chooser
+must be trans-categorical. This is the same regress as in Theorem E3.1. Therefore fundamental
+self-awareness is the scaffold of time.
+
+Remark E6.2 (What Would Refute the Argument). The argument would be refuted by showing
+that time can exist without a chooser (e.g., a purely physical time), or that the chooser can be a
+
+                                                39
+40                                     CHAPTER E6. ARGUMENTS FOR THE NEW AXIOMS
+
+manifestation without regress. The framework does not claim that no such case can be described;
+it claims that none has been described, and that the regress is vicious.
+
+
+E6.4      The Argument for the Expansion Criterion
+Argument E6.3 (Structural Argument for Expansion). (T) Viability is the condition of possibility
+of the good (Principle E4.2). Expansion of the possibility space is expansion of viability. Hence
+expansion is structurally good. The argument is conditional: if the good is to be possible, then
+expansion is required. The normative premise (that the good is to be possible) is supplied by the
+inquiry into the good, not by the structural framework.
+
+Remark E6.3 (What Would Refute the Argument). The argument would be refuted by showing
+that expansion of the possibility space is not correlated with viability, or that viability is not the
+condition of possibility of the good. The framework does not claim that no such case can be
+described; it claims that none has been described, and that the Bridge Principle (Principle E4.2)
+is the structural link.
+Conclusion
+
+This document has developed seven structural extensions to The Philosophy of Viability:
+
+  (I) The topology of containment (§E1), which gives a precise structural meaning to the relation
+      among the seven realms and to the descent from higher to lower.
+
+ (II) The categorization of the hubs (§E2), which interprets the three barzakhic realms as categories
+      of transition and as conditions of cognition.
+
+(III) The trans-categorical triad (§E3): light, identity, and self-awareness as the three conditions
+      of possibility of relation, succession, and choice.
+
+(IV) The ontological status of the modal space (§E3.5): the three ontological layers (Ω, X , R),
+     the epistemic inaccessibility of Ω, the Molinist refinement of omniscience, and the structural
+     resolution of the tension between divine omniscience and creaturely freedom.
+
+ (V) The thread-and-beads interpretation of identity (§E3), with the conservation theorem that
+     follows from it.
+
+(VI) The definition of action as change of possibility space (§E4), the distinction between action,
+     contextual act, and ethical action (§E4.3), and the threefold ethical taxonomy (§E4.7) that
+     refines the expansion criterion into blameworthy, duty, and virtue.
+
+(VII) The refinement of time and self-awareness (§E5), distinguishing fundamental from human
+      self-awareness and phenomenal from structural time.
+
+    Each extension is a structural claim, not a normative one. Each is offered at the strength of
+its argument. Each is integrated into the architecture of the main volume by being placed under
+the same epistemic discipline: the axioms are declared, the arguments are given, the estimates are
+marked, and the open questions are indicated.
+    The horizon is open. The inquiry continues.
+
+
+
+
+                                                 41
+42   CHAPTER E6. ARGUMENTS FOR THE NEW AXIOMS
+Appendix A
+
+Formalizations
+
+A.1   Symbols
+            Symbol     Meaning
+            Ω          The modal space (totality of all possibilities)
+            X          The actualization chain (subset of Ω selected by S)
+            Ri         The i-th realm in the containment chain
+            ⊏          Containment relation (topological subspace)
+            I          An identity
+            P(I, R)    Space of possible realization of I in R
+            S          Self-awareness (fundamental or human, by context)
+            A          An action
+            ∆P         The effect of an action on the space of possible realization
+            Ground     The environment of the chain (not a realm)
+
+A.2   Key Formal Expressions
+ • Containment chain: R1 ⊏ R2 ⊏ · · · ⊏ R7 ⊏ Ground.
+ • Descent as restriction: ρi : Ri+1 → Ri with ρi ◦ ιi = idRi .
+                                 S      form
+ • Three ontological layers: Ω −−→ X −−−→ R.
+ • Modal space contained in the Ground: Ω ⊏ Ground.
+ • Space of possible realization: P(I, R) = {m ∈ R : m is compatible with I}.
+ • Action: e is an action iff e(P(I, R)) ̸= P(I, R) for some I, R.
+ • Ethical action: e is an ethical action iff e is an action and a will or choice precedes e.
+ • Expansion criterion: e is ethical iff P(I, R) ⊆ e(P(I, R)) for all I affected, with strict
+   inclusion for at least one.
+ • Threefold taxonomy: for ethical action A with effect ∆P, A is blameworthy iff ∆P < 0; duty
+   iff ∆P = 0 and harmony is preserved; virtue iff ∆P > 0.
+ • Harmony (formal): Harmony(P, S) ⇐⇒ S(P) ⊆ Comp(S) ∧ Constraints(S) ⊆ Struct(P).
+
+
+                                               43
+44   APPENDIX A. FORMALIZATIONS
+45
+46                                                             APPENDIX B. DEPENDENCY MAP
+
+
+
+
+Appendix B
+
+Dependency Map
+
+ Claim                                      Depends on                                            Status
+ Containment chain                          Topological definition of containment                 (A)
+ Descent as restriction                     Containment chain                                     (T)
+ Independence of mode                       Containment chain + strictness                        (T)
+ Non-passage                                Containment chain                                     (T)
+ Hubs as categories                         Containment chain + rule-fixed structure              (A)
+ Hubs as conditions of cognition            Hubs as categories + veiling                          (T)
+ Totality of possibility                    Modal structural principle                            (A)
+ Self-awareness not a category              Totality of possibility + regress                     (T)
+ Trans-categorical triad                    Parallelism of conditions                             (A)
+ Irreducibility of triad                    Distinctness of relation/succession/choice            (T)
+ Three ontological layers                   Totality of possibility + triad                       (A)
+ Ground terminology                         Structural neutrality of the framework                (A)
+ Modal space contained in Ground            Three ontological layers + Ground                     (A)
+ Ontological form of totality               Totality of possibility + three layers                (A)
+ Omniscience and freedom                    Ontological totality + triad                          (T)
+ Molinist omniscience                       Omniscience and freedom + conditional possibilities   (A)
+ Molinist omniscience-freedom               Molinist omniscience + triad                          (T)
+ Structural order is posterior              Three ontological layers                              (A)
+ Posteriority in fundamentality             Structural order posterior + Philosophy 7.1           (A)
+ Identity as thread                         Trans-categorical character of identity               (A)
+ Invisibility of thread                     Thread as condition, not item                         (T)
+ Conservation under reduction               Thread definition                                     (T)
+ Action as change of possibility            Definition of possibility space                       (A)
+ Action / contextual act / ethical action   Action definition + totality of possibility           (A)
+ Expansion criterion                        Action definition + viability as condition            (A)
+ Bridge principle                           Viability as condition of good                        (A)
+ Ethical/contextual evil                    Expansion criterion + agent causation                 (T)
+ Threefold ethical taxonomy                 Action definition + harmony                           (A)
+ Completeness of the threefold taxonomy     Threefold taxonomy                                    (T)
+ Formal harmony                             Definition of harmony                                 (A)
+ Formal completeness of threefold           Threefold taxonomy + formal harmony                   (T)
+ Triad isomorphism                          Triad + threefold taxonomy                            (T)
+ Ethical-trans-categorical parallel         Triad + threefold taxonomy                            (T)
+ Three levels of action                     Expansion criterion                                   (T)
+ Refinement of the three levels             Threefold taxonomy + three levels                     (T)
+ Time as phenomenal                         Causation as succession + self-awareness as chooser   (A)
+ Self-awareness as scaffold                 Triad + ontological totality                          (A)
+ Two senses of self-awareness               Self-awareness not a category                         (T)
+ Unconscious as weak self-awareness         Self-awareness as scaffold                            (T)
+ Two senses of time                         Distinction phenomenal/structural                     (A)
+ Argument for totality                      Totality of possibility + structural asymmetry        (T)
+ Argument for scaffold                      Scaffold + regress                                    (T)
+ Argument for expansion                     Bridge principle + viability                          (T)
+ Soft manifestation as product              Hard manifestation + self-awareness                   (A)
+Appendix C
+
+Open Questions
+
+Open Question C.1 (Trade-off). How is the sum of possibility spaces to be evaluated when cardi-
+nality and structure do not vary in the same direction?
+Open Question C.2 (Negative Responsibility). Is the failure to act (when action was possible and
+would have expanded the space) itself a contractive action?
+Open Question C.3 (Infinite Network). How is an action to be evaluated in an infinite network of
+affected identities, given that complete evaluation is impossible (Philosophy, Principle 6.1)?
+Open Question C.4 (The Ground). What is the precise structure of the containment of both Ω
+and the realms in the Ground—whether it is a single containment relation or a family of analogous
+relations, and whether the Ground’s mode of containment is itself a mode of existence or a condition
+of possibility?
+Open Question C.5 (Fundamental Self-Awareness). Is fundamental self-awareness identical with
+the divine self-awareness, or is it a structural condition that the divine self-awareness grounds?
+Open Question C.6 (Time). Is structural time a feature of the realms independent of any subject,
+or is it a feature of the relation between the realms and fundamental self-awareness?
+Open Question C.7 (The Boundary of Duty). If an action preserves the space of possible realization
+but improves the harmony between the space and self-awareness (without increasing cardinality),
+is it duty or virtue? Definition E4.5 classifies it as duty (since ∆P = 0), but the improvement of
+harmony is a kind of structural expansion. Should it be classified as virtue?
+Open Question C.8 (The Agent of Contextual Act). Is a contextual act always without an agent?
+Or can it have an agent whose will is not deliberate (e.g., an unintentional action)? In the latter
+case, is a reduced ethical judgment (e.g., limited responsibility) applicable?
+Open Question C.9 (The Unity of the Three Categories). Are the three categories of the threefold
+taxonomy independent or continuous? Can an action be simultaneously blameworthy and virtuous
+(e.g., contracting the space of one identity while expanding another)? If so, how is the structural
+trade-off principle to be applied?
+Open Question C.10 (The Boundary of Potential Action). If an action is potential until it lands,
+what is the ethical status of the attempt? Does the attempt count as an action on the emitter
+(which is actual) or as a failed action (which is potential)? And how is the ethical evaluation of
+the attempt related to the ethical evaluation of the completed action?
+
+
+
+
+                                                47
+
