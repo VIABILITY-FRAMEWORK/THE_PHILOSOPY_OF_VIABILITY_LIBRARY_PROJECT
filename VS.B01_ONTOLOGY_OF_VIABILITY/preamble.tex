@@ -41,29 +41,55 @@
 % Additional text symbols (required for \textquoteleft, \textquotedblleft, etc.).
 \usepackage{textcomp}
 
-% Unicode character declarations for pdfLaTeX compatibility.
-% The following declarations map non-ASCII Unicode characters used
-% throughout the book (transliterated Arabic, Sanskrit, etc.) to
-% appropriate LaTeX commands, since pdfLaTeX does not natively
-% support these code points in the T1 encoding.
-\usepackage{newunicodechar}
+% Unicode characters for transliterated Arabic, Persian, and Sanskrit.
+% pdfLaTeX natively knows only part of this range, so the complete set
+% needed by the book is declared explicitly here. \DeclareUnicodeCharacter
+% is part of inputenc itself: it needs no extra package and, unlike
+% \newunicodechar, produces no "Redefining Unicode character" warning for
+% characters that inputenc already knows.
+%
+% Dot below      : \d    Line below : \b    Dot above : \.
 
-\newunicodechar{Ṣ}{\.{S}}
-\newunicodechar{ṣ}{\.{s}}
-\newunicodechar{Ḥ}{\.{H}}
-\newunicodechar{ḥ}{\.{h}}
-\newunicodechar{Ā}{\={A}}
-\newunicodechar{ā}{\={a}}
-\newunicodechar{Ī}{\={I}}
-\newunicodechar{ī}{\={i}}
-\newunicodechar{Ū}{\={U}}
-\newunicodechar{ū}{\={u}}
-\newunicodechar{Ḍ}{\.{D}}
-\newunicodechar{ḍ}{\.{d}}
-\newunicodechar{Ṭ}{\.{T}}
-\newunicodechar{ṭ}{\.{t}}
-\newunicodechar{ʿ}{`}
-\newunicodechar{ʾ}{'}
+% Sub-breve (for h with breve below), built from the standard breve accent.
+\newsavebox{\viabilitysubbrevebox}
+\newcommand{\viabilitysubbreve}[1]{%
+    \leavevmode
+    \sbox{\viabilitysubbrevebox}{#1}%
+    \usebox{\viabilitysubbrevebox}%
+    \hspace{-\wd\viabilitysubbrevebox}%
+    \makebox[\wd\viabilitysubbrevebox]{\raisebox{-1.4ex}[0pt][0pt]{\u{}}}%
+}
+
+\DeclareUnicodeCharacter{1E0C}{\d{D}}    % Ḍ
+\DeclareUnicodeCharacter{1E0D}{\d{d}}    % ḍ
+\DeclareUnicodeCharacter{1E0E}{\b{D}}    % Ḏ
+\DeclareUnicodeCharacter{1E0F}{\b{d}}    % ḏ
+\DeclareUnicodeCharacter{1E24}{\d{H}}    % Ḥ
+\DeclareUnicodeCharacter{1E25}{\d{h}}    % ḥ
+\DeclareUnicodeCharacter{1E2A}{\viabilitysubbreve{H}}  % Ḫ
+\DeclareUnicodeCharacter{1E2B}{\viabilitysubbreve{h}}  % ḫ
+\DeclareUnicodeCharacter{1E32}{\d{K}}    % Ḳ
+\DeclareUnicodeCharacter{1E33}{\d{k}}    % ḳ
+\DeclareUnicodeCharacter{1E42}{\d{M}}    % Ṃ
+\DeclareUnicodeCharacter{1E43}{\d{m}}    % ṃ
+\DeclareUnicodeCharacter{1E44}{\.{N}}    % Ṅ
+\DeclareUnicodeCharacter{1E45}{\.{n}}    % ṅ
+\DeclareUnicodeCharacter{1E46}{\d{N}}    % Ṇ
+\DeclareUnicodeCharacter{1E47}{\d{n}}    % ṇ
+\DeclareUnicodeCharacter{1E5A}{\d{R}}    % Ṛ
+\DeclareUnicodeCharacter{1E5B}{\d{r}}    % ṛ
+\DeclareUnicodeCharacter{1E62}{\d{S}}    % Ṣ
+\DeclareUnicodeCharacter{1E63}{\d{s}}    % ṣ
+\DeclareUnicodeCharacter{1E6C}{\d{T}}    % Ṭ
+\DeclareUnicodeCharacter{1E6D}{\d{t}}    % ṭ
+\DeclareUnicodeCharacter{1E6E}{\b{T}}    % Ṯ
+\DeclareUnicodeCharacter{1E6F}{\b{t}}    % ṯ
+\DeclareUnicodeCharacter{1E92}{\d{Z}}    % Ẓ
+\DeclareUnicodeCharacter{1E93}{\d{z}}    % ẓ
+
+% Arabic hamza and ayn (modifier letters), set as typographic single quotes.
+\DeclareUnicodeCharacter{02BE}{\textquoteright}   % ʾ  hamza
+\DeclareUnicodeCharacter{02BF}{\textquoteleft}    % ʿ  ayn
 
 % Improved typographic justification and character protrusion.
 \usepackage{microtype}
@@ -134,7 +160,6 @@
 
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{mathtools}
 
@@ -302,11 +327,13 @@
 % 09.1. Chapter headings
 % -----------------------------------------------------------------------------
 
+% \chaptertitlename expands to "Chapter" in the main matter and to
+% "Appendix" after \appendix.
 \titleformat{\chapter}[display]
-    {\normalfont\bfseries\color{ViabilityHeading}\raggedright}
-    {\small\scshape\color{ViabilityAccent}Chapter \thechapter}
+    {\normalfont\huge\bfseries\color{ViabilityHeading}\raggedright}
+    {\small\scshape\color{ViabilityAccent}\chaptertitlename\ \thechapter}
     {1.5ex}
-    {\titlerule[0.8pt]\vspace{1.5ex}}
+    {\begingroup\color{ViabilityAccent}\titlerule[0.8pt]\endgroup\vspace{1.5ex}}
 
 \titlespacing*{\chapter}
     {0pt}
@@ -322,7 +349,7 @@
     {\thesection}
     {0.85em}
     {}
-    [\vspace{0.35ex}\color{ViabilityRule}\titlerule]
+    [\vspace{0.35ex}{\color{ViabilityRule}\titlerule}]
 
 \titlespacing*{\section}
     {0pt}
@@ -433,17 +460,26 @@
 \renewcommand{\headrulewidth}{0.35pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% Header rule in the book's rule colour.
+\renewcommand{\headrule}{%
+    {\color{ViabilityRule}\hrule width\headwidth height\headrulewidth}%
+}
+
 % -----------------------------------------------------------------------------
 % 11.1. Chapter and section marks
 % -----------------------------------------------------------------------------
 
+% Numbers are shown only in the main matter; front and back matter
+% (preface, indexes, ...) are unnumbered and must not display "0".
+\makeatletter
 \renewcommand{\chaptermark}[1]{%
-    \markboth{\thechapter\enspace #1}{}%
+    \markboth{\if@mainmatter\thechapter\enspace\fi #1}{}%
 }
 
 \renewcommand{\sectionmark}[1]{%
-    \markright{\thesection\enspace #1}%
+    \markright{\if@mainmatter\thesection\enspace\fi #1}%
 }
+\makeatother
 
 % -----------------------------------------------------------------------------
 % 11.2. Plain page style
@@ -597,14 +633,25 @@
 
 
 % #############################################################################
-% 15. URL AND LINK HANDLING
+% 15. FOOTNOTE TYPOGRAPHY
+% #############################################################################
+
+\usepackage[bottom,hang]{footmisc}
+
+\setlength{\skip\footins}{10pt}
+
+\renewcommand{\footnotelayout}{\small}
+
+
+% #############################################################################
+% 16. URL AND LINK HANDLING
 % #############################################################################
 
 \usepackage{xurl}
 
 
 % #############################################################################
-% 16. HYPERLINKS AND PDF BOOKMARKS
+% 17. HYPERLINKS AND PDF BOOKMARKS
 % #############################################################################
 
 % Citation commands (\citep, \citet) required by plainnat;
@@ -628,6 +675,7 @@
     bookmarksnumbered=true,
     bookmarksopen=true,
     bookmarksopenlevel=1,
+    pdftitle={The Philosophy of Viability --- Book I: Ontology of Viability},
     pdfdisplaydoctitle=true,
     breaklinks=true,
     linktoc=all
@@ -637,13 +685,13 @@
 
 
 % #############################################################################
-% 17. INTELLIGENT CROSS-REFERENCING
+% 18. INTELLIGENT CROSS-REFERENCING
 % #############################################################################
 
 \usepackage[nameinlink,noabbrev]{cleveref}
 
 % -----------------------------------------------------------------------------
-% 17.1. Structural references
+% 18.1. Structural references
 % -----------------------------------------------------------------------------
 
 \crefname{chapter}{Chapter}{Chapters}
@@ -656,13 +704,13 @@
 \Crefname{subsection}{Subsection}{Subsections}
 
 \crefname{subsubsection}{Subsubsection}{Subsubsections}
-\Crefname{subsubsection}{Subsubsections}{Subsubsections}
+\Crefname{subsubsection}{Subsubsection}{Subsubsections}
 
 \crefname{appendix}{Appendix}{Appendices}
 \Crefname{appendix}{Appendix}{Appendices}
 
 % -----------------------------------------------------------------------------
-% 17.2. Mathematical references
+% 18.2. Mathematical references
 % -----------------------------------------------------------------------------
 
 \crefname{equation}{Equation}{Equations}
@@ -681,7 +729,7 @@
 \Crefname{corollary}{Corollary}{Corollaries}
 
 % -----------------------------------------------------------------------------
-% 17.3. Ontological and formal references
+% 18.3. Ontological and formal references
 % -----------------------------------------------------------------------------
 
 \crefname{definition}{Definition}{Definitions}
@@ -706,7 +754,7 @@
 \Crefname{thesis}{Thesis}{Theses}
 
 % -----------------------------------------------------------------------------
-% 17.4. Explanatory references
+% 18.4. Explanatory references
 % -----------------------------------------------------------------------------
 
 \crefname{remark}{Remark}{Remarks}
@@ -719,7 +767,7 @@
 \Crefname{example}{Example}{Examples}
 
 % -----------------------------------------------------------------------------
-% 17.5. Figures and tables
+% 18.5. Figures and tables
 % -----------------------------------------------------------------------------
 
 \crefname{figure}{Figure}{Figures}
@@ -730,7 +778,7 @@
 
 
 % #############################################################################
-% 18. DOCUMENT NUMBERING AND STRUCTURAL DEPTH
+% 19. DOCUMENT NUMBERING AND STRUCTURAL DEPTH
 % #############################################################################
 
 % Numbering depth:
@@ -745,7 +793,7 @@
 
 
 % #############################################################################
-% 19. FLOAT PLACEMENT
+% 20. FLOAT PLACEMENT
 % #############################################################################
 
 \renewcommand{\topfraction}{0.85}
@@ -756,17 +804,6 @@
 \setcounter{topnumber}{3}
 \setcounter{bottomnumber}{2}
 \setcounter{totalnumber}{5}
-
-
-% #############################################################################
-% 20. FOOTNOTE TYPOGRAPHY
-% #############################################################################
-
-\usepackage[bottom,hang]{footmisc}
-
-\setlength{\skip\footins}{10pt}
-
-\renewcommand{\footnotelayout}{\small}
 
 
 % #############################################################################
