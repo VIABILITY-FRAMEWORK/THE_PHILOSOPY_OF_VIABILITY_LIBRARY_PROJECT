@@ -45,82 +45,51 @@
 
 \begin{tikzpicture}[
     font=\small,
+    every node/.style={inner sep=7pt},
     matternode/.style={
-        draw=ViabilityBlue,
-        fill=ViabilityPaleBlue,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=5.0cm,
-        align=center,
-        inner sep=7pt,
-        minimum height=1.1cm
+        draw=ViabilityBlue, fill=ViabilityPaleBlue,
+        rounded corners=2pt, line width=0.8pt,
+        text width=4.6cm, align=center, minimum height=1.7cm
     },
     formnode/.style={
-        draw=ViabilityGold,
-        fill=ViabilityPaleGold,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=5.0cm,
-        align=center,
-        inner sep=7pt,
-        minimum height=1.1cm
+        draw=ViabilityGold, fill=ViabilityPaleGold,
+        rounded corners=2pt, line width=0.8pt,
+        text width=4.6cm, align=center, minimum height=1.7cm
     },
     composite/.style={
-        draw=ViabilityGreen,
-        fill=ViabilityPaleGreen,
-        rounded corners=2pt,
-        line width=0.9pt,
-        text width=10.8cm,
-        align=center,
-        inner sep=8pt,
-        minimum height=1.2cm
+        draw=ViabilityGreen, fill=ViabilityPaleGreen,
+        rounded corners=2pt, line width=0.9pt,
+        text width=10.8cm, align=center, minimum height=1.5cm
     },
     beingnode/.style={
-        draw=ViabilityDarkBlue,
-        fill=ViabilityPaleBlue,
-        rounded corners=2pt,
-        line width=0.9pt,
-        text width=4.8cm,
-        align=center,
-        inner sep=8pt,
-        minimum height=1.0cm
+        draw=ViabilityDarkBlue, fill=ViabilityPaleBlue,
+        rounded corners=2pt, line width=0.9pt,
+        text width=3.2cm, align=center, minimum height=1.2cm
     },
     identitynode/.style={
-        draw=ViabilityGold,
-        fill=ViabilityPaleGold,
-        rounded corners=2pt,
-        line width=0.9pt,
-        text width=4.8cm,
-        align=center,
-        inner sep=8pt,
-        minimum height=1.0cm
+        draw=ViabilityGold, fill=ViabilityPaleGold,
+        rounded corners=2pt, line width=0.9pt,
+        text width=3.2cm, align=center, minimum height=1.2cm
     },
     note/.style={
-        draw=gray,
-        fill=white,
-        rounded corners=2pt,
-        text width=10.8cm,
-        align=center,
-        inner sep=7pt
+        draw=gray, fill=white, rounded corners=2pt,
+        text width=11cm, align=center
     },
     relation/.style={
         -{Stealth[length=2mm]},
-        draw=ViabilityDarkBlue,
-        line width=0.8pt
+        draw=ViabilityDarkBlue, line width=0.8pt
     },
     nondirectional/.style={
-        draw=ViabilityDarkBlue,
-        line width=1.0pt
+        draw=ViabilityDarkBlue, line width=1pt
     },
     boundary/.style={
-        densely dashed,
-        draw=gray,
-        line width=0.75pt
+        densely dashed, draw=gray, line width=0.75pt
     },
     title/.style={
-        font=\bfseries,
-        align=center,
-        text width=11.0cm
+        font=\small\bfseries, align=center, text width=12cm
+    },
+    label/.style={
+        font=\scriptsize, inner sep=2pt, fill=white
     }
 ]
 
@@ -131,99 +100,73 @@
 \node[title] (titleA) at (0,0)
     {Averroes: The Constitution of Sensible Substance};
 
-\node[matternode] (matter) at (-3.0,-1.55) {
+\node[matternode, below=6mm of titleA, xshift=-3.0cm] (matter) {
     \textbf{Prime Matter}\\[3pt]
     Potential subject for substantial forms
 };
 
-\node[formnode] (form) at (3.0,-1.55) {
+\node[formnode, below=6mm of titleA, xshift=3.0cm] (form) {
     \textbf{Substantial Form}\\[3pt]
     Actuality and determinate nature
 };
 
-\node[composite] (substance) at (0,-3.45) {
+\node[composite, below=1.8cm of titleA |- matter.south] (substance) {
     \textbf{Composite Sensible Substance}\\[4pt]
     A determinate existent constituted through matter and form
 };
 
-\node[composite] (accidents) at (0,-5.05) {
+\node[composite, below=1.3cm of substance] (accidents) {
     \textbf{Accidental Determinations}\\[3pt]
     Dependent features that may be gained or lost while
     the substance remains their subject
 };
 
-\draw[relation]
-    (matter.south) --
-    node[fill=white,inner sep=2pt,font=\scriptsize]
-    {material potentiality}
-    (substance.north west);
+% Vertical arrows into the composite
 
-\draw[relation]
-    (form.south) --
-    node[fill=white,inner sep=2pt,font=\scriptsize]
-    {actualization and determination}
-    (substance.north east);
+\draw[relation] (matter.south) -- (matter.south |- substance.north)
+    node[pos=0.5, left, label, align=right] {material\\potentiality};
 
-\draw[relation]
-    (substance) --
-    node[fill=white,inner sep=2pt,font=\scriptsize]
-    {subject and dependence}
-    (accidents);
+\draw[relation] (form.south) -- (form.south |- substance.north)
+    node[pos=0.5, right, label, align=left] {actualization and\\determination};
+
+\draw[relation] (substance) -- (accidents)
+    node[pos=0.5, right, label] {subject and dependence};
 
 % ---------------------------------------------------------------------
 % PANEL B — BOOK I FOUNDATIONAL RELATION
 % ---------------------------------------------------------------------
 
-\node[title] (titleB) at (0,-6.35)
+\node[title, below=1.5cm of accidents] (titleB)
     {Book I: The Relation between Being and Identity};
 
-\node[beingnode] (being) at (-3.0,-7.65) {
-    \textbf{Being}
-};
+\node[beingnode, below=5mm of titleB, xshift=-4.2cm] (being)
+    {\textbf{Being}};
 
-\node[identitynode] (identity) at (3.0,-7.65) {
-    \textbf{Identity}
-};
+\node[identitynode, below=5mm of titleB, xshift=4.2cm] (identity)
+    {\textbf{Identity}};
 
-\draw[nondirectional]
-    (being.east) --
-    node[
-        fill=white,
-        text=ViabilityDarkBlue,
-        font=\scriptsize,
-        align=center,
-        inner sep=3pt
-    ] {
+\draw[nondirectional] (being.east) -- (identity.west)
+    node[pos=0.5, label, text width=3.3cm, align=center,
+         text=ViabilityDarkBlue] {
         Analytical Distinction\\
         Ontological Inseparability\\
         Absence of Ontological Priority
-    }
-    (identity.west);
+    };
 
-\node[note] (nonreduction) at (0,-9.45) {
+\coordinate (axisB) at (titleB |- being.south);
+
+\node[note, below=1.2cm of axisB] (nonreduction) {
     \textbf{Non-equivalence}\\[3pt]
     Matter \quad Form \quad Essence \quad Unity \quad
-    Individuation \quad Persistence \quad Manifestation
-    \\[3pt]
+    Individuation \quad Persistence \quad Manifestation\\[3pt]
     These concepts perform distinct explanatory functions;
     none is identified with Identity.
 };
 
-\draw[boundary]
-    (being.south) -- (nonreduction.north west);
+% Dashed boundaries: vertical drops, no crossing
 
-\draw[boundary]
-    (identity.south) -- (nonreduction.north east);
-
-\node[
-    align=center,
-    font=\scriptsize,
-    text width=10.8cm
-] at (0,-10.45) {
-    The two panels represent different explanatory questions.
-    The lower relation is not a material or formal composition,
-    and the dashed boundaries do not indicate causal dependence.
-};
+\draw[boundary] (being.south) -- (being.south |- nonreduction.north);
+\draw[boundary] (identity.south) -- (identity.south |- nonreduction.north);
 
 \end{tikzpicture}
 
@@ -237,7 +180,10 @@
     in Book I. The diagram distinguishes the explanatory
     roles of matter, form, essence, and accidental determination
     from the analytical distinction and ontological inseparability
-    of Being and Identity.
+    of Being and Identity. The two panels represent different
+    explanatory questions: the lower relation is not a material
+    or formal composition, and the dashed boundaries do not
+    indicate causal dependence.
 }
 
 \label{fig:VS.B01.P01.C08.S15.SS17.P004.DG01}
