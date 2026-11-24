@@ -1,4 +1,3 @@
-
 % =============================================================================
 % Project : THE PHILOSOPHY OF VIABILITY
 % Book    : Book I — Ontology of Viability
@@ -34,6 +33,7 @@
 %
 % Dependencies :
 %   tikz, positioning, arrows.meta.
+%   (preamble: \usetikzlibrary{positioning, arrows.meta})
 %
 % =============================================================================
 
@@ -42,98 +42,58 @@
 
 \begin{tikzpicture}[
     font=\small,
+    every node/.style={inner sep=7pt},
     realnode/.style={
-        draw=ViabilityDarkBlue,
-        fill=ViabilityPaleBlue,
-        rounded corners=3pt,
-        line width=1pt,
-        text width=10.5cm,
-        align=center,
-        inner sep=9pt,
-        minimum height=1.15cm
+        draw=ViabilityDarkBlue, fill=ViabilityPaleBlue,
+        rounded corners=3pt, line width=1pt,
+        text width=10.5cm, align=center, minimum height=1.5cm
     },
     namesnode/.style={
-        draw=ViabilityGold,
-        fill=ViabilityPaleGold,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=4.0cm,
-        align=center,
-        inner sep=7pt,
-        minimum height=1.65cm
+        draw=ViabilityGold, fill=ViabilityPaleGold,
+        rounded corners=2pt, line width=0.8pt,
+        text width=3.5cm, align=center, minimum height=2.8cm
     },
     entitiesnode/.style={
-        draw=ViabilityBlue,
-        fill=ViabilityPaleBlue,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=4.0cm,
-        align=center,
-        inner sep=7pt,
-        minimum height=1.65cm
+        draw=ViabilityBlue, fill=ViabilityPaleBlue,
+        rounded corners=2pt, line width=0.8pt,
+        text width=3.5cm, align=center, minimum height=2.8cm
     },
     receptivitynode/.style={
-        draw=ViabilityGreen,
-        fill=ViabilityPaleGreen,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=4.0cm,
-        align=center,
-        inner sep=7pt,
-        minimum height=1.65cm
+        draw=ViabilityGreen, fill=ViabilityPaleGreen,
+        rounded corners=2pt, line width=0.8pt,
+        text width=3.5cm, align=center, minimum height=2.8cm
     },
     manifestationnode/.style={
-        draw=ViabilityDarkBlue,
-        fill=ViabilityPaper,
-        rounded corners=3pt,
-        line width=1pt,
-        text width=10.5cm,
-        align=center,
-        inner sep=9pt,
-        minimum height=1.25cm
+        draw=ViabilityDarkBlue, fill=ViabilityPaper,
+        rounded corners=3pt, line width=1pt,
+        text width=10.5cm, align=center, minimum height=1.6cm
     },
     booknode/.style={
-        draw=ViabilityDarkBlue,
-        fill=ViabilityPaleBlue,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=4.5cm,
-        align=center,
-        inner sep=8pt,
-        minimum height=1.1cm
+        draw=ViabilityDarkBlue, fill=ViabilityPaleBlue,
+        rounded corners=2pt, line width=0.8pt,
+        text width=3.2cm, align=center, minimum height=1.2cm
     },
     identitynode/.style={
-        draw=ViabilityGold,
-        fill=ViabilityPaleGold,
-        rounded corners=2pt,
-        line width=0.8pt,
-        text width=4.5cm,
-        align=center,
-        inner sep=8pt,
-        minimum height=1.1cm
+        draw=ViabilityGold, fill=ViabilityPaleGold,
+        rounded corners=2pt, line width=0.8pt,
+        text width=3.2cm, align=center, minimum height=1.2cm
     },
     relation/.style={
         -{Stealth[length=2mm]},
-        draw=ViabilityDarkBlue,
-        line width=0.75pt
+        draw=ViabilityDarkBlue, line width=0.75pt
     },
     conceptual/.style={
-        densely dashed,
-        draw=ViabilityGray,
-        line width=0.8pt
+        densely dashed, draw=ViabilityGray, line width=0.8pt
     },
     title/.style={
-        font=\bfseries,
-        align=center,
-        text width=11cm
+        font=\small\bfseries, align=center, text width=12cm
+    },
+    label/.style={
+        font=\scriptsize, inner sep=2pt, fill=white
     },
     note/.style={
-        draw=ViabilityLightGray,
-        fill=white,
-        rounded corners=2pt,
-        text width=10.5cm,
-        align=center,
-        inner sep=7pt
+        draw=ViabilityLightGray, fill=white, rounded corners=2pt,
+        text width=11cm, align=center
     }
 ]
 
@@ -141,131 +101,92 @@
 % PANEL A — IBN ARABI
 % ---------------------------------------------------------------------
 
-\node[title] at (0,0)
+\node[realnode] (real) at (0,0) {
+    \textbf{The Real — al-Haqq}\\[3pt]
+    Non-delimited Existence (\textit{al-wujud al-mutlaq})
+};
+
+\node[title, above=2mm of real] (titleA)
     {Ibn Arabi: The Real and Its Determinate Manifestations};
 
-\node[realnode] (real) at (0,-1.15) {
-    \textbf{The Real — al-Haqq}\\[3pt]
-    Non-delimited Existence
-    (\textit{al-wujud al-mutlaq})
-};
-
-\node[namesnode] (names) at (-4.5,-3.55) {
-    \textbf{Divine Names}\\[4pt]
-    Relational meanings\\
-    Divine attributes\\
-    Distinct aspects of disclosure
-};
-
-\node[entitiesnode] (entities) at (0,-3.55) {
+\node[entitiesnode, below=1.6cm of real] (entities) {
     \textbf{Fixed Entities}\\[4pt]
     \textit{A'yan thabita}\\
     Determinate realities\\
     Known in divine knowledge
 };
 
-\node[receptivitynode] (receptivity) at (4.5,-3.55) {
-    \textbf{Preparedness and Receptivity}\\[4pt]
-    \textit{Isti'dad / Qabiliyya}\\
-    Specific capacity\\
-    of the receiving loci
+\node[namesnode, left=6mm of entities] (names) {
+    \textbf{Divine Names}\\[4pt]
+    Relational meanings\\
+    Divine attributes\\
+    Distinct aspects of disclosure
 };
 
-\node[manifestationnode] (tajalli) at (0,-6.2) {
+\node[receptivitynode, right=6mm of entities] (receptivity) {
+    \textbf{Preparedness and Receptivity}\\[4pt]
+    \textit{Isti'dad / Qabiliyya}\\
+    Specific capacity of the receiving loci
+};
+
+\node[manifestationnode, below=1.4cm of entities] (tajalli) {
     \textbf{Tajalli — Self-Disclosure}\\[4pt]
     The manifestation of the Real under determinate relations
     and according to the receptivity of the loci
 };
 
-\node[manifestationnode] (forms) at (0,-8.15) {
+\node[manifestationnode, below=1.2cm of tajalli] (forms) {
     \textbf{Delimited Manifestations}\\[4pt]
     Existent entities (\textit{a'yan mawjuda})\\
     Differentiated forms of manifested existence
 };
 
-% Conceptual relations from the Real.
+% Relations from the Real (vertical drops)
 
-\draw[relation]
-    (real.south west) --
-    node[pos=0.48,left,font=\scriptsize,align=right]
-    {relational\\meanings}
-    (names.north);
+\draw[relation] (names.north |- real.south) -- (names.north)
+    node[pos=0.5, left, label, align=right] {relational\\meanings};
 
-\draw[relation]
-    (real.south) --
-    node[right,font=\scriptsize]
-    {divine knowledge}
-    (entities.north);
+\draw[relation] (entities.north |- real.south) -- (entities.north)
+    node[pos=0.5, right, label] {divine knowledge};
 
-\draw[relation]
-    (real.south east) --
-    node[pos=0.48,right,font=\scriptsize,align=left]
-    {relation to\\the loci}
-    (receptivity.north);
+\draw[relation] (receptivity.north |- real.south) -- (receptivity.north)
+    node[pos=0.5, right, label, align=left] {relation to\\the loci};
 
-% Relations to self-disclosure.
+% Relations to self-disclosure (dashed, non-causal)
 
-\draw[conceptual]
-    (names.south) --
-    (tajalli.north west);
+\draw[conceptual] (names.south) -- (names.south |- tajalli.north);
+\draw[conceptual] (entities.south) -- (tajalli.north);
+\draw[conceptual] (receptivity.south) -- (receptivity.south |- tajalli.north);
 
-\draw[conceptual]
-    (entities.south) --
-    (tajalli.north);
-
-\draw[conceptual]
-    (receptivity.south) --
-    (tajalli.north east);
-
-\draw[relation]
-    (tajalli) --
-    node[right,font=\scriptsize]
-    {manifested forms}
-    (forms);
-
-\node[note] at (0,-9.65) {
-    \textbf{Representational qualification}\\[3pt]
-    The connections indicate conceptual relations within
-    the reconstructed account. They do not assert that
-    the divine names, fixed entities, and receptivity
-    form a single temporal or efficient-causal sequence.
-};
+\draw[relation] (tajalli) -- (forms)
+    node[pos=0.5, right, label] {manifested forms};
 
 % ---------------------------------------------------------------------
 % PANEL B — BOOK I
 % ---------------------------------------------------------------------
 
-\node[title] at (0,-11.1)
+\node[title, below=1.5cm of forms] (titleB)
     {Book I: The Foundational Relation};
 
-\node[booknode] (being) at (-2.8,-12.45) {
-    \textbf{Being}
-};
+\node[booknode, below=5mm of titleB, xshift=-4.2cm] (being)
+    {\textbf{Being}};
 
-\node[identitynode] (identity) at (2.8,-12.45) {
-    \textbf{Identity}
-};
+\node[identitynode, below=5mm of titleB, xshift=4.2cm] (identity)
+    {\textbf{Identity}};
 
-\draw[conceptual]
-    (being.east) --
-    node[
-        fill=white,
-        font=\scriptsize,
-        text width=4.0cm,
-        align=center,
-        inner sep=3pt
-    ] {
+\draw[conceptual] (being.east) -- (identity.west)
+    node[pos=0.5, label, text width=3.3cm, align=center] {
         Analytical Distinction\\
         Ontological Inseparability\\
         Absence of Ontological Priority
-    }
-    (identity.west);
+    };
 
-\node[note] at (0,-14.15) {
+\coordinate (axisB) at (titleB |- being.south);
+
+\node[note, below=6mm of axisB] {
     \textbf{Non-equivalence}\\[3pt]
-    Fixed Entity $\neq$ Identity\\
-    Divine Name $\neq$ Determination\\
-    Tajalli $\neq$ Generic Manifestation\\
+    Fixed Entity $\neq$ Identity \quad Divine Name $\neq$ Determination\\
+    Tajalli $\neq$ Generic Manifestation \quad
     Barzakh $\neq$ Book I Mediating Hubs
 };
 
@@ -282,7 +203,10 @@
     relation between Being and Identity in Book I.
     The diagram is comparative rather than genealogical
     or causal; it does not identify the corresponding
-    concepts across the two systems.
+    concepts across the two systems. The connections
+    indicate conceptual relations within the reconstructed
+    account and do not assert a single temporal or
+    efficient-causal sequence.
 }
 
 \label{fig:VS.B01.P01.C08.S16.SS17.P004.DG01}
