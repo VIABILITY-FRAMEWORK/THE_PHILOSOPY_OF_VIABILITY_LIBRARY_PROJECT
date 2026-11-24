@@ -38,6 +38,33 @@
 % High-quality scalable fonts compatible with pdfLaTeX.
 \usepackage{lmodern}
 
+% Additional text symbols (required for \textquoteleft, \textquotedblleft, etc.).
+\usepackage{textcomp}
+
+% Unicode character declarations for pdfLaTeX compatibility.
+% The following declarations map non-ASCII Unicode characters used
+% throughout the book (transliterated Arabic, Sanskrit, etc.) to
+% appropriate LaTeX commands, since pdfLaTeX does not natively
+% support these code points in the T1 encoding.
+\usepackage{newunicodechar}
+
+\newunicodechar{Ṣ}{\.{S}}
+\newunicodechar{ṣ}{\.{s}}
+\newunicodechar{Ḥ}{\.{H}}
+\newunicodechar{ḥ}{\.{h}}
+\newunicodechar{Ā}{\={A}}
+\newunicodechar{ā}{\={a}}
+\newunicodechar{Ī}{\={I}}
+\newunicodechar{ī}{\={i}}
+\newunicodechar{Ū}{\={U}}
+\newunicodechar{ū}{\={u}}
+\newunicodechar{Ḍ}{\.{D}}
+\newunicodechar{ḍ}{\.{d}}
+\newunicodechar{Ṭ}{\.{T}}
+\newunicodechar{ṭ}{\.{t}}
+\newunicodechar{ʿ}{`}
+\newunicodechar{ʾ}{'}
+
 % Improved typographic justification and character protrusion.
 \usepackage{microtype}
 
@@ -130,8 +157,6 @@
 }
 
 \usepackage{tikz}
-\usetikzlibrary{positioning}
-\usetikzlibrary{arrows.meta}
 
 % Frequently used TikZ libraries.
 \usetikzlibrary{
@@ -222,6 +247,8 @@
     style=nextline,
     font=\normalfont\bfseries
 }
+
+
 % #############################################################################
 % 07. TECHNICAL AND EXPLANATORY BOXES
 % #############################################################################
@@ -286,7 +313,6 @@
     {-10pt}
     {34pt}
 
-
 % -----------------------------------------------------------------------------
 % 09.2. Section headings
 % -----------------------------------------------------------------------------
@@ -303,7 +329,6 @@
     {3.2ex plus 0.8ex minus 0.2ex}
     {1.5ex}
 
-
 % -----------------------------------------------------------------------------
 % 09.3. Subsection headings
 % -----------------------------------------------------------------------------
@@ -319,7 +344,6 @@
     {2.6ex plus 0.6ex minus 0.2ex}
     {1.0ex}
 
-
 % -----------------------------------------------------------------------------
 % 09.4. Subsubsection headings
 % -----------------------------------------------------------------------------
@@ -334,6 +358,7 @@
     {0pt}
     {2.0ex plus 0.4ex minus 0.2ex}
     {0.7ex}
+
 
 % #############################################################################
 % 10. TABLE OF CONTENTS TYPOGRAPHY
@@ -377,24 +402,7 @@
 
 \usepackage{fancyhdr}
 \usepackage{emptypage}
-\usepackage{textcomp}
-\usepackage{newunicodechar}
-\newunicodechar{Ṣ}{\.{S}}
-\newunicodechar{ṣ}{\.{s}}
-\newunicodechar{Ḥ}{\.{H}}
-\newunicodechar{ḥ}{\.{h}}
-\newunicodechar{Ā}{\={A}}
-\newunicodechar{ā}{\={a}}
-\newunicodechar{Ī}{\={I}}
-\newunicodechar{ī}{\={i}}
-\newunicodechar{Ū}{\={U}}
-\newunicodechar{ū}{\={u}}
-\newunicodechar{Ḍ}{\.{D}}
-\newunicodechar{ḍ}{\.{d}}
-\newunicodechar{Ṭ}{\.{T}}
-\newunicodechar{ṭ}{\.{t}}
-\newunicodechar{ʿ}{`}
-\newunicodechar{ʾ}{'}
+
 \pagestyle{fancy}
 
 \fancyhf{}
@@ -599,7 +607,8 @@
 % 16. HYPERLINKS AND PDF BOOKMARKS
 % #############################################################################
 
-% Citation commands (\citep, \citet) required by plainnat; must load before hyperref.
+% Citation commands (\citep, \citet) required by plainnat;
+% must be loaded before hyperref.
 \usepackage[round]{natbib}
 
 \usepackage[
@@ -647,7 +656,6 @@
 \Crefname{subsection}{Subsection}{Subsections}
 
 \crefname{subsubsection}{Subsubsection}{Subsubsections}
-
 \Crefname{subsubsection}{Subsubsections}{Subsubsections}
 
 \crefname{appendix}{Appendix}{Appendices}
